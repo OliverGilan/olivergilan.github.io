@@ -1,18 +1,15 @@
 * {
-	padding: 0;
 	margin: 0;
-	border: 0;
+	padding: 0;
 }
 
-html {
-	width: 100vh;
+html,
+body {
+	width: 100vw;
 	height: 100vh;
 }
 
 body {
-	align-self: center;
-}
-
-p {
-	color: red;
+	max-width: 42rem;
+	margin: 0 auto;
 }
