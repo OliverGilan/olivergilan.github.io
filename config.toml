@@ -1,3 +1,18 @@
 baseURL = 'https://olivergilan.com/'
 languageCode = 'en-us'
 title = 'Oliver Gilan'
+sectionPagesMenu = "main"
+pluralizelisttitles = false
+
+[menu]
+[[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "Blog"
+    url = "/blog/"
+
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"

@@ -1,4 +1,12 @@
 <header>
-    <p>{{.Site.Title}}</p>
-    <p>post1</p>
+    <nav>
+        <h1 class="site-title">{{ .Site.Title }}</h1>
+        <ul class="section-list">
+            {{ range .Site.Menus.main }}
+                <li class="section-item">
+                    <a class="section-link" href="{{.URL}}">{{.Title}}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </nav>
 </header>

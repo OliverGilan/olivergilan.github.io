@@ -19,3 +19,25 @@ body {
 	max-width: 42rem;
 	margin: 0 auto;
 }
+
+header {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+nav {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0.5rem;
+}
+
+a {
+	text-decoration: none;
+}
