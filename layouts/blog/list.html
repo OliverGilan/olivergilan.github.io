@@ -1,0 +1,14 @@
+{{ define "main" }}
+    <main>
+        {{ range .Pages.GroupByDate "2006" }}
+        <h3 class="date-group">{{ .Key }}</h3>
+        <ul class="contents">
+            {{ range .Pages }}
+                <li class="section-list-item blog-list-item">
+                    <a class="blog-post-link" href={{.Permalink}}>{{.Title}}</a>
+                </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </main>
+{{ end }}

@@ -1,8 +1,8 @@
 {{ define "main" }}
     <main>
         <ul class="contents">
-            {{ range .Paginator.Pages }}
-                <li>
+            {{ range .Pages }}
+                <li class="section-list-item">
                     <a href={{.Permalink}}>{{.Title}}</a>
                 </li>
             {{ end }}

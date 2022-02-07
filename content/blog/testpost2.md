@@ -1,12 +1,12 @@
 ---
-title: "Testpost"
+title: "How to Create a Blog from Scratch with Hugo"
 date: 2022-02-05T10:04:15-05:00
 draft: false
 ---
 
 # Test Post
 
-This is a test post for hugo.
+This is a second test post for hugo.
 
 In this test post I will write a blog about stuff.
 

@@ -3,6 +3,11 @@
 	src: url("/fonts/SF-Mono/SF-Mono-Regular.otf");
 }
 
+:root {
+	--primary-color: rgba(20, 20, 20, 1);
+	--primary-color-faded: rgba(20, 20, 20, 0.5);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -20,6 +25,13 @@ body {
 	margin: 0 auto;
 }
 
+p,
+h1,
+h2,
+h3 {
+	color: var(--primary-color);
+}
+
 header {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
@@ -34,16 +46,20 @@ nav {
 
 li {
 	list-style-type: none;
-	display: inline-block;
 	margin: 0.5rem;
+}
+
+.horizontal-list {
+	display: inline-block;
 }
 
 a {
 	text-decoration: none;
+	color: var(--primary-color);
 }
 
 a:visited {
-	color: black;
+	color: var(--primary-color);
 }
 
 h1 {
@@ -56,7 +72,23 @@ h1 {
 	font-weight: 700;
 }
 
-.regular-thick {
+.normal-font {
 	font-size: 1rem;
 	font-family: system-ui;
+}
+
+.section-list-item {
+	padding: 0.2rem;
+}
+
+.blog-post-link {
+	font-size: 1rem;
+	text-decoration: dotted;
+	text-decoration-line: underline;
+	text-decoration-color: var(--primary-color-faded);
+	text-underline-offset: 2px;
+}
+
+.blog-post-link:hover {
+	text-decoration-color: var(--primary-color);
 }

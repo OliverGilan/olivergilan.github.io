@@ -12,12 +12,6 @@ pluralizelisttitles = false
     url = "/blog/"
 
 [[menu.main]]
-    identifier = "about"
-    name = "About"
-    title = "About"
-    url = "/about/"
-
-[[menu.main]]
     identifier = "github"
     name = "GitHub"
     title = "GitHub"
