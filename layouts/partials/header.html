@@ -4,7 +4,7 @@
         <ul class="section-list">
             {{ range .Site.Menus.main }}
                 <li class="section-item">
-                    <a class="section-link small-thick" href="{{.URL}}">{{.Title}}</a>
+                    <a class="section-link small-thick" href="{{.URL}}" {{with .Params.targetBlank}} target="_blank" {{end}}>{{.Title}}</a>
                 </li>
             {{ end }}
         </ul>
