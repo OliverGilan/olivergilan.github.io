@@ -21,7 +21,6 @@ hugo new site blogname
 
 You now have the scaffolding for a new site! You can run the site locally using `hugo server` but you won't see anything just yet! Let's create our site!
 
-### Creating a Theme
 At this point you can add an existing theme to your site but I will create me own. Keep in mind, I didn't use a theme because I wanted to create something ultra simple and creating it from scratch helps me understand how Hugo works in greater detail. If you want to create a more complex site or you just want to create something fast I recommend starting with a theme and you can always modify it later but at least you have a base to start from. You can view a list of themes [here](https://themes.gohugo.io/) and choose one you like. Download the theme's source code and add it the `themes` directory of your site. Then initialize git.
 ```bash
 cd blogname 
@@ -35,5 +34,34 @@ theme = "ananke"
 
 Like I said, I didn't use a theme so I will leave my themes directory empty and create a site from scratch.
 
+Now let's set some of the key settings in our configuration file. Open the `config.toml` file and set your baseUrl, language, and title. For me, the title of my blog is simply my name.
+
+```toml
+baseURL = 'https://olivergilan.com/'
+languageCode = 'en-us'
+title = 'Oliver Gilan'
+```
+
 ### Hugo Core Concepts
-It's important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code 
+It's important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code. 
+
+`content\` handles all the content of your site. This is where I'll be putting my markdown files for my blog.
+
+`layouts\` will hold my html files that are used to render the content for any given page. This is where we will create the template for our site.
+
+`static\` holds our static files like custom css files or javascript files we might want to reference from our layouts.
+
+How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want a homepage which will act as my "About" page and I want a blog page. The blog page will be a list of all my blog posts in chronological order and if you click on a post it will take you tothat post's specific page. So in my `content\` directory I create a `blog\` directory and an `_index.md` file. Within the `blog\` directory I will put each post as a markdown file. This very post that you're reading now is located at `content\blog\CreateABlogWithHugo.md`. 
+
+If you want more pages, create more directories. For example if you want your "About" to be separate from your homepage create an `about\` directory next to `blog\`. If you want a contact page create a `contact\` directory. Each directory under `content\` tells Hugo to generate a page of some sort to render that content.
+
+FYI: To create a new markdown file in content, use the CLI command `hugo new [path]`
+for example: `hugo new blog\firstpost.md`
+This generates the markdown file preloaded with front matter fields that you can fill in.
+This generator uses the file in `archetypes\default.md` as a template. You can add more fields in that template file to suit your needs. I left it as is for now.
+
+Because my site is simple I decided to keep all my css in one file but you can of course split it up. Add any CSS or JS files you want to the `static\` directory. I added mine to `static\css\style.css` as well as the fonts my site will use to `static\fonts\`. You can of course load your fonts from an external service like Google fonts but I choose to serve them with my site.
+
+So now you have some content in your `content\` directory and you have your css, javascript, or any other static files in your `static\` directory. Now let's actually build the template files that tell Hugo how to render your content!
+
+### Building the Template
