@@ -65,3 +65,52 @@ Because my site is simple I decided to keep all my css in one file but you can o
 So now you have some content in your `content\` directory and you have your css, javascript, or any other static files in your `static\` directory. Now let's actually build the template files that tell Hugo how to render your content!
 
 ### Building the Template
+The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the `layouts\` directory:
+
+`layout\_default\baseof.html`
+`layout\partials\header.html`
+
+`baseof.html` will be the base template that holds the other templates. You can think of this as the root component in a framework like React. All that I'll put in that file is the following:
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<title>
+			{{ block "title" . }}
+				{{ .Site.Title }}
+			{{ end }}
+		</title>
+	</head>
+	<body>
+		<!-- Code that all your templates share, like a header -->
+		{{ block "main" . }}
+		<!-- The part of the page that begins to differ between templates -->
+		{{ end }}
+		{{ block "footer" . }}
+		<!-- More shared code, perhaps a footer but that can be overridden if need be in -->
+		{{ end }}
+	</body>
+</html>
+```
+You can see I link to the stylesheet here so that every other page has access to the css. The parts that say `{{ block [name] }}` tell Hugo to render another layout in that location. If Hugo cannot find an appropriate layout to render in place of a block statement it will fallback to the default which you can set by adding any content you want between the beginning of the block and the `{{ end }}` statement. Notice how in the `<title>` tag I tell Hugo to render the site's title as the default. `.Site.Title` will evaluate to whatever you set as the title in the config.toml file. 
+
+Now let's implement the header component. Notice that it's located in a directory called "partials." In Hugo a partial is a reusable component that can be plugged into any layout in a similar way to a React component. 
+In `header.html` add the following code:
+
+```html
+<header>
+	<nav>
+		<a href="{{.Site.BaseURL}}">
+			<h1 class="site-title">{{ .Site.Title }}</h1>
+		</a>
+		<ul class="section-list">
+
+		</ul>
+	</nav>
+</header>
+```
+
+#### Working with Menus
