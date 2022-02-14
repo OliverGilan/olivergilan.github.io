@@ -115,3 +115,74 @@ In `header.html` add the following code:
 
 #### Working with Menus
 Notice how in the above header partial I don't actually have the unordered list implemented. I could of course manually create each `<li>` element and point it to the designated page but I'd rather have Hugo dynamically render that menu for me. This makes it easier to update in the future. 
+
+We can do this with some updates to the config of the site. Add the following:
+
+```toml
+sectionPagesMenu = "main"
+```
+This tells Hugo to take every section page of the site and create menu called `main` . The only section page I have right now is for my `content\blog\` directory so right now Hugo has one menu `main` with an element for that blog page. We can make the partial use that dynamic menu with the following code:
+```html
+<header>
+	<nav>
+		<a href="{{.Site.BaseURL}}">
+			<h1 class="site-title">{{ .Site.Title }}</h1>
+		</a>
+		<ul class="section-list">
+			{{ range .Site.Menus.main }}
+				<li class="section-item horizontal-list">
+					<a class="section-link small-thick" href="{{.URL}}">{{.Title}}</a>
+				</li>
+			{{ end }}
+		</ul>
+	</nav>
+</header>
+```
+This take the `main` menu and for each item in it renders a `<li>` tag with a link to that page's URL and it's title. 
+
+By default Hugo pluralizes the titles which I do not want because I want the menu to say `Blog` not `Blogs`. To disable the pluralization add the following to your config file:
+```toml
+pluralizelisttitles = false
+```
+
+I also want to add more links to external sites such as my GitHub. Hugo can't automatically add that to the menu because I don't have a page for it but I can manually add it through the config with the following:
+
+```toml
+[menu]
+[[menu.main]]
+	identifier = "github"
+	name = "GitHub"
+	title = "GitHub"
+	url = "https://github.com/olivergilan"
+```
+This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.
+
+One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:
+```toml
+[menu]
+[[menu.main]]
+	identifier = "github"
+	name = "GitHub"
+	title = "GitHub"
+	url = "https://github.com/olivergilan"
+	[menu.main.params]
+		targetBlank = true
+```
+
+```html
+<header>
+	<nav>
+		<a href="{{.Site.BaseURL}}">
+			<h1 class="site-title">{{ .Site.Title }}</h1>
+		</a>
+		<ul class="section-list">
+			{{ range .Site.Menus.main }}
+				<li class="section-item horizontal-list">
+					<a class="section-link small-thick" href="{{.URL}}" {{with .Params.targetBlank}} target="_blank" {{end}}>{{.Title}}</a>
+				</li>
+			{{ end }}
+		</ul>
+	</nav>
+</header>
+```
+This adds a paramer to that specific menu item with name `targetBlank` and value `true`. Then within the partial for each menu item I check if it has that parameter and if it does I add the `target="_blank"` attribute to the href element. This will make the link open in a new tab! 
