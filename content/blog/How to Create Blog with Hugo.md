@@ -185,4 +185,29 @@ One last feature I want to add is to open certain links in a new tab. If a user 
 	</nav>
 </header>
 ```
-This adds a paramer to that specific menu item with name `targetBlank` and value `true`. Then within the partial for each menu item I check if it has that parameter and if it does I add the `target="_blank"` attribute to the href element. This will make the link open in a new tab! 
+This adds a paramer to that specific menu item with name `targetBlank` and value `true`. Then within the partial for each menu item I check if it has that parameter and if it does I add the `target="_blank"` attribute to the href element. This will make the link open in a new tab! Now I have a working navbar/header! I can add it to my `layouts\defaults\baseof.html` file so that it appears at the top of every page on my site and add some css to style it how I want.
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<title>
+			{{ block "title" . }}
+				{{ .Site.Title }}
+			{{ end }}
+		</title>
+	</head>
+	<body>
+		{{ partial "header" . }}
+		<!-- Code that all your templates share, like a header -->
+		{{ block "main" . }}
+		<!-- The part of the page that begins to differ between templates -->
+		{{ end }}
+		{{ block "footer" . }}
+		<!-- More shared code, perhaps a footer but that can be overridden if need be in -->
+		{{ end }}
+	</body>
+</html>
+```
+Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so with the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in.
