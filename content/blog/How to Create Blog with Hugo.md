@@ -114,3 +114,4 @@ In `header.html` add the following code:
 ```
 
 #### Working with Menus
+Notice how in the above header partial I don't actually have the unordered list implemented. I could of course manually create each `<li>` element and point it to the designated page but I'd rather have Hugo dynamically render that menu for me. This makes it easier to update in the future. 
