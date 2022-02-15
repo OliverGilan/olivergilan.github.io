@@ -10,8 +10,10 @@ For the purposes of this blog I'll use GitHub actions to generate the site and h
 
 ### Getting Started
 To get started [install Hugo](https://gohugo.io/getting-started/installing). I'm on Mac so I used Homebrew:
-```bash
+```Shell
+{{< highlight shell >}}
 brew install hugo
+{{< /highlight >}}
 ```
 
 Once it's installed use the hugo cli to scaffold a new site for you.

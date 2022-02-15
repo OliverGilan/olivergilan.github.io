@@ -1,5 +1,10 @@
 #title {
-	margin-bottom: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 0.3rem;
+}
+
+.post-metadata {
+	margin-bottom: 1.4rem;
 }
 
 p {
