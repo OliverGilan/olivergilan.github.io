@@ -210,4 +210,5 @@ This adds a paramer to that specific menu item with name `targetBlank` and value
 	</body>
 </html>
 ```
-Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so with the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in.
+Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so with the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!
+

@@ -1,6 +1,14 @@
+{{ define "head" }}
+    <link rel="stylesheet" href="/css/post.css" />
+{{ end }}
+
 {{ define "main" }}
     <section id="main">
         <h1 id="title">{{ .Title }}</h1>
+        <section class="post-metadata">
+            <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+            <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+        </section>
         <div>
             <article id="content">
             {{ .Content }}

@@ -8,6 +8,8 @@
 				{{ .Site.Title }} 
 			{{ end }}
 		</title>
+		{{ block "head" . }}
+		{{ end }}
 	</head>
 	<body>
 		{{ partial "header" . }}
