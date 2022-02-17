@@ -94,11 +94,14 @@ h1 {
 }
 
 .code-block {
-	border: 0.5px solid lightgray;
 	padding: 0.2rem;
 	margin: 1rem;
 	overflow-x: scroll;
 	overflow-wrap: break-word;
+}
+
+.code-block .code {
+	border: 0.5px solid lightgray;
 }
 
 .code-block .filepath {
