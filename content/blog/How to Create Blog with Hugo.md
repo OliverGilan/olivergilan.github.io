@@ -11,9 +11,7 @@ For the purposes of this blog I'll use GitHub actions to generate the site and h
 ### Getting Started
 To get started [install Hugo](https://gohugo.io/getting-started/installing). I'm on Mac so I used Homebrew:
 ```Shell
-{{< highlight shell >}}
 brew install hugo
-{{< /highlight >}}
 ```
 
 Once it's installed use the hugo cli to scaffold a new site for you.
@@ -97,6 +95,7 @@ The first part of the template I want to build is the navigation bar. This will 
 	</body>
 </html>
 ```
+
 You can see I link to the stylesheet here so that every other page has access to the css. The parts that say `{{ block [name] }}` tell Hugo to render another layout in that location. If Hugo cannot find an appropriate layout to render in place of a block statement it will fallback to the default which you can set by adding any content you want between the beginning of the block and the `{{ end }}` statement. Notice how in the `<title>` tag I tell Hugo to render the site's title as the default. `.Site.Title` will evaluate to whatever you set as the title in the config.toml file. 
 
 Now let's implement the header component. Notice that it's located in a directory called "partials." In Hugo a partial is a reusable component that can be plugged into any layout in a similar way to a React component. 

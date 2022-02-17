@@ -31,5 +31,5 @@ disableKinds = ['taxonomy', 'term']
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = 'monokai'
+    style = 'monokailight'
     tabWidth = 4
