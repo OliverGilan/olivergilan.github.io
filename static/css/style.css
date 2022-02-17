@@ -92,3 +92,14 @@ h1 {
 .blog-post-link:hover {
 	text-decoration-color: var(--primary-color);
 }
+
+.code-block {
+	border: 0.5px solid lightgray;
+	padding: 0.2rem;
+	margin: 1rem;
+}
+
+.code-block > .filepath {
+	color: var(--primary-color-faded);
+	margin-bottom: 5px;
+}

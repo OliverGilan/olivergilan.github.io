@@ -3,6 +3,6 @@
         {{ .Get "file" }}
     </div>
     <div class="code">
-        {{ .Inner }}
+        {{ .Inner | markdownify }}
     </div>
 </div>

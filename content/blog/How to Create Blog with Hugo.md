@@ -72,7 +72,8 @@ The first part of the template I want to build is the navigation bar. This will 
 
 `baseof.html` will be the base template that holds the other templates. You can think of this as the root component in a framework like React. All that I'll put in that file is the following:
 
-```html
+{{< code file="layouts\defaults\baseof.html" >}}
+```html {linenos=table}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -95,6 +96,7 @@ The first part of the template I want to build is the navigation bar. This will 
 	</body>
 </html>
 ```
+{{< /code >}}
 
 You can see I link to the stylesheet here so that every other page has access to the css. The parts that say `{{ block [name] }}` tell Hugo to render another layout in that location. If Hugo cannot find an appropriate layout to render in place of a block statement it will fallback to the default which you can set by adding any content you want between the beginning of the block and the `{{ end }}` statement. Notice how in the `<title>` tag I tell Hugo to render the site's title as the default. `.Site.Title` will evaluate to whatever you set as the title in the config.toml file. 
 
