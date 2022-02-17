@@ -97,9 +97,16 @@ h1 {
 	border: 0.5px solid lightgray;
 	padding: 0.2rem;
 	margin: 1rem;
+	overflow-x: scroll;
+	overflow-wrap: break-word;
 }
 
-.code-block > .filepath {
+.code-block .filepath {
 	color: var(--primary-color-faded);
 	margin-bottom: 5px;
+}
+
+div.highlight pre {
+	white-space: pre-wrap;
+	word-break: break-word;
 }

@@ -10,37 +10,47 @@ For the purposes of this blog I'll use GitHub actions to generate the site and h
 
 ### Getting Started
 To get started [install Hugo](https://gohugo.io/getting-started/installing). I'm on Mac so I used Homebrew:
+{{< code >}}
 ```Shell
 brew install hugo
 ```
+{{< /code >}}
 
 Once it's installed use the hugo cli to scaffold a new site for you.
+{{< code >}}
 ```bash
 hugo new site blogname
 ```
+{{< /code >}}
 
 You now have the scaffolding for a new site! You can run the site locally using `hugo server` but you won't see anything just yet! Let's create our site!
 
 At this point you can add an existing theme to your site but I will create me own. Keep in mind, I didn't use a theme because I wanted to create something ultra simple and creating it from scratch helps me understand how Hugo works in greater detail. If you want to create a more complex site or you just want to create something fast I recommend starting with a theme and you can always modify it later but at least you have a base to start from. You can view a list of themes [here](https://themes.gohugo.io/) and choose one you like. Download the theme's source code and add it the `themes` directory of your site. Then initialize git.
+{{< code >}}
 ```bash
 cd blogname 
 git init 
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 ```
+{{< /code >}}
+
 And set the theme in the config.toml file.
+{{< code file="config.toml">}}
 ```toml
 theme = "ananke"
 ```
+{{< /code >}}
 
 Like I said, I didn't use a theme so I will leave my themes directory empty and create a site from scratch.
 
 Now let's set some of the key settings in our configuration file. Open the `config.toml` file and set your baseUrl, language, and title. For me, the title of my blog is simply my name.
-
+{{< code file="config.toml">}}
 ```toml
 baseURL = 'https://olivergilan.com/'
 languageCode = 'en-us'
 title = 'Oliver Gilan'
 ```
+{{< /code >}}
 
 ### Hugo Core Concepts
 It's important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code. 
@@ -73,7 +83,7 @@ The first part of the template I want to build is the navigation bar. This will 
 `baseof.html` will be the base template that holds the other templates. You can think of this as the root component in a framework like React. All that I'll put in that file is the following:
 
 {{< code file="layouts\defaults\baseof.html" >}}
-```html {linenos=table}
+```html
 <!DOCTYPE html>
 <html>
 	<head>
@@ -102,7 +112,7 @@ You can see I link to the stylesheet here so that every other page has access to
 
 Now let's implement the header component. Notice that it's located in a directory called "partials." In Hugo a partial is a reusable component that can be plugged into any layout in a similar way to a React component. 
 In `header.html` add the following code:
-
+{{< code >}}
 ```html
 <header>
 	<nav>
@@ -115,16 +125,19 @@ In `header.html` add the following code:
 	</nav>
 </header>
 ```
+{{< /code >}}
 
 #### Working with Menus
 Notice how in the above header partial I don't actually have the unordered list implemented. I could of course manually create each `<li>` element and point it to the designated page but I'd rather have Hugo dynamically render that menu for me. This makes it easier to update in the future. 
 
 We can do this with some updates to the config of the site. Add the following:
-
+{{< code >}}
 ```toml
 sectionPagesMenu = "main"
 ```
+{{< /code >}}
 This tells Hugo to take every section page of the site and create menu called `main` . The only section page I have right now is for my `content\blog\` directory so right now Hugo has one menu `main` with an element for that blog page. We can make the partial use that dynamic menu with the following code:
+{{< code >}}
 ```html
 <header>
 	<nav>
@@ -141,15 +154,19 @@ This tells Hugo to take every section page of the site and create menu called `m
 	</nav>
 </header>
 ```
+{{< /code >}}
+
 This take the `main` menu and for each item in it renders a `<li>` tag with a link to that page's URL and it's title. 
 
 By default Hugo pluralizes the titles which I do not want because I want the menu to say `Blog` not `Blogs`. To disable the pluralization add the following to your config file:
+{{< code >}}
 ```toml
 pluralizelisttitles = false
 ```
+{{< /code >}}
 
 I also want to add more links to external sites such as my GitHub. Hugo can't automatically add that to the menu because I don't have a page for it but I can manually add it through the config with the following:
-
+{{< code >}}
 ```toml
 [menu]
 [[menu.main]]
@@ -158,9 +175,11 @@ I also want to add more links to external sites such as my GitHub. Hugo can't au
 	title = "GitHub"
 	url = "https://github.com/olivergilan"
 ```
+{{< /code >}}
 This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.
 
 One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:
+{{< code >}}
 ```toml
 [menu]
 [[menu.main]]
@@ -171,7 +190,8 @@ One last feature I want to add is to open certain links in a new tab. If a user 
 	[menu.main.params]
 		targetBlank = true
 ```
-
+{{< /code >}}
+{{< code >}}
 ```html
 <header>
 	<nav>
@@ -188,7 +208,10 @@ One last feature I want to add is to open certain links in a new tab. If a user 
 	</nav>
 </header>
 ```
+{{< /code >}}
+
 This adds a paramer to that specific menu item with name `targetBlank` and value `true`. Then within the partial for each menu item I check if it has that parameter and if it does I add the `target="_blank"` attribute to the href element. This will make the link open in a new tab! Now I have a working navbar/header! I can add it to my `layouts\defaults\baseof.html` file so that it appears at the top of every page on my site and add some css to style it how I want.
+{{< code >}}
 ```html
 <!DOCTYPE html>
 <html>
@@ -213,5 +236,6 @@ This adds a paramer to that specific menu item with name `targetBlank` and value
 	</body>
 </html>
 ```
+{{< /code >}}
 Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so with the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!
 
