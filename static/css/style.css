@@ -127,3 +127,15 @@ div.highlight pre {
 .anchor:hover {
 	color: var(--primary-color-faded);
 }
+
+footer {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	border-top: 0.5px solid var(--primary-color-light);
+}
+
+footer p {
+	text-align: center;
+	color: var(--primary-color-light);
+}
