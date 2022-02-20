@@ -1,3 +1,13 @@
 <footer>
+    <div class="socials">
+        {{ range .Site.Menus.socials }}
+            <a class="section-link small-thick" href="{{.URL}}" 
+                {{with .Params.targetBlank}} target="_blank" {{end}}>
+                {{ with .Params.icon }}
+                    <img class="social-icon" src="{{.}}"/>
+                {{end}}
+            </a>
+        {{ end }}
+    </div>
     <p>&copy {{ dateFormat "2006" now }} {{ .Site.Title }}</p>
 </footer>

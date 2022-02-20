@@ -138,4 +138,22 @@ footer {
 footer p {
 	text-align: center;
 	color: var(--primary-color-light);
+	font-size: 0.7rem;
+}
+
+.socials {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.social-icon {
+	width: 35px;
+	opacity: 0.5;
+	margin-right: 0.5rem;
+}
+
+.social-icon:hover {
+	opacity: 1;
+	transition: 0.2s;
 }

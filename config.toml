@@ -20,6 +20,24 @@ disableKinds = ['taxonomy', 'term']
     [menu.main.params]
         targetBlank = true
 
+[[menu.socials]]
+    identifier = "github"
+    name = "GitHub"
+    title = "GitHub"
+    url = "https://github.com/olivergilan"
+    [menu.socials.params]
+        targetBlank = true
+        icon = "/icons/github.png"
+
+[[menu.socials]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    title = "LinkedIn"
+    url = "https://linkedin.com/in/oliver-gilan/"
+    [menu.socials.params]
+        targetBlank = true
+        icon = "/icons/linkedin.png"
+
 [markup]
   [markup.highlight]
     anchorLineNos = false
