@@ -7,6 +7,7 @@
 	--primary-color: rgba(20, 20, 20, 1);
 	--primary-color-faded: rgba(20, 20, 20, 0.5);
 	--primary-color-light: rgba(20, 20, 20, 0.2);
+	--highlight-background-color: rgba(40, 42, 54, 0.2);
 }
 
 * {
@@ -159,4 +160,12 @@ footer p {
 .social-icon:hover {
 	opacity: 1;
 	transition: 0.2s;
+}
+
+code {
+	background-color: var(--highlight-background-color);
+	border-radius: 2px;
+	padding-right: 3px;
+	padding-left: 2px;
+	margin: 1px;
 }
