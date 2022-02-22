@@ -77,7 +77,7 @@ So now you have some content in your `content\` directory and you have your css,
 ### Building the Template
 The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the `layouts\` directory:
 
-`layout\_default\baseof.html`
+`layout\_default\baseof.html` <br>
 `layout\partials\header.html`
 
 `baseof.html` will be the base template that holds the other templates. You can think of this as the root component in a framework like React. All that I'll put in that file is the following:
