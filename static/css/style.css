@@ -108,6 +108,7 @@ h1 {
 
 .code-block .code {
 	border: 0.5px solid lightgray;
+	border-radius: 2px;
 }
 
 .code-block .filepath {
@@ -118,6 +119,8 @@ h1 {
 div.highlight pre {
 	white-space: pre-wrap;
 	word-break: break-word;
+	padding: 0.5rem;
+	border-radius: 5px;
 }
 
 .anchor {
