@@ -66,7 +66,7 @@ How you structure your content within these directories will determine how Hugo 
 2. A blog page that lists all my posts in chronological order
 3. A page for each blog post 
 
-So in my `content/` directory I create a `blog/` directory and an `_index.md` file. Within the `blog/` directory I will put each post as a markdown file. This very post that you're reading now is located at `content/blog/CreateABlogWithHugo.md`. 
+So in my content directory I create a `blog/` directory and an `_index.md` file. Within the blog directory I will put each post as a markdown file. This very post that you're reading now is located at `content/blog/CreateABlogWithHugo.md`. 
 
 If you want more pages, create more directories. For example if you want your "About" to be separate from your homepage create an `about/` directory next to `blog/`. If you want a contact page create a `contact/` directory. Each directory under `content/` tells Hugo to generate a page of some sort to render that content.
 
@@ -79,10 +79,10 @@ This generator uses the file in `archetypes/default.md` as a template. You can a
 
 Because my site is simple I decided to keep all my css in one file but you can of course split it up. Add any CSS or JS files you want to the `static/` directory. I added mine to `static/css/style.css` as well as the fonts my site will use to `static/fonts/`. You can of course load your fonts from an external service like Google fonts but I choose to serve them with my site.
 
-So now you have some content in your `content/` directory and you have your css, javascript, or any other static files in your `static/` directory. Now let's actually build the template files that tell Hugo how to render your content!
+So now you have some content in your content directory and you have your css, javascript, or any other static files in your static directory. Now let's actually build the template files that tell Hugo how to render your content!
 
 ### Building the Template
-The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the `layouts/ directory:
+The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the layouts directory:
 
 `layout/_default/baseof.html` <br>
 `layout/partials/header.html`
@@ -115,7 +115,7 @@ The first part of the template I want to build is the navigation bar. This will 
 ```
 {{< /code >}}
 
-You can see I link to the stylesheet here so that every other page has access to the css. The parts that say `{{ block [name] }}` tell Hugo to render another layout in that location. If Hugo cannot find an appropriate layout to render in place of a block statement it will fallback to the default which you can set by adding any content you want between the beginning of the block and the `{{ end }}` statement. Notice how in the `<title>` tag I tell Hugo to render the site's title as the default. `.Site.Title` will evaluate to whatever you set as the title in the config.toml file. 
+You can see I link to the stylesheet here so that every other page has access to the css. The parts that say `{{ block [name] }}` tell Hugo to render another layout in that location. If Hugo cannot find an appropriate layout to render in place of a block statement it will fallback to the default which you can set by adding any content you want between the beginning of the block and the `{{ end }}` statement. Notice how in the `<title>` tag I tell Hugo to render the site's title as the default. `.Site.Title` will evaluate to whatever you set as the title in the config file. 
 
 Now let's implement the header component. Notice that it's located in a directory called "partials." In Hugo a partial is a reusable component that can be plugged into any layout in a similar way to a React component. 
 In `header.html` add the following code:
@@ -165,7 +165,7 @@ This tells Hugo to take every section page of the site and create menu called `m
 ```
 {{< /code >}}
 
-This take the `main` menu and for each item in it renders a `<li>` tag with a link to that page's URL and it's title. 
+This takes the `main` menu and for each item in it renders a `<li>` tag with a link to that page's URL and it's title. 
 
 By default Hugo pluralizes the titles which I do not want because I want the menu to say `Blog` not `Blogs`. To disable the pluralization add the following to your config file:
 {{< code file="config.toml">}}
@@ -189,6 +189,7 @@ I also want to add more links to external sites such as my GitHub. Hugo can't au
 
 This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.
 
+#### Target Blank
 One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:
 
 {{< code file="config.toml">}}
@@ -251,3 +252,8 @@ This adds a paramer to that specific menu item with name `targetBlank` and value
 {{< /code >}}
 Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so when the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!
 
+### Footer
+### Post Page
+#### Shortcodes
+### Header Anchors
+### RSS
