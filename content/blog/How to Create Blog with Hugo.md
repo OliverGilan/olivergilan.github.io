@@ -101,6 +101,8 @@ The first part of the template I want to build is the navigation bar. This will 
 				{{ .Site.Title }}
 			{{ end }}
 		</title>
+		{{ block "head" . }}
+		{{ end }}
 	</head>
 	<body>
 		<!-- Code that all your templates share, like a header -->
@@ -236,6 +238,8 @@ This adds a paramer to that specific menu item with name `targetBlank` and value
 				{{ .Site.Title }}
 			{{ end }}
 		</title>
+		{{ block "head" . }}
+		{{ end }}
 	</head>
 	<body>
 		{{ partial "header" . }}
@@ -252,8 +256,64 @@ This adds a paramer to that specific menu item with name `targetBlank` and value
 {{< /code >}}
 Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so when the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!
 
-### Footer
 ### Post Page
+So now you've got the scaffolding of your site created and you have a navigation bar that will appear at the top of every page. Let's spend some time creating the template for each blog post as this is where people will be spending the most time on your site.
+Create a new file  `layouts/blog/single.html`. This will be used by Hugo to render individual pages in the blog section of the site.
+
+This is the code I have in my template:
+{{< code file="layouts/blog/single.html" >}}
+```html
+{{ define "head" }}
+    <link rel="stylesheet" href="/css/post.css" />
+{{ end }}
+
+{{ define "main" }}
+    <section id="main">
+        <h1 id="title">{{ .Title }}</h1>
+        <section class="post-metadata">
+            <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+            <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+        </section>
+        <div>
+            <article id="content">
+            {{ .Content }}
+            </article>
+        </div>
+    </section>
+{{ end }}
+
+{{ define "footer" }}
+    {{ partial "footer" . }}
+{{ end }}
+```
+{{< /code >}}
+
+Pretty straightforward but to quickly go over it. Each "define" block implements one of the "block" statements in the `baseof.html` file we created earlier. The head block allows me to inject custom properties into the pages head tag. In this case I made a separate css file for css relating only to blog posts and I link that here. Then in the main block I create the post itself. Notice how I use varriables like .Title, .WordCount, .Content, and the .Date.Format function. These are all provided by Hugo automatically. For example the beginning of this blog post has the following Front Matter:
+
+{{< code file="content/blog/HowToCreateABlogWithHugo.md">}}
+```markdown
+---
+
+title: "How to Create a Blog from Scratch with Hugo"
+
+date: 2022-02-05T10:04:15-05:00
+
+draft: true
+
+---
+```
+{{< /code >}}
+That "title" field is then used by Hugo for the .Title variable when rendering the page for that post. The Content parameter takes whatever I wrote in the Markdown file and generates the blog page's content from it. Everything else here is pretty much standard. You can open dev tools in chrome and look at what sort of elements get rendered from your markdown and then just use css to style your blog posts however you'd like.
+
+Because this is a technical blog one of the important elements for posts will be the inclusion of code blocks. Adding code blocks can be achieved in Hugo using [Shortcodes](https://gohugo.io/content-management/shortcodes/). Hugo has a built-in [Highlight](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode) shortcode that can be used to add syntax highlighting to a block of code in your markdown file (can also be activated using code fences instead of the shortcode tag). In my opinion the highlight shortcode is a bit limited: it will highlight your code but that's it. When I have a code block I want to optionally include the filepath for that code block and you might want to include other things like a "Copy to Clipboard" button. To do that we need to create our own shortcode!
+
 #### Shortcodes
-### Header Anchors
+A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Within the layouts directory create shortcodes directory and add the following file:
+`layouts/shortcodes/code.html`
+
+
+#### Footer
+#### Header Anchors
 ### RSS
+### Compiling the Site
+### Hosting
