@@ -409,6 +409,19 @@ In the above "socials" menu, the items have a custom icon parameter that contain
 This time I don't want the footer on every page, only on my blog post pages. So instead of adding this to the base template I add it to my single page template for the blog section. If you scroll up to the code block above you'll see I define the "footer" block and declare the footer partial in that block. Now it'll be added to every blog post.
 
 #### Header Anchors
+One nice feature on a lot of blogs is having anchors for different sections of individual posts. If you look above this paragraph at this section's heading you'll see the "#" tag which is clickable and if you look at the URL you'll notice it now contains that header in it. This allows you to link to a specific section of a webpage. Hugo has a feature called [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks) that makes adding these anchors easy. For a more in-depth explanation of how this works check out [this post](https://pavelkorolev.xyz/blog/2020-10-31-hugo-header-anchors/) by Pavel Korolev.
+
+{{< code file="layouts/_defaults/_markup/render-heading.html" >}}
+```html
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}
+{{- if and (ge .Level 1) (le .Level 6) }}{{" " -}}
+<a class="anchor" href="#{{ .Anchor | safeURL }}">
+    #
+</a>
+{{- end -}}
+</h{{ .Level }}>
+```
+{{< /code >}}
 
 ### RSS
 ### Compiling the Site
