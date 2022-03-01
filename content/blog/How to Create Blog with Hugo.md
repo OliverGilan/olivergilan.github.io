@@ -337,11 +337,79 @@ This is a normal paragraph...
 {{< /code >}}
 
 I can pass in an optional "file" parameter and if it exists Hugo will render that div with class "filepath" that I can style how I want. The inner code within the shortcode gets processed through the markdown renderer using the `markdownify` function. Because shortcodes can nest within each other, the .Inner content still gets the the built-in Highlight shortcode so my custom shortcode acts as a wrapper extending the native functionality. 
-Notice how my shortcode is literally called "code" and that's because of how I named the shortcode html file. Name the file whatever you want that specific shortcode to be. And there you have it! A little bit of styling and you can have a custom code block or any other custom markdown element.
+Notice how my shortcode is literally called "code" and that's because of how I named the shortcode html file. Name the file whatever you want that specific shortcode to be. 
+
+Don't forget to customize how Hugo styles the code syntax by updating your config file.
+{{< code file="config.toml" >}}
+```toml
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'dracula'
+    tabWidth = 4
+```
+{{< /code >}}
+
+And there you have it! A little bit of styling and you can have a custom code block or any other custom markdown element.
 
 #### Footer
+For the footer I created another partial with a custom menu in the config for the different social elements.
+{{< code file="layouts/partials/footer.html" >}}
+```html
+<footer>
+    <div class="socials">
+        {{ range .Site.Menus.socials }}
+            <a class="section-link small-thick" href="{{.URL}}" 
+                {{with .Params.targetBlank}} target="_blank" {{end}}>
+                {{ with .Params.icon }}
+                    <img class="social-icon" src="{{.}}"/>
+                {{end}}
+            </a>
+        {{ end }}
+    </div>
+    <p>&copy {{ dateFormat "2006" now }} {{ .Site.Title }}</p>
+</footer>
+```
+{{< /code >}}
+
+{{< code file="config.toml" >}}
+```toml
+[menu]
+[[menu.socials]]
+    identifier = "github"
+    name = "GitHub"
+    title = "GitHub"
+    url = "https://github.com/olivergilan"
+    [menu.socials.params]
+        targetBlank = true
+        icon = "/icons/github.png"
+
+[[menu.socials]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    title = "LinkedIn"
+    url = "https://linkedin.com/in/oliver-gilan/"
+    [menu.socials.params]
+        targetBlank = true
+        icon = "/icons/linkedin.png"
+
+```
+{{< /code >}}
+
+In the above "socials" menu, the items have a custom icon parameter that contains the path to the icon for that element within the `static` directory.
+
+This time I don't want the footer on every page, only on my blog post pages. So instead of adding this to the base template I add it to my single page template for the blog section. If you scroll up to the code block above you'll see I define the "footer" block and declare the footer partial in that block. Now it'll be added to every blog post.
 
 #### Header Anchors
+
 ### RSS
 ### Compiling the Site
 ### Hosting
