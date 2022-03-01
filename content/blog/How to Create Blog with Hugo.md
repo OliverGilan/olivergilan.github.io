@@ -309,10 +309,38 @@ Because this is a technical blog one of the important elements for posts will be
 
 #### Shortcodes
 A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Within the layouts directory create shortcodes directory and add the following file:
-`layouts/shortcodes/code.html`
+{{< code file="layouts/shortcodes/code.html" >}}
+```html
+<div class="code-block">
+    {{ with .Get "file" }}
+    <div class="filepath">
+        {{.}}
+    </div>
+    {{ end }}
+    <div class="code">
+        {{ .Inner | markdownify }}
+    </div>
+</div>
+```
+{{< /code >}}
 
+Now in my content markdown files if I want a code block I can use
+{{< code >}}
+```markdown
+This is a normal paragraph...
+{{</* code file="optional/file/path" */>}}
+	{{</* highlight markdown */>}}
+		// Code goes here
+	{{</* /highlight */>}}
+{{</* /code */>}}
+```
+{{< /code >}}
+
+I can pass in an optional "file" parameter and if it exists Hugo will render that div with class "filepath" that I can style how I want. The inner code within the shortcode gets processed through the markdown renderer using the `markdownify` function. Because shortcodes can nest within each other, the .Inner content still gets the the built-in Highlight shortcode so my custom shortcode acts as a wrapper extending the native functionality. 
+Notice how my shortcode is literally called "code" and that's because of how I named the shortcode html file. Name the file whatever you want that specific shortcode to be. And there you have it! A little bit of styling and you can have a custom code block or any other custom markdown element.
 
 #### Footer
+
 #### Header Anchors
 ### RSS
 ### Compiling the Site
