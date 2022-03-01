@@ -8,6 +8,8 @@
 	--primary-color-faded: rgba(20, 20, 20, 0.5);
 	--primary-color-light: rgba(20, 20, 20, 0.2);
 	--highlight-background-color: rgba(2, 144, 226, 0.2);
+	--aside-background-color: rgba(226, 211, 2, 0.2);
+	--aside-bar-color: rgba(228, 216, 52, 0.849);
 }
 
 * {
@@ -52,7 +54,8 @@ nav {
 }
 
 li {
-	list-style-type: none;
+	list-style-type: initial;
+	list-style-position: inside;
 	margin: 0.5rem;
 }
 
@@ -86,6 +89,10 @@ h1 {
 
 .section-list-item {
 	padding: 0.2rem;
+}
+
+.blog-list-item {
+	list-style-type: none;
 }
 
 .blog-post-link {
@@ -173,4 +180,12 @@ code {
 
 .code code {
 	background-color: initial;
+}
+
+.aside {
+	background-color: var(--aside-background-color);
+	padding: 10px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-left: 4px solid var(--aside-bar-color);
 }

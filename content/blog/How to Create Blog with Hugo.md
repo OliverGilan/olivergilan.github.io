@@ -1,7 +1,7 @@
 ---
 title: "How to Create a Blog from Scratch with Hugo"
 date: 2022-02-05T10:04:15-05:00
-draft: false
+draft: true
 ---
 
 In this post I'll walk you through creating the personal blog you're currently reading using Hugo. When choosing my stack for this blog I had a few requirements in mind: low maintenance, high performance/low bundle sizes, simple clean interface with reusable components, and markdown support. Hugo meets all these requirements with blazing fast compile times as well as no reliance on JavaScript or other libraries that could lead to bloated bundles. It supports a ton of different themes but also has the ability to create very simple themes from scratch with reusable components. And it supports markdown which is my preffered method for writing blog posts. So all I need to do is write a new post in markdown, add it to a specific directory, and push to GitHub and Hugo will generate the necessary html to be served.
@@ -57,18 +57,25 @@ It's important to understand the directory structure of Hugo. The scaffolding ge
 
 `content/` handles all the content of your site. This is where I'll be putting my markdown files for my blog.
 
-`layouts/` will hold my html files that are used to render the content for any given page. This is where we will create the template for our site.
+`layouts/` will hold your html files that are used to render the content for any given page. This is where we will create the templates for our site.
 
-`static/` holds our static files like custom css files or javascript files we might want to reference from our layouts.
+`static/` holds your static files like custom css files or javascript files we might want to reference from our layouts.
 
-How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want a homepage which will act as my "About" page and I want a blog page. The blog page will be a list of all my blog posts in chronological order and if you click on a post it will take you tothat post's specific page. So in my `content/` directory I create a `blog/` directory and an `_index.md` file. Within the `blog/` directory I will put each post as a markdown file. This very post that you're reading now is located at `content/blog/CreateABlogWithHugo.md`. 
+How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want 
+1. A homepage which will act as my "About" page
+2. A blog page that lists all my posts in chronological order
+3. A page for each blog post 
+
+So in my `content/` directory I create a `blog/` directory and an `_index.md` file. Within the `blog/` directory I will put each post as a markdown file. This very post that you're reading now is located at `content/blog/CreateABlogWithHugo.md`. 
 
 If you want more pages, create more directories. For example if you want your "About" to be separate from your homepage create an `about/` directory next to `blog/`. If you want a contact page create a `contact/` directory. Each directory under `content/` tells Hugo to generate a page of some sort to render that content.
 
-FYI: To create a new markdown file in content, use the CLI command `hugo new [path]`
+{{< aside >}}
+**FYI:** To create a new markdown file in content, use the CLI command `hugo new [path]`
 for example: `hugo new blog/firstpost.md`
 This generates the markdown file preloaded with front matter fields that you can fill in.
 This generator uses the file in `archetypes/default.md` as a template. You can add more fields in that template file to suit your needs. I left it as is for now.
+{{< /aside >}}
 
 Because my site is simple I decided to keep all my css in one file but you can of course split it up. Add any CSS or JS files you want to the `static/` directory. I added mine to `static/css/style.css` as well as the fonts my site will use to `static/fonts/`. You can of course load your fonts from an external service like Google fonts but I choose to serve them with my site.
 
@@ -242,5 +249,5 @@ This adds a paramer to that specific menu item with name `targetBlank` and value
 </html>
 ```
 {{< /code >}}
-Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so with the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!
+Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so when the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!
 
