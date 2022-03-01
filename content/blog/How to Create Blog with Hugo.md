@@ -75,14 +75,14 @@ Because my site is simple I decided to keep all my css in one file but you can o
 So now you have some content in your `content\` directory and you have your css, javascript, or any other static files in your `static\` directory. Now let's actually build the template files that tell Hugo how to render your content!
 
 ### Building the Template
-The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the `layouts\` directory:
+The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the `layouts/ directory:
 
-`layout\_default\baseof.html` <br>
-`layout\partials\header.html`
+`layout/_default/baseof.html` <br>
+`layout/partials/header.html`
 
 `baseof.html` will be the base template that holds the other templates. You can think of this as the root component in a framework like React. All that I'll put in that file is the following:
 
-{{< code file="layouts\defaults\baseof.html" >}}
+{{< code file="layouts/defaults/baseof.html" >}}
 ```html
 <!DOCTYPE html>
 <html>
@@ -112,7 +112,7 @@ You can see I link to the stylesheet here so that every other page has access to
 
 Now let's implement the header component. Notice that it's located in a directory called "partials." In Hugo a partial is a reusable component that can be plugged into any layout in a similar way to a React component. 
 In `header.html` add the following code:
-{{< code >}}
+{{< code file="layouts/partials/header.html">}}
 ```html
 <header>
 	<nav>
@@ -131,13 +131,15 @@ In `header.html` add the following code:
 Notice how in the above header partial I don't actually have the unordered list implemented. I could of course manually create each `<li>` element and point it to the designated page but I'd rather have Hugo dynamically render that menu for me. This makes it easier to update in the future. 
 
 We can do this with some updates to the config of the site. Add the following:
-{{< code >}}
+{{< code file="config.toml">}}
 ```toml
 sectionPagesMenu = "main"
 ```
 {{< /code >}}
-This tells Hugo to take every section page of the site and create menu called `main` . The only section page I have right now is for my `content\blog\` directory so right now Hugo has one menu `main` with an element for that blog page. We can make the partial use that dynamic menu with the following code:
-{{< code >}}
+
+This tells Hugo to take every section page of the site and create menu called `main` . The only section page I have right now is for my `content/blog/` directory so right now Hugo has one menu `main` with an element for that blog page. We can make the partial use that dynamic menu with the following code:
+
+{{< code file="layouts/partials/header.html">}}
 ```html
 <header>
 	<nav>
@@ -159,14 +161,15 @@ This tells Hugo to take every section page of the site and create menu called `m
 This take the `main` menu and for each item in it renders a `<li>` tag with a link to that page's URL and it's title. 
 
 By default Hugo pluralizes the titles which I do not want because I want the menu to say `Blog` not `Blogs`. To disable the pluralization add the following to your config file:
-{{< code >}}
+{{< code file="config.toml">}}
 ```toml
 pluralizelisttitles = false
 ```
 {{< /code >}}
 
 I also want to add more links to external sites such as my GitHub. Hugo can't automatically add that to the menu because I don't have a page for it but I can manually add it through the config with the following:
-{{< code >}}
+
+{{< code file="config.toml">}}
 ```toml
 [menu]
 [[menu.main]]
@@ -176,10 +179,12 @@ I also want to add more links to external sites such as my GitHub. Hugo can't au
 	url = "https://github.com/olivergilan"
 ```
 {{< /code >}}
+
 This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.
 
 One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:
-{{< code >}}
+
+{{< code file="config.toml">}}
 ```toml
 [menu]
 [[menu.main]]
@@ -191,7 +196,7 @@ One last feature I want to add is to open certain links in a new tab. If a user 
 		targetBlank = true
 ```
 {{< /code >}}
-{{< code >}}
+{{< code file="layouts/partials/header.html">}}
 ```html
 <header>
 	<nav>
@@ -210,8 +215,8 @@ One last feature I want to add is to open certain links in a new tab. If a user 
 ```
 {{< /code >}}
 
-This adds a paramer to that specific menu item with name `targetBlank` and value `true`. Then within the partial for each menu item I check if it has that parameter and if it does I add the `target="_blank"` attribute to the href element. This will make the link open in a new tab! Now I have a working navbar/header! I can add it to my `layouts\defaults\baseof.html` file so that it appears at the top of every page on my site and add some css to style it how I want.
-{{< code >}}
+This adds a paramer to that specific menu item with name `targetBlank` and value `true`. Then within the partial for each menu item I check if it has that parameter and if it does I add the `target="_blank"` attribute to the href element. This will make the link open in a new tab! Now I have a working navbar/header! I can add it to my `layouts/defaults/baseof.html` file so that it appears at the top of every page on my site and add some css to style it how I want.
+{{< code file="layouts/defaults/baseof.html">}}
 ```html
 <!DOCTYPE html>
 <html>

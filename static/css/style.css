@@ -7,7 +7,7 @@
 	--primary-color: rgba(20, 20, 20, 1);
 	--primary-color-faded: rgba(20, 20, 20, 0.5);
 	--primary-color-light: rgba(20, 20, 20, 0.2);
-	--highlight-background-color: rgba(40, 42, 54, 0.2);
+	--highlight-background-color: rgba(2, 144, 226, 0.2);
 }
 
 * {
@@ -168,4 +168,9 @@ code {
 	padding-right: 3px;
 	padding-left: 2px;
 	margin: 1px;
+	font-weight: 500;
+}
+
+.code code {
+	background-color: initial;
 }
