@@ -55,24 +55,24 @@ title = 'Oliver Gilan'
 ### Hugo Core Concepts
 It's important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code. 
 
-`content\` handles all the content of your site. This is where I'll be putting my markdown files for my blog.
+`content/` handles all the content of your site. This is where I'll be putting my markdown files for my blog.
 
-`layouts\` will hold my html files that are used to render the content for any given page. This is where we will create the template for our site.
+`layouts/` will hold my html files that are used to render the content for any given page. This is where we will create the template for our site.
 
-`static\` holds our static files like custom css files or javascript files we might want to reference from our layouts.
+`static/` holds our static files like custom css files or javascript files we might want to reference from our layouts.
 
-How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want a homepage which will act as my "About" page and I want a blog page. The blog page will be a list of all my blog posts in chronological order and if you click on a post it will take you tothat post's specific page. So in my `content\` directory I create a `blog\` directory and an `_index.md` file. Within the `blog\` directory I will put each post as a markdown file. This very post that you're reading now is located at `content\blog\CreateABlogWithHugo.md`. 
+How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want a homepage which will act as my "About" page and I want a blog page. The blog page will be a list of all my blog posts in chronological order and if you click on a post it will take you tothat post's specific page. So in my `content/` directory I create a `blog/` directory and an `_index.md` file. Within the `blog/` directory I will put each post as a markdown file. This very post that you're reading now is located at `content/blog/CreateABlogWithHugo.md`. 
 
-If you want more pages, create more directories. For example if you want your "About" to be separate from your homepage create an `about\` directory next to `blog\`. If you want a contact page create a `contact\` directory. Each directory under `content\` tells Hugo to generate a page of some sort to render that content.
+If you want more pages, create more directories. For example if you want your "About" to be separate from your homepage create an `about/` directory next to `blog/`. If you want a contact page create a `contact/` directory. Each directory under `content/` tells Hugo to generate a page of some sort to render that content.
 
 FYI: To create a new markdown file in content, use the CLI command `hugo new [path]`
-for example: `hugo new blog\firstpost.md`
+for example: `hugo new blog/firstpost.md`
 This generates the markdown file preloaded with front matter fields that you can fill in.
-This generator uses the file in `archetypes\default.md` as a template. You can add more fields in that template file to suit your needs. I left it as is for now.
+This generator uses the file in `archetypes/default.md` as a template. You can add more fields in that template file to suit your needs. I left it as is for now.
 
-Because my site is simple I decided to keep all my css in one file but you can of course split it up. Add any CSS or JS files you want to the `static\` directory. I added mine to `static\css\style.css` as well as the fonts my site will use to `static\fonts\`. You can of course load your fonts from an external service like Google fonts but I choose to serve them with my site.
+Because my site is simple I decided to keep all my css in one file but you can of course split it up. Add any CSS or JS files you want to the `static/` directory. I added mine to `static/css/style.css` as well as the fonts my site will use to `static/fonts/`. You can of course load your fonts from an external service like Google fonts but I choose to serve them with my site.
 
-So now you have some content in your `content\` directory and you have your css, javascript, or any other static files in your `static\` directory. Now let's actually build the template files that tell Hugo how to render your content!
+So now you have some content in your `content/` directory and you have your css, javascript, or any other static files in your `static/` directory. Now let's actually build the template files that tell Hugo how to render your content!
 
 ### Building the Template
 The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the `layouts/ directory:
