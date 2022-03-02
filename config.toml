@@ -5,6 +5,11 @@ sectionPagesMenu = "main"
 pluralizelisttitles = false
 disableKinds = ['taxonomy', 'term']
 
+copyright = "2022 Oliver Gilan All rights reserved"
+[author]
+	name = "Oliver Gilan"
+	email = "blog@olivergilan.com"
+
 [menu]
 [[menu.main]]
     identifier = "blog"
