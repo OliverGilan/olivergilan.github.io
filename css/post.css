@@ -1,13 +1,31 @@
 #title {
 	margin-top: 1rem;
-	margin-bottom: 0.3rem;
+	font-weight: 500;
+}
+
+#date {
+	margin-top: 0.2rem;
 }
 
 .post-metadata {
 	margin-bottom: 1.4rem;
 }
 
+.post-metadata * {
+	font-weight: 300;
+}
+
+.rss-link img {
+	margin-top: 0.2rem;
+}
+
 p {
 	margin-bottom: 0.5rem;
 	margin-top: 0.5rem;
+	font-size: 1rem;
+	line-height: 130%;
+}
+
+h4 {
+	margin-top: 1rem;
 }
