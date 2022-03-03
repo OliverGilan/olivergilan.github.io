@@ -15,6 +15,10 @@
 	font-weight: 300;
 }
 
+.rss-link img {
+	margin-top: 0.2rem;
+}
+
 p {
 	margin-bottom: 0.5rem;
 	margin-top: 0.5rem;
