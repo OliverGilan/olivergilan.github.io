@@ -26,6 +26,15 @@ copyright = "2022 Oliver Gilan All rights reserved"
         targetBlank = true
 
 [[menu.socials]]
+    identifier = "rss"
+    name = "RSS"
+    title = "RSS"
+    url = "https://olivergilan.com/index.xml"
+    [menu.socials.params]
+        targetBlank = true
+        icon = "/icons/rss.png"
+
+[[menu.socials]]
     identifier = "github"
     name = "GitHub"
     title = "GitHub"
@@ -42,6 +51,15 @@ copyright = "2022 Oliver Gilan All rights reserved"
     [menu.socials.params]
         targetBlank = true
         icon = "/icons/linkedin.png"
+
+[[menu.socials]]
+    identifier = "email"
+    name = "Email"
+    title = "Email"
+    url = "mailto:blog@olivergilan.com"
+    [menu.socials.params]
+        targetBlank = true
+        icon = "/icons/email.png"
 
 [markup]
   [markup.highlight]
