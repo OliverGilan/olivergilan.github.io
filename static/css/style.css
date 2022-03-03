@@ -180,6 +180,10 @@ code {
 
 .code code {
 	background-color: initial;
+	padding-right: initial;
+	padding-left: initial;
+	margin: initial;
+	font-weight: initial;
 }
 
 .aside {
