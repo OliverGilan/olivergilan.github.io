@@ -17,6 +17,7 @@ brew install hugo
 {{< /code >}}
 
 Once it's installed use the hugo cli to scaffold a new site for you.
+
 {{< code >}}
 ```bash
 hugo new site blogname
@@ -26,6 +27,7 @@ hugo new site blogname
 You now have the scaffolding for a new site! You can run the site locally using `hugo server` but you won't see anything just yet! Let's create our site!
 
 At this point you can add an existing theme to your site but I will create me own. Keep in mind, I didn't use a theme because I wanted to create something ultra simple and creating it from scratch helps me understand how Hugo works in greater detail. If you want to create a more complex site or you just want to create something fast I recommend starting with a theme and you can always modify it later but at least you have a base to start from. You can view a list of themes [here](https://themes.gohugo.io/) and choose one you like. Download the theme's source code and add it the `themes` directory of your site. Then initialize git.
+
 {{< code >}}
 ```bash
 cd blogname 
@@ -35,6 +37,7 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 {{< /code >}}
 
 And set the theme in the config.toml file.
+
 {{< code file="config.toml">}}
 ```toml
 theme = "ananke"
@@ -206,6 +209,7 @@ One last feature I want to add is to open certain links in a new tab. If a user 
 		targetBlank = true
 ```
 {{< /code >}}
+
 {{< code file="layouts/partials/header.html">}}
 ```html
 <header>
@@ -254,6 +258,7 @@ This adds a paramer to that specific menu item with name `targetBlank` and value
 </html>
 ```
 {{< /code >}}
+
 Using `{{ partial "header" . }}` tells Hugo to look in the partials directory, find the file with that name and render it. Don't forget the period after the partial name, that's not a typo. That period passes in the current context so when the code within the partial uses `.Site.Title` or `.Site.Menus...` it's doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!
 
 ### Post Page
@@ -303,6 +308,7 @@ draft: true
 ---
 ```
 {{< /code >}}
+
 That "title" field is then used by Hugo for the .Title variable when rendering the page for that post. The Content parameter takes whatever I wrote in the Markdown file and generates the blog page's content from it. Everything else here is pretty much standard. You can open dev tools in chrome and look at what sort of elements get rendered from your markdown and then just use css to style your blog posts however you'd like.
 
 Because this is a technical blog one of the important elements for posts will be the inclusion of code blocks. Adding code blocks can be achieved in Hugo using [Shortcodes](https://gohugo.io/content-management/shortcodes/). Hugo has a built-in [Highlight](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode) shortcode that can be used to add syntax highlighting to a block of code in your markdown file (can also be activated using code fences instead of the shortcode tag). In my opinion the highlight shortcode is a bit limited: it will highlight your code but that's it. When I have a code block I want to optionally include the filepath for that code block and you might want to include other things like a "Copy to Clipboard" button. To do that we need to create our own shortcode!
