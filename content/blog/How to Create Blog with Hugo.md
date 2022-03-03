@@ -424,5 +424,53 @@ One nice feature on a lot of blogs is having anchors for different sections of i
 {{< /code >}}
 
 ### RSS
-### Compiling the Site
-### Hosting
+Adding an RSS feed to the site is really quite simple with Hugo. Hugo has a default RSS template but it doesn't quite fit my needs because I want to only have blog posts on the feed and nothing else. By default Hugo creates a feed for each section of your site but in my case I only want one feed for the root of my site and I only want it to contain pages from the blog section. To do this I followed this [awesome post](https://benjamincongdon.me/blog/2020/01/14/Tips-for-Customizing-Hugo-RSS-Feeds/) by Benjamin Congdon. 
+
+### Compiling and Hosting
+When it comes to compiling and hosting I want it to be as simple as possible. I don't want to spend time in the future messing around with all this infra or manually copying files to servers, etc. Because I'm hosting this whole repository in GitHub I just used [GitHub Actions](https://github.com/features/actions) to build my site. To do that just create the following file:
+
+{{< code file=".github/workflows/gh-pages.yml" >}}
+``` yaml
+name: github pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+```
+{{< /code >}}
+
+Once you add this file to your repo and push it to GitHub it automatically creates a workflow that executes the above job. The job runs every time there is a new change pushed to the master branch of the repo. The Job first checks out the latest commits of the master branch, installs Hugo, compiles the site, then pushes the compiled static files to the gh-pages branch of the repository. 
+
+This is great because it means whenever I want to make a change to the site, whether that's changing code or just adding a new blog post, I simply need to push the change to my master branch and it'll automatically rebuild the site and push the new build to the gh-pages branch. 
+
+For hosting I want to keep it simple as well so I'm just hosting my site on [GitHub Pages](https://pages.github.com/). In the settings for my repository I set the gh-pages branch to be the source for the served pages and I add my custom domain so that people can access the site with my custom URL.
+
+### Conclusion
+And that's it! Now I have a functioning blog that I can add new features to and expand whenever I want. It's incredibly simple and minimal, no themes or bloated JavaScript frameworks (actually no JS at all as of right now), and it fits nicely into my existing workflows.
