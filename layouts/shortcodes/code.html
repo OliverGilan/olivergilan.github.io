@@ -1,8 +1,8 @@
 <div class="code-block">
     {{ with .Get "file" }}
-    <div class="filepath">
+    <p class="filepath">
         {{.}}
-    </div>
+    </p>
     {{ end }}
     <div class="code">
         {{ .Inner | markdownify }}
