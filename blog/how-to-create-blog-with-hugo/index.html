@@ -36,15 +36,15 @@ Oliver Gilan
 </span></span><span style=display:flex><span>git init
 </span></span><span style=display:flex><span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 </span></span></code></pre></div></div></div><p>And set the theme in the config.toml file.</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>theme = <span style=color:#f1fa8c>&#34;ananke&#34;</span>
 </span></span></code></pre></div></div></div><p>Like I said, I didn&rsquo;t use a theme so I will leave my themes directory empty and create a site from scratch.</p><p>Now let&rsquo;s set some of the key settings in our configuration file. Open the <code>config.toml</code> file and set your baseUrl, language, and title. For me, the title of my blog is simply my name.
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>baseURL = <span style=color:#f1fa8c>&#39;https://olivergilan.com/&#39;</span>
 </span></span><span style=display:flex><span>languageCode = <span style=color:#f1fa8c>&#39;en-us&#39;</span>
 </span></span><span style=display:flex><span>title = <span style=color:#f1fa8c>&#39;Oliver Gilan&#39;</span>
@@ -61,9 +61,9 @@ This generator uses the file in <code>archetypes/default.md</code> as a template
 #
 </a></h3><p>The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won&rsquo;t change. To get started create the following files within the layouts directory:</p><p><code>layout/_default/baseof.html</code> <br>
 <code>layout/partials/header.html</code></p><p><code>baseof.html</code> will be the base template that holds the other templates. You can think of this as the root component in a framework like React. All that I&rsquo;ll put in that file is the following:</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/defaults/baseof.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#ff79c6>&lt;!DOCTYPE html&gt;</span>
 </span></span><span style=display:flex><span>&lt;<span style=color:#ff79c6>html</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>head</span>&gt;
@@ -84,9 +84,9 @@ layouts/defaults/baseof.html
 </span></span></code></pre></div></div></div><p>You can see I link to the stylesheet here so that every other page has access to the css. The parts that say <code>{{ block [name] }}</code> tell Hugo to render another layout in that location. If Hugo cannot find an appropriate layout to render in place of a block statement it will fallback to the default which you can set by adding any content you want between the beginning of the block and the <code>{{ end }}</code> statement. Notice how in the <code>&lt;title></code> tag I tell Hugo to render the site&rsquo;s title as the default. <code>.Site.Title</code> will evaluate to whatever you set as the title in the config file.</p><p>Now let&rsquo;s implement the header component. Notice that it&rsquo;s located in a directory called &ldquo;partials.&rdquo; In Hugo a partial is a reusable component that can be plugged into any layout in a similar way to a React component.
 In <code>header.html</code> add the following code:
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/partials/header.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#ff79c6>header</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>nav</span>&gt;
 </span></span><span style=display:flex><span>		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
@@ -99,14 +99,14 @@ layouts/partials/header.html
 #
 </a></h4><p>Notice how in the above header partial I don&rsquo;t actually have the unordered list implemented. I could of course manually create each <code>&lt;li></code> element and point it to the designated page but I&rsquo;d rather have Hugo dynamically render that menu for me. This makes it easier to update in the future.</p><p>We can do this with some updates to the config of the site. Add the following:
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>sectionPagesMenu = <span style=color:#f1fa8c>&#34;main&#34;</span>
 </span></span></code></pre></div></div></div></p><p>This tells Hugo to take every section page of the site and create menu called <code>main</code> . The only section page I have right now is for my <code>content/blog/</code> directory so right now Hugo has one menu <code>main</code> with an element for that blog page. We can make the partial use that dynamic menu with the following code:</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/partials/header.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#ff79c6>header</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>nav</span>&gt;
 </span></span><span style=display:flex><span>		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
@@ -125,14 +125,14 @@ layouts/partials/header.html
 </span></span><span style=display:flex><span>&lt;/<span style=color:#ff79c6>header</span>&gt;
 </span></span></code></pre></div></div></div><p>This takes the <code>main</code> menu and for each item in it renders a <code>&lt;li></code> tag with a link to that page&rsquo;s URL and it&rsquo;s title.</p><p>By default Hugo pluralizes the titles which I do not want because I want the menu to say <code>Blog</code> not <code>Blogs</code>. To disable the pluralization add the following to your config file:
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>pluralizelisttitles = <span style=color:#ff79c6>false</span>
 </span></span></code></pre></div></div></div></p><p>I also want to add more links to external sites such as my GitHub. Hugo can&rsquo;t automatically add that to the menu because I don&rsquo;t have a page for it but I can manually add it through the config with the following:</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[menu]
 </span></span><span style=display:flex><span>[[menu.main]]
 </span></span><span style=display:flex><span>	identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
@@ -142,9 +142,9 @@ config.toml
 </span></span></code></pre></div></div></div><p>This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.</p><h4 id=target-blank>Target Blank <a class=anchor href=#target-blank>
 #
 </a></h4><p>One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[menu]
 </span></span><span style=display:flex><span>[[menu.main]]
 </span></span><span style=display:flex><span>	identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
@@ -154,9 +154,9 @@ config.toml
 </span></span><span style=display:flex><span>	[menu.main.params]
 </span></span><span style=display:flex><span>		targetBlank = <span style=color:#ff79c6>true</span>
 </span></span></code></pre></div></div></div><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/partials/header.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#ff79c6>header</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>nav</span>&gt;
 </span></span><span style=display:flex><span>		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
@@ -181,9 +181,9 @@ layouts/partials/header.html
 </span></span><span style=display:flex><span>&lt;/<span style=color:#ff79c6>header</span>&gt;
 </span></span></code></pre></div></div></div><p>This adds a paramer to that specific menu item with name <code>targetBlank</code> and value <code>true</code>. Then within the partial for each menu item I check if it has that parameter and if it does I add the <code>target="_blank"</code> attribute to the href element. This will make the link open in a new tab! Now I have a working navbar/header! I can add it to my <code>layouts/defaults/baseof.html</code> file so that it appears at the top of every page on my site and add some css to style it how I want.
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/defaults/baseof.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#ff79c6>&lt;!DOCTYPE html&gt;</span>
 </span></span><span style=display:flex><span>&lt;<span style=color:#ff79c6>html</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>head</span>&gt;
@@ -207,9 +207,9 @@ layouts/defaults/baseof.html
 </a></h3><p>So now you&rsquo;ve got the scaffolding of your site created and you have a navigation bar that will appear at the top of every page. Let&rsquo;s spend some time creating the template for each blog post as this is where people will be spending the most time on your site.
 Create a new file <code>layouts/blog/single.html</code>. This will be used by Hugo to render individual pages in the blog section of the site.</p><p>This is the code I have in my template:
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/blog/single.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>{{ define &#34;head&#34; }}
 </span></span><span style=display:flex><span>&lt;<span style=color:#ff79c6>link</span> <span style=color:#50fa7b>rel</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;stylesheet&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/css/post.css&#34;</span> /&gt;
 </span></span><span style=display:flex><span>{{ end }} {{ define &#34;main&#34; }}
@@ -225,9 +225,9 @@ layouts/blog/single.html
 </span></span><span style=display:flex><span>&lt;/<span style=color:#ff79c6>section</span>&gt;
 </span></span><span style=display:flex><span>{{ end }} {{ define &#34;footer&#34; }} {{ partial &#34;footer&#34; . }} {{ end }}
 </span></span></code></pre></div></div></div></p><p>Pretty straightforward but to quickly go over it. Each &ldquo;define&rdquo; block implements one of the &ldquo;block&rdquo; statements in the <code>baseof.html</code> file we created earlier. The head block allows me to inject custom properties into the pages head tag. In this case I made a separate css file for css relating only to blog posts and I link that here. Then in the main block I create the post itself. Notice how I use varriables like .Title, .WordCount, .Content, and the .Date.Format function. These are all provided by Hugo automatically. For example the beginning of this blog post has the following Front Matter:</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 content/blog/HowToCreateABlogWithHugo.md
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span>---
 </span></span><span style=display:flex><span>title: &#34;How to Create a Blog from Scratch with Hugo&#34;
 </span></span><span style=display:flex><span>
@@ -239,9 +239,9 @@ content/blog/HowToCreateABlogWithHugo.md
 #
 </a></h4><p>A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Within the layouts directory create shortcodes directory and add the following file:
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/shortcodes/code.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;code-block&#34;</span>&gt;
 </span></span><span style=display:flex><span>	{{ with .Get &#34;file&#34; }}
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;filepath&#34;</span>&gt;{{.}}&lt;/<span style=color:#ff79c6>div</span>&gt;
@@ -260,9 +260,9 @@ layouts/shortcodes/code.html
 </span></span></code></pre></div></div></div></p><p>I can pass in an optional &ldquo;file&rdquo; parameter and if it exists Hugo will render that div with class &ldquo;filepath&rdquo; that I can style how I want. The inner code within the shortcode gets processed through the markdown renderer using the <code>markdownify</code> function. Because shortcodes can nest within each other, the .Inner content still gets the the built-in Highlight shortcode so my custom shortcode acts as a wrapper extending the native functionality.
 Notice how my shortcode is literally called &ldquo;code&rdquo; and that&rsquo;s because of how I named the shortcode html file. Name the file whatever you want that specific shortcode to be.</p><p>Don&rsquo;t forget to customize how Hugo styles the code syntax by updating your config file.
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[markup]
 </span></span><span style=display:flex><span>  [markup.highlight]
 </span></span><span style=display:flex><span>    anchorLineNos = <span style=color:#ff79c6>false</span>
@@ -280,9 +280,9 @@ config.toml
 #
 </a></h4><p>For the footer I created another partial with a custom menu in the config for the different social elements.
 <div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/partials/footer.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#ff79c6>footer</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;socials&#34;</span>&gt;
 </span></span><span style=display:flex><span>		{{ range .Site.Menus.socials }}
@@ -303,9 +303,9 @@ layouts/partials/footer.html
 </span></span><span style=display:flex><span>	&lt;<span style=color:#ff79c6>p</span>&gt;&amp;copy {{ dateFormat &#34;2006&#34; now }} {{ .Site.Title }}&lt;/<span style=color:#ff79c6>p</span>&gt;
 </span></span><span style=display:flex><span>&lt;/<span style=color:#ff79c6>footer</span>&gt;
 </span></span></code></pre></div></div></div></p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 config.toml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[menu]
 </span></span><span style=display:flex><span>[[menu.socials]]
 </span></span><span style=display:flex><span>    identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
@@ -327,9 +327,9 @@ config.toml
 </span></span></code></pre></div></div></div><p>In the above &ldquo;socials&rdquo; menu, the items have a custom icon parameter that contains the path to the icon for that element within the <code>static</code> directory.</p><p>This time I don&rsquo;t want the footer on every page, only on my blog post pages. So instead of adding this to the base template I add it to my single page template for the blog section. If you scroll up to the code block above you&rsquo;ll see I define the &ldquo;footer&rdquo; block and declare the footer partial in that block. Now it&rsquo;ll be added to every blog post.</p><h4 id=header-anchors>Header Anchors <a class=anchor href=#header-anchors>
 #
 </a></h4><p>One nice feature on a lot of blogs is having anchors for different sections of individual posts. If you look above this paragraph at this section&rsquo;s heading you&rsquo;ll see the &ldquo;#&rdquo; tag which is clickable and if you look at the URL you&rsquo;ll notice it now contains that header in it. This allows you to link to a specific section of a webpage. Hugo has a feature called <a href=https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks>Markdown Render Hooks</a> that makes adding these anchors easy. For a more in-depth explanation of how this works check out <a href=https://pavelkorolev.xyz/blog/2020-10-31-hugo-header-anchors/>this post</a> by Pavel Korolev.</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 layouts/_defaults/_markup/render-heading.html
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#ff79c6>h</span>{{ .<span style=color:#50fa7b>Level</span> }} <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{ .Anchor | safeURL }}&#34;</span>&gt;{{ .Text | safeHTML }}
 </span></span><span style=display:flex><span>{{- if and (ge .Level 1) (le .Level 6) }}{{&#34; &#34; -}}
 </span></span><span style=display:flex><span>&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;anchor&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;#{{ .Anchor | safeURL }}&#34;</span>&gt;
@@ -342,9 +342,9 @@ layouts/_defaults/_markup/render-heading.html
 </a></h3><p>Adding an RSS feed to the site is really quite simple with Hugo. Hugo has a default RSS template but it doesn&rsquo;t quite fit my needs because I want to only have blog posts on the feed and nothing else. By default Hugo creates a feed for each section of your site but in my case I only want one feed for the root of my site and I only want it to contain pages from the blog section. To do this I followed this <a href=https://benjamincongdon.me/blog/2020/01/14/Tips-for-Customizing-Hugo-RSS-Feeds/>awesome post</a> by Benjamin Congdon.</p><h3 id=compiling-and-hosting>Compiling and Hosting <a class=anchor href=#compiling-and-hosting>
 #
 </a></h3><p>When it comes to compiling and hosting I want it to be as simple as possible. I don&rsquo;t want to spend time in the future messing around with all this infra or manually copying files to servers, etc. Because I&rsquo;m hosting this whole repository in GitHub I just used <a href=https://github.com/features/actions>GitHub Actions</a> to build my site. To do that just create the following file:</p><div class=code-block>
-<div class=filepath>
+<p class=filepath>
 .github/workflows/gh-pages.yml
-</div><div class=code>
+</p><div class=code>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#ff79c6>name</span>: github pages
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#ff79c6>on</span>:
