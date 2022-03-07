@@ -162,6 +162,7 @@ footer p {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+	align-items: baseline;
 }
 
 .social-icon {
@@ -205,6 +206,7 @@ code {
 	flex-flow: row wrap;
 	align-items: center;
 	margin: 1rem;
+	width: fit-content;
 }
 
 .rss-block {
