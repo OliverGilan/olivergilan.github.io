@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet href=/css/style.css>
 <title>
-Oliver Gilan
+How to Create a Blog from Scratch with Hugo
 </title>
 <link rel=stylesheet href=/css/post.css>
 </head>
@@ -12,7 +12,7 @@ Oliver Gilan
 <div class=inside>
 <header>
 <nav>
-<a href=https://olivergilan.com/><h1 class=site-title>Oliver Gilan</h1></a>
+<a href=https://olivergilan.com/ id=site-title><h1>Oliver Gilan</h1></a>
 <ul class=section-list>
 <li class="section-item horizontal-list">
 <a class="section-link small-thick" href=/blog/>Blog</a>
@@ -85,9 +85,17 @@ title = <span style=color:#f1fa8c>&#39;Oliver Gilan&#39;</span>
 <h3 id=hugo-core-concepts>Hugo Core Concepts <a class=anchor href=#hugo-core-concepts>
 #
 </a></h3><p>It&rsquo;s important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code.</p>
+<ul>
+<li>
 <p><code>content/</code> handles all the content of your site. This is where I&rsquo;ll be putting my markdown files for my blog.</p>
+</li>
+<li>
 <p><code>layouts/</code> will hold your html files that are used to render the content for any given page. This is where we will create the templates for our site.</p>
+</li>
+<li>
 <p><code>static/</code> holds your static files like custom css files or javascript files we might want to reference from our layouts.</p>
+</li>
+</ul>
 <p>How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want</p>
 <ol>
 <li>A homepage which will act as my &ldquo;About&rdquo; page</li>
@@ -532,18 +540,18 @@ layouts/_defaults/_markup/render-heading.html
 <aside id=meta>
 </aside>
 <footer>
-<div class=socials>
-<a class="section-link small-thick" href=mailto:blog@olivergilan.com target=_blank>
-<img class=social-icon src=/icons/email-fa.svg>
+<div class=footer-links>
+<a class="footer-link small-thick" href=https://github.com/olivergilan target=_blank>
+Github
 </a>
-<a class="section-link small-thick" href=https://github.com/olivergilan target=_blank>
-<img class=social-icon src=/icons/github-fa.svg>
+<a class="footer-link small-thick" href=https://linkedin.com/in/oliver-gilan/ target=_blank>
+LinkedIn
 </a>
-<a class="section-link small-thick" href=https://linkedin.com/in/oliver-gilan/ target=_blank>
-<img class=social-icon src=/icons/linkedin-fa.svg>
+<a class="footer-link small-thick" href=https://olivergilan.com/index.xml target=_blank>
+RSS
 </a>
-<a class="section-link small-thick" href=https://olivergilan.com/index.xml target=_blank>
-<img class=social-icon src=/icons/rss-fa.svg>
+<a class="footer-link small-thick" href=https://twitter.com/olvrgln target=_blank>
+Twitter
 </a>
 </div>
 <p>&copy 2022 Oliver Gilan</p>

@@ -3,6 +3,151 @@
 	src: url("/fonts/SF-Mono/SF-Mono-Regular.otf");
 }
 
+@font-face {
+	font-family: 'freight-text-pro-Semibold';
+	src: url('/fonts/FreightTextPro/FreightTextProSemibold-Regular.eot');
+	src: local('FreightText Pro Semibold'), local('FreightTextProSemibold-Regular'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Regular.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Regular.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Regular.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Regular.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Bold';
+	src: url('/fonts/FreightTextPro/FreightTextProBold-Regular.eot');
+	src: local('FreightText Pro Bold'), local('FreightTextProBold-Regular'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Regular.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Regular.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Regular.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Regular.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Medium';
+	src: url('/fonts/FreightTextPro/FreightTextProMedium-Regular.eot');
+	src: local('FreightText Pro Medium'), local('FreightTextProMedium-Regular'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Regular.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Regular.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Regular.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Regular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Medium';
+	src: url('/fonts/FreightTextPro/FreightTextProMedium-Italic.eot');
+	src: local('FreightText Pro Medium Italic'), local('FreightTextProMedium-Italic'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Italic.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Italic.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Italic.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProMedium-Italic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Black';
+	src: url('/fonts/FreightTextPro/FreightTextProBlack-Italic.eot');
+	src: local('FreightText Pro Black Italic'), local('FreightTextProBlack-Italic'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Italic.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Italic.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Italic.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Italic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Book';
+	src: url('/fonts/FreightTextPro/FreightTextProBook-Italic.eot');
+	src: local('FreightText Pro Book Italic'), local('FreightTextProBook-Italic'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Italic.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Italic.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Italic.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Semibold';
+	src: url('/fonts/FreightTextPro/FreightTextProSemibold-Italic.eot');
+	src: local('FreightText Pro Semibold Italic'), local('FreightTextProSemibold-Italic'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Italic.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Italic.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Italic.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProSemibold-Italic.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Light';
+	src: url('/fonts/FreightTextPro/FreightTextProLight-Regular.eot');
+	src: local('FreightText Pro Light'), local('FreightTextProLight-Regular'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Regular.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Regular.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Regular.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Regular.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Black';
+	src: url('/fonts/FreightTextPro/FreightTextProBlack-Regular.eot');
+	src: local('FreightText Pro Black'), local('FreightTextProBlack-Regular'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Regular.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Regular.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Regular.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProBlack-Regular.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Bold';
+	src: url('/fonts/FreightTextPro/FreightTextProBold-Italic.eot');
+	src: local('FreightText Pro Bold Italic'), local('FreightTextProBold-Italic'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Italic.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Italic.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Italic.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProBold-Italic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Book';
+	src: url('/fonts/FreightTextPro/FreightTextProBook-Regular.eot');
+	src: local('FreightText Pro Book'), local('FreightTextProBook-Regular'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Regular.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Regular.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Regular.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProBook-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'freight-text-pro-Light';
+	src: url('/fonts/FreightTextPro/FreightTextProLight-Italic.eot');
+	src: local('FreightText Pro Light Italic'), local('FreightTextProLight-Italic'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Italic.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Italic.woff2') format('woff2'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Italic.woff') format('woff'),
+			url('/fonts/FreightTextPro/FreightTextProLight-Italic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+
 :root {
 	--primary-color: rgba(20, 20, 20, 1);
 	--primary-color-faded: rgba(20, 20, 20, 0.5);
@@ -15,7 +160,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "system-ui";
+	font-family: "freight-text-pro-Book";
 }
 
 html,
@@ -31,8 +176,8 @@ body {
 
 .inside {
 	max-width: 99%;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 h2,
@@ -62,7 +207,7 @@ nav {
 li {
 	list-style-type: initial;
 	list-style-position: inside;
-	margin: 0.5rem;
+	margin: 0.3rem;
 }
 
 .horizontal-list {
@@ -70,17 +215,18 @@ li {
 }
 
 a {
-	text-decoration: none;
-	color: var(--primary-color);
+	/* text-decoration: none; */
+	/* color: var(--primary-color); */
+	font-size: 1.1rem;
 }
 
 a:visited {
-	color: var(--primary-color);
+	/* color: var(--primary-color); */
 }
 
 h1 {
 	font-weight: 300;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 
 .small-thick {
@@ -97,12 +243,22 @@ h1 {
 	padding: 0.2rem;
 }
 
+.section-link {
+	font-size: 1.1rem;
+	text-decoration: none;
+	color: initial;
+}
+
+.section-link:visited {
+	color: initial;
+}
+
 .blog-list-item {
 	list-style-type: none;
 }
 
 .blog-post-link {
-	font-size: 1rem;
+	font-size: 1.1rem;
 	text-decoration: dotted;
 	text-decoration-line: underline;
 	text-decoration-color: var(--primary-color-faded);
@@ -193,6 +349,11 @@ code {
 	font-weight: initial;
 }
 
+code span {
+	font-family: "CodeSnippets";
+	font-size: .8rem;
+}
+
 .aside {
 	background-color: var(--aside-background-color);
 	padding: 10px;
@@ -201,14 +362,24 @@ code {
 	border-left: 4px solid var(--aside-bar-color);
 }
 
-.homepage-social {
+/* .homepage-social {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
 	margin: 1rem;
 	width: fit-content;
-}
+} */
 
 .rss-block {
 	margin-top: 1rem;
+}
+
+p{
+	font-size: 1.1rem;
+	line-height: 150%;
+	/* margin-bottom: 2rem; */
+}
+
+#site-title{
+	text-decoration: none;
 }

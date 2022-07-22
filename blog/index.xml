@@ -52,9 +52,17 @@ title = &lt;span style="color:#f1fa8c">&amp;#39;Oliver Gilan&amp;#39;&lt;/span>
 &lt;h3 id="hugo-core-concepts">Hugo Core Concepts &lt;a class="anchor" href="#hugo-core-concepts">
 #
 &lt;/a>&lt;/h3>&lt;p>It&amp;rsquo;s important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code.&lt;/p>
+&lt;ul>
+&lt;li>
 &lt;p>&lt;code>content/&lt;/code> handles all the content of your site. This is where I&amp;rsquo;ll be putting my markdown files for my blog.&lt;/p>
+&lt;/li>
+&lt;li>
 &lt;p>&lt;code>layouts/&lt;/code> will hold your html files that are used to render the content for any given page. This is where we will create the templates for our site.&lt;/p>
+&lt;/li>
+&lt;li>
 &lt;p>&lt;code>static/&lt;/code> holds your static files like custom css files or javascript files we might want to reference from our layouts.&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;p>How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want&lt;/p>
 &lt;ol>
 &lt;li>A homepage which will act as my &amp;ldquo;About&amp;rdquo; page&lt;/li>
