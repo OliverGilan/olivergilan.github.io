@@ -88,6 +88,33 @@ li p {
 
 
 /*  */
+/* Table of Contents */
+/*  */
+#tocContainer {
+	border-bottom: 1px solid var(--primary-color-faded);
+	padding-top: .2rem;
+}
+
+#contents {
+	margin-bottom: 0;
+	font-family: 'freight-text-pro-Bold';
+	font-size: 1.3rem;
+}
+
+#TableOfContents li {
+	list-style-type: none;
+}
+
+#TableOfContents a {
+	text-decoration: none;
+}
+
+li > ul {
+	margin-left: 1.5rem;
+}
+
+
+/*  */
 /* Code Snippets */
 /*  */
 .code-block {

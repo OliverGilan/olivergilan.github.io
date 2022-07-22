@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Oliver Gilan</title><link>https://olivergilan.com/</link><description>Recent content on Oliver Gilan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>blog@olivergilan.com (Oliver Gilan)</managingEditor><webMaster>blog@olivergilan.com (Oliver Gilan)</webMaster><copyright>2022 Oliver Gilan All rights reserved</copyright><lastBuildDate>Mon, 07 Feb 2022 10:46:26 -0500</lastBuildDate><atom:link href="https://olivergilan.com/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create a Blog from Scratch with Hugo</title><link>https://olivergilan.com/blog/how-to-create-blog-with-hugo/</link><pubDate>Thu, 03 Mar 2022 10:04:15 -0500</pubDate><author>blog@olivergilan.com (Oliver Gilan)</author><guid>https://olivergilan.com/blog/how-to-create-blog-with-hugo/</guid><description>&lt;p>In this post I&amp;rsquo;ll walk you through creating the personal blog you&amp;rsquo;re currently reading using Hugo. When choosing my stack for this blog I had a few requirements in mind: low maintenance, high performance/low bundle sizes, simple clean interface with reusable components, and markdown support. Hugo meets all these requirements with blazing fast compile times as well as no reliance on JavaScript or other libraries that could lead to bloated bundles. It supports a ton of different themes but also has the ability to create very simple themes from scratch with reusable components. And it supports markdown which is my preffered method for writing blog posts. So all I need to do is write a new post in markdown, add it to a specific directory, and push to GitHub and Hugo will generate the necessary html to be served.&lt;/p>
 &lt;p>For the purposes of this blog I&amp;rsquo;ll use GitHub actions to generate the site and host it on GitHub pages.&lt;/p>
+&lt;div id="tocContainer">
+&lt;p id="contents">Contents&lt;/p>
+&lt;nav id="TableOfContents">
+&lt;ul>
+&lt;li>&lt;a href="#getting-started">Getting Started&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#hugo-core-concepts">Hugo Core Concepts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#building-the-template">Building the Template&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#working-with-menus">Working with Menus&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#target-blank">Target Blank&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#post-page">Post Page&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#shortcodes">Shortcodes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#footer">Footer&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#header-anchors">Header Anchors&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#rss">RSS&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#compiling-and-hosting">Compiling and Hosting&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/nav>
+&lt;/div>
 &lt;h2 id="getting-started">Getting Started &lt;a class="anchor" href="#getting-started">
 #
 &lt;/a>&lt;/h2>&lt;p>To get started &lt;a href="https://gohugo.io/getting-started/installing">install Hugo&lt;/a>. I&amp;rsquo;m on Mac so I used Homebrew:
@@ -131,9 +153,9 @@ layouts/partials/header.html
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
-&lt;h4 id="working-with-menus">Working with Menus &lt;a class="anchor" href="#working-with-menus">
+&lt;h3 id="working-with-menus">Working with Menus &lt;a class="anchor" href="#working-with-menus">
 #
-&lt;/a>&lt;/h4>&lt;p>Notice how in the above header partial I don&amp;rsquo;t actually have the unordered list implemented. I could of course manually create each &lt;code>&amp;lt;li&amp;gt;&lt;/code> element and point it to the designated page but I&amp;rsquo;d rather have Hugo dynamically render that menu for me. This makes it easier to update in the future.&lt;/p>
+&lt;/a>&lt;/h3>&lt;p>Notice how in the above header partial I don&amp;rsquo;t actually have the unordered list implemented. I could of course manually create each &lt;code>&amp;lt;li&amp;gt;&lt;/code> element and point it to the designated page but I&amp;rsquo;d rather have Hugo dynamically render that menu for me. This makes it easier to update in the future.&lt;/p>
 &lt;p>We can do this with some updates to the config of the site. Add the following:
 &lt;div class="code-block">
 &lt;p class="filepath">
@@ -196,9 +218,9 @@ url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#3
 &lt;/div>
 &lt;/div>
 &lt;p>This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.&lt;/p>
-&lt;h4 id="target-blank">Target Blank &lt;a class="anchor" href="#target-blank">
+&lt;h3 id="target-blank">Target Blank &lt;a class="anchor" href="#target-blank">
 #
-&lt;/a>&lt;/h4>&lt;p>One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:&lt;/p>
+&lt;/a>&lt;/h3>&lt;p>One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:&lt;/p>
 &lt;div class="code-block">
 &lt;p class="filepath">
 config.toml
@@ -313,9 +335,9 @@ draft: true
 &lt;/div>
 &lt;p>That &amp;ldquo;title&amp;rdquo; field is then used by Hugo for the .Title variable when rendering the page for that post. The Content parameter takes whatever I wrote in the Markdown file and generates the blog page&amp;rsquo;s content from it. Everything else here is pretty much standard. You can open dev tools in chrome and look at what sort of elements get rendered from your markdown and then just use css to style your blog posts however you&amp;rsquo;d like.&lt;/p>
 &lt;p>Because this is a technical blog one of the important elements for posts will be the inclusion of code blocks. Adding code blocks can be achieved in Hugo using &lt;a href="https://gohugo.io/content-management/shortcodes/">Shortcodes&lt;/a>. Hugo has a built-in &lt;a href="https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode">Highlight&lt;/a> shortcode that can be used to add syntax highlighting to a block of code in your markdown file (can also be activated using code fences instead of the shortcode tag). In my opinion the highlight shortcode is a bit limited: it will highlight your code but that&amp;rsquo;s it. When I have a code block I want to optionally include the filepath for that code block and you might want to include other things like a &amp;ldquo;Copy to Clipboard&amp;rdquo; button. To do that we need to create our own shortcode!&lt;/p>
-&lt;h4 id="shortcodes">Shortcodes &lt;a class="anchor" href="#shortcodes">
+&lt;h3 id="shortcodes">Shortcodes &lt;a class="anchor" href="#shortcodes">
 #
-&lt;/a>&lt;/h4>&lt;p>A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Within the layouts directory create shortcodes directory and add the following file:
+&lt;/a>&lt;/h3>&lt;p>A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Within the layouts directory create shortcodes directory and add the following file:
 &lt;div class="code-block">
 &lt;p class="filepath">
 layouts/shortcodes/code.html
@@ -367,9 +389,9 @@ tabWidth = &lt;span style="color:#099">4&lt;/span>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>And there you have it! A little bit of styling and you can have a custom code block or any other custom markdown element.&lt;/p>
-&lt;h4 id="footer">Footer &lt;a class="anchor" href="#footer">
+&lt;h3 id="footer">Footer &lt;a class="anchor" href="#footer">
 #
-&lt;/a>&lt;/h4>&lt;p>For the footer I created another partial with a custom menu in the config for the different social elements.
+&lt;/a>&lt;/h3>&lt;p>For the footer I created another partial with a custom menu in the config for the different social elements.
 &lt;div class="code-block">
 &lt;p class="filepath">
 layouts/partials/footer.html
@@ -424,9 +446,9 @@ icon = &lt;span style="color:#d14">&amp;#34;/icons/linkedin.png&amp;#34;&lt;/spa
 &lt;/div>
 &lt;p>In the above &amp;ldquo;socials&amp;rdquo; menu, the items have a custom icon parameter that contains the path to the icon for that element within the &lt;code>static&lt;/code> directory.&lt;/p>
 &lt;p>This time I don&amp;rsquo;t want the footer on every page, only on my blog post pages. So instead of adding this to the base template I add it to my single page template for the blog section. If you scroll up to the code block above you&amp;rsquo;ll see I define the &amp;ldquo;footer&amp;rdquo; block and declare the footer partial in that block. Now it&amp;rsquo;ll be added to every blog post.&lt;/p>
-&lt;h4 id="header-anchors">Header Anchors &lt;a class="anchor" href="#header-anchors">
+&lt;h3 id="header-anchors">Header Anchors &lt;a class="anchor" href="#header-anchors">
 #
-&lt;/a>&lt;/h4>&lt;p>One nice feature on a lot of blogs is having anchors for different sections of individual posts. If you look above this paragraph at this section&amp;rsquo;s heading you&amp;rsquo;ll see the &amp;ldquo;#&amp;rdquo; tag which is clickable and if you look at the URL you&amp;rsquo;ll notice it now contains that header in it. This allows you to link to a specific section of a webpage. Hugo has a feature called &lt;a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks">Markdown Render Hooks&lt;/a> that makes adding these anchors easy. For a more in-depth explanation of how this works check out &lt;a href="https://pavelkorolev.xyz/blog/2020-10-31-hugo-header-anchors/">this post&lt;/a> by Pavel Korolev.&lt;/p>
+&lt;/a>&lt;/h3>&lt;p>One nice feature on a lot of blogs is having anchors for different sections of individual posts. If you look above this paragraph at this section&amp;rsquo;s heading you&amp;rsquo;ll see the &amp;ldquo;#&amp;rdquo; tag which is clickable and if you look at the URL you&amp;rsquo;ll notice it now contains that header in it. This allows you to link to a specific section of a webpage. Hugo has a feature called &lt;a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks">Markdown Render Hooks&lt;/a> that makes adding these anchors easy. For a more in-depth explanation of how this works check out &lt;a href="https://pavelkorolev.xyz/blog/2020-10-31-hugo-header-anchors/">this post&lt;/a> by Pavel Korolev.&lt;/p>
 &lt;div class="code-block">
 &lt;p class="filepath">
 layouts/_defaults/_markup/render-heading.html
