@@ -1,11 +1,12 @@
 <footer>
-    <div class="socials">
+    <div class="footer-links">
         {{ range .Site.Menus.socials }}
-            <a class="section-link small-thick" href="{{.URL}}" 
+            <a class="footer-link small-thick" href="{{.URL}}" 
                 {{with .Params.targetBlank}} target="_blank" {{end}}>
-                {{ with .Params.icon }}
+                {{ .Title }}
+                <!-- {{ with .Params.icon }}
                     <img class="social-icon" src="{{.}}" />
-                {{end}}
+                {{end}} -->
             </a>
         {{ end }}
     </div>

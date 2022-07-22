@@ -70,11 +70,11 @@ title = 'Oliver Gilan'
 
 It's important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code.
 
-`content/` handles all the content of your site. This is where I'll be putting my markdown files for my blog.
+* `content/` handles all the content of your site. This is where I'll be putting my markdown files for my blog.
 
-`layouts/` will hold your html files that are used to render the content for any given page. This is where we will create the templates for our site.
+* `layouts/` will hold your html files that are used to render the content for any given page. This is where we will create the templates for our site.
 
-`static/` holds your static files like custom css files or javascript files we might want to reference from our layouts.
+* `static/` holds your static files like custom css files or javascript files we might want to reference from our layouts.
 
 How you structure your content within these directories will determine how Hugo generates your site. For example, for my blog I only want a couple pages: I want
 

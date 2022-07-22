@@ -1,5 +1,6 @@
 {{ define "main" }}
     <main>
+        <p class="rss-link">This blog has an <a href="{{ partial "rss.html" .}}" target="_blank">RSS</a> feed.</p>
         {{ range .Pages.GroupByDate "2006" }}
         <h3 class="date-group">{{ .Key }}</h3>
         <ul class="contents">

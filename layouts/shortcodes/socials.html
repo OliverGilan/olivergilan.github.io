@@ -1,0 +1,13 @@
+<ul>
+  {{ range .Site.Menus.socials }}
+    {{ $social := . }}
+    {{ if ne $social.Title "RSS" }}
+    <li>
+      <a class="homepage-social" href="{{ partial "social.html" (dict "context" $ "id" $social.Title)}}" 
+          {{with .Params.targetBlank}} target="_blank" {{end}}>
+          {{ $social.Title }}
+      </a>
+    </li>
+    {{ end }}
+  {{ end }}
+</ul>

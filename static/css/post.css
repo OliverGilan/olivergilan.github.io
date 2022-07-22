@@ -21,12 +21,32 @@
 }
 
 p {
-	margin-bottom: 0.5rem;
-	margin-top: 0.5rem;
-	font-size: 1rem;
-	line-height: 130%;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	font-size: 1.1rem;
+	line-height: 150%;
+}
+
+h3 {
+	font-size: 1.3rem;
 }
 
 h4 {
 	margin-top: 1rem;
+	font-size: 1.2rem;
+}
+
+li p {
+	display: inline;
+	margin: none;
+}
+
+.footer-links{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.footer-link {
+	margin: .3rem;
 }

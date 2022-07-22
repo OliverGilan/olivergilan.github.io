@@ -36,8 +36,8 @@ copyright = "2022 Oliver Gilan All rights reserved"
 
 [[menu.socials]]
     identifier = "github"
-    name = "GitHub"
-    title = "GitHub"
+    name = "Github"
+    title = "Github"
     url = "https://github.com/olivergilan"
     [menu.socials.params]
         targetBlank = true
@@ -53,10 +53,10 @@ copyright = "2022 Oliver Gilan All rights reserved"
         icon = "/icons/linkedin-fa.svg"
 
 [[menu.socials]]
-    identifier = "email"
-    name = "Email"
-    title = "Email"
-    url = "mailto:blog@olivergilan.com"
+    identifier = "twitter"
+    name = "Twitter"
+    title = "Twitter"
+    url = "https://twitter.com/olvrgln"
     [menu.socials.params]
         targetBlank = true
         icon = "/icons/email-fa.svg"

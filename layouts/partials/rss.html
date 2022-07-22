@@ -1,0 +1,8 @@
+{{$url := ""}}
+{{ range .Site.Menus.socials }}
+  {{ $social := . }}
+  {{ if eq $social.Title "RSS" }}
+    {{ $url = .URL }}
+  {{ end }}
+{{ end }}
+{{return $url}}

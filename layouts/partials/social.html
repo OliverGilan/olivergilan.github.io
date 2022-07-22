@@ -1,0 +1,8 @@
+{{$url := ""}}
+{{ range .context.Site.Menus.socials }}
+  {{ $s := . }}
+  {{ if eq $s.Title $.id }}
+    {{ $url = .URL }}
+  {{ end }}
+{{ end }}
+{{return $url}}
