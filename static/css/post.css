@@ -1,8 +1,42 @@
+/*  */
+/* Fonts */
+/*  */
+@font-face {
+	font-family: "CodeSnippets";
+	src: url("/fonts/SF-Mono/SF-Mono-Regular.otf");
+}
+
+/*  */
+/* Element Rules */
+/*  */
 h2,
 h3 {
 	margin-top: 2rem;
 }
 
+/* p {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+} */
+
+h3 {
+	font-size: 1.3rem;
+}
+
+h4 {
+	margin-top: 1.3rem;
+	font-size: 1.2rem;
+}
+
+li p {
+	display: inline;
+	margin: none;
+}
+
+
+/*  */
+/* Block Rules */
+/*  */
 #title {
 	margin-top: 1rem;
 	font-weight: 500;
@@ -12,33 +46,16 @@ h3 {
 	margin-top: 0.2rem;
 }
 
+
+/*  */
+/* Custom Classes */
+/*  */
 .post-metadata {
 	margin-bottom: 1.4rem;
 }
 
 .post-metadata * {
 	font-weight: 300;
-}
-
-p {
-	margin-bottom: 1rem;
-	margin-top: 1rem;
-	font-size: 1.1rem;
-	line-height: 150%;
-}
-
-h3 {
-	font-size: 1.3rem;
-}
-
-h4 {
-	margin-top: 1rem;
-	font-size: 1.2rem;
-}
-
-li p {
-	display: inline;
-	margin: none;
 }
 
 .footer-links{
@@ -51,43 +68,37 @@ li p {
 	margin: .3rem;
 }
 
-code {
-	background-color: var(--highlight-background-color);
-	border-radius: 2px;
-	padding-right: 3px;
-	padding-left: 2px;
-	margin: 1px;
-	font-weight: 500;
+.anchor {
+	color: var(--primary-color-light);
+	text-decoration: none;
 }
 
-.code code {
+.anchor:hover {
+	color: var(--primary-color-faded);
+}
+
+
+/*  */
+/* Code Snippets */
+/*  */
+.code-block {
+	margin: .5rem;
+	overflow-x: scroll;
+	overflow-wrap: break-word;
+}
+
+.code-block .filepath {
+	color: var(--primary-color-faded);
+	font-family: 'CodeSnippets';
+	font-size: .8rem;
+}
+
+.code-block-inner code {
 	background-color: initial;
 	padding-right: initial;
 	padding-left: initial;
 	margin: initial;
 	font-weight: initial;
-}
-
-code span {
-	font-family: "CodeSnippets";
-	font-size: .8rem;
-}
-
-.code-block {
-	padding: 0.2rem;
-	margin: 1rem;
-	overflow-x: scroll;
-	overflow-wrap: break-word;
-}
-
-.code-block .code {
-	border: 0.5px solid lightgray;
-	border-radius: 2px;
-}
-
-.code-block .filepath {
-	color: var(--primary-color-faded);
-	margin-bottom: 5px;
 }
 
 div.highlight pre {
@@ -97,10 +108,17 @@ div.highlight pre {
 	border-radius: 5px;
 }
 
-.anchor {
-	color: var(--primary-color-light);
+code {
+	background-color: var(--highlight-background-color);
+	border-radius: 2px;
+	padding-right: 3px;
+	padding-left: 2px;
+	margin: 1px;
+	font-weight: 500;
 }
 
-.anchor:hover {
-	color: var(--primary-color-faded);
+
+code span {
+	font-family: "CodeSnippets";
+	font-size: .8rem;
 }

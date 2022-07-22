@@ -6,9 +6,11 @@ draft: false
 
 In this post I'll walk you through creating the personal blog you're currently reading using Hugo. When choosing my stack for this blog I had a few requirements in mind: low maintenance, high performance/low bundle sizes, simple clean interface with reusable components, and markdown support. Hugo meets all these requirements with blazing fast compile times as well as no reliance on JavaScript or other libraries that could lead to bloated bundles. It supports a ton of different themes but also has the ability to create very simple themes from scratch with reusable components. And it supports markdown which is my preffered method for writing blog posts. So all I need to do is write a new post in markdown, add it to a specific directory, and push to GitHub and Hugo will generate the necessary html to be served.
 
+<br>
+
 For the purposes of this blog I'll use GitHub actions to generate the site and host it on GitHub pages.
 
-### Getting Started
+## Getting Started
 
 To get started [install Hugo](https://gohugo.io/getting-started/installing). I'm on Mac so I used Homebrew:
 {{< code >}}
@@ -66,7 +68,7 @@ title = 'Oliver Gilan'
 
 {{< /code >}}
 
-### Hugo Core Concepts
+## Hugo Core Concepts
 
 It's important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code.
 
@@ -97,7 +99,7 @@ Because my site is simple I decided to keep all my css in one file but you can o
 
 So now you have some content in your content directory and you have your css, javascript, or any other static files in your static directory. Now let's actually build the template files that tell Hugo how to render your content!
 
-### Building the Template
+## Building the Template
 
 The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won't change. To get started create the following files within the layouts directory:
 
@@ -471,11 +473,11 @@ One nice feature on a lot of blogs is having anchors for different sections of i
 
 {{< /code >}}
 
-### RSS
+## RSS
 
 Adding an RSS feed to the site is really quite simple with Hugo. Hugo has a default RSS template but it doesn't quite fit my needs because I want to only have blog posts on the feed and nothing else. By default Hugo creates a feed for each section of your site but in my case I only want one feed for the root of my site and I only want it to contain pages from the blog section. To do this I followed this [awesome post](https://benjamincongdon.me/blog/2020/01/14/Tips-for-Customizing-Hugo-RSS-Feeds/) by Benjamin Congdon.
 
-### Compiling and Hosting
+## Compiling and Hosting
 
 When it comes to compiling and hosting I want it to be as simple as possible. I don't want to spend time in the future messing around with all this infra or manually copying files to servers, etc. Because I'm hosting this whole repository in GitHub I just used [GitHub Actions](https://github.com/features/actions) to build my site. To do that just create the following file:
 
@@ -524,6 +526,6 @@ This is great because it means whenever I want to make a change to the site, whe
 
 For hosting I want to keep it simple as well so I'm just hosting my site on [GitHub Pages](https://pages.github.com/). In the settings for my repository I set the gh-pages branch to be the source for the served pages and I add my custom domain so that people can access the site with my custom URL.
 
-### Conclusion
+## Conclusion
 
 And that's it! Now I have a functioning blog that I can add new features to and expand whenever I want. It's incredibly simple and minimal, no themes or bloated JavaScript frameworks (actually no JS at all as of right now), and it fits nicely into my existing workflows.
