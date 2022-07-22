@@ -33,19 +33,20 @@ How to Create a Blog from Scratch with Hugo
 <div>
 <article id=content>
 <p>In this post I&rsquo;ll walk you through creating the personal blog you&rsquo;re currently reading using Hugo. When choosing my stack for this blog I had a few requirements in mind: low maintenance, high performance/low bundle sizes, simple clean interface with reusable components, and markdown support. Hugo meets all these requirements with blazing fast compile times as well as no reliance on JavaScript or other libraries that could lead to bloated bundles. It supports a ton of different themes but also has the ability to create very simple themes from scratch with reusable components. And it supports markdown which is my preffered method for writing blog posts. So all I need to do is write a new post in markdown, add it to a specific directory, and push to GitHub and Hugo will generate the necessary html to be served.</p>
+<br>
 <p>For the purposes of this blog I&rsquo;ll use GitHub actions to generate the site and host it on GitHub pages.</p>
-<h3 id=getting-started>Getting Started <a class=anchor href=#getting-started>
+<h2 id=getting-started>Getting Started <a class=anchor href=#getting-started>
 #
-</a></h3><p>To get started <a href=https://gohugo.io/getting-started/installing>install Hugo</a>. I&rsquo;m on Mac so I used Homebrew:
+</a></h2><p>To get started <a href=https://gohugo.io/getting-started/installing>install Hugo</a>. I&rsquo;m on Mac so I used Homebrew:
 <div class=code-block>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>brew install hugo
 </code></pre></div>
 </div>
 </div></p>
 <p>Once it&rsquo;s installed use the hugo cli to scaffold a new site for you.</p>
 <div class=code-block>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site blogname
 </code></pre></div>
 </div>
@@ -53,7 +54,7 @@ How to Create a Blog from Scratch with Hugo
 <p>You now have the scaffolding for a new site! You can run the site locally using <code>hugo server</code> but you won&rsquo;t see anything just yet! Let&rsquo;s create our site!</p>
 <p>At this point you can add an existing theme to your site but I will create me own. Keep in mind, I didn&rsquo;t use a theme because I wanted to create something ultra simple and creating it from scratch helps me understand how Hugo works in greater detail. If you want to create a more complex site or you just want to create something fast I recommend starting with a theme and you can always modify it later but at least you have a base to start from. You can view a list of themes <a href=https://themes.gohugo.io/>here</a> and choose one you like. Download the theme&rsquo;s source code and add it the <code>themes</code> directory of your site. Then initialize git.</p>
 <div class=code-block>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8be9fd;font-style:italic>cd</span> blogname
 git init
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
@@ -65,7 +66,7 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>theme = <span style=color:#f1fa8c>&#34;ananke&#34;</span>
 </code></pre></div>
 </div>
@@ -76,16 +77,16 @@ config.toml
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>baseURL = <span style=color:#f1fa8c>&#39;https://olivergilan.com/&#39;</span>
 languageCode = <span style=color:#f1fa8c>&#39;en-us&#39;</span>
 title = <span style=color:#f1fa8c>&#39;Oliver Gilan&#39;</span>
 </code></pre></div>
 </div>
 </div></p>
-<h3 id=hugo-core-concepts>Hugo Core Concepts <a class=anchor href=#hugo-core-concepts>
+<h2 id=hugo-core-concepts>Hugo Core Concepts <a class=anchor href=#hugo-core-concepts>
 #
-</a></h3><p>It&rsquo;s important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code.</p>
+</a></h2><p>It&rsquo;s important to understand the directory structure of Hugo. The scaffolding generator for Hugo created a few important directories to understand. The themes directory as previously mentioned handles all the code.</p>
 <ul>
 <li>
 <p><code>content/</code> handles all the content of your site. This is where I&rsquo;ll be putting my markdown files for my blog.</p>
@@ -115,9 +116,9 @@ This generator uses the file in <code>archetypes/default.md</code> as a template
 </div>
 <p>Because my site is simple I decided to keep all my css in one file but you can of course split it up. Add any CSS or JS files you want to the <code>static/</code> directory. I added mine to <code>static/css/style.css</code> as well as the fonts my site will use to <code>static/fonts/</code>. You can of course load your fonts from an external service like Google fonts but I choose to serve them with my site.</p>
 <p>So now you have some content in your content directory and you have your css, javascript, or any other static files in your static directory. Now let&rsquo;s actually build the template files that tell Hugo how to render your content!</p>
-<h3 id=building-the-template>Building the Template <a class=anchor href=#building-the-template>
+<h2 id=building-the-template>Building the Template <a class=anchor href=#building-the-template>
 #
-</a></h3><p>The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won&rsquo;t change. To get started create the following files within the layouts directory:</p>
+</a></h2><p>The first part of the template I want to build is the navigation bar. This will be present on all of the pages in my site and won&rsquo;t change. To get started create the following files within the layouts directory:</p>
 <p><code>layout/_default/baseof.html</code> <br>
 <code>layout/partials/header.html</code></p>
 <p><code>baseof.html</code> will be the base template that holds the other templates. You can think of this as the root component in a framework like React. All that I&rsquo;ll put in that file is the following:</p>
@@ -125,7 +126,7 @@ This generator uses the file in <code>archetypes/default.md</code> as a template
 <p class=filepath>
 layouts/defaults/baseof.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#ff79c6>&lt;!DOCTYPE html&gt;</span>
 &lt;<span style=color:#ff79c6>html</span>&gt;
 	&lt;<span style=color:#ff79c6>head</span>&gt;
@@ -153,7 +154,7 @@ In <code>header.html</code> add the following code:
 <p class=filepath>
 layouts/partials/header.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>header</span>&gt;
 	&lt;<span style=color:#ff79c6>nav</span>&gt;
 		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
@@ -173,7 +174,7 @@ layouts/partials/header.html
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>sectionPagesMenu = <span style=color:#f1fa8c>&#34;main&#34;</span>
 </code></pre></div>
 </div>
@@ -183,7 +184,7 @@ config.toml
 <p class=filepath>
 layouts/partials/header.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>header</span>&gt;
 	&lt;<span style=color:#ff79c6>nav</span>&gt;
 		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
@@ -209,7 +210,7 @@ layouts/partials/header.html
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>pluralizelisttitles = <span style=color:#ff79c6>false</span>
 </code></pre></div>
 </div>
@@ -219,7 +220,7 @@ config.toml
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
 [[menu.main]]
 	identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
@@ -237,7 +238,7 @@ config.toml
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
 [[menu.main]]
 	identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
@@ -253,7 +254,7 @@ config.toml
 <p class=filepath>
 layouts/partials/header.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>header</span>&gt;
 	&lt;<span style=color:#ff79c6>nav</span>&gt;
 		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
@@ -284,7 +285,7 @@ layouts/partials/header.html
 <p class=filepath>
 layouts/defaults/baseof.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#ff79c6>&lt;!DOCTYPE html&gt;</span>
 &lt;<span style=color:#ff79c6>html</span>&gt;
 	&lt;<span style=color:#ff79c6>head</span>&gt;
@@ -316,7 +317,7 @@ Create a new file <code>layouts/blog/single.html</code>. This will be used by Hu
 <p class=filepath>
 layouts/blog/single.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{ define &#34;head&#34; }}
 &lt;<span style=color:#ff79c6>link</span> <span style=color:#50fa7b>rel</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;stylesheet&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/css/post.css&#34;</span> /&gt;
 {{ end }} {{ define &#34;main&#34; }}
@@ -339,7 +340,7 @@ layouts/blog/single.html
 <p class=filepath>
 content/blog/HowToCreateABlogWithHugo.md
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>---
 title: &#34;How to Create a Blog from Scratch with Hugo&#34;
 
@@ -359,7 +360,7 @@ draft: true
 <p class=filepath>
 layouts/shortcodes/code.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;code-block&#34;</span>&gt;
 	{{ with .Get &#34;file&#34; }}
 	&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;filepath&#34;</span>&gt;{{.}}&lt;/<span style=color:#ff79c6>div</span>&gt;
@@ -371,7 +372,7 @@ layouts/shortcodes/code.html
 </div></p>
 <p>Now in my content markdown files if I want a code block I can use
 <div class=code-block>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>This is a normal paragraph...
 {{&lt; <span style=color:#ff79c6>code</span> <span style=color:#50fa7b>file</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;optional/file/path&#34;</span> &gt;}}
 {{&lt; <span style=color:#ff79c6>highlight</span> <span style=color:#50fa7b>markdown</span> &gt;}}
@@ -388,7 +389,7 @@ Notice how my shortcode is literally called &ldquo;code&rdquo; and that&rsquo;s 
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[markup]
   [markup.highlight]
     anchorLineNos = <span style=color:#ff79c6>false</span>
@@ -413,7 +414,7 @@ config.toml
 <p class=filepath>
 layouts/partials/footer.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>footer</span>&gt;
 	&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;socials&#34;</span>&gt;
 		{{ range .Site.Menus.socials }}
@@ -440,7 +441,7 @@ layouts/partials/footer.html
 <p class=filepath>
 config.toml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
 [[menu.socials]]
     identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
@@ -472,7 +473,7 @@ config.toml
 <p class=filepath>
 layouts/_defaults/_markup/render-heading.html
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>h</span>{{ .<span style=color:#50fa7b>Level</span> }} <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{ .Anchor | safeURL }}&#34;</span>&gt;{{ .Text | safeHTML }}
 {{- if and (ge .Level 1) (le .Level 6) }}{{&#34; &#34; -}}
 &lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;anchor&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;#{{ .Anchor | safeURL }}&#34;</span>&gt;
@@ -483,17 +484,17 @@ layouts/_defaults/_markup/render-heading.html
 </code></pre></div>
 </div>
 </div>
-<h3 id=rss>RSS <a class=anchor href=#rss>
+<h2 id=rss>RSS <a class=anchor href=#rss>
 #
-</a></h3><p>Adding an RSS feed to the site is really quite simple with Hugo. Hugo has a default RSS template but it doesn&rsquo;t quite fit my needs because I want to only have blog posts on the feed and nothing else. By default Hugo creates a feed for each section of your site but in my case I only want one feed for the root of my site and I only want it to contain pages from the blog section. To do this I followed this <a href=https://benjamincongdon.me/blog/2020/01/14/Tips-for-Customizing-Hugo-RSS-Feeds/>awesome post</a> by Benjamin Congdon.</p>
-<h3 id=compiling-and-hosting>Compiling and Hosting <a class=anchor href=#compiling-and-hosting>
+</a></h2><p>Adding an RSS feed to the site is really quite simple with Hugo. Hugo has a default RSS template but it doesn&rsquo;t quite fit my needs because I want to only have blog posts on the feed and nothing else. By default Hugo creates a feed for each section of your site but in my case I only want one feed for the root of my site and I only want it to contain pages from the blog section. To do this I followed this <a href=https://benjamincongdon.me/blog/2020/01/14/Tips-for-Customizing-Hugo-RSS-Feeds/>awesome post</a> by Benjamin Congdon.</p>
+<h2 id=compiling-and-hosting>Compiling and Hosting <a class=anchor href=#compiling-and-hosting>
 #
-</a></h3><p>When it comes to compiling and hosting I want it to be as simple as possible. I don&rsquo;t want to spend time in the future messing around with all this infra or manually copying files to servers, etc. Because I&rsquo;m hosting this whole repository in GitHub I just used <a href=https://github.com/features/actions>GitHub Actions</a> to build my site. To do that just create the following file:</p>
+</a></h2><p>When it comes to compiling and hosting I want it to be as simple as possible. I don&rsquo;t want to spend time in the future messing around with all this infra or manually copying files to servers, etc. Because I&rsquo;m hosting this whole repository in GitHub I just used <a href=https://github.com/features/actions>GitHub Actions</a> to build my site. To do that just create the following file:</p>
 <div class=code-block>
 <p class=filepath>
 .github/workflows/gh-pages.yml
 </p>
-<div class=code>
+<div class=code-block-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#ff79c6>name</span>: github pages
 
 <span style=color:#ff79c6>on</span>:
@@ -532,9 +533,9 @@ layouts/_defaults/_markup/render-heading.html
 <p>Once you add this file to your repo and push it to GitHub it automatically creates a workflow that executes the above job. The job runs every time there is a new change pushed to the master branch of the repo. The Job first checks out the latest commits of the master branch, installs Hugo, compiles the site, then pushes the compiled static files to the gh-pages branch of the repository.</p>
 <p>This is great because it means whenever I want to make a change to the site, whether that&rsquo;s changing code or just adding a new blog post, I simply need to push the change to my master branch and it&rsquo;ll automatically rebuild the site and push the new build to the gh-pages branch.</p>
 <p>For hosting I want to keep it simple as well so I&rsquo;m just hosting my site on <a href=https://pages.github.com/>GitHub Pages</a>. In the settings for my repository I set the gh-pages branch to be the source for the served pages and I add my custom domain so that people can access the site with my custom URL.</p>
-<h3 id=conclusion>Conclusion <a class=anchor href=#conclusion>
+<h2 id=conclusion>Conclusion <a class=anchor href=#conclusion>
 #
-</a></h3><p>And that&rsquo;s it! Now I have a functioning blog that I can add new features to and expand whenever I want. It&rsquo;s incredibly simple and minimal, no themes or bloated JavaScript frameworks (actually no JS at all as of right now), and it fits nicely into my existing workflows.</p>
+</a></h2><p>And that&rsquo;s it! Now I have a functioning blog that I can add new features to and expand whenever I want. It&rsquo;s incredibly simple and minimal, no themes or bloated JavaScript frameworks (actually no JS at all as of right now), and it fits nicely into my existing workflows.</p>
 </article>
 </div>
 </section>
