@@ -9,9 +9,7 @@
         <section class="post-metadata">
             <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
             <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-            {{/*  <a href="{{.Site.BaseURL}}index.xml" target="blank" class="rss-link">
-                <img src="/icons/rss_orange.png" width="20" />
-            </a>  */}}
+            <a href="{{.Site.BaseURL}}index.xml" target="blank" class="rss-link">RSS</a>
         </section>
         <div>
             <article id="content">
@@ -19,16 +17,14 @@
             </article>
         </div>
     </section>
-    <aside id="meta">
-        {{/*  <div>
-            {{ with .PrevInSection }}
-            <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-            {{ end }}
-            {{ with .NextInSection }}
-            <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-            {{ end }}
-        </div>  */}}
-    </aside>
+    <!-- <aside id="meta">
+        {{ with .PrevInSection }}
+            <a class="previous" href="{{.Permalink}}"><< {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+            <a class="next" href="{{.Permalink}}">>> {{.Title}}</a>
+        {{ end }}
+    </aside> -->
 {{ end }}
 
 {{ define "footer" }}

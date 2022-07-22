@@ -1,7 +1,7 @@
 ---
-title: "How to Create a Blog from Scratch with Hugo"
+title: "Thoughts on the Future of Cloud"
 date: 2022-07-06T00:00:00-00:00
-draft: true
+draft: false
 ---
 
 
