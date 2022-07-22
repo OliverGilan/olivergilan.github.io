@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Oliver Gilan</title><link>https://olivergilan.com/</link><description>Recent content on Oliver Gilan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>blog@olivergilan.com (Oliver Gilan)</managingEditor><webMaster>blog@olivergilan.com (Oliver Gilan)</webMaster><copyright>2022 Oliver Gilan All rights reserved</copyright><lastBuildDate>Mon, 07 Feb 2022 10:46:26 -0500</lastBuildDate><atom:link href="https://olivergilan.com/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create a Blog from Scratch with Hugo</title><link>https://olivergilan.com/blog/how-to-create-blog-with-hugo/</link><pubDate>Thu, 03 Mar 2022 10:04:15 -0500</pubDate><author>blog@olivergilan.com (Oliver Gilan)</author><guid>https://olivergilan.com/blog/how-to-create-blog-with-hugo/</guid><description>&lt;p>In this post I&amp;rsquo;ll walk you through creating the personal blog you&amp;rsquo;re currently reading using Hugo. When choosing my stack for this blog I had a few requirements in mind: low maintenance, high performance/low bundle sizes, simple clean interface with reusable components, and markdown support. Hugo meets all these requirements with blazing fast compile times as well as no reliance on JavaScript or other libraries that could lead to bloated bundles. It supports a ton of different themes but also has the ability to create very simple themes from scratch with reusable components. And it supports markdown which is my preffered method for writing blog posts. So all I need to do is write a new post in markdown, add it to a specific directory, and push to GitHub and Hugo will generate the necessary html to be served.&lt;/p>
-&lt;br>
 &lt;p>For the purposes of this blog I&amp;rsquo;ll use GitHub actions to generate the site and host it on GitHub pages.&lt;/p>
 &lt;h2 id="getting-started">Getting Started &lt;a class="anchor" href="#getting-started">
 #
 &lt;/a>&lt;/h2>&lt;p>To get started &lt;a href="https://gohugo.io/getting-started/installing">install Hugo&lt;/a>. I&amp;rsquo;m on Mac so I used Homebrew:
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-Shell" data-lang="Shell">brew install hugo
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-Shell" data-lang="Shell">brew install hugo
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>Once it&amp;rsquo;s installed use the hugo cli to scaffold a new site for you.&lt;/p>
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">hugo new site blogname
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">hugo new site blogname
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -21,7 +20,7 @@
 &lt;p>At this point you can add an existing theme to your site but I will create me own. Keep in mind, I didn&amp;rsquo;t use a theme because I wanted to create something ultra simple and creating it from scratch helps me understand how Hugo works in greater detail. If you want to create a more complex site or you just want to create something fast I recommend starting with a theme and you can always modify it later but at least you have a base to start from. You can view a list of themes &lt;a href="https://themes.gohugo.io/">here&lt;/a> and choose one you like. Download the theme&amp;rsquo;s source code and add it the &lt;code>themes&lt;/code> directory of your site. Then initialize git.&lt;/p>
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#8be9fd;font-style:italic">cd&lt;/span> blogname
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#0086b3">cd&lt;/span> blogname
 git init
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 &lt;/code>&lt;/pre>&lt;/div>
@@ -33,7 +32,7 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">theme = &lt;span style="color:#f1fa8c">&amp;#34;ananke&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">theme = &lt;span style="color:#d14">&amp;#34;ananke&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -44,9 +43,9 @@ config.toml
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">baseURL = &lt;span style="color:#f1fa8c">&amp;#39;https://olivergilan.com/&amp;#39;&lt;/span>
-languageCode = &lt;span style="color:#f1fa8c">&amp;#39;en-us&amp;#39;&lt;/span>
-title = &lt;span style="color:#f1fa8c">&amp;#39;Oliver Gilan&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">baseURL = &lt;span style="color:#d14">&amp;#39;https://olivergilan.com/&amp;#39;&lt;/span>
+languageCode = &lt;span style="color:#d14">&amp;#39;en-us&amp;#39;&lt;/span>
+title = &lt;span style="color:#d14">&amp;#39;Oliver Gilan&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -93,23 +92,23 @@ This generator uses the file in &lt;code>archetypes/default.md&lt;/code> as a te
 layouts/defaults/baseof.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#ff79c6">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&amp;lt;&lt;span style="color:#ff79c6">html&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">charset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#000080">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">meta&lt;/span> &lt;span style="color:#008080">charset&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#000080">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#000080">title&lt;/span>&amp;gt;
 {{ block &amp;#34;head&amp;#34; . }} {{ end }}
-&amp;lt;/&lt;span style="color:#ff79c6">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">body&lt;/span>&amp;gt;
-&lt;span style="color:#6272a4">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
+&amp;lt;/&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">body&lt;/span>&amp;gt;
+&lt;span style="color:#998;font-style:italic">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
 {{ block &amp;#34;main&amp;#34; . }}
-&lt;span style="color:#6272a4">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
+&lt;span style="color:#998;font-style:italic">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
 {{ end }} {{ block &amp;#34;footer&amp;#34; . }}
-&lt;span style="color:#6272a4">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
+&lt;span style="color:#998;font-style:italic">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
 {{ end }}
-&amp;lt;/&lt;span style="color:#ff79c6">body&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">html&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">html&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -121,14 +120,14 @@ In &lt;code>header.html&lt;/code> add the following code:
 layouts/partials/header.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">header&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">nav&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">a&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">h1&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#ff79c6">h1&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">a&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">ul&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#ff79c6">ul&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">nav&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">header&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -141,7 +140,7 @@ layouts/partials/header.html
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">sectionPagesMenu = &lt;span style="color:#f1fa8c">&amp;#34;main&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">sectionPagesMenu = &lt;span style="color:#d14">&amp;#34;main&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -151,22 +150,22 @@ config.toml
 layouts/partials/header.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">header&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">nav&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">a&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">h1&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#ff79c6">h1&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">a&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">ul&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
 {{ range .Site.Menus.main }}
-&amp;lt;&lt;span style="color:#ff79c6">li&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">a&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-link small-thick&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
-&amp;gt;{{.Title}}&amp;lt;/&lt;span style="color:#ff79c6">a&lt;/span>
+&amp;lt;&lt;span style="color:#000080">li&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
+&amp;gt;{{.Title}}&amp;lt;/&lt;span style="color:#000080">a&lt;/span>
 &amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">li&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
 {{ end }}
-&amp;lt;/&lt;span style="color:#ff79c6">ul&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">nav&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">header&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -177,7 +176,7 @@ layouts/partials/header.html
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">pluralizelisttitles = &lt;span style="color:#ff79c6">false&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">pluralizelisttitles = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -187,12 +186,12 @@ config.toml
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
 [[menu.main]]
-identifier = &lt;span style="color:#f1fa8c">&amp;#34;github&amp;#34;&lt;/span>
-name = &lt;span style="color:#f1fa8c">&amp;#34;GitHub&amp;#34;&lt;/span>
-title = &lt;span style="color:#f1fa8c">&amp;#34;GitHub&amp;#34;&lt;/span>
-url = &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
+identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
+name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -205,14 +204,14 @@ url = &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/olivergilan&amp
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
 [[menu.main]]
-identifier = &lt;span style="color:#f1fa8c">&amp;#34;github&amp;#34;&lt;/span>
-name = &lt;span style="color:#f1fa8c">&amp;#34;GitHub&amp;#34;&lt;/span>
-title = &lt;span style="color:#f1fa8c">&amp;#34;GitHub&amp;#34;&lt;/span>
-url = &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
+identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
+name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
 [menu.main.params]
-targetBlank = &lt;span style="color:#ff79c6">true&lt;/span>
+targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -221,28 +220,25 @@ targetBlank = &lt;span style="color:#ff79c6">true&lt;/span>
 layouts/partials/header.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">header&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">nav&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">a&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">h1&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#ff79c6">h1&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">a&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">ul&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
 {{ range .Site.Menus.main }}
-&amp;lt;&lt;span style="color:#ff79c6">li&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">a&lt;/span>
-&lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
-&lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
-{{&lt;span style="color:#50fa7b">with&lt;/span>
-.&lt;span style="color:#50fa7b">Params&lt;/span>.&lt;span style="color:#50fa7b">targetBlank&lt;/span>}}
-&lt;span style="color:#50fa7b">target&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;_blank&amp;#34;&lt;/span>
-{{&lt;span style="color:#50fa7b">end&lt;/span>}}
-&amp;gt;{{.Title}}&amp;lt;/&lt;span style="color:#ff79c6">a&lt;/span>
-&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">a&lt;/span>
+&lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
+&lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
+&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#008080">with&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Params&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">targetBlank&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>&lt;span style="color:#008080">target&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;_blank&amp;#34;&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#008080">end&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>&amp;gt;
+{{ .Title }}
+&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
 {{ end }}
-&amp;lt;/&lt;span style="color:#ff79c6">ul&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">nav&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">header&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -252,24 +248,24 @@ layouts/partials/header.html
 layouts/defaults/baseof.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#ff79c6">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&amp;lt;&lt;span style="color:#ff79c6">html&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">meta&lt;/span> &lt;span style="color:#50fa7b">charset&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#ff79c6">title&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#000080">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">meta&lt;/span> &lt;span style="color:#008080">charset&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#000080">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#000080">title&lt;/span>&amp;gt;
 {{ block &amp;#34;head&amp;#34; . }} {{ end }}
-&amp;lt;/&lt;span style="color:#ff79c6">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">body&lt;/span>&amp;gt;
 {{ partial &amp;#34;header&amp;#34; . }}
-&lt;span style="color:#6272a4">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
+&lt;span style="color:#998;font-style:italic">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
 {{ block &amp;#34;main&amp;#34; . }}
-&lt;span style="color:#6272a4">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
+&lt;span style="color:#998;font-style:italic">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
 {{ end }} {{ block &amp;#34;footer&amp;#34; . }}
-&lt;span style="color:#6272a4">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
+&lt;span style="color:#998;font-style:italic">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
 {{ end }}
-&amp;lt;/&lt;span style="color:#ff79c6">body&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">html&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">html&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -284,19 +280,19 @@ Create a new file &lt;code>layouts/blog/single.html&lt;/code>. This will be used
 layouts/blog/single.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">{{ define &amp;#34;head&amp;#34; }}
-&amp;lt;&lt;span style="color:#ff79c6">link&lt;/span> &lt;span style="color:#50fa7b">rel&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/css/post.css&amp;#34;&lt;/span> /&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">{{ define &amp;#34;head&amp;#34; }}
+&amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/post.css&amp;#34;&lt;/span> /&amp;gt;
 {{ end }} {{ define &amp;#34;main&amp;#34; }}
-&amp;lt;&lt;span style="color:#ff79c6">section&lt;/span> &lt;span style="color:#50fa7b">id&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;main&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">h1&lt;/span> &lt;span style="color:#50fa7b">id&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;title&amp;#34;&lt;/span>&amp;gt;{{ .Title }}&amp;lt;/&lt;span style="color:#ff79c6">h1&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">section&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;post-metadata&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">h4&lt;/span> &lt;span style="color:#50fa7b">id&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;date&amp;#34;&lt;/span>&amp;gt;{{ .Date.Format &amp;#34;Mon Jan 2, 2006&amp;#34; }}&amp;lt;/&lt;span style="color:#ff79c6">h4&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">h5&lt;/span> &lt;span style="color:#50fa7b">id&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;wordcount&amp;#34;&lt;/span>&amp;gt;{{ .WordCount }} Words&amp;lt;/&lt;span style="color:#ff79c6">h5&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">section&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">div&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">article&lt;/span> &lt;span style="color:#50fa7b">id&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;content&amp;#34;&lt;/span>&amp;gt;{{ .Content }}&amp;lt;/&lt;span style="color:#ff79c6">article&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">div&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">section&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">section&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;main&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;title&amp;#34;&lt;/span>&amp;gt;{{ .Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">section&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;post-metadata&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h4&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;date&amp;#34;&lt;/span>&amp;gt;{{ .Date.Format &amp;#34;Mon Jan 2, 2006&amp;#34; }}&amp;lt;/&lt;span style="color:#000080">h4&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h5&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;wordcount&amp;#34;&lt;/span>&amp;gt;{{ .WordCount }} Words&amp;lt;/&lt;span style="color:#000080">h5&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">section&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">article&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;content&amp;#34;&lt;/span>&amp;gt;{{ .Content }}&amp;lt;/&lt;span style="color:#000080">article&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">section&lt;/span>&amp;gt;
 {{ end }} {{ define &amp;#34;footer&amp;#34; }} {{ partial &amp;#34;footer&amp;#34; . }} {{ end }}
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
@@ -307,7 +303,7 @@ layouts/blog/single.html
 content/blog/HowToCreateABlogWithHugo.md
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-markdown" data-lang="markdown">---
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-markdown" data-lang="markdown">---
 title: &amp;#34;How to Create a Blog from Scratch with Hugo&amp;#34;
 date: 2022-02-05T10:04:15-05:00
 draft: true
@@ -325,24 +321,24 @@ draft: true
 layouts/shortcodes/code.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">div&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;code-block&amp;#34;&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;code-block&amp;#34;&lt;/span>&amp;gt;
 {{ with .Get &amp;#34;file&amp;#34; }}
-&amp;lt;&lt;span style="color:#ff79c6">div&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;filepath&amp;#34;&lt;/span>&amp;gt;{{.}}&amp;lt;/&lt;span style="color:#ff79c6">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filepath&amp;#34;&lt;/span>&amp;gt;{{.}}&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
 {{ end }}
-&amp;lt;&lt;span style="color:#ff79c6">div&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;code&amp;#34;&lt;/span>&amp;gt;{{ .Inner | markdownify }}&amp;lt;/&lt;span style="color:#ff79c6">div&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;code&amp;#34;&lt;/span>&amp;gt;{{ .Inner | markdownify }}&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>Now in my content markdown files if I want a code block I can use
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-markdown" data-lang="markdown">This is a normal paragraph...
-{{&amp;lt; &lt;span style="color:#ff79c6">code&lt;/span> &lt;span style="color:#50fa7b">file&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;optional/file/path&amp;#34;&lt;/span> &amp;gt;}}
-{{&amp;lt; &lt;span style="color:#ff79c6">highlight&lt;/span> &lt;span style="color:#50fa7b">markdown&lt;/span> &amp;gt;}}
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-markdown" data-lang="markdown">This is a normal paragraph...
+{{&amp;lt; &lt;span style="color:#000080">code&lt;/span> &lt;span style="color:#008080">file&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;optional/file/path&amp;#34;&lt;/span> &amp;gt;}}
+{{&amp;lt; &lt;span style="color:#000080">highlight&lt;/span> &lt;span style="color:#008080">markdown&lt;/span> &amp;gt;}}
 // Code goes here
-{{&amp;lt; /&lt;span style="color:#ff79c6">highlight&lt;/span> &amp;gt;}}
-{{&amp;lt; /&lt;span style="color:#ff79c6">code&lt;/span> &amp;gt;}}
+{{&amp;lt; /&lt;span style="color:#000080">highlight&lt;/span> &amp;gt;}}
+{{&amp;lt; /&lt;span style="color:#000080">code&lt;/span> &amp;gt;}}
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -354,19 +350,19 @@ Notice how my shortcode is literally called &amp;ldquo;code&amp;rdquo; and that&
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[markup]
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[markup]
 [markup.highlight]
-anchorLineNos = &lt;span style="color:#ff79c6">false&lt;/span>
-codeFences = &lt;span style="color:#ff79c6">true&lt;/span>
-guessSyntax = &lt;span style="color:#ff79c6">false&lt;/span>
-hl_Lines = &lt;span style="color:#f1fa8c">&amp;#39;&amp;#39;&lt;/span>
-lineAnchors = &lt;span style="color:#f1fa8c">&amp;#39;&amp;#39;&lt;/span>
-lineNoStart = &lt;span style="color:#bd93f9">1&lt;/span>
-lineNos = &lt;span style="color:#ff79c6">false&lt;/span>
-lineNumbersInTable = &lt;span style="color:#ff79c6">true&lt;/span>
-noClasses = &lt;span style="color:#ff79c6">true&lt;/span>
-style = &lt;span style="color:#f1fa8c">&amp;#39;dracula&amp;#39;&lt;/span>
-tabWidth = &lt;span style="color:#bd93f9">4&lt;/span>
+anchorLineNos = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+codeFences = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+guessSyntax = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+hl_Lines = &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>
+lineAnchors = &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>
+lineNoStart = &lt;span style="color:#099">1&lt;/span>
+lineNos = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+lineNumbersInTable = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+noClasses = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+style = &lt;span style="color:#d14">&amp;#39;dracula&amp;#39;&lt;/span>
+tabWidth = &lt;span style="color:#099">4&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -379,25 +375,25 @@ tabWidth = &lt;span style="color:#bd93f9">4&lt;/span>
 layouts/partials/footer.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">footer&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">div&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;socials&amp;#34;&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">footer&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;socials&amp;#34;&lt;/span>&amp;gt;
 {{ range .Site.Menus.socials }}
-&amp;lt;&lt;span style="color:#ff79c6">a&lt;/span>
-&lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
-&lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
-{{&lt;span style="color:#50fa7b">with&lt;/span>
-.&lt;span style="color:#50fa7b">Params&lt;/span>.&lt;span style="color:#50fa7b">targetBlank&lt;/span>}}
-&lt;span style="color:#50fa7b">target&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;_blank&amp;#34;&lt;/span>
-{{&lt;span style="color:#50fa7b">end&lt;/span>}}
+&amp;lt;&lt;span style="color:#000080">a&lt;/span>
+&lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
+&lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
+&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span>&lt;span style="color:#008080">with&lt;/span>
+&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Params&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">targetBlank&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>
+&lt;span style="color:#008080">target&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;_blank&amp;#34;&lt;/span>
+&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span>&lt;span style="color:#008080">end&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>
 &amp;gt;
 {{ with .Params.icon }}
-&amp;lt;&lt;span style="color:#ff79c6">img&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;social-icon&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">src&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{.}}&amp;#34;&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#000080">img&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;social-icon&amp;#34;&lt;/span> &lt;span style="color:#008080">src&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.}}&amp;#34;&lt;/span> /&amp;gt;
 {{end}}
-&amp;lt;/&lt;span style="color:#ff79c6">a&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
 {{ end }}
-&amp;lt;/&lt;span style="color:#ff79c6">div&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#ff79c6">p&lt;/span>&amp;gt;&amp;amp;copy {{ dateFormat &amp;#34;2006&amp;#34; now }} {{ .Site.Title }}&amp;lt;/&lt;span style="color:#ff79c6">p&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#ff79c6">footer&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">p&lt;/span>&amp;gt;&lt;span style="color:#a61717;background-color:#e3d2d2">&amp;amp;&lt;/span>copy {{ dateFormat &amp;#34;2006&amp;#34; now }} {{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">footer&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
@@ -406,23 +402,23 @@ layouts/partials/footer.html
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
 [[menu.socials]]
-identifier = &lt;span style="color:#f1fa8c">&amp;#34;github&amp;#34;&lt;/span>
-name = &lt;span style="color:#f1fa8c">&amp;#34;GitHub&amp;#34;&lt;/span>
-title = &lt;span style="color:#f1fa8c">&amp;#34;GitHub&amp;#34;&lt;/span>
-url = &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
+identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
+name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
 [menu.socials.params]
-targetBlank = &lt;span style="color:#ff79c6">true&lt;/span>
-icon = &lt;span style="color:#f1fa8c">&amp;#34;/icons/github.png&amp;#34;&lt;/span>
+targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+icon = &lt;span style="color:#d14">&amp;#34;/icons/github.png&amp;#34;&lt;/span>
 [[menu.socials]]
-identifier = &lt;span style="color:#f1fa8c">&amp;#34;linkedin&amp;#34;&lt;/span>
-name = &lt;span style="color:#f1fa8c">&amp;#34;LinkedIn&amp;#34;&lt;/span>
-title = &lt;span style="color:#f1fa8c">&amp;#34;LinkedIn&amp;#34;&lt;/span>
-url = &lt;span style="color:#f1fa8c">&amp;#34;https://linkedin.com/in/oliver-gilan/&amp;#34;&lt;/span>
+identifier = &lt;span style="color:#d14">&amp;#34;linkedin&amp;#34;&lt;/span>
+name = &lt;span style="color:#d14">&amp;#34;LinkedIn&amp;#34;&lt;/span>
+title = &lt;span style="color:#d14">&amp;#34;LinkedIn&amp;#34;&lt;/span>
+url = &lt;span style="color:#d14">&amp;#34;https://linkedin.com/in/oliver-gilan/&amp;#34;&lt;/span>
 [menu.socials.params]
-targetBlank = &lt;span style="color:#ff79c6">true&lt;/span>
-icon = &lt;span style="color:#f1fa8c">&amp;#34;/icons/linkedin.png&amp;#34;&lt;/span>
+targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+icon = &lt;span style="color:#d14">&amp;#34;/icons/linkedin.png&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -436,13 +432,13 @@ icon = &lt;span style="color:#f1fa8c">&amp;#34;/icons/linkedin.png&amp;#34;&lt;/
 layouts/_defaults/_markup/render-heading.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#ff79c6">h&lt;/span>{{ .&lt;span style="color:#50fa7b">Level&lt;/span> }} &lt;span style="color:#50fa7b">id&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;{{ .Text | safeHTML }}
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">h&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Level&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;{{ .Text | safeHTML }}
 {{- if and (ge .Level 1) (le .Level 6) }}{{&amp;#34; &amp;#34; -}}
-&amp;lt;&lt;span style="color:#ff79c6">a&lt;/span> &lt;span style="color:#50fa7b">class&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;anchor&amp;#34;&lt;/span> &lt;span style="color:#50fa7b">href&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;#{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;anchor&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;#{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;
 #
-&amp;lt;/&lt;span style="color:#ff79c6">a&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
 {{- end -}}
-&amp;lt;/h{{ .Level }}&amp;gt;
+&lt;span style="color:#a61717;background-color:#e3d2d2">&amp;lt;&lt;/span>/h{{ .Level }}&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
@@ -457,34 +453,39 @@ layouts/_defaults/_markup/render-heading.html
 .github/workflows/gh-pages.yml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#ff79c6">name&lt;/span>: github pages
-&lt;span style="color:#ff79c6">on&lt;/span>:
-&lt;span style="color:#ff79c6">push&lt;/span>:
-&lt;span style="color:#ff79c6">branches&lt;/span>:
-- main &lt;span style="color:#6272a4"># Set a branch to deploy&lt;/span>
-&lt;span style="color:#ff79c6">pull_request&lt;/span>:
-&lt;span style="color:#ff79c6">jobs&lt;/span>:
-&lt;span style="color:#ff79c6">deploy&lt;/span>:
-&lt;span style="color:#ff79c6">runs-on&lt;/span>: ubuntu-20.04
-&lt;span style="color:#ff79c6">steps&lt;/span>:
-- &lt;span style="color:#ff79c6">uses&lt;/span>: actions/checkout@v2
-&lt;span style="color:#ff79c6">with&lt;/span>:
-&lt;span style="color:#ff79c6">submodules&lt;/span>: &lt;span style="color:#ff79c6">true&lt;/span> &lt;span style="color:#6272a4"># Fetch Hugo themes (true OR recursive)&lt;/span>
-&lt;span style="color:#ff79c6">fetch-depth&lt;/span>: &lt;span style="color:#bd93f9">0&lt;/span> &lt;span style="color:#6272a4"># Fetch all history for .GitInfo and .Lastmod&lt;/span>
-- &lt;span style="color:#ff79c6">name&lt;/span>: Setup Hugo
-&lt;span style="color:#ff79c6">uses&lt;/span>: peaceiris/actions-hugo@v2
-&lt;span style="color:#ff79c6">with&lt;/span>:
-&lt;span style="color:#ff79c6">hugo-version&lt;/span>: &lt;span style="color:#f1fa8c">&amp;#34;latest&amp;#34;&lt;/span>
-&lt;span style="color:#6272a4"># extended: true&lt;/span>
-- &lt;span style="color:#ff79c6">name&lt;/span>: Build
-&lt;span style="color:#ff79c6">run&lt;/span>: hugo --minify
-- &lt;span style="color:#ff79c6">name&lt;/span>: Deploy
-&lt;span style="color:#ff79c6">uses&lt;/span>: peaceiris/actions-gh-pages@v3
-&lt;span style="color:#ff79c6">if&lt;/span>: github.ref == &amp;#39;refs/heads/main&amp;#39;
-&lt;span style="color:#ff79c6">with&lt;/span>:
-&lt;span style="color:#ff79c6">github_token&lt;/span>: ${{ secrets.GITHUB_TOKEN }}
-&lt;span style="color:#ff79c6">publish_dir&lt;/span>: ./public
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>github pages&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000080">on&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">push&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">branches&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- main&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Set a branch to deploy&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">pull_request&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000080">jobs&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">deploy&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">runs-on&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>ubuntu-20.04&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">steps&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>actions/checkout@v2&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">submodules&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">true&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">fetch-depth&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#099">0&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Setup Hugo&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-hugo@v2&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">hugo-version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#d14">&amp;#34;latest&amp;#34;&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># extended: true&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Build&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>hugo --minify&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Deploy&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-gh-pages@v3&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">if&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>github.ref == &amp;#39;refs/heads/main&amp;#39;&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">github_token&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.GITHUB_TOKEN }}&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">publish_dir&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>./public&lt;span style="color:#bbb">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>Once you add this file to your repo and push it to GitHub it automatically creates a workflow that executes the above job. The job runs every time there is a new change pushed to the master branch of the repo. The Job first checks out the latest commits of the master branch, installs Hugo, compiles the site, then pushes the compiled static files to the gh-pages branch of the repository.&lt;/p>

@@ -27,27 +27,26 @@ How to Create a Blog from Scratch with Hugo
 <h1 id=title>How to Create a Blog from Scratch with Hugo</h1>
 <section class=post-metadata>
 <h4 id=date> Thu Mar 3, 2022 </h4>
-<h5 id=wordcount> 3471 Words </h5>
+<h5 id=wordcount> 3431 Words </h5>
 <a href=https://olivergilan.com/index.xml target=blank class=rss-link>RSS</a>
 </section>
 <div>
 <article id=content>
 <p>In this post I&rsquo;ll walk you through creating the personal blog you&rsquo;re currently reading using Hugo. When choosing my stack for this blog I had a few requirements in mind: low maintenance, high performance/low bundle sizes, simple clean interface with reusable components, and markdown support. Hugo meets all these requirements with blazing fast compile times as well as no reliance on JavaScript or other libraries that could lead to bloated bundles. It supports a ton of different themes but also has the ability to create very simple themes from scratch with reusable components. And it supports markdown which is my preffered method for writing blog posts. So all I need to do is write a new post in markdown, add it to a specific directory, and push to GitHub and Hugo will generate the necessary html to be served.</p>
-<br>
 <p>For the purposes of this blog I&rsquo;ll use GitHub actions to generate the site and host it on GitHub pages.</p>
 <h2 id=getting-started>Getting Started <a class=anchor href=#getting-started>
 #
 </a></h2><p>To get started <a href=https://gohugo.io/getting-started/installing>install Hugo</a>. I&rsquo;m on Mac so I used Homebrew:
 <div class=code-block>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>brew install hugo
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>brew install hugo
 </code></pre></div>
 </div>
 </div></p>
 <p>Once it&rsquo;s installed use the hugo cli to scaffold a new site for you.</p>
 <div class=code-block>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site blogname
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site blogname
 </code></pre></div>
 </div>
 </div>
@@ -55,7 +54,7 @@ How to Create a Blog from Scratch with Hugo
 <p>At this point you can add an existing theme to your site but I will create me own. Keep in mind, I didn&rsquo;t use a theme because I wanted to create something ultra simple and creating it from scratch helps me understand how Hugo works in greater detail. If you want to create a more complex site or you just want to create something fast I recommend starting with a theme and you can always modify it later but at least you have a base to start from. You can view a list of themes <a href=https://themes.gohugo.io/>here</a> and choose one you like. Download the theme&rsquo;s source code and add it the <code>themes</code> directory of your site. Then initialize git.</p>
 <div class=code-block>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8be9fd;font-style:italic>cd</span> blogname
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#0086b3>cd</span> blogname
 git init
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 </code></pre></div>
@@ -67,7 +66,7 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>theme = <span style=color:#f1fa8c>&#34;ananke&#34;</span>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>theme = <span style=color:#d14>&#34;ananke&#34;</span>
 </code></pre></div>
 </div>
 </div>
@@ -78,9 +77,9 @@ config.toml
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>baseURL = <span style=color:#f1fa8c>&#39;https://olivergilan.com/&#39;</span>
-languageCode = <span style=color:#f1fa8c>&#39;en-us&#39;</span>
-title = <span style=color:#f1fa8c>&#39;Oliver Gilan&#39;</span>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>baseURL = <span style=color:#d14>&#39;https://olivergilan.com/&#39;</span>
+languageCode = <span style=color:#d14>&#39;en-us&#39;</span>
+title = <span style=color:#d14>&#39;Oliver Gilan&#39;</span>
 </code></pre></div>
 </div>
 </div></p>
@@ -127,23 +126,23 @@ This generator uses the file in <code>archetypes/default.md</code> as a template
 layouts/defaults/baseof.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#ff79c6>&lt;!DOCTYPE html&gt;</span>
-&lt;<span style=color:#ff79c6>html</span>&gt;
-	&lt;<span style=color:#ff79c6>head</span>&gt;
-		&lt;<span style=color:#ff79c6>meta</span> <span style=color:#50fa7b>charset</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;utf-8&#34;</span> /&gt;
-		&lt;<span style=color:#ff79c6>link</span> <span style=color:#50fa7b>rel</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;stylesheet&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/css/style.css&#34;</span> /&gt;
-		&lt;<span style=color:#ff79c6>title</span>&gt;{{ block &#34;title&#34; . }} {{ .Site.Title }} {{ end }}&lt;/<span style=color:#ff79c6>title</span>&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:navy>html</span>&gt;
+	&lt;<span style=color:navy>head</span>&gt;
+		&lt;<span style=color:navy>meta</span> <span style=color:teal>charset</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;utf-8&#34;</span> /&gt;
+		&lt;<span style=color:navy>link</span> <span style=color:teal>rel</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;stylesheet&#34;</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;/css/style.css&#34;</span> /&gt;
+		&lt;<span style=color:navy>title</span>&gt;{{ block &#34;title&#34; . }} {{ .Site.Title }} {{ end }}&lt;/<span style=color:navy>title</span>&gt;
 		{{ block &#34;head&#34; . }} {{ end }}
-	&lt;/<span style=color:#ff79c6>head</span>&gt;
-	&lt;<span style=color:#ff79c6>body</span>&gt;
-		<span style=color:#6272a4>&lt;!-- Code that all your templates share, like a header --&gt;</span>
+	&lt;/<span style=color:navy>head</span>&gt;
+	&lt;<span style=color:navy>body</span>&gt;
+		<span style=color:#998;font-style:italic>&lt;!-- Code that all your templates share, like a header --&gt;</span>
 		{{ block &#34;main&#34; . }}
-		<span style=color:#6272a4>&lt;!-- The part of the page that begins to differ between templates --&gt;</span>
+		<span style=color:#998;font-style:italic>&lt;!-- The part of the page that begins to differ between templates --&gt;</span>
 		{{ end }} {{ block &#34;footer&#34; . }}
-		<span style=color:#6272a4>&lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&gt;</span>
+		<span style=color:#998;font-style:italic>&lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&gt;</span>
 		{{ end }}
-	&lt;/<span style=color:#ff79c6>body</span>&gt;
-&lt;/<span style=color:#ff79c6>html</span>&gt;
+	&lt;/<span style=color:navy>body</span>&gt;
+&lt;/<span style=color:navy>html</span>&gt;
 </code></pre></div>
 </div>
 </div>
@@ -155,14 +154,14 @@ In <code>header.html</code> add the following code:
 layouts/partials/header.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>header</span>&gt;
-	&lt;<span style=color:#ff79c6>nav</span>&gt;
-		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
-			&lt;<span style=color:#ff79c6>h1</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;site-title&#34;</span>&gt;{{ .Site.Title }}&lt;/<span style=color:#ff79c6>h1</span>&gt;
-		&lt;/<span style=color:#ff79c6>a</span>&gt;
-		&lt;<span style=color:#ff79c6>ul</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-list&#34;</span>&gt;&lt;/<span style=color:#ff79c6>ul</span>&gt;
-	&lt;/<span style=color:#ff79c6>nav</span>&gt;
-&lt;/<span style=color:#ff79c6>header</span>&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:navy>header</span>&gt;
+	&lt;<span style=color:navy>nav</span>&gt;
+		&lt;<span style=color:navy>a</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
+			&lt;<span style=color:navy>h1</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;site-title&#34;</span>&gt;{{ .Site.Title }}&lt;/<span style=color:navy>h1</span>&gt;
+		&lt;/<span style=color:navy>a</span>&gt;
+		&lt;<span style=color:navy>ul</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-list&#34;</span>&gt;&lt;/<span style=color:navy>ul</span>&gt;
+	&lt;/<span style=color:navy>nav</span>&gt;
+&lt;/<span style=color:navy>header</span>&gt;
 </code></pre></div>
 </div>
 </div></p>
@@ -175,7 +174,7 @@ layouts/partials/header.html
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>sectionPagesMenu = <span style=color:#f1fa8c>&#34;main&#34;</span>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>sectionPagesMenu = <span style=color:#d14>&#34;main&#34;</span>
 </code></pre></div>
 </div>
 </div></p>
@@ -185,22 +184,22 @@ config.toml
 layouts/partials/header.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>header</span>&gt;
-	&lt;<span style=color:#ff79c6>nav</span>&gt;
-		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
-			&lt;<span style=color:#ff79c6>h1</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;site-title&#34;</span>&gt;{{ .Site.Title }}&lt;/<span style=color:#ff79c6>h1</span>&gt;
-		&lt;/<span style=color:#ff79c6>a</span>&gt;
-		&lt;<span style=color:#ff79c6>ul</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-list&#34;</span>&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:navy>header</span>&gt;
+	&lt;<span style=color:navy>nav</span>&gt;
+		&lt;<span style=color:navy>a</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
+			&lt;<span style=color:navy>h1</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;site-title&#34;</span>&gt;{{ .Site.Title }}&lt;/<span style=color:navy>h1</span>&gt;
+		&lt;/<span style=color:navy>a</span>&gt;
+		&lt;<span style=color:navy>ul</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-list&#34;</span>&gt;
 			{{ range .Site.Menus.main }}
-			&lt;<span style=color:#ff79c6>li</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-item horizontal-list&#34;</span>&gt;
-				&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-link small-thick&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.URL}}&#34;</span>
-					&gt;{{.Title}}&lt;/<span style=color:#ff79c6>a</span>
+			&lt;<span style=color:navy>li</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-item horizontal-list&#34;</span>&gt;
+				&lt;<span style=color:navy>a</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-link small-thick&#34;</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{.URL}}&#34;</span>
+					&gt;{{.Title}}&lt;/<span style=color:navy>a</span>
 				&gt;
-			&lt;/<span style=color:#ff79c6>li</span>&gt;
+			&lt;/<span style=color:navy>li</span>&gt;
 			{{ end }}
-		&lt;/<span style=color:#ff79c6>ul</span>&gt;
-	&lt;/<span style=color:#ff79c6>nav</span>&gt;
-&lt;/<span style=color:#ff79c6>header</span>&gt;
+		&lt;/<span style=color:navy>ul</span>&gt;
+	&lt;/<span style=color:navy>nav</span>&gt;
+&lt;/<span style=color:navy>header</span>&gt;
 </code></pre></div>
 </div>
 </div>
@@ -211,7 +210,7 @@ layouts/partials/header.html
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>pluralizelisttitles = <span style=color:#ff79c6>false</span>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>pluralizelisttitles = <span style=color:#000;font-weight:700>false</span>
 </code></pre></div>
 </div>
 </div></p>
@@ -221,12 +220,12 @@ config.toml
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
 [[menu.main]]
-	identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
-	name = <span style=color:#f1fa8c>&#34;GitHub&#34;</span>
-	title = <span style=color:#f1fa8c>&#34;GitHub&#34;</span>
-	url = <span style=color:#f1fa8c>&#34;https://github.com/olivergilan&#34;</span>
+	identifier = <span style=color:#d14>&#34;github&#34;</span>
+	name = <span style=color:#d14>&#34;GitHub&#34;</span>
+	title = <span style=color:#d14>&#34;GitHub&#34;</span>
+	url = <span style=color:#d14>&#34;https://github.com/olivergilan&#34;</span>
 </code></pre></div>
 </div>
 </div>
@@ -239,14 +238,14 @@ config.toml
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
 [[menu.main]]
-	identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
-	name = <span style=color:#f1fa8c>&#34;GitHub&#34;</span>
-	title = <span style=color:#f1fa8c>&#34;GitHub&#34;</span>
-	url = <span style=color:#f1fa8c>&#34;https://github.com/olivergilan&#34;</span>
+	identifier = <span style=color:#d14>&#34;github&#34;</span>
+	name = <span style=color:#d14>&#34;GitHub&#34;</span>
+	title = <span style=color:#d14>&#34;GitHub&#34;</span>
+	url = <span style=color:#d14>&#34;https://github.com/olivergilan&#34;</span>
 	[menu.main.params]
-		targetBlank = <span style=color:#ff79c6>true</span>
+		targetBlank = <span style=color:#000;font-weight:700>true</span>
 </code></pre></div>
 </div>
 </div>
@@ -255,28 +254,25 @@ config.toml
 layouts/partials/header.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>header</span>&gt;
-	&lt;<span style=color:#ff79c6>nav</span>&gt;
-		&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
-			&lt;<span style=color:#ff79c6>h1</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;site-title&#34;</span>&gt;{{ .Site.Title }}&lt;/<span style=color:#ff79c6>h1</span>&gt;
-		&lt;/<span style=color:#ff79c6>a</span>&gt;
-		&lt;<span style=color:#ff79c6>ul</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-list&#34;</span>&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:navy>header</span>&gt;
+	&lt;<span style=color:navy>nav</span>&gt;
+		&lt;<span style=color:navy>a</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{.Site.BaseURL}}&#34;</span>&gt;
+			&lt;<span style=color:navy>h1</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;site-title&#34;</span>&gt;{{ .Site.Title }}&lt;/<span style=color:navy>h1</span>&gt;
+		&lt;/<span style=color:navy>a</span>&gt;
+		&lt;<span style=color:navy>ul</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-list&#34;</span>&gt;
 			{{ range .Site.Menus.main }}
-			&lt;<span style=color:#ff79c6>li</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-item horizontal-list&#34;</span>&gt;
-				&lt;<span style=color:#ff79c6>a</span>
-					<span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-link small-thick&#34;</span>
-					<span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.URL}}&#34;</span>
-					{{<span style=color:#50fa7b>with</span>
-					.<span style=color:#50fa7b>Params</span>.<span style=color:#50fa7b>targetBlank</span>}}
-					<span style=color:#50fa7b>target</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;_blank&#34;</span>
-					{{<span style=color:#50fa7b>end</span>}}
-					&gt;{{.Title}}&lt;/<span style=color:#ff79c6>a</span>
-				&gt;
-			&lt;/<span style=color:#ff79c6>li</span>&gt;
+			&lt;<span style=color:navy>li</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-item horizontal-list&#34;</span>&gt;
+				&lt;<span style=color:navy>a</span>
+					<span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-link small-thick&#34;</span>
+					<span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{.URL}}&#34;</span>
+					<span style=color:#a61717;background-color:#e3d2d2>{{</span> <span style=color:teal>with</span> <span style=color:#a61717;background-color:#e3d2d2>.</span><span style=color:teal>Params</span><span style=color:#a61717;background-color:#e3d2d2>.</span><span style=color:teal>targetBlank</span> <span style=color:#a61717;background-color:#e3d2d2>}}</span><span style=color:teal>target</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;_blank&#34;</span><span style=color:#a61717;background-color:#e3d2d2>{{</span> <span style=color:teal>end</span> <span style=color:#a61717;background-color:#e3d2d2>}}</span>&gt;
+						{{ .Title }}
+					&lt;/<span style=color:navy>a</span>&gt;
+			&lt;/<span style=color:navy>li</span>&gt;
 			{{ end }}
-		&lt;/<span style=color:#ff79c6>ul</span>&gt;
-	&lt;/<span style=color:#ff79c6>nav</span>&gt;
-&lt;/<span style=color:#ff79c6>header</span>&gt;
+		&lt;/<span style=color:navy>ul</span>&gt;
+	&lt;/<span style=color:navy>nav</span>&gt;
+&lt;/<span style=color:navy>header</span>&gt;
 </code></pre></div>
 </div>
 </div>
@@ -286,24 +282,24 @@ layouts/partials/header.html
 layouts/defaults/baseof.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#ff79c6>&lt;!DOCTYPE html&gt;</span>
-&lt;<span style=color:#ff79c6>html</span>&gt;
-	&lt;<span style=color:#ff79c6>head</span>&gt;
-		&lt;<span style=color:#ff79c6>meta</span> <span style=color:#50fa7b>charset</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;utf-8&#34;</span> /&gt;
-		&lt;<span style=color:#ff79c6>link</span> <span style=color:#50fa7b>rel</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;stylesheet&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/css/style.css&#34;</span> /&gt;
-		&lt;<span style=color:#ff79c6>title</span>&gt;{{ block &#34;title&#34; . }} {{ .Site.Title }} {{ end }}&lt;/<span style=color:#ff79c6>title</span>&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:navy>html</span>&gt;
+	&lt;<span style=color:navy>head</span>&gt;
+		&lt;<span style=color:navy>meta</span> <span style=color:teal>charset</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;utf-8&#34;</span> /&gt;
+		&lt;<span style=color:navy>link</span> <span style=color:teal>rel</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;stylesheet&#34;</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;/css/style.css&#34;</span> /&gt;
+		&lt;<span style=color:navy>title</span>&gt;{{ block &#34;title&#34; . }} {{ .Site.Title }} {{ end }}&lt;/<span style=color:navy>title</span>&gt;
 		{{ block &#34;head&#34; . }} {{ end }}
-	&lt;/<span style=color:#ff79c6>head</span>&gt;
-	&lt;<span style=color:#ff79c6>body</span>&gt;
+	&lt;/<span style=color:navy>head</span>&gt;
+	&lt;<span style=color:navy>body</span>&gt;
 		{{ partial &#34;header&#34; . }}
-		<span style=color:#6272a4>&lt;!-- Code that all your templates share, like a header --&gt;</span>
+		<span style=color:#998;font-style:italic>&lt;!-- Code that all your templates share, like a header --&gt;</span>
 		{{ block &#34;main&#34; . }}
-		<span style=color:#6272a4>&lt;!-- The part of the page that begins to differ between templates --&gt;</span>
+		<span style=color:#998;font-style:italic>&lt;!-- The part of the page that begins to differ between templates --&gt;</span>
 		{{ end }} {{ block &#34;footer&#34; . }}
-		<span style=color:#6272a4>&lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&gt;</span>
+		<span style=color:#998;font-style:italic>&lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&gt;</span>
 		{{ end }}
-	&lt;/<span style=color:#ff79c6>body</span>&gt;
-&lt;/<span style=color:#ff79c6>html</span>&gt;
+	&lt;/<span style=color:navy>body</span>&gt;
+&lt;/<span style=color:navy>html</span>&gt;
 </code></pre></div>
 </div>
 </div></p>
@@ -318,19 +314,19 @@ Create a new file <code>layouts/blog/single.html</code>. This will be used by Hu
 layouts/blog/single.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{ define &#34;head&#34; }}
-&lt;<span style=color:#ff79c6>link</span> <span style=color:#50fa7b>rel</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;stylesheet&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;/css/post.css&#34;</span> /&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{ define &#34;head&#34; }}
+&lt;<span style=color:navy>link</span> <span style=color:teal>rel</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;stylesheet&#34;</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;/css/post.css&#34;</span> /&gt;
 {{ end }} {{ define &#34;main&#34; }}
-&lt;<span style=color:#ff79c6>section</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;main&#34;</span>&gt;
-	&lt;<span style=color:#ff79c6>h1</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style=color:#ff79c6>h1</span>&gt;
-	&lt;<span style=color:#ff79c6>section</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;post-metadata&#34;</span>&gt;
-		&lt;<span style=color:#ff79c6>h4</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;date&#34;</span>&gt;{{ .Date.Format &#34;Mon Jan 2, 2006&#34; }}&lt;/<span style=color:#ff79c6>h4</span>&gt;
-		&lt;<span style=color:#ff79c6>h5</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;wordcount&#34;</span>&gt;{{ .WordCount }} Words&lt;/<span style=color:#ff79c6>h5</span>&gt;
-	&lt;/<span style=color:#ff79c6>section</span>&gt;
-	&lt;<span style=color:#ff79c6>div</span>&gt;
-		&lt;<span style=color:#ff79c6>article</span> <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;content&#34;</span>&gt;{{ .Content }}&lt;/<span style=color:#ff79c6>article</span>&gt;
-	&lt;/<span style=color:#ff79c6>div</span>&gt;
-&lt;/<span style=color:#ff79c6>section</span>&gt;
+&lt;<span style=color:navy>section</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;main&#34;</span>&gt;
+	&lt;<span style=color:navy>h1</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style=color:navy>h1</span>&gt;
+	&lt;<span style=color:navy>section</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;post-metadata&#34;</span>&gt;
+		&lt;<span style=color:navy>h4</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;date&#34;</span>&gt;{{ .Date.Format &#34;Mon Jan 2, 2006&#34; }}&lt;/<span style=color:navy>h4</span>&gt;
+		&lt;<span style=color:navy>h5</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;wordcount&#34;</span>&gt;{{ .WordCount }} Words&lt;/<span style=color:navy>h5</span>&gt;
+	&lt;/<span style=color:navy>section</span>&gt;
+	&lt;<span style=color:navy>div</span>&gt;
+		&lt;<span style=color:navy>article</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;content&#34;</span>&gt;{{ .Content }}&lt;/<span style=color:navy>article</span>&gt;
+	&lt;/<span style=color:navy>div</span>&gt;
+&lt;/<span style=color:navy>section</span>&gt;
 {{ end }} {{ define &#34;footer&#34; }} {{ partial &#34;footer&#34; . }} {{ end }}
 </code></pre></div>
 </div>
@@ -341,7 +337,7 @@ layouts/blog/single.html
 content/blog/HowToCreateABlogWithHugo.md
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>---
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>---
 title: &#34;How to Create a Blog from Scratch with Hugo&#34;
 
 date: 2022-02-05T10:04:15-05:00
@@ -361,24 +357,24 @@ draft: true
 layouts/shortcodes/code.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;code-block&#34;</span>&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;code-block&#34;</span>&gt;
 	{{ with .Get &#34;file&#34; }}
-	&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;filepath&#34;</span>&gt;{{.}}&lt;/<span style=color:#ff79c6>div</span>&gt;
+	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;filepath&#34;</span>&gt;{{.}}&lt;/<span style=color:navy>div</span>&gt;
 	{{ end }}
-	&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;code&#34;</span>&gt;{{ .Inner | markdownify }}&lt;/<span style=color:#ff79c6>div</span>&gt;
-&lt;/<span style=color:#ff79c6>div</span>&gt;
+	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;code&#34;</span>&gt;{{ .Inner | markdownify }}&lt;/<span style=color:navy>div</span>&gt;
+&lt;/<span style=color:navy>div</span>&gt;
 </code></pre></div>
 </div>
 </div></p>
 <p>Now in my content markdown files if I want a code block I can use
 <div class=code-block>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>This is a normal paragraph...
-{{&lt; <span style=color:#ff79c6>code</span> <span style=color:#50fa7b>file</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;optional/file/path&#34;</span> &gt;}}
-{{&lt; <span style=color:#ff79c6>highlight</span> <span style=color:#50fa7b>markdown</span> &gt;}}
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>This is a normal paragraph...
+{{&lt; <span style=color:navy>code</span> <span style=color:teal>file</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;optional/file/path&#34;</span> &gt;}}
+{{&lt; <span style=color:navy>highlight</span> <span style=color:teal>markdown</span> &gt;}}
 // Code goes here
-{{&lt; /<span style=color:#ff79c6>highlight</span> &gt;}}
-{{&lt; /<span style=color:#ff79c6>code</span> &gt;}}
+{{&lt; /<span style=color:navy>highlight</span> &gt;}}
+{{&lt; /<span style=color:navy>code</span> &gt;}}
 </code></pre></div>
 </div>
 </div></p>
@@ -390,19 +386,19 @@ Notice how my shortcode is literally called &ldquo;code&rdquo; and that&rsquo;s 
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[markup]
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[markup]
   [markup.highlight]
-    anchorLineNos = <span style=color:#ff79c6>false</span>
-    codeFences = <span style=color:#ff79c6>true</span>
-    guessSyntax = <span style=color:#ff79c6>false</span>
-    hl_Lines = <span style=color:#f1fa8c>&#39;&#39;</span>
-    lineAnchors = <span style=color:#f1fa8c>&#39;&#39;</span>
-    lineNoStart = <span style=color:#bd93f9>1</span>
-    lineNos = <span style=color:#ff79c6>false</span>
-    lineNumbersInTable = <span style=color:#ff79c6>true</span>
-    noClasses = <span style=color:#ff79c6>true</span>
-    style = <span style=color:#f1fa8c>&#39;dracula&#39;</span>
-    tabWidth = <span style=color:#bd93f9>4</span>
+    anchorLineNos = <span style=color:#000;font-weight:700>false</span>
+    codeFences = <span style=color:#000;font-weight:700>true</span>
+    guessSyntax = <span style=color:#000;font-weight:700>false</span>
+    hl_Lines = <span style=color:#d14>&#39;&#39;</span>
+    lineAnchors = <span style=color:#d14>&#39;&#39;</span>
+    lineNoStart = <span style=color:#099>1</span>
+    lineNos = <span style=color:#000;font-weight:700>false</span>
+    lineNumbersInTable = <span style=color:#000;font-weight:700>true</span>
+    noClasses = <span style=color:#000;font-weight:700>true</span>
+    style = <span style=color:#d14>&#39;dracula&#39;</span>
+    tabWidth = <span style=color:#099>4</span>
 </code></pre></div>
 </div>
 </div></p>
@@ -415,25 +411,25 @@ config.toml
 layouts/partials/footer.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>footer</span>&gt;
-	&lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;socials&#34;</span>&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:navy>footer</span>&gt;
+	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;socials&#34;</span>&gt;
 		{{ range .Site.Menus.socials }}
-		&lt;<span style=color:#ff79c6>a</span>
-			<span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;section-link small-thick&#34;</span>
-			<span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.URL}}&#34;</span>
-			{{<span style=color:#50fa7b>with</span>
-			.<span style=color:#50fa7b>Params</span>.<span style=color:#50fa7b>targetBlank</span>}}
-			<span style=color:#50fa7b>target</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;_blank&#34;</span>
-			{{<span style=color:#50fa7b>end</span>}}
+		&lt;<span style=color:navy>a</span>
+			<span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;section-link small-thick&#34;</span>
+			<span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{.URL}}&#34;</span>
+			<span style=color:#a61717;background-color:#e3d2d2>{{</span><span style=color:teal>with</span>
+			<span style=color:#a61717;background-color:#e3d2d2>.</span><span style=color:teal>Params</span><span style=color:#a61717;background-color:#e3d2d2>.</span><span style=color:teal>targetBlank</span><span style=color:#a61717;background-color:#e3d2d2>}}</span>
+			<span style=color:teal>target</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;_blank&#34;</span>
+			<span style=color:#a61717;background-color:#e3d2d2>{{</span><span style=color:teal>end</span><span style=color:#a61717;background-color:#e3d2d2>}}</span>
 		&gt;
 			{{ with .Params.icon }}
-			&lt;<span style=color:#ff79c6>img</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;social-icon&#34;</span> <span style=color:#50fa7b>src</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{.}}&#34;</span> /&gt;
+			&lt;<span style=color:navy>img</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;social-icon&#34;</span> <span style=color:teal>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{.}}&#34;</span> /&gt;
 			{{end}}
-		&lt;/<span style=color:#ff79c6>a</span>&gt;
+		&lt;/<span style=color:navy>a</span>&gt;
 		{{ end }}
-	&lt;/<span style=color:#ff79c6>div</span>&gt;
-	&lt;<span style=color:#ff79c6>p</span>&gt;&amp;copy {{ dateFormat &#34;2006&#34; now }} {{ .Site.Title }}&lt;/<span style=color:#ff79c6>p</span>&gt;
-&lt;/<span style=color:#ff79c6>footer</span>&gt;
+	&lt;/<span style=color:navy>div</span>&gt;
+	&lt;<span style=color:navy>p</span>&gt;<span style=color:#a61717;background-color:#e3d2d2>&amp;</span>copy {{ dateFormat &#34;2006&#34; now }} {{ .Site.Title }}&lt;/<span style=color:navy>p</span>&gt;
+&lt;/<span style=color:navy>footer</span>&gt;
 </code></pre></div>
 </div>
 </div></p>
@@ -442,24 +438,24 @@ layouts/partials/footer.html
 config.toml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[menu]
 [[menu.socials]]
-    identifier = <span style=color:#f1fa8c>&#34;github&#34;</span>
-    name = <span style=color:#f1fa8c>&#34;GitHub&#34;</span>
-    title = <span style=color:#f1fa8c>&#34;GitHub&#34;</span>
-    url = <span style=color:#f1fa8c>&#34;https://github.com/olivergilan&#34;</span>
+    identifier = <span style=color:#d14>&#34;github&#34;</span>
+    name = <span style=color:#d14>&#34;GitHub&#34;</span>
+    title = <span style=color:#d14>&#34;GitHub&#34;</span>
+    url = <span style=color:#d14>&#34;https://github.com/olivergilan&#34;</span>
     [menu.socials.params]
-        targetBlank = <span style=color:#ff79c6>true</span>
-        icon = <span style=color:#f1fa8c>&#34;/icons/github.png&#34;</span>
+        targetBlank = <span style=color:#000;font-weight:700>true</span>
+        icon = <span style=color:#d14>&#34;/icons/github.png&#34;</span>
 
 [[menu.socials]]
-    identifier = <span style=color:#f1fa8c>&#34;linkedin&#34;</span>
-    name = <span style=color:#f1fa8c>&#34;LinkedIn&#34;</span>
-    title = <span style=color:#f1fa8c>&#34;LinkedIn&#34;</span>
-    url = <span style=color:#f1fa8c>&#34;https://linkedin.com/in/oliver-gilan/&#34;</span>
+    identifier = <span style=color:#d14>&#34;linkedin&#34;</span>
+    name = <span style=color:#d14>&#34;LinkedIn&#34;</span>
+    title = <span style=color:#d14>&#34;LinkedIn&#34;</span>
+    url = <span style=color:#d14>&#34;https://linkedin.com/in/oliver-gilan/&#34;</span>
     [menu.socials.params]
-        targetBlank = <span style=color:#ff79c6>true</span>
-        icon = <span style=color:#f1fa8c>&#34;/icons/linkedin.png&#34;</span>
+        targetBlank = <span style=color:#000;font-weight:700>true</span>
+        icon = <span style=color:#d14>&#34;/icons/linkedin.png&#34;</span>
 
 </code></pre></div>
 </div>
@@ -474,13 +470,13 @@ config.toml
 layouts/_defaults/_markup/render-heading.html
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#ff79c6>h</span>{{ .<span style=color:#50fa7b>Level</span> }} <span style=color:#50fa7b>id</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;{{ .Anchor | safeURL }}&#34;</span>&gt;{{ .Text | safeHTML }}
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:navy>h</span><span style=color:#a61717;background-color:#e3d2d2>{{</span> <span style=color:#a61717;background-color:#e3d2d2>.</span><span style=color:teal>Level</span> <span style=color:#a61717;background-color:#e3d2d2>}}</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;{{ .Anchor | safeURL }}&#34;</span>&gt;{{ .Text | safeHTML }}
 {{- if and (ge .Level 1) (le .Level 6) }}{{&#34; &#34; -}}
-&lt;<span style=color:#ff79c6>a</span> <span style=color:#50fa7b>class</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;anchor&#34;</span> <span style=color:#50fa7b>href</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;#{{ .Anchor | safeURL }}&#34;</span>&gt;
+&lt;<span style=color:navy>a</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;anchor&#34;</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;#{{ .Anchor | safeURL }}&#34;</span>&gt;
     #
-&lt;/<span style=color:#ff79c6>a</span>&gt;
+&lt;/<span style=color:navy>a</span>&gt;
 {{- end -}}
-&lt;/h{{ .Level }}&gt;
+<span style=color:#a61717;background-color:#e3d2d2>&lt;</span>/h{{ .Level }}&gt;
 </code></pre></div>
 </div>
 </div>
@@ -495,39 +491,39 @@ layouts/_defaults/_markup/render-heading.html
 .github/workflows/gh-pages.yml
 </p>
 <div class=code-block-inner>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#ff79c6>name</span>: github pages
-
-<span style=color:#ff79c6>on</span>:
-    <span style=color:#ff79c6>push</span>:
-        <span style=color:#ff79c6>branches</span>:
-            - main <span style=color:#6272a4># Set a branch to deploy</span>
-    <span style=color:#ff79c6>pull_request</span>:
-
-<span style=color:#ff79c6>jobs</span>:
-    <span style=color:#ff79c6>deploy</span>:
-        <span style=color:#ff79c6>runs-on</span>: ubuntu-20.04
-        <span style=color:#ff79c6>steps</span>:
-            - <span style=color:#ff79c6>uses</span>: actions/checkout@v2
-              <span style=color:#ff79c6>with</span>:
-                  <span style=color:#ff79c6>submodules</span>: <span style=color:#ff79c6>true</span> <span style=color:#6272a4># Fetch Hugo themes (true OR recursive)</span>
-                  <span style=color:#ff79c6>fetch-depth</span>: <span style=color:#bd93f9>0</span> <span style=color:#6272a4># Fetch all history for .GitInfo and .Lastmod</span>
-
-            - <span style=color:#ff79c6>name</span>: Setup Hugo
-              <span style=color:#ff79c6>uses</span>: peaceiris/actions-hugo@v2
-              <span style=color:#ff79c6>with</span>:
-                  <span style=color:#ff79c6>hugo-version</span>: <span style=color:#f1fa8c>&#34;latest&#34;</span>
-                  <span style=color:#6272a4># extended: true</span>
-
-            - <span style=color:#ff79c6>name</span>: Build
-              <span style=color:#ff79c6>run</span>: hugo --minify
-
-            - <span style=color:#ff79c6>name</span>: Deploy
-              <span style=color:#ff79c6>uses</span>: peaceiris/actions-gh-pages@v3
-              <span style=color:#ff79c6>if</span>: github.ref == &#39;refs/heads/main&#39;
-              <span style=color:#ff79c6>with</span>:
-                  <span style=color:#ff79c6>github_token</span>: ${{ secrets.GITHUB_TOKEN }}
-                  <span style=color:#ff79c6>publish_dir</span>: ./public
-</code></pre></div>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:navy>name</span>:<span style=color:#bbb> </span>github pages<span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:navy>on</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:navy>push</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>        </span><span style=color:navy>branches</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>            </span>- main<span style=color:#bbb> </span><span style=color:#998;font-style:italic># Set a branch to deploy</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:navy>pull_request</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:navy>jobs</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:navy>deploy</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>        </span><span style=color:navy>runs-on</span>:<span style=color:#bbb> </span>ubuntu-20.04<span style=color:#bbb>
+</span><span style=color:#bbb>        </span><span style=color:navy>steps</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>            </span>- <span style=color:navy>uses</span>:<span style=color:#bbb> </span>actions/checkout@v2<span style=color:#bbb>
+</span><span style=color:#bbb>              </span><span style=color:navy>with</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>                  </span><span style=color:navy>submodules</span>:<span style=color:#bbb> </span><span style=color:#000;font-weight:700>true</span><span style=color:#bbb> </span><span style=color:#998;font-style:italic># Fetch Hugo themes (true OR recursive)</span><span style=color:#bbb>
+</span><span style=color:#bbb>                  </span><span style=color:navy>fetch-depth</span>:<span style=color:#bbb> </span><span style=color:#099>0</span><span style=color:#bbb> </span><span style=color:#998;font-style:italic># Fetch all history for .GitInfo and .Lastmod</span><span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb>            </span>- <span style=color:navy>name</span>:<span style=color:#bbb> </span>Setup Hugo<span style=color:#bbb>
+</span><span style=color:#bbb>              </span><span style=color:navy>uses</span>:<span style=color:#bbb> </span>peaceiris/actions-hugo@v2<span style=color:#bbb>
+</span><span style=color:#bbb>              </span><span style=color:navy>with</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>                  </span><span style=color:navy>hugo-version</span>:<span style=color:#bbb> </span><span style=color:#d14>&#34;latest&#34;</span><span style=color:#bbb>
+</span><span style=color:#bbb>                  </span><span style=color:#998;font-style:italic># extended: true</span><span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb>            </span>- <span style=color:navy>name</span>:<span style=color:#bbb> </span>Build<span style=color:#bbb>
+</span><span style=color:#bbb>              </span><span style=color:navy>run</span>:<span style=color:#bbb> </span>hugo --minify<span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb>            </span>- <span style=color:navy>name</span>:<span style=color:#bbb> </span>Deploy<span style=color:#bbb>
+</span><span style=color:#bbb>              </span><span style=color:navy>uses</span>:<span style=color:#bbb> </span>peaceiris/actions-gh-pages@v3<span style=color:#bbb>
+</span><span style=color:#bbb>              </span><span style=color:navy>if</span>:<span style=color:#bbb> </span>github.ref == &#39;refs/heads/main&#39;<span style=color:#bbb>
+</span><span style=color:#bbb>              </span><span style=color:navy>with</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>                  </span><span style=color:navy>github_token</span>:<span style=color:#bbb> </span>${{ secrets.GITHUB_TOKEN }}<span style=color:#bbb>
+</span><span style=color:#bbb>                  </span><span style=color:navy>publish_dir</span>:<span style=color:#bbb> </span>./public<span style=color:#bbb>
+</span></code></pre></div>
 </div>
 </div>
 <p>Once you add this file to your repo and push it to GitHub it automatically creates a workflow that executes the above job. The job runs every time there is a new change pushed to the master branch of the repo. The Job first checks out the latest commits of the master branch, installs Hugo, compiles the site, then pushes the compiled static files to the gh-pages branch of the repository.</p>
@@ -542,7 +538,7 @@ layouts/_defaults/_markup/render-heading.html
 <footer>
 <div class=footer-links>
 <a class="footer-link small-thick" href=https://github.com/olivergilan target=_blank>
-Github
+GitHub
 </a>
 <a class="footer-link small-thick" href=https://linkedin.com/in/oliver-gilan/ target=_blank>
 LinkedIn
