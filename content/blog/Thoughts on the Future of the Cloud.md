@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on the Future of Cloud"
 date: 2022-07-06T00:00:00-00:00
-draft: false
+draft: true
 ---
 
 
