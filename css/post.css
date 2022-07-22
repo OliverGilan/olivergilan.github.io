@@ -1,3 +1,8 @@
+h2,
+h3 {
+	margin-top: 2rem;
+}
+
 #title {
 	margin-top: 1rem;
 	font-weight: 500;
@@ -44,4 +49,58 @@ li p {
 
 .footer-link {
 	margin: .3rem;
+}
+
+code {
+	background-color: var(--highlight-background-color);
+	border-radius: 2px;
+	padding-right: 3px;
+	padding-left: 2px;
+	margin: 1px;
+	font-weight: 500;
+}
+
+.code code {
+	background-color: initial;
+	padding-right: initial;
+	padding-left: initial;
+	margin: initial;
+	font-weight: initial;
+}
+
+code span {
+	font-family: "CodeSnippets";
+	font-size: .8rem;
+}
+
+.code-block {
+	padding: 0.2rem;
+	margin: 1rem;
+	overflow-x: scroll;
+	overflow-wrap: break-word;
+}
+
+.code-block .code {
+	border: 0.5px solid lightgray;
+	border-radius: 2px;
+}
+
+.code-block .filepath {
+	color: var(--primary-color-faded);
+	margin-bottom: 5px;
+}
+
+div.highlight pre {
+	white-space: pre-wrap;
+	word-break: break-word;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+
+.anchor {
+	color: var(--primary-color-light);
+}
+
+.anchor:hover {
+	color: var(--primary-color-faded);
 }
