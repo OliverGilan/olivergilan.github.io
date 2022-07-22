@@ -8,6 +8,8 @@ In this post I'll walk you through creating the personal blog you're currently r
 
 For the purposes of this blog I'll use GitHub actions to generate the site and host it on GitHub pages.
 
+{{< table_of_contents >}}
+
 ## Getting Started
 
 To get started [install Hugo](https://gohugo.io/getting-started/installing). I'm on Mac so I used Homebrew:
@@ -149,7 +151,7 @@ In `header.html` add the following code:
 
 {{< /code >}}
 
-#### Working with Menus
+### Working with Menus
 
 Notice how in the above header partial I don't actually have the unordered list implemented. I could of course manually create each `<li>` element and point it to the designated page but I'd rather have Hugo dynamically render that menu for me. This makes it easier to update in the future.
 
@@ -215,7 +217,7 @@ I also want to add more links to external sites such as my GitHub. Hugo can't au
 
 This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.
 
-#### Target Blank
+### Target Blank
 
 One last feature I want to add is to open certain links in a new tab. If a user clicks a link to my blog page or any other page within my site it should navigate within the same tab but if a user clicks my GitHub link I want it to open in a new tab so they can easily switch back to my site if they want to. This can be achieved by adding the following code:
 
@@ -335,7 +337,7 @@ That "title" field is then used by Hugo for the .Title variable when rendering t
 
 Because this is a technical blog one of the important elements for posts will be the inclusion of code blocks. Adding code blocks can be achieved in Hugo using [Shortcodes](https://gohugo.io/content-management/shortcodes/). Hugo has a built-in [Highlight](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode) shortcode that can be used to add syntax highlighting to a block of code in your markdown file (can also be activated using code fences instead of the shortcode tag). In my opinion the highlight shortcode is a bit limited: it will highlight your code but that's it. When I have a code block I want to optionally include the filepath for that code block and you might want to include other things like a "Copy to Clipboard" button. To do that we need to create our own shortcode!
 
-#### Shortcodes
+### Shortcodes
 
 A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Within the layouts directory create shortcodes directory and add the following file:
 {{< code file="layouts/shortcodes/code.html" >}}
@@ -391,7 +393,7 @@ Don't forget to customize how Hugo styles the code syntax by updating your confi
 
 And there you have it! A little bit of styling and you can have a custom code block or any other custom markdown element.
 
-#### Footer
+### Footer
 
 For the footer I created another partial with a custom menu in the config for the different social elements.
 {{< code file="layouts/partials/footer.html" >}}
@@ -450,7 +452,7 @@ In the above "socials" menu, the items have a custom icon parameter that contain
 
 This time I don't want the footer on every page, only on my blog post pages. So instead of adding this to the base template I add it to my single page template for the blog section. If you scroll up to the code block above you'll see I define the "footer" block and declare the footer partial in that block. Now it'll be added to every blog post.
 
-#### Header Anchors
+### Header Anchors
 
 One nice feature on a lot of blogs is having anchors for different sections of individual posts. If you look above this paragraph at this section's heading you'll see the "#" tag which is clickable and if you look at the URL you'll notice it now contains that header in it. This allows you to link to a specific section of a webpage. Hugo has a feature called [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks) that makes adding these anchors easy. For a more in-depth explanation of how this works check out [this post](https://pavelkorolev.xyz/blog/2020-10-31-hugo-header-anchors/) by Pavel Korolev.
 
