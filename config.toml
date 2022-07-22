@@ -36,8 +36,8 @@ copyright = "2022 Oliver Gilan All rights reserved"
 
 [[menu.socials]]
     identifier = "github"
-    name = "Github"
-    title = "Github"
+    name = "GitHub"
+    title = "GitHub"
     url = "https://github.com/olivergilan"
     [menu.socials.params]
         targetBlank = true

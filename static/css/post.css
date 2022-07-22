@@ -4,6 +4,15 @@
 @font-face {
 	font-family: "CodeSnippets";
 	src: url("/fonts/SF-Mono/SF-Mono-Regular.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "CodeSnippets-Bold";
+	src: url("/fonts/SF-Mono/SF-Mono-Bold.otf");
+	font-weight: bold;
+	font-style: italic;
 }
 
 /*  */
@@ -14,10 +23,10 @@ h3 {
 	margin-top: 2rem;
 }
 
-/* p {
-	margin-top: 1rem;
+p {
+	/* margin-top: 1rem; */
 	margin-bottom: 1rem;
-} */
+}
 
 h3 {
 	font-size: 1.3rem;
@@ -91,14 +100,18 @@ li p {
 	color: var(--primary-color-faded);
 	font-family: 'CodeSnippets';
 	font-size: .8rem;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
+/* This is a code block */
 .code-block-inner code {
 	background-color: initial;
 	padding-right: initial;
 	padding-left: initial;
 	margin: initial;
 	font-weight: initial;
+	color: inherit;
 }
 
 div.highlight pre {
@@ -108,17 +121,15 @@ div.highlight pre {
 	border-radius: 5px;
 }
 
-code {
-	background-color: var(--highlight-background-color);
-	border-radius: 2px;
-	padding-right: 3px;
-	padding-left: 2px;
-	margin: 1px;
-	font-weight: 500;
+code span {
+	font-size: .8rem;
+	font-family: "CodeSnippets";
 }
 
-
-code span {
-	font-family: "CodeSnippets";
-	font-size: .8rem;
+/* This is an inline code snippet */
+code {
+	font-family: "CodeSnippets-Bold";
+	font-weight: bold;
+	font-size: .85em;
+	/* color: rgb(219, 39, 119); */
 }

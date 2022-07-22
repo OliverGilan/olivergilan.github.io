@@ -193,6 +193,11 @@ h4 {
 	color: var(--primary-color);
 }
 
+strong {
+	font-family: 'freight-text-pro-Bold';
+}
+
+
 /*  */
 /* Element Rules */
 /*  */
