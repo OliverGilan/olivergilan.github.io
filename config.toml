@@ -72,7 +72,7 @@ copyright = "2022 Oliver Gilan All rights reserved"
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = 'dracula'
+    style = 'github'
     tabWidth = 4
 
 [markup.goldmark.renderer]

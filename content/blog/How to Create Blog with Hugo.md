@@ -248,12 +248,9 @@ One last feature I want to add is to open certain links in a new tab. If a user 
 				<a
 					class="section-link small-thick"
 					href="{{.URL}}"
-					{{with
-					.Params.targetBlank}}
-					target="_blank"
-					{{end}}
-					>{{.Title}}</a
-				>
+					{{ with .Params.targetBlank }}target="_blank"{{ end }}>
+						{{ .Title }}
+					</a>
 			</li>
 			{{ end }}
 		</ul>

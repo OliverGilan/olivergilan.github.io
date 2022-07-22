@@ -119,6 +119,7 @@ div.highlight pre {
 	word-break: break-word;
 	padding: 0.5rem;
 	border-radius: 5px;
+	border: .1px solid var(--primary-color-faded);
 }
 
 code span {
