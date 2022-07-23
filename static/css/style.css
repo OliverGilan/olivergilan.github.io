@@ -3,7 +3,7 @@
 /*  */
 @font-face {
 	font-family: "CodeSnippets";
-	src: url("/fonts/SF-Mono/SF-Mono-Regular.otf");
+	src: url("/fonts/SF-Mono/SF-Mono-Regular.otf") format("opentype");
 }
 
 @font-face {
@@ -285,8 +285,8 @@ footer p {
 
 .blog-post-link {
 	font-size: 1.1rem;
-	text-decoration: dotted;
-	text-decoration-line: underline;
+	text-decoration: underline dotted;
+	/* text-decoration-line: underline; */
 	text-decoration-color: var(--primary-color-faded);
 	text-underline-offset: 2px;
 }
