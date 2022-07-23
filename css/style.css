@@ -232,9 +232,10 @@ header {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+	align-items: baseline;
 }
 
-#site-title{
+#site-title {
 	text-decoration: none;
 }
 
