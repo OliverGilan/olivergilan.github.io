@@ -4,6 +4,7 @@ title = 'Oliver Gilan'
 sectionPagesMenu = "main"
 pluralizelisttitles = false
 disableKinds = ['taxonomy', 'term']
+relativeURLs = "True"
 
 copyright = "2022 Oliver Gilan All rights reserved"
 [author]
