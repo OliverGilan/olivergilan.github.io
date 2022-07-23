@@ -162,6 +162,5 @@ code {
 }
 
 pre > code {
-	font-family: inherit;
-	font-weight: inherit;
+	font-family: "CodeSnippets";
 }
