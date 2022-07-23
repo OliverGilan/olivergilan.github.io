@@ -7,6 +7,9 @@
 		<link rel="shortcut icon" href="/icons/favicon.svg" />
 		<link rel="mask-icon" href="/icons/favicon.svg" color="#5bbad5">
 		<link rel="apple-touch-icon" href="/icons/favicon.svg">
+    <meta property="og:image:secure_url" content="{{ .Site.BaseURL }}icons/favicon.png">
+    <meta name="og:title" content="{{.Title}}" />
+    <meta name="twitter:card" value="summary" />
 		<title>
 			{{ block "title" . }} 
 				{{ .Title }} 
