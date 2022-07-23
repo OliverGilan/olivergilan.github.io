@@ -1,5 +1,9 @@
 {{ define "head" }}
     <link rel="stylesheet" href="/css/post.css" />
+    <meta name="description" content="{{.Description}}" />
+    <meta name="og:description" content="{{.Description}}" />
+    <meta name="og:title" content="{{.Title}}" />
+    <meta name="twitter:card" value="summary" />
     {{ partial "formats" . }}
 {{ end }}
 
