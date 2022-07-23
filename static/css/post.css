@@ -160,3 +160,8 @@ code {
 	font-size: .85em;
 	/* color: rgb(219, 39, 119); */
 }
+
+pre > code {
+	font-family: inherit;
+	font-weight: inherit;
+}
