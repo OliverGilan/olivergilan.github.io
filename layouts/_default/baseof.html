@@ -5,6 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="/css/style.css" />
+		<meta name="description" content="{{.Description}}" />
+
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/png" href="{{ .Site.BaseURL }}favicon.png?v=1"/>
 		<link rel="mask-icon" sizes="any" href="{{ .Site.BaseURL }}favicon.png?v=1">
@@ -19,9 +21,12 @@
     <meta property="og:image" content="{{ .Site.BaseURL }}favicon.png?v=1">
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="{{ .RelPermalink }}" />
-    <meta name="twitter:card" value="summary" />
-		<meta name="description" content="{{.Description}}" />
 
+		<!-- Twitter -->
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:site" value="@olvrgln" />
+    <meta name="twitter:title" value="{{.Title}}" />
+		
 		<!-- IOS Metadata -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
