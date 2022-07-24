@@ -3,6 +3,7 @@ title: "How to Create a Blog from Scratch with Hugo"
 date: 2022-03-03T10:04:15-05:00
 draft: false
 description: "Hugo is a static site generator built in Golang. Fast compile times and a powerful templating engine makes it a powerful option for creating sites like a blog."
+thumbnail: "Hugo_SSG.png"
 ---
 
 In this post I'll walk you through creating the personal blog you're currently reading using Hugo. When choosing my stack for this blog I had a few requirements in mind: low maintenance, high performance/low bundle sizes, simple clean interface with reusable components, and markdown support. Hugo meets all these requirements with blazing fast compile times as well as no reliance on JavaScript or other libraries that could lead to bloated bundles. It supports a ton of different themes but also has the ability to create very simple themes from scratch with reusable components. And it supports markdown which is my preffered method for writing blog posts. So all I need to do is write a new post in markdown, add it to a specific directory, and push to GitHub and Hugo will generate the necessary html to be served.
