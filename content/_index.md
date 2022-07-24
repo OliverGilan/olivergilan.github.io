@@ -10,7 +10,7 @@ Greetings reader! A little bit about me: I'm currently working as a software eng
 
 <br>
 
-This blog is a space for me to organize my thoughts, share my ideas & observations about different topics, and talk about my latest projects or things that excite me. Just as my knowledge and wisdom is not final there's a good chance that any opinion on this blog represents my understanding of the topic at the time of writing which may be different by the time you read it. If I write something you disagree with feel free to write a post of your own and send it to me or better yet, just flame me on [Twitter](https://twitter.com/olvrgln)!
+This blog is a space for me to organize my thoughts, share my ideas & observations about different topics, and talk about my latest projects or things that excite me. Just as my knowledge and wisdom is not final there's a good chance that any opinion on this blog represents my understanding of the topic at the time of writing which may be different by the time you read it. If I write something you disagree with feel free to write a post of your own and send it to me or just flame me on [Twitter](https://twitter.com/olvrgln)!
 
 <br>
 
