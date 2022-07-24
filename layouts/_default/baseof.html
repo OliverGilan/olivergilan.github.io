@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		{{ $url := .Site.BaseURL }}
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="/css/style.css" />
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/png" href="favicon.png"/>
-		<link rel="mask-icon" sizes="any" href="{{ .Site.BaseURL }}icons/favicon.svg" color="#5bbad5">
-		<link rel="apple-touch-icon" sizes="192x192" href="{{ .Site.BaseURL }}/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="{{ .Site.BaseURL }}favicon.png"/>
+		<link rel="mask-icon" sizes="any" href="{{ .Site.BaseURL }}favicon.png">
+		<link rel="apple-touch-icon" sizes="192x192" href="{{ .Site.BaseURL }}favicon.png">
 
 		<!-- Open Graph -->
     <meta property="og:title" content="{{.Title}}" />
     <meta property="og:description" content="{{.Description}}" />
-		{{ with .Thumbnail }}<meta property="og:image" content="{{ .Site.BaseURL }}images/{{ .Thumbnail }}" />{{end}}
+		{{ with .Params.thumbnail }}
+			<meta property="og:image" content="{{ $url }}images/{{ . }}" />
+		{{end}}
     <meta property="og:image" content="{{ .Site.BaseURL }}icons/favicon.png">
     <meta name="twitter:card" value="summary" />
 		<meta name="description" content="{{.Description}}" />

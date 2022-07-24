@@ -3,6 +3,7 @@ title: "Oliver Gilan"
 date: 2022-02-07T10:46:26-05:00
 draft: false
 description: "A personal blog about bits, bytes, and the people that make them."
+thubmnail: null
 ---
 
 Greetings reader! A little bit about me: I'm currently working as a software engineer and living in NYC. I'm interested in the evolution of the cloud and its applications, the processes of exceptional individuals and orgs, and the effects of technology on the world.
