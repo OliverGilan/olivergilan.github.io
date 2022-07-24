@@ -2,7 +2,7 @@
 title: "Oliver Gilan"
 date: 2022-02-07T10:46:26-05:00
 draft: false
-description: "A personal blog about bits, bytes, and the people that make them."
+description: "A personal blog about bits and the people that write them."
 thubmnail: null
 ---
 
