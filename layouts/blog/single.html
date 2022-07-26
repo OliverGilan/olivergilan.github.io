@@ -7,7 +7,7 @@
     <section id="main">
         <h1 id="title">{{ .Title }}</h1>
         <section class="post-metadata">
-            <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+            <h4 id="date"> {{ .Date.Format "Jan 2, 2006" }} </h4>
             <h5 id="wordcount"> {{ .WordCount }} Words </h5>
             <a href="{{.Site.BaseURL}}index.xml" target="blank" class="rss-link">RSS</a>
         </section>
