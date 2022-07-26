@@ -201,10 +201,10 @@ strong {
 /*  */
 /* Element Rules */
 /*  */
-p{
+p, li{
 	font-size: 1.1rem;
 	line-height: 150%;
-	text-align: justify;
+	/* text-align: justify; */
 }
 
 a {
