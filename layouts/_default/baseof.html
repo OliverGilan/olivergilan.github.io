@@ -18,7 +18,9 @@
 		{{ with .Params.thumbnail }}
 			<meta property="og:image" content="{{ $url }}images/{{ . }}" />
 		{{end}}
-    <meta property="og:image" content="{{ .Site.BaseURL }}favicon.png?v=1">
+		{{ if not (isset .Params "thumbnail") }}
+    	<meta property="og:image" content="{{ .Site.BaseURL }}favicon.png?v=1">
+		{{end}}
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="{{ .RelPermalink }}" />
 
