@@ -160,6 +160,8 @@
 	--highlight-background-color: rgba(2, 144, 226, 0.2);
 	--aside-background-color: rgba(226, 211, 2, 0.2);
 	--aside-bar-color: rgba(228, 216, 52, 0.849);
+	--quote-background-color: rgba(20, 20, 20, 0.05);
+	--quote-bar-color: var(--primary-color-faded)
 }
 
 * {
