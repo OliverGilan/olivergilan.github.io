@@ -1,5 +1,6 @@
 ---
 title: "Is Work-Life Balance Worth It?"
+slug: "work-life-balance"
 date: 2022-07-27
 draft: false
 description: "In the debate of work-life balance versus work-life integration it seems as though balance is winning out over passion as more and more people view life as the hours spent between clocking in and clocking out. Why is this viewpoint dominating and does it lead to a fulfilling life?"

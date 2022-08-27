@@ -1,5 +1,6 @@
 ---
 title: "How to Create a Blog from Scratch with Hugo"
+slug: "how-to-create-a-blog-in-hugo"
 date: 2022-03-03T10:04:15-05:00
 draft: false
 description: "Hugo is a static site generator built in Golang. Fast compile times and a powerful templating engine makes it a powerful option for creating sites like a blog."

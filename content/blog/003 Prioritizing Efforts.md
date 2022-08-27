@@ -1,5 +1,6 @@
 ---
 title: "Prioritizing Efforts"
+slug: "prioritizing-efforts"
 date: 2022-08-26
 draft: false
 description: "Working on the right thing is as important as working hard but when a startup is rapidly growing how do you determine where to best focus your efforts?"
