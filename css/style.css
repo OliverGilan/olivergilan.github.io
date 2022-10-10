@@ -218,8 +218,12 @@ h1 {
 	font-size: 1.8rem;
 }
 
+ol {
+	list-style-type: decimal;
+}
+
 li {
-	list-style-type: initial;
+	/* list-style-type: initial; */
 	list-style-position: inside;
 	margin: 0.3rem;
 }
