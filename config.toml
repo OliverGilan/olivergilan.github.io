@@ -12,9 +12,9 @@ copyright = "2022 Oliver Gilan All rights reserved"
 	email = "blog@olivergilan.com"
 
 [outputFormats]
-[outputFormats.RSS]
-    mediatype = "application/rss"
-    baseName = "rss"
+    [outputFormats.RSS]
+        mediatype = "application/rss"
+        baseName = "rss"
 
 [menu]
 [[menu.main]]

@@ -1,4 +1,3 @@
 {{$url := ""}}
-  {{print $.Page.OutputFormats}}
-    {{ $url = ($.Page.OutputFormats.Get "RSS").Permalink }}
+{{ $url = (.OutputFormats.Get "RSS").Permalink }}
 {{return $url}}
