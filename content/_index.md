@@ -23,6 +23,7 @@ You can also subscribe to my blog's RSS feed to stay up to date:
 <br>
 
 ---
+
 <br>
 
 I work at [Census](https://www.getcensus.com). We are the first reverse ETL tool and our mission is enabling companies to use their data warehouse as a source of truth to power all of their operations. We are growing fast and if you like my blog there's a good chance you'll like working with me! If you're interested in working with a group of people that are all highly competent, driven, and passionate then I encourage you to apply to our [open positions](https://getcensus.com/careers?utm_source=workwitholiver).
