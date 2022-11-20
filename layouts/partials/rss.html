@@ -1,8 +1,4 @@
 {{$url := ""}}
-{{ range .Site.Menus.socials }}
-  {{ $social := . }}
-  {{ if eq $social.Title "RSS" }}
-    {{ $url = .URL }}
-  {{ end }}
-{{ end }}
+  {{print $.Page.OutputFormats}}
+    {{ $url = ($.Page.OutputFormats.Get "RSS").Permalink }}
 {{return $url}}

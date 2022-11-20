@@ -9,7 +9,7 @@
         <section class="post-metadata">
             <h4 id="date"> {{ .Date.Format "Jan 2, 2006" }} </h4>
             <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-            <a href="{{.Site.BaseURL}}index.xml" target="blank" class="rss-link">RSS</a>
+            <a href='{{ partial "rss.html" .}}' target="_blank" class="rss-link">RSS</a>
         </section>
         <div>
             <article id="content">

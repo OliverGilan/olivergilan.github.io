@@ -1,13 +1,5 @@
 <ul>
-  {{ range .Site.Menus.socials }}
-    {{ $social := . }}
-    {{ if eq $social.Title "RSS" }}
     <li>
-      <a class="homepage-social" href="{{.URL}}" 
-          {{with .Params.targetBlank}} target="_blank" {{end}}>
-          {{ $social.Title }}
-      </a>
+      <a href='{{ partial "rss.html" $}}' target="_blank" class="rss-link">RSS</a>
     </li>
-    {{ end }}
-  {{ end }}
 </ul>
