@@ -26,4 +26,10 @@ You can also subscribe to my blog's RSS feed to stay up to date:
 
 <br>
 
-I work at [Census](https://www.getcensus.com). We are the first reverse ETL tool and our mission is enabling companies to use their data warehouse as a source of truth to power all of their operations. We are growing fast and if you like my blog there's a good chance you'll like working with me! If you're interested in working with a group of people that are all highly competent, driven, and passionate then I encourage you to apply to our [open positions](https://getcensus.com/careers?utm_source=workwitholiver).
+I work at [Census](https://www.getcensus.com). We are the first reverse ETL tool and our mission is enabling companies to use their data warehouse as a source of truth to power all of their operations. We are growing fast and looking for new talent to join us. Here's why you would enjoy working with us:
+- We are still small so there's no end to the interesting work that needs to be done and the opportunity for you to have an impact.
+- Everyone who works here has a high IQ and even higher EQ. Being able to rely on your coworkers for support and trusting that they'll handle things competently is a phenomenal feeling.
+- There's as little bureaucracy as one could expect and you'll be completely empowered to ship fast and improve our systems/product without roadblocks.
+- It's highly motivating and fulfilling to have users declare their appreciation for code that you wrote and that happens just about every day here!
+
+If you're interested I encourage you to apply to our [open positions](https://getcensus.com/careers?utm_source=workwitholiver).
