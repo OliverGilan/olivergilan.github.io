@@ -104,6 +104,11 @@ ol, ul {
 /*  */
 /* Custom Classes */
 /*  */
+
+.post-description {
+	font-style: italic;
+}
+
 .post-metadata {
 	margin-bottom: 1.4rem;
 }
