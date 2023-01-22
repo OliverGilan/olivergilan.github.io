@@ -57,6 +57,21 @@ ol, ul {
 	margin-right: 3rem;
 }
 
+figure {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+figcaption > p {
+	font-size: 1rem;
+	font-style: italic;
+	color: var(--primary-color-faded);
+}
+
+figure > img {
+	width: 600px;
+}
 
 /*  */
 /* Block Rules */
