@@ -71,6 +71,7 @@ figcaption > p {
 
 figure > img {
 	width: 600px;
+	max-width: 80%;
 }
 
 /*  */
