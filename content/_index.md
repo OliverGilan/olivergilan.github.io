@@ -23,6 +23,5 @@ We are growing fast and if that sounds like an environment you are interested in
 You can email me at *blog (at) olivergilan.com* or reach me at the following links:
 {{< socials >}}
 
-You can also subscribe to my blog's RSS feed to stay up to date:
-{{< rss >}}
+You can also subscribe to my blog's <a href="blog/rss.xml" target="_blank">RSS feed</a> to stay up to date:
 

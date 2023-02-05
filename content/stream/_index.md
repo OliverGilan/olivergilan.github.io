@@ -1,7 +1,7 @@
 ---
 title: "Oliver Gilan"
 date: 2023-02-05
-draft: true
+draft: false
 description: "A stream of consciousness"
 thubmnail: null
 ---
