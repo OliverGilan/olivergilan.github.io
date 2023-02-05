@@ -22,21 +22,21 @@ copyright = "2022 Oliver Gilan All rights reserved"
     name = "Blog"
     title = "Blog"
     url = "/blog/"
+    weight = 1
 
 [[menu.main]]
-    identifier = "github"
-    name = "GitHub"
-    title = "GitHub"
-    url = "https://github.com/olivergilan"
-    [menu.main.params]
-        targetBlank = true
+    identifier = "stream"
+    name = "Stream"
+    title = "Stream"
+    url = "/stream/"
+    weight = 2
 
-[[menu.socials]]
+[[menu.main]]
     identifier = "rss"
     name = "RSS"
     title = "RSS"
     url = "https://olivergilan.com/index.xml"
-    [menu.socials.params]
+    [menu.main.params]
         targetBlank = true
         icon = "/icons/rss-fa.svg"
 

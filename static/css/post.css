@@ -133,16 +133,6 @@ figure > img {
 	font-weight: 300;
 }
 
-.footer-links{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-}
-
-.footer-link {
-	margin: .3rem;
-}
-
 .anchor {
 	color: var(--primary-color-light);
 	text-decoration: none;

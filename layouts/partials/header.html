@@ -3,10 +3,15 @@
     <nav>
         <ul class="section-list">
             {{ range .Site.Menus.main }}
+                {{ if not (eq .Identifier "rss") }}
                 <li class="section-item horizontal-list">
                     <a class="section-link small-thick" href="{{.URL}}" {{with .Params.targetBlank}} target="_blank" {{end}}>{{.Title}}</a>
                 </li>
+                {{ end }}
             {{ end }}
+            <li class="section-item horizontal-list">
+                <a class="section-link small-thick" href="https://github.com/olivergilan" target="_blank">Github</a>
+            </li>
         </ul>
     </nav>
 </header>
