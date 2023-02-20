@@ -298,6 +298,10 @@ footer p {
 	font-weight: 700;
 }
 
+.section-list {
+	margin: 0;
+}
+
 .section-list-item {
 	padding: 0.2rem;
 }
