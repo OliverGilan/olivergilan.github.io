@@ -9,7 +9,7 @@
           <h3 class="thought-title">{{ .Title }}</h3>
           <p class="thought-date"><em>{{ .Date.Format "Jan 2, 2006" }}</em></p>
           <br>
-          <p class="thought-content">{{ .Content }}</p>
+          <p class="thought-content">{{ .Content | markdownify }}</p>
         </div>
         {{ end }}
     </main>

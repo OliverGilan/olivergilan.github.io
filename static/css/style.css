@@ -346,3 +346,20 @@ footer p {
 	margin-bottom: 1rem;
 	border-left: 4px solid var(--aside-bar-color);
 }
+
+.stream-thought {
+	display: flex;
+	flex-flow: column nowrap;
+	padding-top: 1rem;
+	border-top: 1px dotted var(--primary-color-light);
+	margin-bottom: 2rem;
+}
+
+.twitter-tweet {
+	width: 100%;
+	margin: 0;
+	align-self: center;
+	/* display: flex;
+	flex-flow: row nowrap;
+	justify-content: center; */
+}
