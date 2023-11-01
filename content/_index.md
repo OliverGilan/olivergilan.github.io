@@ -6,17 +6,19 @@ description: "A public slice of my personal journal"
 thubmnail: null
 ---
 
-**Software engineer based in New York City.** This site is a public slice of my personal journal where I share what I'm interested in and what I've learned, usually about engineering, product development, and business. No opinion on here is final and if you wish to discuss an idea further please don't hesitate to reach out by email, Twitter, or better yet write your own blog post exploring the idea and send it to me. I'd be happy to proofread and/or share if it relates to what I've written.
+**Hello, I'm Oliver and this site is a public slice of my personal journal** where I share what I'm interested in and what I've learned --- usually about engineering, business, and life. A few of the recurring problems in my life that I am currently spending a lot of time thinking about are the ability (or lack thereof) to create great software at scale, how to create artificial organs, how to deterministically control and program the immune system, and how to bench 225 for reps. Happy to discuss any of those topics and more so don't hesitate to reach out or give me feedback on my writing.
 
 <br>
 
-I currently work at [Census](https://www.getcensus.com) enabling teams to operationalize their data by using their datawarehouse as the source of truth to power all their operations. My team is unparalleled in their ambition, technical capability, and emotional intelligence making this the most exciting environment I've ever worked in. Here's a few more reasons why you would enjoy working with us:
-- Team is still small so there's a large of surface area to impact our outcomes
-- You'll be empowered to ship fast and improve our product/systems with little bureaucracy
-- There's a clear need for our product and shipping features that are immediately used and loved by customers is rewarding
-
-We are growing fast and if that sounds like an environment you are interested in please apply to our [open positions](https://getcensus.com/careers?utm_source=workwitholiver)! 
-
+**Stats**
+- **Height**: 6'0
+- **Weight**: 145lbs
+- **VO2 Max**: 58 ml/kg/min
+- **T-Level**: 943 ng/dL
+- **Bench ORM**: 150lbs
+- **1-mile PR**: 5:50
+- **10-mile PR**: 1:27:04 (8:41/mi)
+- **Resting HR (7d avg)**: 51bpm
 
 <br>
 
