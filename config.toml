@@ -58,14 +58,14 @@ copyright = "2022 Oliver Gilan All rights reserved"
         targetBlank = true
         icon = "/icons/linkedin-fa.svg"
 
-[[menu.socials]]
-    identifier = "twitter"
-    name = "Twitter"
-    title = "Twitter"
-    url = "https://twitter.com/olvrgln"
-    [menu.socials.params]
-        targetBlank = true
-        icon = "/icons/email-fa.svg"
+# [[menu.socials]]
+#     identifier = "twitter"
+#     name = "Twitter"
+#     title = "Twitter"
+#     url = "https://twitter.com/olvrgln"
+#     [menu.socials.params]
+#         targetBlank = true
+#         icon = "/icons/email-fa.svg"
 
 [markup]
   [markup.highlight]
