@@ -10,12 +10,17 @@ thubmnail: null
 
 <br>
 
+My long-form writing is posted on my [blog]({{< ref "blog" >}}) while my thoughts that aren't fleshed out enough for a blog entry are posted as a [stream]({{< ref "stream" >}}) of consciousness.
+I'm currently compiling a list of the [100 books]({{< ref "books" >}}) that I would read over and over again and I maintain a [blogroll]({{< ref "blogroll" >}}) of writings and websites I love to read.
+
+<br>
+
 **Stats**
 - **Height**: 5'11
-- **Weight**: 145lbs
+- **Weight**: 147lbs
 - **VO2 Max**: 58 ml/kg/min
 - **T-Level**: 943 ng/dL
-- **Bench ORM**: 150lbs
+- **Bench Press ORM**: 150lbs
 - **1-mile PR**: 5:50
 - **10-mile PR**: 1:27:04 (8:41/mi)
 - **Resting HR (7d avg)**: 51bpm

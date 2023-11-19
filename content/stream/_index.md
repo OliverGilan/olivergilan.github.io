@@ -1,5 +1,5 @@
 ---
-title: "Oliver Gilan"
+title: "Stream"
 date: 2023-02-05
 draft: false
 description: "A stream of consciousness"

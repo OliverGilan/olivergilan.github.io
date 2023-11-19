@@ -304,6 +304,8 @@ footer p {
 
 .section-list-item {
 	padding: 0.2rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .section-link {
@@ -316,7 +318,7 @@ footer p {
 	color: initial;
 }
 
-.blog-list-item {
+.blog-list-item, .blogroll-list-item, .book-list-item{
 	list-style-type: none;
 }
 

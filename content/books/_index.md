@@ -1,4 +1,5 @@
 ---
+title: 'Books'
 section: 'Books'
 ---
 

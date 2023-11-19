@@ -1,7 +1,7 @@
 baseURL = 'https://olivergilan.com/'
 languageCode = 'en-us'
 title = 'Oliver Gilan'
-sectionPagesMenu = "main"
+sectionPagesMenu = "sections"
 pluralizelisttitles = false
 disableKinds = ['taxonomy', 'term']
 relativeURLs = "True"
@@ -24,12 +24,12 @@ copyright = "2022 Oliver Gilan All rights reserved"
     url = "/blog/"
     weight = 1
 
-[[menu.main]]
-    identifier = "stream"
-    name = "Stream"
-    title = "Stream"
-    url = "/stream/"
-    weight = 2
+# [[menu.main]]
+#     identifier = "stream"
+#     name = "Stream"
+#     title = "Stream"
+#     url = "/stream/"
+#     weight = 2
 
 [[menu.main]]
     identifier = "rss"
