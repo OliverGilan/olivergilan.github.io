@@ -322,7 +322,19 @@ footer p {
 
 .blog-post-link {
 	font-size: 1.1rem;
-	text-decoration: underline dotted;
+  text-decoration: underline dotted;
+	/* text-decoration-line: underline; */
+	text-decoration-color: var(--primary-color-faded);
+	text-underline-offset: 2px;
+}
+
+.book-list-item {
+  margin-bottom: 0px;
+}
+
+.book-post-link {
+  font-size: 1.1rem;
+  text-decoration: underline dotted;
 	/* text-decoration-line: underline; */
 	text-decoration-color: var(--primary-color-faded);
 	text-underline-offset: 2px;

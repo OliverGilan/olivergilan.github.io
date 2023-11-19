@@ -6,12 +6,12 @@ description: "A public slice of my personal journal"
 thubmnail: null
 ---
 
-**Hello, I'm Oliver and this site is a public slice of my personal journal** where I share what I'm interested in and what I've learned --- usually about engineering, business, and life. A few of the recurring problems in my life that I am currently spending a lot of time thinking about are the ability (or lack thereof) to create great software at scale, how to create artificial organs, how to deterministically control and program the immune system, and how to bench 225 for reps. Happy to discuss any of those topics and more so don't hesitate to reach out or give me feedback on my writing.
+**Hello, this site is a public slice of my personal journal** where I share what I'm interested in and what I've learned --- usually about engineering, business, and life. A few of the problems I'm currently spending a lot of time thinking about are the ability (or lack thereof) to create great software at scale, creating artificial organs, and deterministically controlling/programming the immune system. 
 
 <br>
 
 **Stats**
-- **Height**: 6'0
+- **Height**: 5'11
 - **Weight**: 145lbs
 - **VO2 Max**: 58 ml/kg/min
 - **T-Level**: 943 ng/dL

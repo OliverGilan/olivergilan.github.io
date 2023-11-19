@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <main>
+      <h2> Books </h2>
+      <br>
+      {{ .Content }}
+      <br>
+      <ul class="genre-list">
+        {{ range .Pages }}
+          {{ $render := .Params._build.render }}
+          <li class="section-list-item book-list-item">
+            {{ if (eq $render "never") }}
+              <span>{{.Title}}</span>
+            {{ else }}
+              <a class="book-post-link" href={{.Permalink}}>{{.Title}}</a>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+  </main>
+{{ end }}
