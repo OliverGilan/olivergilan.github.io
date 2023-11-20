@@ -9,7 +9,7 @@
           {{ $render := .Params._build.render }}
           <li class="section-list-item book-list-item">
             {{ if (eq $render "never") }}
-              <span>{{.Title}}</span>
+              <span>{{.Title}}</span> - <em>{{.Params.author}}</em>
             {{ else }}
               <a class="book-post-link" href={{.Permalink}}>{{.Title}}</a>
             {{ end }}
