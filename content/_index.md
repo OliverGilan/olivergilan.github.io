@@ -29,6 +29,3 @@ I'm currently compiling a list of the [100 books]({{< ref "books" >}}) that I wo
 
 You can email me at *blog (at) olivergilan.com* or reach me at the following links:
 {{< socials >}}
-
-You can also subscribe to my blog's <a href="blog/rss.xml" target="_blank">RSS feed</a> to stay up to date:
-

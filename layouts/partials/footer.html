@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-links-nav">
-        {{ range .Site.Menus.sections }}
+        {{ range .Site.Menus.main }}
             <a class="footer-link small-thick" href="{{.URL}}" 
                 {{with .Params.targetBlank}} target="_blank" {{end}}>
                 {{ .Title }}

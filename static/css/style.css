@@ -150,6 +150,57 @@
 	font-style: italic;
 }
 
+@font-face {
+  font-family: 'Minerva Modern Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Minerva Modern Regular'), url('/fonts/MinervaModern/regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Minerva Modern Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/MinervaModern/black.ttf') format('truetype');
+  src: local('Minerva Modern Black'), url('/fonts/MinervaModern/black.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Minerva Modern Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/MinervaModern/bolditalic.ttf') format('truetype');
+  src: local('Minerva Modern Black Italic'), url('/fonts/MinervaModern/blackitalic.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Minerva Modern Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/MinervaModern/bold.ttf') format('truetype');
+  src: local('Minerva Modern Bold'), url('/fonts/MinervaModern/bold.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Minerva Modern Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/MinervaModern/bolditalic.ttf') format('truetype');
+  src: local('Minerva Modern Bold Italic'), url('/fonts/MinervaModern/bolditalic.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Minerva Modern Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/MinervaModern/italic.ttf') format('truetype');
+  src: local('Minerva Modern Italic'), url('/fonts/MinervaModern/italic.woff') format('woff');
+}
+
 /*  */
 /* Side-wide rules */
 /*  */
@@ -161,13 +212,18 @@
 	--aside-background-color: rgba(226, 211, 2, 0.2);
 	--aside-bar-color: rgba(228, 216, 52, 0.849);
 	--quote-background-color: rgba(20, 20, 20, 0.05);
-	--quote-bar-color: var(--primary-color-faded)
+	--quote-bar-color: var(--primary-color-faded);
+  --primary-font: 'Minerva Modern Regular';
+  --emphasis-font: 'Minerva Modern Bold';
+  --quote-font: 'Minerva Modern Italic';
+  --code-font: 'CodeSnippets';
 }
 
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "freight-text-pro-Regular";
+	font-family: var(--primary-font);
+  font-size: 18px;
 }
 
 html,
@@ -203,7 +259,7 @@ h4 {
 }
 
 strong {
-	font-family: 'freight-text-pro-Bold';
+	font-family: var(--emphasis-font);
 }
 
 
@@ -249,7 +305,7 @@ header {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: column nowrap;
 	justify-content: space-between;
 	align-items: baseline;
 }
@@ -308,10 +364,14 @@ footer p {
   margin-top: 0px;
 }
 
+.section-item {
+  margin-left: 0px;
+}
+
 .section-link {
 	font-size: 1.1rem;
-	text-decoration: none;
-	color: initial;
+	text-decoration: underline;
+	color: rgb(41, 151, 255) !important;
 }
 
 .section-link:visited {
