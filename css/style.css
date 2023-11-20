@@ -258,6 +258,14 @@ h4 {
 	color: var(--primary-color);
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
 strong {
 	font-family: var(--emphasis-font);
 }
@@ -359,7 +367,7 @@ footer p {
 }
 
 .section-list-item {
-	padding: 0.2rem;
+	padding-bottom: 2px;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -383,6 +391,14 @@ footer p {
 }
 
 .blog-post-link {
+	font-size: 1.1rem;
+  text-decoration: underline dotted;
+	/* text-decoration-line: underline; */
+	text-decoration-color: var(--primary-color-faded);
+	text-underline-offset: 2px;
+}
+
+.blogroll-post-link {
 	font-size: 1.1rem;
   text-decoration: underline dotted;
 	/* text-decoration-line: underline; */
