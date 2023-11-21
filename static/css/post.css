@@ -1,18 +1,3 @@
-/*  */
-/* Fonts */
-/*  */
-@font-face {
-	font-family: "CodeSnippets";
-	src: url("/fonts/SF-Mono/SF-Mono-Regular.otf") format("opentype");
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "CodeSnippets-Bold";
-	src: url("/fonts/SF-Mono/SF-Mono-Bold.otf") format("opentype");
-	font-weight: bold;
-}
 
 /*  */
 /* Element Rules */
