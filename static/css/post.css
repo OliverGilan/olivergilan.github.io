@@ -83,7 +83,7 @@ figure > img {
 
 .quote-block-inner p {
 	font-style: italic;
-	font-family: 'Minerva Modern Italic';
+	font-family: var(--primary-font);
 	font-size: 1.2rem;
 }
 
@@ -98,7 +98,7 @@ figure > img {
 	margin-right: .5rem;
 	margin-bottom: 0;
 	/* font-style: italic; */
-	font-family: 'Minerva Modern Bold';
+	font-family: var(--primary-font);
 }
 
 
@@ -138,7 +138,7 @@ figure > img {
 
 #contents {
 	margin-bottom: 0;
-	font-family: 'Minerva Modern Regular';
+	font-family: var(--primary-font);
 	font-size: 1.3rem;
 }
 
