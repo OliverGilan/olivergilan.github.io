@@ -1,4 +1,9 @@
 @font-face {
+	font-family: 'Inter';
+	src: url('/fonts/Inter.ttf') format('truetype');
+}
+
+@font-face {
 	font-family: 'freight-text-pro-Semibold';
 	src: url('/fonts/FreightTextPro/FreightTextProSemibold-Regular.eot');
 	src: local('FreightText Pro Semibold'), local('FreightTextProSemibold-Regular'),
