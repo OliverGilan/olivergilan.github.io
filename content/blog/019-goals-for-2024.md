@@ -2,7 +2,7 @@
 title: "Goals for 2024"
 slug: "goals-for-2024"
 date: 2023-12-09
-draft: true
+draft: false
 description: "Taking stock of my progress."
 thumbnail: null
 ---
