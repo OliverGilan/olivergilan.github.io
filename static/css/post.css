@@ -1,4 +1,3 @@
-
 /*  */
 /* Element Rules */
 /*  */
@@ -6,6 +5,7 @@ h2,
 h3 {
 	margin-top: 1.5rem;
 	margin-bottom: .3rem;
+	font-weight: 500;
 }
 
 p {
@@ -14,7 +14,7 @@ p {
 	/* text-indent: 1rem; */
 }
 
-p > strong {
+p>strong {
 	margin-bottom: 0;
 }
 
@@ -36,9 +36,10 @@ li p {
 	margin: none;
 }
 
-ol, ul {
+ol,
+ul {
 	margin-bottom: 1rem;
-	margin-left: 1.5rem;	
+	margin-left: 1.5rem;
 	margin-right: 3rem;
 }
 
@@ -48,15 +49,23 @@ figure {
 	align-items: center;
 }
 
-figcaption > p {
+figcaption>p {
 	font-size: 1rem;
 	font-style: italic;
 	color: var(--primary-color-faded);
 }
 
-figure > img {
+figure>img {
 	width: 600px;
 	max-width: 80%;
+}
+
+blockquote {
+	background-color: var(--quote-background-color);
+	padding: 10px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-left: 4px solid var(--quote-bar-color);
 }
 
 /*  */
@@ -150,8 +159,9 @@ figure > img {
 	text-decoration: none;
 }
 
-li > ul {
+li>ul {
 	margin-left: 1.5rem;
+	margin-bottom: 0.2rem;
 }
 
 
@@ -203,6 +213,6 @@ code {
 	/* color: rgb(219, 39, 119); */
 }
 
-pre > code {
+pre>code {
 	font-family: "CodeSnippets";
 }
