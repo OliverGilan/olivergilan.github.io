@@ -68,6 +68,30 @@ blockquote {
 	border-left: 4px solid var(--quote-bar-color);
 }
 
+sup a {
+	font-size: 0.7rem;
+	vertical-align: super;
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+	/* margin: 2rem; */
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+
+thead {
+	border-bottom: 1px dashed var(--primary-color-light);
+}
+
+thead tr th {
+	width: fit-content;
+	text-align: left;
+}
+
 /*  */
 /* Block Rules */
 /*  */
