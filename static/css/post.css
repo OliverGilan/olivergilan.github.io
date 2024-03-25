@@ -1,8 +1,7 @@
 /*  */
 /* Element Rules */
 /*  */
-h2,
-h3 {
+h2, h3 {
 	margin-top: 1.5rem;
 	margin-bottom: .3rem;
 	font-weight: 500;
@@ -130,8 +129,7 @@ thead tr th {
 .quote-author {
 	margin-right: .5rem;
 	margin-bottom: 0;
-	/* font-style: italic; */
-	font-family: var(--primary-font);
+	font-family: 'Minerva Modern Bold';
 }
 
 
@@ -234,7 +232,6 @@ code {
 	font-family: "CodeSnippets-Bold";
 	font-weight: bold;
 	font-size: .85em;
-	/* color: rgb(219, 39, 119); */
 }
 
 pre>code {
