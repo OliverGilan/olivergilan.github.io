@@ -220,7 +220,7 @@ footer p {
   margin-bottom: 5px;
 }
 
-.book-author {
+.thought-date, .book-author {
   font-size: 0.8rem;
   font-weight: 600;
 }

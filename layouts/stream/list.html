@@ -7,7 +7,7 @@
         {{ range .Pages }}
         <div class="stream-thought">
           <h3 class="thought-title">{{ .Title }}</h3>
-          <p class="thought-date"><em>{{ .Date.Format "Jan 2, 2006" }}</em></p>
+          <p class="thought-date">{{ .Date.Format "Jan 2, 2006" }}</p>
           <br>
           <p class="thought-content">{{ .Content | markdownify }}</p>
         </div>
