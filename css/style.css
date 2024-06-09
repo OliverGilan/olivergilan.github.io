@@ -217,7 +217,12 @@ footer p {
 }
 
 .book-list-item {
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+.book-author {
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .book-post-link {
