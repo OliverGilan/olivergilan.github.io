@@ -79,11 +79,9 @@ em {
 /*  */
 /* Element Rules */
 /*  */
-p,
-li {
-  font-size: 1.1rem;
-  line-height: 150%;
-  /* text-align: justify; */
+p, li{
+	font-size: 1.1rem;
+	line-height: 150%;
 }
 
 a {
@@ -100,9 +98,8 @@ ol {
 }
 
 li {
-  /* list-style-type: initial; */
-  list-style-position: inside;
-  margin: 0.3rem;
+	list-style-position: inside;
+	margin: 0.3rem;
 }
 
 ol,
@@ -130,13 +127,12 @@ header {
 }
 
 footer {
-  margin-top: 1rem;
-  padding-top: .7rem;
-  /* padding-bottom: 0.1rem; */
-  border-top: 0.5px solid var(--primary-color-light);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+	margin-top: 1rem;
+	padding-top: .7rem;
+	border-top: 0.5px solid var(--primary-color-light);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
 }
 
 footer p {
