@@ -7,7 +7,7 @@ description: "Cloud hosting is one of the biggest markets in the world and it's 
 thumbnail: "cloud_marketshare.jpg"
 ---
 
-Matthew Parkhurst & I founded Antimetal in April of 2022 to bring my vision around "the Cloud" to life. I left the company to focus on my health shortly after but it's been fascinating to watch how my thesis has played out over the past two and a half years. I haven't talked in-depth about my original vision since then but I figure now is a good time to put it all in writing as some parts of my thesis have been validated, the market has matured, and there's still plenty of opportunity left.
+Matthew Parkhurst & I founded [Antimetal](https://antimetal.com/) in April of 2022 to bring my vision around "the Cloud" to life. I left the company to focus on my health shortly after but it's been fascinating to watch how my thesis has played out over the past two and a half years. I haven't talked in-depth about my original vision since then but I figure now is a good time to put it all in writing as some parts of my thesis have been validated, the market has matured, and there's still plenty of opportunity left.
 
 ## Market Context
 
