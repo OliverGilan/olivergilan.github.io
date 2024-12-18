@@ -15,7 +15,7 @@ I'm currently compiling a list of the [100 books]({{< ref "books" >}}) that I wo
 
 <br>
 
-**Stats**
+<!-- **Stats**
 - **Height**: 5'11
 - **Weight**: 147lbs
 - **VO2 Max**: 58 ml/kg/min
@@ -23,9 +23,9 @@ I'm currently compiling a list of the [100 books]({{< ref "books" >}}) that I wo
 - **Bench Press ORM**: 150lbs
 - **1-mile PR**: 5:50
 - **10-mile PR**: 1:27:04 (8:41/mi)
-- **Resting HR (7d avg)**: 51bpm
+- **Resting HR (7d avg)**: 51bpm -->
 
 <br>
 
-You can email me at *blog (at) olivergilan.com* or reach me at the following links:
+You can email me at _blog (at) olivergilan.com_ or reach me at the following links:
 {{< socials >}}
