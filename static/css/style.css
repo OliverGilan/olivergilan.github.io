@@ -10,10 +10,10 @@
   --aside-bar-color: rgba(228, 216, 52, 0.849);
   --quote-background-color: rgba(20, 20, 20, 0.05);
   --quote-bar-color: var(--primary-color-faded);
-  --primary-font: 'Inter';
-  --emphasis-font: 'Inter';
-  --quote-font: 'freight-text-pro-Italic';
-  --code-font: 'CodeSnippets';
+  --primary-font: "Inter";
+  --emphasis-font: "Inter";
+  --quote-font: "freight-text-pro-Italic";
+  --code-font: "CodeSnippets";
 }
 
 * {
@@ -75,7 +75,6 @@ em {
   font-size: 1.1rem;
 }
 
-
 /*  */
 /* Element Rules */
 /*  */
@@ -112,7 +111,6 @@ ul {
   margin-right: 3rem;
 }
 
-
 /*  */
 /* Block Rules */
 /*  */
@@ -131,7 +129,7 @@ header {
 
 footer {
   margin-top: 1rem;
-  padding-top: .7rem;
+  padding-top: 0.7rem;
   /* padding-bottom: 0.1rem; */
   border-top: 0.5px solid var(--primary-color-light);
   display: flex;
@@ -154,9 +152,8 @@ footer p {
 }
 
 .footer-link {
-  margin: .3rem;
+  margin: 0.3rem;
 }
-
 
 /*  */
 /* Custom Classes */
@@ -220,7 +217,8 @@ footer p {
   margin-bottom: 5px;
 }
 
-.thought-date, .book-author {
+.thought-date,
+.book-author {
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -267,4 +265,31 @@ footer p {
   /* display: flex;
 	flex-flow: row nowrap;
 	justify-content: center; */
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.two-columns figure {
+  margin: 0;
+  width: 100%;
+}
+
+.two-columns figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
 }
