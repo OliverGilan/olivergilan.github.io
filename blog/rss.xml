@@ -1,7 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Oliver Gilan</title><link>https://olivergilan.com/blog/</link><description>Recent content in Blog on Oliver Gilan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>blog@olivergilan.com (Oliver Gilan)</managingEditor><webMaster>blog@olivergilan.com (Oliver Gilan)</webMaster><copyright>2022 Oliver Gilan All rights reserved</copyright><lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://olivergilan.com/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title>AI Hasn't Helped Most Engineers (yet)</title><link>https://olivergilan.com/blog/ai-hasnt-helped-most-engineers/</link><pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate><author>Oliver Gilan</author><guid>https://olivergilan.com/blog/ai-hasnt-helped-most-engineers/</guid><enclosure url="https://olivergilan.com/images/ai_help.webp" type="image/jpeg"/><description>&lt;p>The &lt;a href="https://en.wikipedia.org/wiki/Lockheed_Martin_F-35_Lightning_II">F-35&lt;/a> is one of the most advanced man-made machines ever created. It can fly at 1.6x the speed of sound, is virtually undetectable by radar, can hover in place, and provides a total 360-degree field of view to the pilot.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Oliver Gilan</title><link>https://olivergilan.com/blog/</link><description>Recent content in Blog on Oliver Gilan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>blog@olivergilan.com (Oliver Gilan)</managingEditor><webMaster>blog@olivergilan.com (Oliver Gilan)</webMaster><copyright>2022 Oliver Gilan All rights reserved</copyright><lastBuildDate>Sun, 03 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://olivergilan.com/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title>AI requires resetting the frame</title><link>https://olivergilan.com/blog/resetting-the-frame/</link><pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate><author>Oliver Gilan</author><guid>https://olivergilan.com/blog/resetting-the-frame/</guid><description>&lt;p>Every company in the world is thinking about how to add AI to their existing products and new products built from scratch. With intelligence too cheap to meter, you&amp;rsquo;d think we&amp;rsquo;d be seeing deep integration into existing products and novel user experiences but instead we find that most companies are converging on the same &lt;a href="https://www.figma.com/make/">simple&lt;/a> &lt;a href="https://www.airtable.com/platform/app-building">app&lt;/a> &lt;a href="https://www.canva.com/">builders&lt;/a>.&lt;/p>
+&lt;div class="two-columns">
+&lt;figure>&lt;img src="../images/figma_make.png"
+alt="Figma make chatbox">
+&lt;/figure>
+&lt;figure>&lt;img src="../images/canva_make.png"
+alt="Canva app builder">
+&lt;/figure>
+&lt;figure>&lt;img src="../images/airtable_make.png"
+alt="Airtable app builder">
+&lt;/figure>
+&lt;figure>&lt;img src="../images/codegen.png"
+alt="Codegen">
+&lt;/figure>
+&lt;/div>
+&lt;p>In a way, the chatbox is the pinnacle of UX design: a dead simple canvas with infinite possibility. Why even bother with product design if you can just talk to an agent and ask it to make the company&amp;rsquo;s stock go up by 10% next quarter?&lt;/p>
+&lt;p>Maybe we get that future but, for now, I&amp;rsquo;ll take the other side of that bet. The products that define the next decade will be those that deeply integrate AI into their user experience beyond just a chat box. These products will have designers deeply embedded in engineering and product teams, working closely with users and builders to re-think fundamental workflows to build novel user experiences.&lt;/p>
+&lt;h2 id="infinity-as-a-constraint">Infinity as a Constraint &lt;a class="anchor" href="#infinity-as-a-constraint">
+#
+&lt;/a>&lt;/h2>&lt;p>AI provides too many open-ended possibilities, both today and for the future. It&amp;rsquo;s difficult to figure out how to deeply integrate AI into existing products and workflows in ways that will 10x the user experience and it&amp;rsquo;s even more difficult to know if that integration will make sense in the future.&lt;/p>
+&lt;p>A year ago the LLM models on the market had a fraction of the power and intelligence of the current models. It&amp;rsquo;s wise to expect another jump in capabilities in the coming years &amp;ndash; or not. No one really knows where things are headed and the massive error bars around any prediction regarding LLM progress makes it difficult to take big bets on an opinionated product direction. Any work to deeply integrate an LLM today may find itself outdated in a year, and actually hindering the adoption of a newer, better model.&lt;/p>
+&lt;p>Companies are shipping chat boxes because they don&amp;rsquo;t know what else to ship. The chat box is unopinionated and becomes more powerful as the models become more powerful.&lt;/p>
+&lt;p>And yet, these models aren’t infinitely capable. The chat box is oppressive in its limitless possibility. Perhaps if the models were capable enough to handle infinity it would be a more respectable user experience but as they stand today, AI benefits from constraints and guardrails, as do humans. Users don&amp;rsquo;t want infinity, they want well-designed tools, and constrained sandboxes that allow them to use those tools effectively to solve their problems.&lt;/p>
+&lt;p>It&amp;rsquo;s these unopinionated chat boxes that will get steamrolled by the models as they improve and it&amp;rsquo;s the products that take an opinionated bet and provide a deeply well-thought out user experience that endure deep into the future. So how can we intelligently take that bet?&lt;/p>
+&lt;h2 id="functional-ergonomics">Functional Ergonomics &lt;a class="anchor" href="#functional-ergonomics">
+#
+&lt;/a>&lt;/h2>&lt;p>Functional ergonomics is all about how easy it is to do what you want to do as a user. The ergonomics of your product is the most important factor for designing a great user experience.&lt;/p>
+&lt;p>This means a lot more than having a simple or pretty UI. Having good ergonomics means understanding your users and their problems and tailoring the software to them.&lt;/p>
+&lt;ul>
+&lt;li>If your users handle large datasets, do your data tables support bulk actions?&lt;/li>
+&lt;li>If you&amp;rsquo;re building a developer tool do you have keyboard shortcuts? Do you integrate into existing stacks easily?&lt;/li>
+&lt;li>Do users frequently open multiple tabs just to compare data in separate deeply-nested, normalized views?&lt;/li>
+&lt;li>If it&amp;rsquo;s a collaborative product, do you support multiplayer editing?&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>This&lt;/em> is the heart of good UX and it&amp;rsquo;s, unsurprisingly, the least likely to be solved by formula. Performance can be measured easily, aesthetics can improve with some basic principles, but it&amp;rsquo;s up to you to do the hard work of understanding your users and their problems and then make it easy for them to solve their problems.&lt;/p>
+&lt;p>When companies like Airtable or Figma release a chat box to generate some vibe-coded slop, they&amp;rsquo;re being lazy. Both of these companies have become billion-dollar businesses off the success of wildly novel and complex products that re-defined the user experience for their respective workflows. Instead of adding depth to their existing products through AI, they&amp;rsquo;ve shipped the lowest common denominator.&lt;/p>
+&lt;h2 id="resetting-the-frame">Resetting the Frame &lt;a class="anchor" href="#resetting-the-frame">
+#
+&lt;/a>&lt;/h2>&lt;p>Great functional ergonomics comes from resetting the frame. The opposite of the chat boxes are the &lt;a href="https://koomen.dev/essays/horseless-carriages/">horseless carriages&lt;/a> most companies are building by shoving AI into existing workflows as a tacked-on sidebar or chat overlay.&lt;/p>
+&lt;p>At &lt;a href="https://mesa.dev">Mesa&lt;/a> we&amp;rsquo;re building real-time collaborative code repositories that allow engineering teams to use AI agents throughout the SDLC. We started by building a Pull Request review agent and UI but as agents continue to get better we keep asking ourselves: &lt;em>“will pull requests even need to exist as a concept in a couple years?”&lt;/em>&lt;/p>
+&lt;p>The current frame says: &lt;em>how can we use AI to review pull requests?&lt;/em> Resetting the frame says: &lt;em>do pull requests as a concept even make sense anymore?&lt;/em> Users don’t care about pull requests, they care about change control. Enforcing quality, security, and organizational standards at the point where changes are introduced into the system. With AI, can we achieve these goals without pull requests altogether?&lt;/p>
+&lt;p>The biggest challenge in product design today isn&amp;rsquo;t figuring out how to design a specific workflow, but figuring out which workflows even need to exist. Every product is asking these questions now. The lazy answer is to build a general purpose chat box, but the products that define the next decade will take an opinionated bet and build products with emergent properties that become more than just a great LLM and great traditional software.&lt;/p>
+&lt;p>At Mesa we&amp;rsquo;re building a deep user experience. We have a strong thesis on where these models are heading and we are building the best possible user experience for humans working with these models in the realm of software development. If you&amp;rsquo;re a designer or engineer and you want to take part in resetting the frame for software development, reach out: &lt;a href="mailto:oliver@mesa.dev">oliver@mesa.dev&lt;/a>&lt;/p></description></item><item><title>AI Hasn't Helped Most Engineers (yet)</title><link>https://olivergilan.com/blog/ai-hasnt-helped-most-engineers/</link><pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate><author>Oliver Gilan</author><guid>https://olivergilan.com/blog/ai-hasnt-helped-most-engineers/</guid><enclosure url="https://olivergilan.com/images/ai_help.webp" type="image/jpeg"/><description>&lt;p>The &lt;a href="https://en.wikipedia.org/wiki/Lockheed_Martin_F-35_Lightning_II">F-35&lt;/a> is one of the most advanced man-made machines ever created. It can fly at 1.6x the speed of sound, is virtually undetectable by radar, can hover in place, and provides a total 360-degree field of view to the pilot.&lt;/p>
 &lt;p>It&amp;rsquo;s a marvel of human achievement, but it’s constantly plagued by &lt;a href="https://www.reuters.com/business/aerospace-defense/us-resumes-taking-f-35-after-delays-over-software-upgrade-2024-07-20/">delays and cost overruns&lt;/a>. A common source of the issues? Software.&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;em>&amp;ldquo;The hardware of [&lt;a href="https://www.lockheedmartin.com/en-us/news/statements-speeches/2024/lockheed-martin-update-on-f-35-technology-refresh-3.html">Technology Refresh-3&lt;/a>] seems to be coming along fine but the software is lagging,&amp;quot;&lt;/em>&lt;/p>
+&lt;p>&lt;em>&amp;ldquo;The hardware of [&lt;a href="https://www.lockheedmartin.com/en-us/news/statements-speeches/2024/lockheed-martin-update-on-f-35-technology-refresh-3.html">Technology Refresh-3&lt;/a>] seems to be coming along fine but the software is lagging,&amp;rdquo;&lt;/em>&lt;/p>
 &lt;p>&lt;em>— Secretary of the Air Force Frank Kendall&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;strong>How can it be that the most advanced machine on earth is delayed because of software?&lt;/strong> How is it that, time and time again, it&amp;rsquo;s harder for companies to write competent code than it is to literally fly humans faster than the speed of sound?&lt;/p>
@@ -16,7 +58,7 @@
 &lt;p>Most of the last decade&amp;rsquo;s developer tools fall into the first layer: new JavaScript frameworks, terminal emulators, text editors powered by AI, code-gen chatbots, and more.&lt;/p>
 &lt;p>Tools like &lt;a href="https://v0.dev/">Vercel’s v0&lt;/a> can help create complex user interfaces with AI (which is great if you’re working on a greenfield project using NextJS) but a principal engineer at a company like Chase Bank does not build new UIs often — let alone with a framework like NextJS. They probably just finished a multi-year project to upgrade some COBOL service to use Java 8, which they’ll be sticking with for another decade (at least). Tooling in the first layer makes for great demos, but it often doesn’t help engineers working on mature systems.&lt;/p>
 &lt;p>&lt;strong>A senior engineer working in a big company usually spends way less time writing code and way more time managing a living codebase:&lt;/strong> reviewing code, responding to outages, maintaining code quality, focusing on architecture, keeping dependencies up-to-date, optimizing hot paths, engaging in large-scale refactors/migrations, and overcoming coordination problems throughout the org. We need DevTools to make this type of work 10x easier.&lt;/p>
-&lt;p>Some of this work has been improved by developer tooling in the third layer (with the Cloud, observability platforms, infrastructure-as-code, etc), but, frankly, it hasn&amp;rsquo;t changed enough (partly because of hyperscalers' complexity and the fragmented ecosystem of complementary tools). This layer has had less impact on productivity than one would expect.&lt;/p>
+&lt;p>Some of this work has been improved by developer tooling in the third layer (with the Cloud, observability platforms, infrastructure-as-code, etc), but, frankly, it hasn&amp;rsquo;t changed enough (partly because of hyperscalers&amp;rsquo; complexity and the fragmented ecosystem of complementary tools). This layer has had less impact on productivity than one would expect.&lt;/p>
 &lt;p>In other words, we need a lot more innovation in the second layer of development — the repository. &lt;strong>The repository is the canonical source of truth and the common denominator for an engineering organization.&lt;/strong> It’s where code changes are reviewed, issues discussed and prioritized, deployments orchestrated, dependencies managed, and where most of the work on a mature codebase is done. We need to make the repository itself far more powerful than it is today if we want to significantly improve the productivity of engineers managing large codebases.&lt;/p>
 &lt;h2 id="the-repository-as-a-living-codebase">The Repository as a Living Codebase &lt;a class="anchor" href="#the-repository-as-a-living-codebase">
 #
@@ -108,61 +150,61 @@ It&amp;rsquo;s worth noting that this price comparison isn&amp;rsquo;t really ap
 Edit: It turns out some of the PaaS services these days do have a concept of spend management: &lt;a href="https://vercel.com/blog/introducing-spend-management-realtime-usage-alerts-sms-notifications">Vercel&lt;/a> &lt;a href="https://docs.railway.app/guides/optimize-usage">Railway&lt;/a>
 &lt;/div>
 &lt;/div>
-&lt;p>The second way I wanted to tackle pricing was to take advantage of AWS reserved instances. Reserved instances is where you pay in advance for a certain amount of compute in exchange for discounts up to 60%! Then when you use compute later you can do it from the reserved instance credits you have. The beautiful part about this is reserved instances are relatively low risk, especially as your compute needs grow, because you can resell unused credits. For an individual company just trying to build a product this might be more complexity than it&amp;rsquo;s worth but for a PaaS it makes sense to reserve the compute for a discount and handle that complexity intelligently. What this unlocks is that even if we were to price our product at the same price as AWS' on-demand rate we could still have 60% margins. That&amp;rsquo;s not as good as the 300% that Vercel is getting but it doesn&amp;rsquo;t need to be for the services where you&amp;rsquo;re simply wrapping AWS. I&amp;rsquo;ll explain how we can get higher margins on other services in a moment. The end goal of these two things, though, is we could have a PaaS that basically has price parity with AWS while providing a better cost management experience than any cloud on the market today.&lt;/p>
+&lt;p>The second way I wanted to tackle pricing was to take advantage of AWS reserved instances. Reserved instances is where you pay in advance for a certain amount of compute in exchange for discounts up to 60%! Then when you use compute later you can do it from the reserved instance credits you have. The beautiful part about this is reserved instances are relatively low risk, especially as your compute needs grow, because you can resell unused credits. For an individual company just trying to build a product this might be more complexity than it&amp;rsquo;s worth but for a PaaS it makes sense to reserve the compute for a discount and handle that complexity intelligently. What this unlocks is that even if we were to price our product at the same price as AWS&amp;rsquo; on-demand rate we could still have 60% margins. That&amp;rsquo;s not as good as the 300% that Vercel is getting but it doesn&amp;rsquo;t need to be for the services where you&amp;rsquo;re simply wrapping AWS. I&amp;rsquo;ll explain how we can get higher margins on other services in a moment. The end goal of these two things, though, is we could have a PaaS that basically has price parity with AWS while providing a better cost management experience than any cloud on the market today.&lt;/p>
 &lt;p>When it comes to convenience I wanted an experience that worked for small teams that want simplicity and enterprise teams with complex and bespoke needs. I see only one way to solve this: code. Almost every PaaS platform like Vercel or Railway or Render all revolve around a similar core workflow: you create an account on the platform, you click some buttons to connect your GitHub account to the platform, then you press a big &amp;ldquo;Deploy&amp;rdquo; button. In the world of enterprise almost no one is deploying software like that.&lt;/p>
 &lt;p>Big companies use Infrastructure as Code (IaC) tools where you use code to specify of the infrastructure you want whether it&amp;rsquo;s servers or storage or domain names and then you provision infrastructure based on that specification. If you want to add a new server you generally update the spec and then push that change to the Cloud. There&amp;rsquo;s a couple reasons this is preferable to clicking around in a dashboard. The first is that it&amp;rsquo;s reproducible. Because it&amp;rsquo;s code that&amp;rsquo;s written down, if all your infrastructure gets deleted for some reason you could in theory just run the code again and bring your cloud back to the desired state. This is super useful if you want to make sure that your development or test environment matches your production environment and stays in sync. Another reason this is helpful is once it&amp;rsquo;s written down you can version it automatically because your codebase is already being versioned anyway. If someone makes a change that breaks some infrastructure in theory you can find which change created the break and then rollback that change easily. And lastly, if you want to change a bunch of resources all at once &amp;ndash; such as changing all your bucket names to have a certain prefix &amp;ndash; you can do that a lot easier in a code editor than clicking around a dashboard.&lt;/p>
 &lt;p>Okay, so what? Well, if you want a platform that works for big teams you need to have first-class support for IaC and it just so happens that if you want to allow multiple levels of complexity in one product then code is the best way to do that! Let&amp;rsquo;s say you&amp;rsquo;re a small team and you literally just want to deploy your NextJS app. A PaaS that offers IaC might let you do that like follows:
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="color:#000;font-weight:bold">const&lt;/span> domain &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> CustomDomain({
-...
-})
-&lt;span style="color:#000;font-weight:bold">const&lt;/span> site &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> NextJSApp({
-name&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;my-next-app&amp;#34;&lt;/span>,
-domain&lt;span style="color:#000;font-weight:bold">:&lt;/span> domain
-})
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> domain &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> CustomDomain({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> site &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> NextJSApp({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;my-next-app&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> domain&lt;span style="color:#000;font-weight:bold">:&lt;/span> domain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>That&amp;rsquo;s pretty simple! That would be very easy for any small team or even an individual developer but let&amp;rsquo;s say now you&amp;rsquo;re working on a big team that&amp;rsquo;s using NextJS and wants a lot more control over how it&amp;rsquo;s deployed. Well you could do something like:&lt;/p>
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="color:#000;font-weight:bold">const&lt;/span> domain &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> CustomDomain({...})
-&lt;span style="color:#000;font-weight:bold">const&lt;/span> queue &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> Redis({...})
-&lt;span style="color:#000;font-weight:bold">const&lt;/span> cdn &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> CDN()
-&lt;span style="color:#000;font-weight:bold">const&lt;/span> site &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> NextJSApp({
-name&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;my-next-app&amp;#34;&lt;/span>,
-domain&lt;span style="color:#000;font-weight:bold">:&lt;/span> domain,
-functions&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
-runtime&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;edge&amp;#34;&lt;/span>,
-timeout&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;15m&amp;#34;&lt;/span>,
-memory&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;512mb&amp;#34;&lt;/span>,
-},
-cdn&lt;span style="color:#000;font-weight:bold">:&lt;/span> cdn,
-queue&lt;span style="color:#000;font-weight:bold">:&lt;/span> queue
-})
-...
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> domain &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> CustomDomain({...})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> queue &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> Redis({...})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> cdn &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> CDN()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> site &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> NextJSApp({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;my-next-app&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> domain&lt;span style="color:#000;font-weight:bold">:&lt;/span> domain,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> functions&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> runtime&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;edge&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> timeout&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;15m&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> memory&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;512mb&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cdn&lt;span style="color:#000;font-weight:bold">:&lt;/span> cdn,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> queue&lt;span style="color:#000;font-weight:bold">:&lt;/span> queue
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>Or you can go even lower level and have more control:&lt;/p>
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="color:#000;font-weight:bold">const&lt;/span> vpc &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> VPC({...});
-&lt;span style="color:#000;font-weight:bold">const&lt;/span> storage &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> DurableStorage({
-size&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;16gb&amp;#34;&lt;/span>,
-...
-})
-&lt;span style="color:#000;font-weight:bold">const&lt;/span> vm &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> VM({
-memory&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;4gb&amp;#34;&lt;/span>,
-vcpu&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">2&lt;/span>,
-storage&lt;span style="color:#000;font-weight:bold">:&lt;/span> storage,
-vpc&lt;span style="color:#000;font-weight:bold">:&lt;/span> vpc,
-scaling&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
-...
-}
-})
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> vpc &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> VPC({...});
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> storage &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> DurableStorage({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> size&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;16gb&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> vm &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> VM({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> memory&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;4gb&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> vcpu&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> storage&lt;span style="color:#000;font-weight:bold">:&lt;/span> storage,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> vpc&lt;span style="color:#000;font-weight:bold">:&lt;/span> vpc,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> scaling&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>This is all half-baked pseudocode to illustrate a point: when you&amp;rsquo;re specifying things in code you can have multiple interfaces for the same thing and you can make one interface have multiple levels of complexity. You can make it so if all someone wants to do is tell you the domain to host their app on you can figure out the rest for them just like Vercel or Render would do but if they want more control they can just start configuring more of the options. You can also have a concept of primitives that build up to higher level concepts. For the power users in big companies you give them primitives to configure VM&amp;rsquo;s with exactly the memory and compute power they want and allow them to configure all the networking rules, etc. For the simpler user you give them a construct like &lt;code>NextJSApp&lt;/code> which is simple but under the hood it just provisions a VM with NodeJS and handles the configuration for them.&lt;/p>
@@ -173,11 +215,11 @@ scaling&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
 &lt;p>Every SaaS company needs a number of capabilities that are serviced by various other entire companies but they don&amp;rsquo;t need to be. You can have an Auth service and an Email service and a feature flag service, etc.
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="color:#000;font-weight:bold">const&lt;/span> emailProvider &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> cloud.Email(&lt;span style="color:#d14">&amp;#34;MyEmail&amp;#34;&lt;/span>, {
-sender&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;example.com&amp;#34;&lt;/span>,
-dmarc&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;v=DMARC1; p=quarantine; adkim=s; aspf=s;&amp;#34;&lt;/span>
-});
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> emailProvider &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> cloud.Email(&lt;span style="color:#d14">&amp;#34;MyEmail&amp;#34;&lt;/span>, {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sender&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;example.com&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dmarc&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;v=DMARC1; p=quarantine; adkim=s; aspf=s;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>Use the hyperscalers for their base infrastructure and accept lower margins when wrapping that but write your own software to power higher-level services and charge more for those. Simply wrapping AWS Lambda? Don&amp;rsquo;t mark it up by 300% like Vercel. But do you have an Auth service that customers can provision which is just a number of Lambda functions under the hood for performing token exchanges? Charge more for that.&lt;/p>
@@ -189,50 +231,52 @@ dmarc&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="co
 &lt;p>Ultimately these are not easy ideas and anyone who tries to build something like this needs to be prepared for a long road but in my opinion it&amp;rsquo;s the best way to build a generational company in the cloud. There are certainly going to be pitfalls and things that make this approach extremely difficult but in my opinion it&amp;rsquo;s really the only way to get the optimal tradeoff along all 3 dimensions and I think it&amp;rsquo;s the tradeoff that allows someone to build a better cloud than anything that exists today.&lt;/p>
 &lt;h2 id="how-its-playing-out">How It&amp;rsquo;s Playing Out &lt;a class="anchor" href="#how-its-playing-out">
 #
-&lt;/a>&lt;/h2>&lt;p>Well, Antimetal went in a slightly different direction than what I originally had envisioned but I think that was smart of them. To implement price controls and create a better spend experience in the way I envisioned I needed to have a platform in the first place. Matt, my ex- cofounder, found a better way. He said to hell with having an actual cloud and just went ahead and built a platform that sits within your own cloud and orchestrates reserved instances for you so that you can get cost savings. This was a genius move because it meant they could avoid all the complexity of building a PaaS and just focus on selling a product where they only make money if they save their customer money. That tends to be an easy business model to sell and now they are installed in hundreds of customers' clouds earning their trust and gaining momentum. I don&amp;rsquo;t know if they want to even branch out into the PaaS model at this point and I don&amp;rsquo;t even think it would make sense for them to do so but they would be in a pretty good position if they tried.&lt;/p>
+&lt;/a>&lt;/h2>&lt;p>Well, Antimetal went in a slightly different direction than what I originally had envisioned but I think that was smart of them. To implement price controls and create a better spend experience in the way I envisioned I needed to have a platform in the first place. Matt, my ex- cofounder, found a better way. He said to hell with having an actual cloud and just went ahead and built a platform that sits within your own cloud and orchestrates reserved instances for you so that you can get cost savings. This was a genius move because it meant they could avoid all the complexity of building a PaaS and just focus on selling a product where they only make money if they save their customer money. That tends to be an easy business model to sell and now they are installed in hundreds of customers&amp;rsquo; clouds earning their trust and gaining momentum. I don&amp;rsquo;t know if they want to even branch out into the PaaS model at this point and I don&amp;rsquo;t even think it would make sense for them to do so but they would be in a pretty good position if they tried.&lt;/p>
 &lt;p>Besides Antimetal, it appears that Vercel is winning in the short term as the PaaS of choice for many. I&amp;rsquo;m skeptical of Vercel, however. The vibes feel off, React and NextJS seem to be undergoing somewhat of a schism within the community, and I think many people feel that Vercel does not tend to act in &lt;a href="https://x.com/thdxr/status/1780710481084432849">good faith&lt;/a>. They are in the lead amongst PaaS platforms but $100 million in revenue is far from $100 billion in revenue and I still fundamentally think the way they&amp;rsquo;ve created their product for ultra simplicity has put a very big ceiling that will be hard for them to break out of. Most companies that will pay a lot for cloud hosting do not care about 1-click deployments through a dashboard.&lt;/p>
 &lt;p>In my opinion edge computing is also turning out to not be a really good bet and I feel validated in that. There are some operations that work well on the edge but any operation that needs to rely on a database in a central location nullifies the entire benefit of the edge. There are new serverless database offerings that are growing in popularity, though, so it&amp;rsquo;s possible that this calculus changes over time. Still, if you&amp;rsquo;re building a B2B SaaS then 30ms ping vs 120ms ping isn&amp;rsquo;t the difference between your company&amp;rsquo;s product getting customers or not. It seems quite clear to me that if performance really matters for your application you&amp;rsquo;re better off just doing local-first with a smart sync engine than using the edge and if performance doesn&amp;rsquo;t matter that much then you don&amp;rsquo;t need the edge.&lt;/p>
 &lt;p>And that brings me to SST which is the only player in the space building something that aligns with what I had in mind. This is not an ad for SST I just get excited about it because their founders seem to really &lt;a href="https://x.com/thdxr/status/1830990051322237260">&amp;ldquo;get&amp;rdquo;&lt;/a> what I had in mind 2 years ago. Remember that example code snippet I used up above to illustrate how you could theoretically let someone send emails from within their product? That&amp;rsquo;s actually a &lt;a href="https://sst.dev/docs/start/aws/email/">code example&lt;/a> from SST! To deploy any infrastructure with SST you need to define it in a type-safe IaC specification built on top of the &lt;a href="https://www.pulumi.com/">Pulumi&lt;/a> engine. They&amp;rsquo;ve created shims on top of AWS and Cloudflare providers in Pulumi to allow for a simpler interface for many of the services while still letting you set basically any complex configuration if you want to.&lt;/p>
 &lt;p>They also let you seamlessly deploy to multiple clouds at once because of their use of IaC! Here&amp;rsquo;s a snippet creating an email provider in AWS and configuring it&amp;rsquo;s dns to use Cloudflare. Do you know how wild it is to be able to deploy this sort of configuration this easily?&lt;/p>
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="color:#000;font-weight:bold">export&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> email &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> sst.aws.Email(&lt;span style="color:#d14">&amp;#34;Email&amp;#34;&lt;/span>, {
-sender&lt;span style="color:#000;font-weight:bold">:&lt;/span> domain,
-dns&lt;span style="color:#000;font-weight:bold">:&lt;/span> sst.cloudflare.dns(),
-});
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">export&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> email &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> sst.aws.Email(&lt;span style="color:#d14">&amp;#34;Email&amp;#34;&lt;/span>, {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sender&lt;span style="color:#000;font-weight:bold">:&lt;/span> domain,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dns&lt;span style="color:#000;font-weight:bold">:&lt;/span> sst.cloudflare.dns(),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>And because they&amp;rsquo;re using Pulumi and simply deploying resources to your own AWS instance any capability that they do not provide with the SST provider you can still use with other Pulumi providers. You can even orchestrate your other SaaS tools like Stripe and then link them to your resources. No fiddling with the Stripe dashboard to set up a new webhook anymore.
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="color:#000;font-weight:bold">import&lt;/span> { domain } from &lt;span style="color:#d14">&amp;#34;./dns&amp;#34;&lt;/span>;
-sst.Linkable.wrap(stripe.WebhookEndpoint, (endpoint) =&amp;gt; {
-&lt;span style="color:#000;font-weight:bold">return&lt;/span> {
-properties&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
-id&lt;span style="color:#000;font-weight:bold">:&lt;/span> endpoint.id,
-secret&lt;span style="color:#000;font-weight:bold">:&lt;/span> endpoint.secret,
-},
-};
-});
-&lt;span style="color:#000;font-weight:bold">export&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> webhook &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> stripe.WebhookEndpoint(&lt;span style="color:#d14">&amp;#34;StripeWebhook&amp;#34;&lt;/span>, {
-url&lt;span style="color:#000;font-weight:bold">:&lt;/span> $interpolate&lt;span style="color:#d14">`https://openapi.&lt;/span>&lt;span style="color:#d14">${&lt;/span>domain&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">/hook/stripe`&lt;/span>,
-metadata&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
-stage&lt;span style="color:#000;font-weight:bold">:&lt;/span> $app.stage,
-},
-enabledEvents&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
-&lt;span style="color:#d14">&amp;#34;payment_method.attached&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;payment_method.detached&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;payment_method.updated&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;product.created&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;product.updated&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;product.deleted&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;price.created&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;price.updated&amp;#34;&lt;/span>,
-&lt;span style="color:#d14">&amp;#34;price.deleted&amp;#34;&lt;/span>,
-],
-});
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">import&lt;/span> { domain } from &lt;span style="color:#d14">&amp;#34;./dns&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sst.Linkable.wrap(stripe.WebhookEndpoint, (endpoint) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">return&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> properties&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> id&lt;span style="color:#000;font-weight:bold">:&lt;/span> endpoint.id,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> secret&lt;span style="color:#000;font-weight:bold">:&lt;/span> endpoint.secret,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">export&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> webhook &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> stripe.WebhookEndpoint(&lt;span style="color:#d14">&amp;#34;StripeWebhook&amp;#34;&lt;/span>, {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url&lt;span style="color:#000;font-weight:bold">:&lt;/span> $interpolate&lt;span style="color:#d14">`https://openapi.&lt;/span>&lt;span style="color:#d14">${&lt;/span>domain&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">/hook/stripe`&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> metadata&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stage&lt;span style="color:#000;font-weight:bold">:&lt;/span> $app.stage,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> enabledEvents&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;payment_method.attached&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;payment_method.detached&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;payment_method.updated&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;product.created&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;product.updated&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;product.deleted&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;price.created&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;price.updated&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#d14">&amp;#34;price.deleted&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>I&amp;rsquo;ve never seen ergonomics this powerful from a PaaS but it&amp;rsquo;s really an obvious conclusion when you think about the 2nd and 3rd-order effects of IaC and the cloud.&lt;/p>
@@ -305,15 +349,15 @@ enabledEvents&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
 &lt;li>1000mcg Vitamin B12 daily&lt;sup id="fnref:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>L-Theanine 200mg daily&lt;sup id="fnref:9">&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref">9&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>20min breath-work daily (10min x 2)&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>30min sunlight daily&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>30min sunlight daily&lt;sup id="fnref1:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
 &lt;h3 id="microbiome-rehabilitation">Microbiome Rehabilitation &lt;a class="anchor" href="#microbiome-rehabilitation">
 #
 &lt;/a>&lt;/h3>&lt;ul>
 &lt;li>24h fast biweekly&lt;sup id="fnref:11">&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref">11&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>72h fast once&lt;sup id="fnref:11">&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref">11&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>72h fast once&lt;sup id="fnref1:11">&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref">11&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>20g insoluble fiber daily&lt;sup id="fnref:12">&lt;a href="#fn:12" class="footnote-ref" role="doc-noteref">12&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>10g soluble fiber daily&lt;sup id="fnref:12">&lt;a href="#fn:12" class="footnote-ref" role="doc-noteref">12&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>10g soluble fiber daily&lt;sup id="fnref1:12">&lt;a href="#fn:12" class="footnote-ref" role="doc-noteref">12&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>Fermented foods with each meal&lt;sup id="fnref:13">&lt;a href="#fn:13" class="footnote-ref" role="doc-noteref">13&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>Reduced animal proteins&lt;sup id="fnref:14">&lt;a href="#fn:14" class="footnote-ref" role="doc-noteref">14&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>800g of vegetables daily (6-8) different sources&lt;sup id="fnref:15">&lt;a href="#fn:15" class="footnote-ref" role="doc-noteref">15&lt;/a>&lt;/sup>&lt;/li>
@@ -324,7 +368,7 @@ enabledEvents&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
 #
 &lt;/a>&lt;/h3>&lt;ul>
 &lt;li>Alcohol&lt;sup id="fnref:18">&lt;a href="#fn:18" class="footnote-ref" role="doc-noteref">18&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>Weed&lt;sup id="fnref:18">&lt;a href="#fn:18" class="footnote-ref" role="doc-noteref">18&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>Weed&lt;sup id="fnref1:18">&lt;a href="#fn:18" class="footnote-ref" role="doc-noteref">18&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>Caffeine/Coffee&lt;sup id="fnref:19">&lt;a href="#fn:19" class="footnote-ref" role="doc-noteref">19&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
 &lt;h2 id="philosophy">Philosophy &lt;a class="anchor" href="#philosophy">
@@ -339,68 +383,68 @@ enabledEvents&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
 &lt;p>I expect this protocol to adjust over the course of these 17 weeks and I won&amp;rsquo;t have 100% adherence. I will track my progress and any changes to the protocol and make that data available on this blog at a later date. At the end of this time I will undergo a gluten challenge where I eat gluten normally for a full week and write up the results. The biggest constraint here is my bodyweight. When I became sick I very quickly lost 30lbs and I&amp;rsquo;ve regained 15 of those pounds over the past two years of recovery. I&amp;rsquo;d like to keep gaining weight but I suspect this protocol will make that difficult due to the reduction of red meat consumption as well as regular fasting. I will have to track my weight over these weeks to ensure I do not lose weight. I do believe if my gut heals then we could see my weight go up as I&amp;rsquo;ll be inclined to eat more and absorb more of the nutrients in my food.&lt;/p>
 &lt;h2 id="science--references">Science + References &lt;a class="anchor" href="#science--references">
 #
-&lt;/a>&lt;/h2>&lt;section class="footnotes" role="doc-endnotes">
+&lt;/a>&lt;/h2>&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4838534/#:~:text=Dysbiosis%20is%20defined%20by%20an,bacterial%20distribution%20within%20the%20gut">Dysbiosis&lt;/a> is a broad term that means an imbalance in the composition of gut bacteria. The food you eat doesn&amp;rsquo;t feed you it feeds the bacteria in your gut which break it down into components that your body absorbs along with byproducts called &lt;a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/metabolite">metabolites&lt;/a> which affect various systems in your body. The composition of your gut bacteria matters because different strains of bacteria feed on different foods and produce different metabolites. These metabolites can promote or suppress inflammation, regulate the intestinal lining of your gut, affect your mood, and change the way your body absorbs various nutrients. Different strains of bacteria also breakdown food into different components. As it relates to gluten, depending on how this complex protein is broken down can determine if it results in immunogenic molecules or not.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>Intestinal tight junctions are protein complexes in the intestinal skin that regulate the movement of molecules across the gut barrier. It is critical for nutrient absorption and controls the balance between tolerance and immunity to non-self antigens. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6311762/#:~:text=Adjacent%20intestinal%20epithelia%20form%20tight,water%20across%20the%20intestinal%20epithelium">Source&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
+&lt;li id="fn:3">
 &lt;p>Immunogenic gluten peptides are components of gluten that when isolated during digestion cause an immune response. These peptides are not always exposed during gluten digestion and thus its hypothesized that many gluten-related problems may be the result of incorrect gluten digestion. My hypothesis is that if this is what&amp;rsquo;s occuring inside me then fixing my gut composition will fix this.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:4" role="doc-endnote">
+&lt;li id="fn:4">
 &lt;p>Zonulin is the only human protein discovered to date to directly modulate functionality of tight junctions. Zonulin overproduction has been shown as a biomarker of impaired gut barrier functionality and is a specific marker for many autoimmune diseases. Zonulin inhibitors like Larazotide acetate have been shown to significantly reduce autoimmune symptoms for patients with celiac disease. It can be hypothesized that the overproduction of zonulin leads to intestinal tight junction impairment and what&amp;rsquo;s commonly known as leaky gut syndrome which leads to immune response. If this is the case then if I reduce serum zonulin levels I should see a reduction in immune reactions to gluten. The composition of the microbiome as well as stress &lt;em>may&lt;/em> both lead to zonulin production which is why a big part of this protocol focuses on the reduction of baseline stress levels. &lt;a href="https://www.frontiersin.org/articles/10.3389/fnut.2020.00152/full">Source&lt;/a> &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3384703/">Source&lt;/a> &lt;a href="https://sci-hub.se/10.1016/j.biopsycho.2018.08.013">Source&lt;/a> &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10569989/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:5" role="doc-endnote">
+&lt;li id="fn:5">
 &lt;p>There are other ways to measure stress such as a cortisol reading from a blood test but I am using these proxies instead because I can get somewhat reliable continuous monitoring of them from my garmin. Heartrate and HRV are also good proxies because they correlate strongly with your internal vagal tone. We know that stress causes dysfunction of the intestinal lining by stimulating production of zonulin. The key here is I&amp;rsquo;m trying to reduce baseline stress not peak stress. When I work out or run hard I will experience peak stress and in those times I actually have a very good stress response because I&amp;rsquo;m a fit individual. The real problem is all the other moments when I should be relaxed but my baseline level of stress is just a little too high causing this constant drip of zonulin and cortisol. To understand how to reduce baseline levels of stress you need to understand the nervous system, namely the autonomic and sympathetic parts of it. The sympathetic nervous system activates the fight or flight mode in humans while the autonomic nervous system balances it out and calms you down. Normally these two systems are in a tug of war with the autonomic system keeping you calm most of the time and your sympathetic nervous system giving you energy in acute moments when you need it. It&amp;rsquo;s possible for the autonomic system to become weak and unable to effectively balance out the sympathetic system leading to higher levels of baseline stress and it&amp;rsquo;s this sort of imbalance that can lead to a bad positive feedback loop: higher stress leads to improper digestion leads to less nutrition absorption leads to worse sleep leads to more stress. So my main strategy for reducing baseline stress levels is to boost the functionality of autonomic nervous system and the biggest component of that is the &lt;a href="https://my.clevelandclinic.org/health/body/22279-vagus-nerve">Vagus nerve&lt;/a>. The vagus nerve is one of the key pathways in which the gut communicates with the brain and vice versa and there is &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5859128/">evidence&lt;/a> that various vagus nerve therapies can reduce inflammation. HRV is a &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6996447/#:~:text=The%20link%20between%20vagus%20nerve,established%2C%20correlating%20with%20vagal%20tone.">great proxy&lt;/a> for understanding the health of the vagus nerve.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:6" role="doc-endnote">
+&lt;li id="fn:6">
 &lt;p>CBD has been shown to be significantly effective in controlling stress responses in humans. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8704602/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:7" role="doc-endnote">
+&lt;li id="fn:7">
 &lt;p>Ashwagandha, specifically the KSM-66 variety has been shown to be significantly effective in controlling stress response in humans. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8762185/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:8" role="doc-endnote">
+&lt;li id="fn:8">
 &lt;p>Vitamin B12 is highly correlated with HRV levels specifically when studied among stroke patients but this is unsurprising considering B12 is critical for nerve health. I believe that adequate B12 levels would correlate to a healthier vagus nerve which would lead to improved HRV. that being said my B12 levels are not low nowadays (I unfortunately don&amp;rsquo;t have data from when I was sick for this metric) so I don&amp;rsquo;t expect this to make a huge difference. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10118344/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:9" role="doc-endnote">
+&lt;li id="fn:9">
 &lt;p>L-theanine has been shown to reduce stress, anxiety, and improve sleep in humans. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6836118/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:10" role="doc-endnote">
-&lt;p>I feel I do not need to even provide sources for these two. Breathwork has been shown to clinically reduce stress levels and Vitamin D is critical for reguating the immune system and stress levels. I prefer raw, organic, unfiltered sunlight beyond just Vitamin D supplementation and I live in an area of the world where I should be able to get 30 minutes of sunlight a day but in days where I can&amp;rsquo;t I will supplement.&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:10">
+&lt;p>I feel I do not need to even provide sources for these two. Breathwork has been shown to clinically reduce stress levels and Vitamin D is critical for reguating the immune system and stress levels. I prefer raw, organic, unfiltered sunlight beyond just Vitamin D supplementation and I live in an area of the world where I should be able to get 30 minutes of sunlight a day but in days where I can&amp;rsquo;t I will supplement.&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:11" role="doc-endnote">
-&lt;p>Fasting can have a profound effect on both the immune system and the gut&amp;rsquo;s microbiome. Studies have reported significant positive changes in the composition of gut bacteria for people undergoing intermittent fasting as well as prolonged fasting. Dysbiosis is simply an imbalance in gut bacteria usually because one or two strains have grown too large and are outcompeting the other strains. Prolonged fasting can be effective at reconsituting this composition by restricting energy to the dominant strains. Fasting is also effective at retraining the immune system. Many studies show that a 72hr water fast is a tipping point where the immune system activates different pathways to recycle old damaged cells and replace them with new ones. I&amp;rsquo;ll admit I do not 100% understand the mechanisms here and I need to read more but I&amp;rsquo;m hoping that near the end of this protocol I will have fixed the root of the issue (leaky gut) and a 3-day fast can help retrain my immune system almost as a &amp;ldquo;factory reset.&amp;rdquo; It&amp;rsquo;s possible that intermittent fasting would actually be more effective here but I worry about my tendency to easily lose weight and I feel it would be easier to maintain or even gain weight while doing more targeted prolonged water fasts. Fasting is valuable but I do not want to sacrifice my weight so if I find bi-weekly to be too often I&amp;rsquo;ll adjust. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10495574/">Source&lt;/a> &lt;a href="https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(14)00151-9">Source&lt;/a>&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:11">
+&lt;p>Fasting can have a profound effect on both the immune system and the gut&amp;rsquo;s microbiome. Studies have reported significant positive changes in the composition of gut bacteria for people undergoing intermittent fasting as well as prolonged fasting. Dysbiosis is simply an imbalance in gut bacteria usually because one or two strains have grown too large and are outcompeting the other strains. Prolonged fasting can be effective at reconsituting this composition by restricting energy to the dominant strains. Fasting is also effective at retraining the immune system. Many studies show that a 72hr water fast is a tipping point where the immune system activates different pathways to recycle old damaged cells and replace them with new ones. I&amp;rsquo;ll admit I do not 100% understand the mechanisms here and I need to read more but I&amp;rsquo;m hoping that near the end of this protocol I will have fixed the root of the issue (leaky gut) and a 3-day fast can help retrain my immune system almost as a &amp;ldquo;factory reset.&amp;rdquo; It&amp;rsquo;s possible that intermittent fasting would actually be more effective here but I worry about my tendency to easily lose weight and I feel it would be easier to maintain or even gain weight while doing more targeted prolonged water fasts. Fasting is valuable but I do not want to sacrifice my weight so if I find bi-weekly to be too often I&amp;rsquo;ll adjust. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10495574/">Source&lt;/a> &lt;a href="https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(14)00151-9">Source&lt;/a>&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:12" role="doc-endnote">
-&lt;p>Fiber is incredibly important for the composition of the gut&amp;rsquo;s microbiome due to the generation of SCFAs and the bacteria that it supports. &lt;strong>If there is an 80/20 for improving gut health then fiber is a part of it!&lt;/strong> It effectively lowers the GI of meals by protecting starchy carbohydrates from being atttacked by enzymes which slows the conversion into glucose. High fiber diets have been shown to correlate with a reduction of symptoms for a variety of autoimmune diseases including psoriasis. Fiber regulates inflammation in the gut and the SCFAs like butyrate play an important role in protecting the gut&amp;rsquo;s mucus layer and inducing new generation of Treg cells which help calm the immune system. Dietary fiber does come in insoluble and soluble form and they do behave differently in the body. Generally I&amp;rsquo;m trying to get a total of 30g of fiber which is the recommended daily intake amount but specifically want to focus on insoluble fiber for its role in generating SCFAs. This is harder to get through just pure eating and will probably have to be supplemented and I will also be careful to slowly ramp up my intake to not overwhelm my system. Also most importantly fiber acts as prebiotic that supports valuable strains of gut bacteria and can help rebalance the composition of the microbiome. &lt;a href="https://pubmed.ncbi.nlm.nih.gov/29950699/">Source&lt;/a> &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7432353/#B28-ijms-21-05405">Source&lt;/a> &lt;a href="https://www.gisymbol.com/low-gi-explained/">Source&lt;/a> &lt;a href="https://www.ucsfhealth.org/education/increasing-fiber-intake">Source&lt;/a> &lt;a href="https://www.todaysdietitian.com/newarchives/0816p34.shtml">Source&lt;/a> &lt;a href="https://www.todaysdietitian.com/newarchives/AS20p24.shtml">Source&lt;/a>&amp;#160;&lt;a href="#fnref:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:12">
+&lt;p>Fiber is incredibly important for the composition of the gut&amp;rsquo;s microbiome due to the generation of SCFAs and the bacteria that it supports. &lt;strong>If there is an 80/20 for improving gut health then fiber is a part of it!&lt;/strong> It effectively lowers the GI of meals by protecting starchy carbohydrates from being atttacked by enzymes which slows the conversion into glucose. High fiber diets have been shown to correlate with a reduction of symptoms for a variety of autoimmune diseases including psoriasis. Fiber regulates inflammation in the gut and the SCFAs like butyrate play an important role in protecting the gut&amp;rsquo;s mucus layer and inducing new generation of Treg cells which help calm the immune system. Dietary fiber does come in insoluble and soluble form and they do behave differently in the body. Generally I&amp;rsquo;m trying to get a total of 30g of fiber which is the recommended daily intake amount but specifically want to focus on insoluble fiber for its role in generating SCFAs. This is harder to get through just pure eating and will probably have to be supplemented and I will also be careful to slowly ramp up my intake to not overwhelm my system. Also most importantly fiber acts as prebiotic that supports valuable strains of gut bacteria and can help rebalance the composition of the microbiome. &lt;a href="https://pubmed.ncbi.nlm.nih.gov/29950699/">Source&lt;/a> &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7432353/#B28-ijms-21-05405">Source&lt;/a> &lt;a href="https://www.gisymbol.com/low-gi-explained/">Source&lt;/a> &lt;a href="https://www.ucsfhealth.org/education/increasing-fiber-intake">Source&lt;/a> &lt;a href="https://www.todaysdietitian.com/newarchives/0816p34.shtml">Source&lt;/a> &lt;a href="https://www.todaysdietitian.com/newarchives/AS20p24.shtml">Source&lt;/a>&amp;#160;&lt;a href="#fnref:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:13" role="doc-endnote">
+&lt;li id="fn:13">
 &lt;p>Just about every civilization in human history has had a diet with a fermented food as its staple and the effect they have on the gut can be profound both in the short and long term. One of the most effective changes I&amp;rsquo;ve made over the past two years has been to increase the amount of fermented foods I eat (saurkraut, kimchi, miso, etc) and I credit it to a large part of my recovery. These fermented foods have live cultures which seed the gut with valuable bacteria and lead to long term diversity gains in the microbiome. I&amp;rsquo;m aiming to eat a portion of something fermented with every meal following &amp;mdash; or along with &amp;mdash; the intake of fiber so that these cultures have a better time colonizing in my gut. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9003261/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:13" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:14" role="doc-endnote">
+&lt;li id="fn:14">
 &lt;p>This one is controversial and there&amp;rsquo;s a lot of conflicting evidence but it does seem like animal proteins and red meats specifically create more oxidative stress which can lead to gut inflammation. Red meat is abundant in saturated fatty acids which induces inflammation and heme which in turn leads to gut dysbiosis and reduces the synthesis of butyrate. Red meat intake is also correlated with autoimmune diseases but there&amp;rsquo;s so many confounding factors in such studies that it&amp;rsquo;s hard to know if it plays any significant role. I want to maintain my weight and strength and I&amp;rsquo;m already so limited on what calories I can consume that I will not cut it out completely but just reduce my intake. &lt;a href="https://pubmed.ncbi.nlm.nih.gov/29759553/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:14" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:15" role="doc-endnote">
+&lt;li id="fn:15">
 &lt;p>This basically just amounts of getting enough fiber plus some good micronutrients. Should be easy.&amp;#160;&lt;a href="#fnref:15" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:16" role="doc-endnote">
+&lt;li id="fn:16">
 &lt;p>FODMAPs are sugars that are absorbed poorly and ferment in the small intestine. Cutting out FODMAPs was originally how I began to recover and whenever I get a bad flare up it is a strategy that helps control it. I maintain a mostly low FODMAP diet today but with this protocol I want to be stricter there for the time being which mostly amounts to cutting out various sources of sugar. Glycemic Index (GI) is a measure of how carbohydrate foods affect blood glucose levels. High GI foods spike blood glucose and lead to crashes that result in a food coma. Low GI foods are absorbed by the body slowly and give more steady levels of energy over the course of a day. When your blood glucose spikes your body releases more insulin which causes a whole host of problems including diabetes. Higher blood glucose can lead to inflammation and immune activation which is what I&amp;rsquo;m specifically trying to avoid. &lt;a href="https://www.gisymbol.com/low-gi-explained/">Source&lt;/a> &lt;a href="https://www.levelshealth.com/blog/metabolic-health-101">Source&lt;/a>&amp;#160;&lt;a href="#fnref:16" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:17" role="doc-endnote">
+&lt;li id="fn:17">
 &lt;p>The presence of acid in the stomach slows down the conversion of carbohydrates into glucose which lowers the overall GI of a meal. This is one of the reasons fermented foods are so healthy. &lt;a href="https://www.gisymbol.com/low-gi-explained/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:17" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:18" role="doc-endnote">
-&lt;p>Alcohol is just not good for the gut, it&amp;rsquo;s not good for the immune system, and it&amp;rsquo;s literally just bad. I probably won&amp;rsquo;t be able to cut it out completely during these 3 months of spring but I will significantly reduce my consumption which is already low. I am not certain of marijuana&amp;rsquo;s effect on inflammation but I tend to either have or notice more inflammation oftentimes when I smoke so I will cut that out for now too.&amp;#160;&lt;a href="#fnref:18" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:18">
+&lt;p>Alcohol is just not good for the gut, it&amp;rsquo;s not good for the immune system, and it&amp;rsquo;s literally just bad. I probably won&amp;rsquo;t be able to cut it out completely during these 3 months of spring but I will significantly reduce my consumption which is already low. I am not certain of marijuana&amp;rsquo;s effect on inflammation but I tend to either have or notice more inflammation oftentimes when I smoke so I will cut that out for now too.&amp;#160;&lt;a href="#fnref:18" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:18" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:19" role="doc-endnote">
+&lt;li id="fn:19">
 &lt;p>There is limited evidence concerning coffee and the microbiome. It&amp;rsquo;s generally accepted that coffee alters the composition of the microbiome in a significant manner but it&amp;rsquo;s not clear from what I&amp;rsquo;ve read if it&amp;rsquo;s a good thing or a bad thing. My prior is that coffee is bad for the microbiome but recent studies show that it may increase microbiome diversity and reduce inflammation. It&amp;rsquo;s hard to know what&amp;rsquo;s real so I will overweight my priors for now and simply maintain a reduced consumption of coffee. If I need the occasional caffeine I will use green tea. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7282261/">Source&lt;/a> &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10096519/">Source&lt;/a>&amp;#160;&lt;a href="#fnref:19" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Kidney Crisis</title><link>https://olivergilan.com/blog/kidney-crisis/</link><pubDate>Sun, 04 Feb 2024 00:00:00 +0000</pubDate><author>Oliver Gilan</author><guid>https://olivergilan.com/blog/kidney-crisis/</guid><enclosure url="https://olivergilan.com/images/silicon_kidney.png" type="image/jpeg"/><description>&lt;div id="tocContainer">
+&lt;/div></description></item><item><title>Kidney Crisis</title><link>https://olivergilan.com/blog/kidney-crisis/</link><pubDate>Sun, 04 Feb 2024 00:00:00 +0000</pubDate><author>Oliver Gilan</author><guid>https://olivergilan.com/blog/kidney-crisis/</guid><enclosure url="https://olivergilan.com/images/silicon_kidney.png" type="image/jpeg"/><description>&lt;div id="tocContainer">
 &lt;p id="contents">Contents&lt;/p>
 &lt;nav id="TableOfContents">
 &lt;ul>
@@ -475,7 +519,7 @@ enabledEvents&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
 &lt;p>The challenges remaining for the artificial kidney are almost fundamentally engineering in nature and not requiring immense scientific breakthroughs. Money can solve engineering problems but it can&amp;rsquo;t increase the speed at which new insights are attained. This bears well for the artificial kidney.&lt;/p>
 &lt;h3 id="the-regulatory-environment">The Regulatory Environment &lt;a class="anchor" href="#the-regulatory-environment">
 #
-&lt;/a>&lt;/h3>&lt;p>The regulatory environment is also uniquely aligned to bring these new technologies to market. One of the big changes was President Trump signing &lt;a href="https://www.federalregister.gov/documents/2019/07/15/2019-15159/advancing-american-kidney-health">Executive Order 13879 on Advancing American Kidney Health&lt;/a> which explicitly aims to open the door towards tackling the kidney crisis. Among other initiatives to improve preventative care the Order explicitly calls for policy to &lt;strong>&amp;ldquo;increase patient choice through affordable alternative treatments for ESRD by encouraging higher value care, educating patients on treatment alternatives, and encouraging the development of artificial kidneys.&amp;quot;&lt;/strong>&lt;/p>
+&lt;/a>&lt;/h3>&lt;p>The regulatory environment is also uniquely aligned to bring these new technologies to market. One of the big changes was President Trump signing &lt;a href="https://www.federalregister.gov/documents/2019/07/15/2019-15159/advancing-american-kidney-health">Executive Order 13879 on Advancing American Kidney Health&lt;/a> which explicitly aims to open the door towards tackling the kidney crisis. Among other initiatives to improve preventative care the Order explicitly calls for policy to &lt;strong>&amp;ldquo;increase patient choice through affordable alternative treatments for ESRD by encouraging higher value care, educating patients on treatment alternatives, and encouraging the development of artificial kidneys.&amp;rdquo;&lt;/strong>&lt;/p>
 &lt;p>The Order goes on to explicitly call for regulatory bodies such as the FDA and Congress to increase their support and collaboration with the private sector to develop an artificial kidney.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Sec. 6&lt;/strong>. &lt;em>Encouraging the Development of an Artificial Kidney.&lt;/em> Within 120 days of the date of this order, in order to increase breakthrough technologies to provide patients suffering from kidney disease with better options for care than those that are currently available, the Secretary shall:&lt;/p>
@@ -587,7 +631,7 @@ Zero to One: Notes on Start Ups, or How to Build the Future
 &lt;p>I should briefly note that leadership can be explicit or implicit. Early employees will always influence the culture and system in place even if not formally promoted into leadership positions. Just the deep knowledge of a system can be enough to make an IC a leader and there are very interesting human dynamics that will inevitably form around implicit hierarchies such as these. Do not assume that you can just hire an IC early on with little impact to the overall culture of the company.&lt;/p>
 &lt;h4 id="lesson-9-help-people-grow">Lesson 9: Help People Grow&lt;/h4>&lt;p>If you want B and C players to perform better than they otherwise could and if you want your early employees to grow into the competent leadership your company will need then your system and culture will &lt;em>need&lt;/em> to help people grow. The Patriots didn&amp;rsquo;t just draft and sign the best players they focused on players that could learn and then they taught them how to succeed. Year after year they had one of the best offensive line units in the league and it was mostly due to coaching. Their Offensive Line coach, &lt;a href="https://en.wikipedia.org/wiki/Dante_Scarnecchia">Dante Scarnecchia&lt;/a>, grew up around football and coached on the Patriots for 34 years! He was extremely experienced not just about football but also about teaching and the results of his coaching showed up on the field every year.&lt;/p>
 &lt;p>It&amp;rsquo;s undeniable that great coaches and teachers in any field can make an incredible difference in the performance of their students and business is no different. The single-responsibility principal makes it easy to keep people in a box performing the same work that they&amp;rsquo;ve mastered over and over but talented people in such positions will grow bored and leave. If someone is capable of mastering a given domain there&amp;rsquo;s a good chance they can master the next, harder, domain as well. You should identify people&amp;rsquo;s strengths and their propensity to learn and grow and then do your best to keep giving them new challenges and responsibilities at a rate that lines up with their zone of proximal development. This rate will be different for everyone but successfully understanding and taking advantage of this as a boss is probably the best way to keep smart employees engaged on the mission while growing their abilities.&lt;/p>
-&lt;p>Companies that rely on college and university to do the teaching for their future employees will be at a sore disadvantage to the company that hires people with talent and ambition and then follows up by giving them the tools and mentorship required to make them succeed. As a leader you should absolutely be focusing on your company&amp;rsquo;s onboarding process, your company&amp;rsquo;s knowledge distribution process, your employees' rate of growth, and anything else that can dictate or explain how a given employee may grow over time. If you&amp;rsquo;re an ambitious young person chase great leadership over maximizing salary early in your career. Great leadership that can make you great is rare and consequently if you&amp;rsquo;re one of those great leaders that can significantly increase the abilities of others then that&amp;rsquo;s one of your best assets for competing against FAANG companies offering higher salaries than you can afford.&lt;/p>
+&lt;p>Companies that rely on college and university to do the teaching for their future employees will be at a sore disadvantage to the company that hires people with talent and ambition and then follows up by giving them the tools and mentorship required to make them succeed. As a leader you should absolutely be focusing on your company&amp;rsquo;s onboarding process, your company&amp;rsquo;s knowledge distribution process, your employees&amp;rsquo; rate of growth, and anything else that can dictate or explain how a given employee may grow over time. If you&amp;rsquo;re an ambitious young person chase great leadership over maximizing salary early in your career. Great leadership that can make you great is rare and consequently if you&amp;rsquo;re one of those great leaders that can significantly increase the abilities of others then that&amp;rsquo;s one of your best assets for competing against FAANG companies offering higher salaries than you can afford.&lt;/p>
 &lt;p>So in the end a system and culture that helps people grow will attract more ambitious and intelligent young people, turn its early participants into the capable leaders needed as the company grows, and help B and C players perform above their level.&lt;/p>
 &lt;hr>
 &lt;/br>
@@ -751,7 +795,7 @@ Zero to One: Notes on Start Ups, or How to Build the Future
 &lt;p>And today, 2 decades after the birth of Agile and with further developments such as BDD, TDD, DDD, and every other acronym you can think of, the characteristics of software that marked the crisis are as prevalent as ever. NOTAM melted down because a contractor introduced incorrect data; because the system &lt;em>let&lt;/em> him introduce that data. Over a million organizations use Microsoft Teams, a basic chat app that constantly crashes, consumes memory, and straight up fails to work on many machines. Twitch, a streaming platform with 31 million users, takes upwards of 10 seconds to render on my 6 year old MacBook. Companies (and the &lt;a href="https://techbeacon.com/security/nsaarmys-inscom-leaks-top-secrets-aws-bucket-look-ma-no-password">NSA&lt;/a>) routinely &lt;a href="https://www.securityweek.com/aws-s3-buckets-exposed-millions-facebook-records#:~:text=The%20company's%20researchers%20identified%20an,%2C%20likes%2C%20and%20Facebook%20IDs.">expose customer data&lt;/a> by forgetting to add authentication to their public AWS S3 buckets. Outdated software keeps people in &lt;a href="https://kjzz.org/content/1660988/whistleblowers-software-bug-keeping-hundreds-inmates-arizona-prisons-beyond-release">prison&lt;/a> when legally they should be free. Browsers have a never-ending appetite for RAM and now desktop apps built on those browser engines have adopted a similar palate. New front-end projects using the most popular frameworks are saddled with dependencies for dependencies for dependencies each one increasing the &lt;a href="https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/">surface area&lt;/a> for attack. Peek into the average enterprise codebase and you&amp;rsquo;ll find hundreds of lines of boilerplate code, unnecessary abstractions&amp;ndash; factories and providers and complex inheritance schemes&amp;ndash; along with dependency injection and a variety of other patterns complicating code so that a useless unit test becomes a little more sane to write. Kubernetes and microservices designed to decouple independent pieces of software now add latency, orchestration complexity, and interface coupling across multiple runtimes and software teams. Large-scale government software systems routinely experience &lt;a href="https://news.ycombinator.com/item?id=34440228">outages&lt;/a>, &lt;a href="https://krebsonsecurity.com/2022/02/report-missouri-governors-office-responsible-for-teacher-data-leak/">data leakage&lt;/a>, and &lt;a href="https://www.cnn.com/2022/05/18/politics/software-bug-warning-vmware/index.html">exploitation&lt;/a> and the default state for new government software projects is &lt;a href="https://www.standishgroup.com/sample_research_files/Haze4.pdf">failure&lt;/a>. The crisis is ongoing.&lt;/p>
 &lt;p>The Standish Group conducts a study every year on the state of software development in the industry and publishes a &lt;a href="https://www.standishgroup.com/sample_research_files/CHAOSReport2015-Final.pdf">Chaos Report&lt;/a> with its findings going back to 1994. Agile dominates the industry as the primary methodology employed in most software projects yet the success rates are still dismally low.&lt;/p>
 &lt;figure>&lt;img src="../images/software_project_success_table.png"
-alt="Software Project Outcomes Table"/>&lt;figcaption>
+alt="Software Project Outcomes Table">&lt;figcaption>
 &lt;p>Software project outcomes by project size&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -848,7 +892,7 @@ alt="Software Project Outcomes Table"/>&lt;figcaption>
 #
 &lt;/a>&lt;/h3>&lt;p>One of the interesting phenomenons I&amp;rsquo;ve noticed with GPT and other LLMs is they are extremely impressive and yet it is very difficult to envision just how these models can be or might be used. The obvious low hanging fruit is there: AI profile pictures and picture book illustrations with DALLE, musical lyrics, poetry, different flavors of chatbots with GPT, etc. Those are certainly valid usecases yet none of them are venture-scale and I&amp;rsquo;ve had trouble of thinking about what can be done that &lt;em>is&lt;/em> venture-scale. I&amp;rsquo;ve been using the following framework to evaluate what sort of products and businesses would work well with a GPT-like model:&lt;/p>
 &lt;p>&lt;strong>Domain w/ Clear Boundaries&lt;/strong>
-Avoid completely open ended domains like &amp;ldquo;browsing the internet.&amp;rdquo; This just feels like a problem space that is too vast to reliably and consistently engineer these models to handle properly. If you are going to build an AI product to browse the internet instead have it focus only on a select number of websites and with a set number of actions. A digital assistant could reliably navigate to Google Calendar and manage a schedule. Then again, if it&amp;rsquo;s too simple of a domain then you &lt;em>probably&lt;/em> don&amp;rsquo;t even need an LLM and would see better results with just plain ol' software. Going back to the previous example, once you&amp;rsquo;ve captured user intent it&amp;rsquo;s trivial to use Google Calendar&amp;rsquo;s API to just automate someone&amp;rsquo;s calendar without any AI involved.&lt;/p>
+Avoid completely open ended domains like &amp;ldquo;browsing the internet.&amp;rdquo; This just feels like a problem space that is too vast to reliably and consistently engineer these models to handle properly. If you are going to build an AI product to browse the internet instead have it focus only on a select number of websites and with a set number of actions. A digital assistant could reliably navigate to Google Calendar and manage a schedule. Then again, if it&amp;rsquo;s too simple of a domain then you &lt;em>probably&lt;/em> don&amp;rsquo;t even need an LLM and would see better results with just plain ol&amp;rsquo; software. Going back to the previous example, once you&amp;rsquo;ve captured user intent it&amp;rsquo;s trivial to use Google Calendar&amp;rsquo;s API to just automate someone&amp;rsquo;s calendar without any AI involved.&lt;/p>
 &lt;p>&lt;strong>Pick Your Edge Cases Wisely&lt;/strong>
 Any domain that is simple enough to not have any edge cases might be too simple to justify using something like GPT. Therefore you probably want to pick a domain with some type of long tail of edge cases but you should evaluate these cases very carefully and pick the problems where the edge cases aren&amp;rsquo;t critical. This is why I don&amp;rsquo;t like self driving as a problem space. There&amp;rsquo;s a seemingly infinite number of edge cases and getting it wrong on any of them can lead to catastrophic outcomes. Similar with something like a therapy chatbot. You only need it to mess up once and it creates dramatic harm.&lt;/p>
 &lt;p>&lt;strong>Reduce Scarcity&lt;/strong>
@@ -915,28 +959,28 @@ Not everyone should or needs to have access to all the information. This is less
 #
 &lt;/a>&lt;/h2>&lt;p>Okay so how do you actually build an effective internal knowledge system? Well I&amp;rsquo;m not quite sure but I plan on doing this for Census in the coming months so I&amp;rsquo;ll make sure to write another post explaining how that goes. My working theory so far is as follows: we already have a bunch of documentation but it&amp;rsquo;s scattered and unstructured. Most of it is in Notion but without any organization so the plan is to start there.&lt;/p>
 &lt;p>I&amp;rsquo;ll begin with an overall directory structure as follows:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-markdown" data-lang="markdown">.
-|- Getting Started/
-|- Architecture/
-|--- Infra/
-|--- Module 1/
-|--- ...
-|- Team 1/
-|--- Style Guide
-|--- ...
-|- Team 2/
-|- Team 3/
-|- Ops/
-|--- Planning/
-|----- RFC/
-|----- ...
-|--- Deployments
-|--- Git &lt;span style="color:#a61717;background-color:#e3d2d2">&amp;amp;&lt;/span> Github Workflow
-|--- Logs &lt;span style="color:#a61717;background-color:#e3d2d2">&amp;amp;&lt;/span> Debugging
-|- OnCall/
-|--- Runbook/
-|- Uncategorized/
-&lt;/code>&lt;/pre>&lt;/div>&lt;br/>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- Getting Started/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- Architecture/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Infra/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Module 1/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- Team 1/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Style Guide
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- Team 2/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- Team 3/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- Ops/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Planning/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|----- RFC/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|----- ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Deployments
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Git &lt;span style="color:#a61717;background-color:#e3d2d2">&amp;amp;&lt;/span> Github Workflow
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Logs &lt;span style="color:#a61717;background-color:#e3d2d2">&amp;amp;&lt;/span> Debugging
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- OnCall/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|--- Runbook/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|- Uncategorized/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;br/>
 &lt;p>I&amp;rsquo;ve intentionally kept out a lot of the subsections for each directory but each top-level directory should have an internal structure as well. You can think of this top level structure as a top-down approach but another approach is to take all your existing documents and group them together as leaf nodes creating gradually bigger groups from the bottom up. I think the latter approach is ultimately the best way to create a good system that fits your specific knowledge but the above structure is a solid generic starting point for most small engineering teams.&lt;/p>
 &lt;p>Most of it is self-explanatory but to quickly go over it, the &lt;code>Getting Started&lt;/code> directory should hold all the info for a new member to the team to onboard including things like local environment setup, high level concepts, important tools, git flows, etc. &lt;code>Architecture&lt;/code> contains information regarding the infrastructure like cloud resources, service diagrams, etc. as well as sections for logical code modules that clearly explain how different parts of the codebase work. Then each team gets its own directory where they can outline team specific style guides, planning sections, common patterns, etc. This works because Census only has 3 engineering teams right now and they all share one repository but these might be unnecessary for your situation. &lt;code>Ops&lt;/code> holds all the information around&amp;hellip; you guessed it, ops! Things like deploying, planning, etc. &lt;code>OnCall&lt;/code> should have all the information needed for an engineer to successfully manage a week on call. Finally &lt;code>Uncategorized&lt;/code> is for any docs or info that doesn&amp;rsquo;t immediately fit into one of the existing buckets. This will happen and that&amp;rsquo;s fine; building this system is an iterative process. As the uncategorized information grows we&amp;rsquo;ll create new sections, shift old sections around, and try to reduce the uncategorized queue.&lt;/p>
 &lt;p>Ideally we&amp;rsquo;ll get to a point where every section and piece of info has a unique number associated with it, different sections have different structured formats to make it easy to write new documents, every piece of information has a specific place to live, and finding any needed piece of information is effortless.&lt;/p>
@@ -994,7 +1038,7 @@ Link
 &lt;/ol>
 &lt;p>Work will feel dull when the nature of the work is dull. This is obvious and yet I&amp;rsquo;m constantly shocked by how many companies will go through great pain to hire the &amp;ldquo;best and brightest&amp;rdquo; from the most prestigious universities only to then have them spend their days copying rows from emails into Excel documents. There is an abundance of low hanging fruit for many businesses to reduce toil and unlock the creative productivity of their employees which would make many of these jobs more fulfilling and exciting, not to mention more valuable. If you work as an &amp;ldquo;analyst&amp;rdquo; in investment banking and your 15 hour days consist of putting meetings on the calendar for your boss you&amp;rsquo;re a lot more likely to feel disdain for your job than if you&amp;rsquo;re given tasks that involve actual analysis, creativity, and even risk-taking. In many ways this is a direct result of poor leadership that doesn&amp;rsquo;t understand how to value the skills of their employees nor how to build systems at scale for reducing toil.&lt;br>
 Secondly, many of these bullshit jobs do not accomplish much of value which is often the real killer of morale. Many barista jobs can be automated too but they often get to see the direct result of their work by making drinks, becoming familiar with regulars, and directly providing a service many people find valuable. It doesn&amp;rsquo;t surprise me that I more often meet a barista who enjoys their work than I do a junior investment banker. Most white collar jobs have not adapted to the age of information and unlocked the creative productivity most of their employees have ot offer.&lt;/p>
-&lt;p>There&amp;rsquo;s also the issue of the workday itself. When productivity was a direct result of time spent on the assembly line a 9-5 workday made sense but when work requires creative or analytical time spent at a desk only marginally results in higher output. There&amp;rsquo;s simply no reason for many white collar information jobs to require employees to sit at a desk for 8 hours a day and yet a shockingly small amount of companies even try to experiment with different working schedules that may better fit their employees' lives. I do think this argument is sometimes taken too far with people claiming that any more than 3 hours a day of creative work is a waste which misses the point that most people&amp;ndash; especially those early in their career&amp;ndash; cannot do 3 hours of productive work without a lot of &amp;ldquo;wasted&amp;rdquo; time inbetween. There&amp;rsquo;s also the fact that not all work work done in a creative job is creative. As a programmer no matter how productive I can be writing code or debugging a problem there&amp;rsquo;s still a lot of work to be done around planning, coordination, and team building. Brie talks about working 15 hour days which is fine and well when you are at an early stage startup trying to solve an ambitious problem and the mountains to climb seem never-ending. But most companies are not in that situation and making employees commute an hour each way in traffic to sit at a desk for 8 hours to only do 2 hours of productive creative work is not a good strategy to make people passionate about their jobs.&lt;/p>
+&lt;p>There&amp;rsquo;s also the issue of the workday itself. When productivity was a direct result of time spent on the assembly line a 9-5 workday made sense but when work requires creative or analytical time spent at a desk only marginally results in higher output. There&amp;rsquo;s simply no reason for many white collar information jobs to require employees to sit at a desk for 8 hours a day and yet a shockingly small amount of companies even try to experiment with different working schedules that may better fit their employees&amp;rsquo; lives. I do think this argument is sometimes taken too far with people claiming that any more than 3 hours a day of creative work is a waste which misses the point that most people&amp;ndash; especially those early in their career&amp;ndash; cannot do 3 hours of productive work without a lot of &amp;ldquo;wasted&amp;rdquo; time inbetween. There&amp;rsquo;s also the fact that not all work work done in a creative job is creative. As a programmer no matter how productive I can be writing code or debugging a problem there&amp;rsquo;s still a lot of work to be done around planning, coordination, and team building. Brie talks about working 15 hour days which is fine and well when you are at an early stage startup trying to solve an ambitious problem and the mountains to climb seem never-ending. But most companies are not in that situation and making employees commute an hour each way in traffic to sit at a desk for 8 hours to only do 2 hours of productive creative work is not a good strategy to make people passionate about their jobs.&lt;/p>
 &lt;h2 id="the-burdens-of-adulthood">The Burdens of Adulthood &lt;a class="anchor" href="#the-burdens-of-adulthood">
 #
 &lt;/a>&lt;/h2>&lt;p>Bad work environments and boring jobs aren&amp;rsquo;t where the problems end either. It also feels as though we have less time today than we had in the past. I am extremely fortunate to work as a software engineer in tech where employees have more leverage than normal. I can work from home and set my hours in a way most people can&amp;rsquo;t and yet even I often feel overwhelmed keeping up with the responsibilities outside of work e.g. cleaning my apartment regularly, doing my laundry, excercising, buying groceries and cooking for myself, cleaning dishes, etc. Just taking care of the bare necessities often takes up most of my time outside of work and that&amp;rsquo;s not even taking into account time spent with friends, leisure, hobbies, etc. Modern life is so full of &lt;a href="https://www.theatlantic.com/politics/archive/2021/07/how-government-learned-waste-your-time-tax/619568/">time taxes&lt;/a> just for daily survival that sometimes it feels like too much for one person to handle&amp;hellip; and it might be.&lt;/p>
@@ -1051,25 +1095,25 @@ Secondly, many of these bullshit jobs do not accomplish much of value which is o
 &lt;/a>&lt;/h2>&lt;p>To get started &lt;a href="https://gohugo.io/getting-started/installing">install Hugo&lt;/a>. I&amp;rsquo;m on Mac so I used Homebrew:
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-Shell" data-lang="Shell">brew install hugo
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Shell" data-lang="Shell">&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>Once it&amp;rsquo;s installed use the hugo cli to scaffold a new site for you.&lt;/p>
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">hugo new site blogname
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new site blogname
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>You now have the scaffolding for a new site! You can run the site locally using &lt;code>hugo server&lt;/code> but you won&amp;rsquo;t see anything just yet! Let&amp;rsquo;s create our site!&lt;/p>
 &lt;p>At this point you can add an existing theme to your site but I will create me own. Keep in mind, I didn&amp;rsquo;t use a theme because I wanted to create something ultra simple and creating it from scratch helps me understand how Hugo works in greater detail. If you want to create a more complex site or you just want to create something fast I recommend starting with a theme and you can always modify it later but at least you have a base to start from. You can view a list of themes &lt;a href="https://themes.gohugo.io/">here&lt;/a> and choose one you like. Download the theme&amp;rsquo;s source code and add it the &lt;code>themes&lt;/code> directory of your site. Then initialize git.&lt;/p>
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#0086b3">cd&lt;/span> blogname
-git init
-git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0086b3">cd&lt;/span> blogname
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>And set the theme in the config.toml file.&lt;/p>
@@ -1078,8 +1122,8 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">theme = &lt;span style="color:#d14">&amp;#34;ananke&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>theme = &lt;span style="color:#d14">&amp;#34;ananke&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>Like I said, I didn&amp;rsquo;t use a theme so I will leave my themes directory empty and create a site from scratch.&lt;/p>
@@ -1089,10 +1133,10 @@ config.toml
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">baseURL = &lt;span style="color:#d14">&amp;#39;https://olivergilan.com/&amp;#39;&lt;/span>
-languageCode = &lt;span style="color:#d14">&amp;#39;en-us&amp;#39;&lt;/span>
-title = &lt;span style="color:#d14">&amp;#39;Oliver Gilan&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>baseURL = &lt;span style="color:#d14">&amp;#39;https://olivergilan.com/&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>languageCode = &lt;span style="color:#d14">&amp;#39;en-us&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>title = &lt;span style="color:#d14">&amp;#39;Oliver Gilan&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;h2 id="hugo-core-concepts">Hugo Core Concepts &lt;a class="anchor" href="#hugo-core-concepts">
@@ -1138,24 +1182,24 @@ This generator uses the file in &lt;code>archetypes/default.md&lt;/code> as a te
 layouts/defaults/baseof.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&amp;lt;&lt;span style="color:#000080">html&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">meta&lt;/span> &lt;span style="color:#008080">charset&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#000080">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#000080">title&lt;/span>&amp;gt;
-{{ block &amp;#34;head&amp;#34; . }} {{ end }}
-&amp;lt;/&lt;span style="color:#000080">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">body&lt;/span>&amp;gt;
-&lt;span style="color:#998;font-style:italic">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
-{{ block &amp;#34;main&amp;#34; . }}
-&lt;span style="color:#998;font-style:italic">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
-{{ end }} {{ block &amp;#34;footer&amp;#34; . }}
-&lt;span style="color:#998;font-style:italic">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
-{{ end }}
-&amp;lt;/&lt;span style="color:#000080">body&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">html&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">meta&lt;/span> &lt;span style="color:#008080">charset&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#000080">title&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ block &amp;#34;head&amp;#34; . }} {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#998;font-style:italic">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ block &amp;#34;main&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#998;font-style:italic">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }} {{ block &amp;#34;footer&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#998;font-style:italic">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>You can see I link to the stylesheet here so that every other page has access to the css. The parts that say &lt;code>{{ block [name] }}&lt;/code> tell Hugo to render another layout in that location. If Hugo cannot find an appropriate layout to render in place of a block statement it will fallback to the default which you can set by adding any content you want between the beginning of the block and the &lt;code>{{ end }}&lt;/code> statement. Notice how in the &lt;code>&amp;lt;title&amp;gt;&lt;/code> tag I tell Hugo to render the site&amp;rsquo;s title as the default. &lt;code>.Site.Title&lt;/code> will evaluate to whatever you set as the title in the config file.&lt;/p>
@@ -1166,15 +1210,15 @@ In &lt;code>header.html&lt;/code> add the following code:
 layouts/partials/header.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;h3 id="working-with-menus">Working with Menus &lt;a class="anchor" href="#working-with-menus">
@@ -1186,8 +1230,8 @@ layouts/partials/header.html
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">sectionPagesMenu = &lt;span style="color:#d14">&amp;#34;main&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>sectionPagesMenu = &lt;span style="color:#d14">&amp;#34;main&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>This tells Hugo to take every section page of the site and create menu called &lt;code>main&lt;/code> . The only section page I have right now is for my &lt;code>content/blog/&lt;/code> directory so right now Hugo has one menu &lt;code>main&lt;/code> with an element for that blog page. We can make the partial use that dynamic menu with the following code:&lt;/p>
@@ -1196,23 +1240,23 @@ config.toml
 layouts/partials/header.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
-{{ range .Site.Menus.main }}
-&amp;lt;&lt;span style="color:#000080">li&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
-&amp;gt;{{.Title}}&amp;lt;/&lt;span style="color:#000080">a&lt;/span>
-&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
-{{ end }}
-&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ range .Site.Menus.main }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">li&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;gt;{{.Title}}&amp;lt;/&lt;span style="color:#000080">a&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>This takes the &lt;code>main&lt;/code> menu and for each item in it renders a &lt;code>&amp;lt;li&amp;gt;&lt;/code> tag with a link to that page&amp;rsquo;s URL and it&amp;rsquo;s title.&lt;/p>
@@ -1222,8 +1266,8 @@ layouts/partials/header.html
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">pluralizelisttitles = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>pluralizelisttitles = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>I also want to add more links to external sites such as my GitHub. Hugo can&amp;rsquo;t automatically add that to the menu because I don&amp;rsquo;t have a page for it but I can manually add it through the config with the following:&lt;/p>
@@ -1232,13 +1276,13 @@ config.toml
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
-[[menu.main]]
-identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
-name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
-title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
-url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[menu]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[[menu.main]]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>This manually adds another element to the main menu so that it gets rendered using the given title and url fields. Now if I ever want to add, remove, or update an element on my navigation bar I can just quickly edit my config file without modifying the html code.&lt;/p>
@@ -1250,15 +1294,15 @@ url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#3
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
-[[menu.main]]
-identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
-name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
-title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
-url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
-[menu.main.params]
-targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[menu]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[[menu.main]]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [menu.main.params]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;div class="code-block">
@@ -1266,26 +1310,26 @@ targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
 layouts/partials/header.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
-{{ range .Site.Menus.main }}
-&amp;lt;&lt;span style="color:#000080">li&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">a&lt;/span>
-&lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
-&lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
-&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#008080">with&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Params&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">targetBlank&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>&lt;span style="color:#008080">target&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;_blank&amp;#34;&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#008080">end&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>&amp;gt;
-{{ .Title }}
-&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
-{{ end }}
-&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.Site.BaseURL}}&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;site-title&amp;#34;&lt;/span>&amp;gt;{{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">ul&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-list&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ range .Site.Menus.main }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">li&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-item horizontal-list&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">a&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#008080">with&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Params&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">targetBlank&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>&lt;span style="color:#008080">target&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;_blank&amp;#34;&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#008080">end&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ .Title }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">nav&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">header&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>This adds a paramer to that specific menu item with name &lt;code>targetBlank&lt;/code> and value &lt;code>true&lt;/code>. Then within the partial for each menu item I check if it has that parameter and if it does I add the &lt;code>target=&amp;quot;_blank&amp;quot;&lt;/code> attribute to the href element. This will make the link open in a new tab! Now I have a working navbar/header! I can add it to my &lt;code>layouts/defaults/baseof.html&lt;/code> file so that it appears at the top of every page on my site and add some css to style it how I want.
@@ -1294,25 +1338,25 @@ layouts/partials/header.html
 layouts/defaults/baseof.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&amp;lt;&lt;span style="color:#000080">html&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">meta&lt;/span> &lt;span style="color:#008080">charset&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#000080">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#000080">title&lt;/span>&amp;gt;
-{{ block &amp;#34;head&amp;#34; . }} {{ end }}
-&amp;lt;/&lt;span style="color:#000080">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">body&lt;/span>&amp;gt;
-{{ partial &amp;#34;header&amp;#34; . }}
-&lt;span style="color:#998;font-style:italic">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
-{{ block &amp;#34;main&amp;#34; . }}
-&lt;span style="color:#998;font-style:italic">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
-{{ end }} {{ block &amp;#34;footer&amp;#34; . }}
-&lt;span style="color:#998;font-style:italic">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
-{{ end }}
-&amp;lt;/&lt;span style="color:#000080">body&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">html&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">meta&lt;/span> &lt;span style="color:#008080">charset&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;utf-8&amp;#34;&lt;/span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/style.css&amp;#34;&lt;/span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">title&lt;/span>&amp;gt;{{ block &amp;#34;title&amp;#34; . }} {{ .Site.Title }} {{ end }}&amp;lt;/&lt;span style="color:#000080">title&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ block &amp;#34;head&amp;#34; . }} {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ partial &amp;#34;header&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#998;font-style:italic">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ block &amp;#34;main&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#998;font-style:italic">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }} {{ block &amp;#34;footer&amp;#34; . }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#998;font-style:italic">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>Using &lt;code>{{ partial &amp;quot;header&amp;quot; . }}&lt;/code> tells Hugo to look in the partials directory, find the file with that name and render it. Don&amp;rsquo;t forget the period after the partial name, that&amp;rsquo;s not a typo. That period passes in the current context so when the code within the partial uses &lt;code>.Site.Title&lt;/code> or &lt;code>.Site.Menus...&lt;/code> it&amp;rsquo;s doing so with that context being passed in. And now we have a working header with a navigation menu that can be reused on every page!&lt;/p>
@@ -1326,21 +1370,21 @@ Create a new file &lt;code>layouts/blog/single.html&lt;/code>. This will be used
 layouts/blog/single.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">{{ define &amp;#34;head&amp;#34; }}
-&amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/post.css&amp;#34;&lt;/span> /&amp;gt;
-{{ end }} {{ define &amp;#34;main&amp;#34; }}
-&amp;lt;&lt;span style="color:#000080">section&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;main&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;title&amp;#34;&lt;/span>&amp;gt;{{ .Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">section&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;post-metadata&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">h4&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;date&amp;#34;&lt;/span>&amp;gt;{{ .Date.Format &amp;#34;Mon Jan 2, 2006&amp;#34; }}&amp;lt;/&lt;span style="color:#000080">h4&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">h5&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;wordcount&amp;#34;&lt;/span>&amp;gt;{{ .WordCount }} Words&amp;lt;/&lt;span style="color:#000080">h5&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">section&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">div&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">article&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;content&amp;#34;&lt;/span>&amp;gt;{{ .Content }}&amp;lt;/&lt;span style="color:#000080">article&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">section&lt;/span>&amp;gt;
-{{ end }} {{ define &amp;#34;footer&amp;#34; }} {{ partial &amp;#34;footer&amp;#34; . }} {{ end }}
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>{{ define &amp;#34;head&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">link&lt;/span> &lt;span style="color:#008080">rel&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;/css/post.css&amp;#34;&lt;/span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{ end }} {{ define &amp;#34;main&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">section&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;main&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">h1&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;title&amp;#34;&lt;/span>&amp;gt;{{ .Title }}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">section&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;post-metadata&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">h4&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;date&amp;#34;&lt;/span>&amp;gt;{{ .Date.Format &amp;#34;Mon Jan 2, 2006&amp;#34; }}&amp;lt;/&lt;span style="color:#000080">h4&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">h5&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;wordcount&amp;#34;&lt;/span>&amp;gt;{{ .WordCount }} Words&amp;lt;/&lt;span style="color:#000080">h5&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">section&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">article&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;content&amp;#34;&lt;/span>&amp;gt;{{ .Content }}&amp;lt;/&lt;span style="color:#000080">article&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">section&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{ end }} {{ define &amp;#34;footer&amp;#34; }} {{ partial &amp;#34;footer&amp;#34; . }} {{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>Pretty straightforward but to quickly go over it. Each &amp;ldquo;define&amp;rdquo; block implements one of the &amp;ldquo;block&amp;rdquo; statements in the &lt;code>baseof.html&lt;/code> file we created earlier. The head block allows me to inject custom properties into the pages head tag. In this case I made a separate css file for css relating only to blog posts and I link that here. Then in the main block I create the post itself. Notice how I use varriables like .Title, .WordCount, .Content, and the .Date.Format function. These are all provided by Hugo automatically. For example the beginning of this blog post has the following Front Matter:&lt;/p>
@@ -1349,12 +1393,14 @@ layouts/blog/single.html
 content/blog/HowToCreateABlogWithHugo.md
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-markdown" data-lang="markdown">---
-title: &amp;#34;How to Create a Blog from Scratch with Hugo&amp;#34;
-date: 2022-02-05T10:04:15-05:00
-draft: true
----
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>title: &amp;#34;How to Create a Blog from Scratch with Hugo&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>date: 2022-02-05T10:04:15-05:00
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>draft: true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>That &amp;ldquo;title&amp;rdquo; field is then used by Hugo for the .Title variable when rendering the page for that post. The Content parameter takes whatever I wrote in the Markdown file and generates the blog page&amp;rsquo;s content from it. Everything else here is pretty much standard. You can open dev tools in chrome and look at what sort of elements get rendered from your markdown and then just use css to style your blog posts however you&amp;rsquo;d like.&lt;/p>
@@ -1367,25 +1413,28 @@ draft: true
 layouts/shortcodes/code.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;code-block&amp;#34;&lt;/span>&amp;gt;
-{{ with .Get &amp;#34;file&amp;#34; }}
-&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filepath&amp;#34;&lt;/span>&amp;gt;{{.}}&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
-{{ end }}
-&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;code&amp;#34;&lt;/span>&amp;gt;{{ .Inner | markdownify }}&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;code-block&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ with .Get &amp;#34;file&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filepath&amp;#34;&lt;/span>&amp;gt;{{.}}&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;code&amp;#34;&lt;/span>&amp;gt;{{ .Inner | markdownify }}&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>Now in my content markdown files if I want a code block I can use
 &lt;div class="code-block">
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-markdown" data-lang="markdown">This is a normal paragraph...
-{{&amp;lt; &lt;span style="color:#000080">code&lt;/span> &lt;span style="color:#008080">file&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;optional/file/path&amp;#34;&lt;/span> &amp;gt;}}
-{{&amp;lt; &lt;span style="color:#000080">highlight&lt;/span> &lt;span style="color:#008080">markdown&lt;/span> &amp;gt;}}
-// Code goes here
-{{&amp;lt; /&lt;span style="color:#000080">highlight&lt;/span> &amp;gt;}}
-{{&amp;lt; /&lt;span style="color:#000080">code&lt;/span> &amp;gt;}}
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>This is a normal paragraph...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;div class="code-block">
+&lt;p class="filepath">
+optional/file/path
+&lt;/p>
+&lt;div class="code-block-inner">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>// Code goes here&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>I can pass in an optional &amp;ldquo;file&amp;rdquo; parameter and if it exists Hugo will render that div with class &amp;ldquo;filepath&amp;rdquo; that I can style how I want. The inner code within the shortcode gets processed through the markdown renderer using the &lt;code>markdownify&lt;/code> function. Because shortcodes can nest within each other, the .Inner content still gets the the built-in Highlight shortcode so my custom shortcode acts as a wrapper extending the native functionality.
@@ -1396,20 +1445,20 @@ Notice how my shortcode is literally called &amp;ldquo;code&amp;rdquo; and that&
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[markup]
-[markup.highlight]
-anchorLineNos = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
-codeFences = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
-guessSyntax = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
-hl_Lines = &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>
-lineAnchors = &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>
-lineNoStart = &lt;span style="color:#099">1&lt;/span>
-lineNos = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
-lineNumbersInTable = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
-noClasses = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
-style = &lt;span style="color:#d14">&amp;#39;dracula&amp;#39;&lt;/span>
-tabWidth = &lt;span style="color:#099">4&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[markup]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [markup.highlight]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> anchorLineNos = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> codeFences = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> guessSyntax = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> hl_Lines = &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lineAnchors = &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lineNoStart = &lt;span style="color:#099">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lineNos = &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lineNumbersInTable = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> noClasses = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> style = &lt;span style="color:#d14">&amp;#39;dracula&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> tabWidth = &lt;span style="color:#099">4&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;p>And there you have it! A little bit of styling and you can have a custom code block or any other custom markdown element.&lt;/p>
@@ -1421,26 +1470,26 @@ tabWidth = &lt;span style="color:#099">4&lt;/span>
 layouts/partials/footer.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">footer&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;socials&amp;#34;&lt;/span>&amp;gt;
-{{ range .Site.Menus.socials }}
-&amp;lt;&lt;span style="color:#000080">a&lt;/span>
-&lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
-&lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
-&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span>&lt;span style="color:#008080">with&lt;/span>
-&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Params&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">targetBlank&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>
-&lt;span style="color:#008080">target&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;_blank&amp;#34;&lt;/span>
-&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span>&lt;span style="color:#008080">end&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>
-&amp;gt;
-{{ with .Params.icon }}
-&amp;lt;&lt;span style="color:#000080">img&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;social-icon&amp;#34;&lt;/span> &lt;span style="color:#008080">src&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.}}&amp;#34;&lt;/span> /&amp;gt;
-{{end}}
-&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
-{{ end }}
-&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#000080">p&lt;/span>&amp;gt;&lt;span style="color:#a61717;background-color:#e3d2d2">&amp;amp;&lt;/span>copy {{ dateFormat &amp;#34;2006&amp;#34; now }} {{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">p&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#000080">footer&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">footer&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;socials&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ range .Site.Menus.socials }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">a&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;section-link small-thick&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.URL}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span>&lt;span style="color:#008080">with&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Params&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">targetBlank&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#008080">target&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;_blank&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span>&lt;span style="color:#008080">end&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ with .Params.icon }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">img&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;social-icon&amp;#34;&lt;/span> &lt;span style="color:#008080">src&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{.}}&amp;#34;&lt;/span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{end}}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {{ end }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#000080">p&lt;/span>&amp;gt;&lt;span style="color:#a61717;background-color:#e3d2d2">&amp;amp;&lt;/span>copy {{ dateFormat &amp;#34;2006&amp;#34; now }} {{ .Site.Title }}&amp;lt;/&lt;span style="color:#000080">p&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">footer&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>&lt;/p>
 &lt;div class="code-block">
@@ -1448,24 +1497,25 @@ layouts/partials/footer.html
 config.toml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[menu]
-[[menu.socials]]
-identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
-name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
-title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
-url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
-[menu.socials.params]
-targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
-icon = &lt;span style="color:#d14">&amp;#34;/icons/github.png&amp;#34;&lt;/span>
-[[menu.socials]]
-identifier = &lt;span style="color:#d14">&amp;#34;linkedin&amp;#34;&lt;/span>
-name = &lt;span style="color:#d14">&amp;#34;LinkedIn&amp;#34;&lt;/span>
-title = &lt;span style="color:#d14">&amp;#34;LinkedIn&amp;#34;&lt;/span>
-url = &lt;span style="color:#d14">&amp;#34;https://linkedin.com/in/oliver-gilan/&amp;#34;&lt;/span>
-[menu.socials.params]
-targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
-icon = &lt;span style="color:#d14">&amp;#34;/icons/linkedin.png&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[menu]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[[menu.socials]]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> identifier = &lt;span style="color:#d14">&amp;#34;github&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> title = &lt;span style="color:#d14">&amp;#34;GitHub&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url = &lt;span style="color:#d14">&amp;#34;https://github.com/olivergilan&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [menu.socials.params]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> icon = &lt;span style="color:#d14">&amp;#34;/icons/github.png&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[[menu.socials]]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> identifier = &lt;span style="color:#d14">&amp;#34;linkedin&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &lt;span style="color:#d14">&amp;#34;LinkedIn&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> title = &lt;span style="color:#d14">&amp;#34;LinkedIn&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url = &lt;span style="color:#d14">&amp;#34;https://linkedin.com/in/oliver-gilan/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [menu.socials.params]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> targetBlank = &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> icon = &lt;span style="color:#d14">&amp;#34;/icons/linkedin.png&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>In the above &amp;ldquo;socials&amp;rdquo; menu, the items have a custom icon parameter that contains the path to the icon for that element within the &lt;code>static&lt;/code> directory.&lt;/p>
@@ -1478,14 +1528,14 @@ icon = &lt;span style="color:#d14">&amp;#34;/icons/linkedin.png&amp;#34;&lt;/spa
 layouts/_defaults/_markup/render-heading.html
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">h&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Level&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;{{ .Text | safeHTML }}
-{{- if and (ge .Level 1) (le .Level 6) }}{{&amp;#34; &amp;#34; -}}
-&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;anchor&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;#{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;
-#
-&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
-{{- end -}}
-&lt;span style="color:#a61717;background-color:#e3d2d2">&amp;lt;&lt;/span>/h{{ .Level }}&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">h&lt;/span>&lt;span style="color:#a61717;background-color:#e3d2d2">{{&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">.&lt;/span>&lt;span style="color:#008080">Level&lt;/span> &lt;span style="color:#a61717;background-color:#e3d2d2">}}&lt;/span> &lt;span style="color:#008080">id&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;{{ .Text | safeHTML }}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{- if and (ge .Level 1) (le .Level 6) }}{{&amp;#34; &amp;#34; -}}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;anchor&amp;#34;&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;#{{ .Anchor | safeURL }}&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> #
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{- end -}}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a61717;background-color:#e3d2d2">&amp;lt;&lt;/span>/h{{ .Level }}&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;h2 id="rss">RSS &lt;a class="anchor" href="#rss">
@@ -1499,39 +1549,39 @@ layouts/_defaults/_markup/render-heading.html
 .github/workflows/gh-pages.yml
 &lt;/p>
 &lt;div class="code-block-inner">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>github pages&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000080">on&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">push&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">branches&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- main&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Set a branch to deploy&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">pull_request&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000080">jobs&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">deploy&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">runs-on&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>ubuntu-20.04&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">steps&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>actions/checkout@v2&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">submodules&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">true&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">fetch-depth&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#099">0&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Setup Hugo&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-hugo@v2&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">hugo-version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#d14">&amp;#34;latest&amp;#34;&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># extended: true&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Build&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>hugo --minify&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Deploy&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-gh-pages@v3&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">if&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>github.ref == &amp;#39;refs/heads/main&amp;#39;&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">github_token&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.GITHUB_TOKEN }}&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">publish_dir&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>./public&lt;span style="color:#bbb">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>github pages&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000080">on&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">push&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">branches&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- main&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Set a branch to deploy&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">pull_request&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000080">jobs&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">deploy&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">runs-on&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>ubuntu-20.04&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">steps&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>actions/checkout@v2&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">submodules&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">true&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">fetch-depth&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#099">0&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Setup Hugo&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-hugo@v2&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">hugo-version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#d14">&amp;#34;latest&amp;#34;&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#998;font-style:italic"># extended: true&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Build&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>hugo --minify&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000080">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Deploy&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-gh-pages@v3&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">if&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>github.ref == &amp;#39;refs/heads/main&amp;#39;&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">with&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">github_token&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.GITHUB_TOKEN }}&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000080">publish_dir&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>./public&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;p>Once you add this file to your repo and push it to GitHub it automatically creates a workflow that executes the above job. The job runs every time there is a new change pushed to the master branch of the repo. The Job first checks out the latest commits of the master branch, installs Hugo, compiles the site, then pushes the compiled static files to the gh-pages branch of the repository.&lt;/p>
