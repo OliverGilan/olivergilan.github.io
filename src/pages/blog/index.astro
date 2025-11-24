@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { PostCard } from '../../components/PostCard';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return import.meta.env.PROD ? !data.draft : true;
+});
+
+const sortedPosts = allPosts.sort((a, b) => 
+  b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<BaseLayout 
+  title="Blog - Oliver Gilan" 
+  description="Long-form thoughts on technology, engineering, and life"
+  currentPath="/blog"
+>
+  <div>
+    <h1 class="text-4xl font-bold mb-8">Blog</h1>
+    <div class="space-y-6">
+      {sortedPosts.map((post) => (
+        <PostCard
+          title={post.data.title}
+          slug={post.slug}
+          date={post.data.date}
+          description={post.data.description}
+          href={`/blog/${post.slug}`}
+          client:load
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

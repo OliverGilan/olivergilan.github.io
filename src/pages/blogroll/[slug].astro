@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const items = await getCollection('blogroll');
+  
+  return items.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await item.render();
+---
+
+<BaseLayout 
+  title={`${item.data.title} - Oliver Gilan`}
+  description={item.data.description}
+  currentPath={`/blogroll/${item.slug}`}
+>
+  <article>
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">{item.data.title}</h1>
+      {item.data.link && (
+        <a 
+          href={item.data.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-blue-600 hover:text-blue-800 underline"
+        >
+          Visit Link →
+        </a>
+      )}
+    </header>
+    
+    <div class="prose prose-lg max-w-none">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

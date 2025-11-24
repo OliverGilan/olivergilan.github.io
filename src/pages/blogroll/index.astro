@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allItems = await getCollection('blogroll');
+const sortedItems = allItems.sort((a, b) => 
+  a.data.title.localeCompare(b.data.title)
+);
+---
+
+<BaseLayout 
+  title="Blogroll - Oliver Gilan" 
+  description="Links and recommendations I find interesting"
+  currentPath="/blogroll"
+>
+  <div>
+    <h1 class="text-4xl font-bold mb-8">Blogroll</h1>
+    <div class="space-y-6">
+      {sortedItems.map((item) => (
+        <article class="border-b border-gray-200 pb-6 mb-6 last:border-b-0">
+          <a href={`/blogroll/${item.slug}`} class="group">
+            <h2 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+              {item.data.title}
+            </h2>
+          </a>
+          {item.data.description && (
+            <p class="text-gray-700 leading-relaxed">{item.data.description}</p>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

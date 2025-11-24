@@ -1,0 +1,242 @@
+/*  */
+/* Element Rules */
+/*  */
+h2,
+h3 {
+	margin-top: 1.5rem;
+	margin-bottom: .3rem;
+	font-weight: 500;
+}
+
+p {
+	/* margin-top: 1rem; */
+	margin-bottom: 1rem;
+	/* text-indent: 1rem; */
+}
+
+p>strong {
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+h4 {
+	margin-top: 1.3rem;
+	font-size: 1.2rem;
+}
+
+li {
+	list-style-position: initial;
+}
+
+li p {
+	display: inline;
+	margin: none;
+}
+
+ol,
+ul {
+	margin-bottom: 1rem;
+	margin-left: 1.5rem;
+	margin-right: 3rem;
+}
+
+figure {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+figcaption>p {
+	font-size: 1rem;
+	font-style: italic;
+	color: var(--primary-color-faded);
+}
+
+figure>img {
+	width: 600px;
+	max-width: 80%;
+}
+
+blockquote {
+	background-color: var(--quote-background-color);
+	padding: 10px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-left: 4px solid var(--quote-bar-color);
+}
+
+sup a {
+	font-size: 0.7rem;
+	vertical-align: super;
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+	/* margin: 2rem; */
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+
+thead {
+	border-bottom: 1px dashed var(--primary-color-light);
+}
+
+thead tr th {
+	width: fit-content;
+	text-align: left;
+}
+
+/*  */
+/* Block Rules */
+/*  */
+#title {
+	margin-top: 1rem;
+	font-weight: 500;
+}
+
+#date {
+	margin-top: 0.2rem;
+}
+
+.quote-block {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	background-color: var(--quote-background-color);
+	padding: 10px;
+	margin-top: 1.3rem;
+	margin-bottom: 1.3rem;
+	border-left: 4px solid var(--quote-bar-color);
+}
+
+.quote-block-inner p {
+	font-style: italic;
+	font-family: var(--primary-font);
+	font-size: 1.2rem;
+}
+
+.quote-block-attribution {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: baseline;
+	height: fit-content;
+}
+
+.quote-author {
+	margin-right: .5rem;
+	margin-bottom: 0;
+	/* font-style: italic; */
+	font-family: var(--primary-font);
+}
+
+
+/*  */
+/* Custom Classes */
+/*  */
+
+.post-description {
+	font-style: italic;
+}
+
+.post-metadata {
+	margin-bottom: 1.4rem;
+}
+
+.post-metadata * {
+	font-weight: 300;
+}
+
+.anchor {
+	color: var(--primary-color-light);
+	text-decoration: none;
+}
+
+.anchor:hover {
+	color: var(--primary-color-faded);
+}
+
+
+/*  */
+/* Table of Contents */
+/*  */
+#tocContainer {
+	border-bottom: 1px solid var(--primary-color-faded);
+	padding-top: .2rem;
+}
+
+#contents {
+	margin-bottom: 0;
+	font-family: var(--primary-font);
+	font-size: 1.3rem;
+}
+
+#TableOfContents li {
+	list-style-type: none;
+}
+
+#TableOfContents a {
+	text-decoration: none;
+}
+
+li>ul {
+	margin-left: 1.5rem;
+	margin-bottom: 0.2rem;
+}
+
+
+/*  */
+/* Code Snippets */
+/*  */
+.code-block {
+	margin: .5rem;
+	overflow-x: scroll;
+	overflow-wrap: break-word;
+}
+
+.code-block .filepath {
+	color: var(--primary-color-faded);
+	font-family: 'CodeSnippets';
+	font-size: .8rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* This is a code block */
+.code-block-inner code {
+	background-color: initial;
+	padding-right: initial;
+	padding-left: initial;
+	margin: initial;
+	font-weight: initial;
+	color: inherit;
+}
+
+div.highlight pre {
+	white-space: pre-wrap;
+	word-break: break-word;
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: .1px solid var(--primary-color-faded);
+}
+
+code span {
+	font-size: .8rem;
+	font-family: "CodeSnippets";
+}
+
+/* This is an inline code snippet */
+code {
+	font-family: "CodeSnippets-Bold";
+	font-weight: bold;
+	font-size: .85em;
+	/* color: rgb(219, 39, 119); */
+}
+
+pre>code {
+	font-family: "CodeSnippets";
+}

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SocialLinks } from '../components/SocialLinks';
+---
+
+<BaseLayout title="Oliver Gilan - Home" description="Personal blog and thoughts by Oliver Gilan">
+  <div class="max-w-2xl">
+    <h1 class="text-4xl font-bold mb-6">Hello, I'm Oliver Gilan</h1>
+    
+    <div class="prose prose-lg mb-8">
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        I'm a software engineer passionate about building products and solving problems.
+      </p>
+      
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        This is my personal space on the internet where I write about technology, life, and everything in between.
+      </p>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Connect</h2>
+      <SocialLinks client:load />
+    </div>
+
+    <div class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold mb-4">What I Write About</h2>
+        <div class="grid gap-4">
+          <a href="/blog" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            <h3 class="text-xl font-semibold mb-2">Blog</h3>
+            <p class="text-gray-600">Long-form thoughts on technology, engineering, and life</p>
+          </a>
+          
+          <a href="/stream" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            <h3 class="text-xl font-semibold mb-2">Stream</h3>
+            <p class="text-gray-600">Quick thoughts and shorter updates</p>
+          </a>
+          
+          <a href="/blogroll" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            <h3 class="text-xl font-semibold mb-2">Blogroll</h3>
+            <p class="text-gray-600">Links and recommendations I find interesting</p>
+          </a>
+          
+          <a href="/books" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            <h3 class="text-xl font-semibold mb-2">Books</h3>
+            <p class="text-gray-600">My reading list and book thoughts</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

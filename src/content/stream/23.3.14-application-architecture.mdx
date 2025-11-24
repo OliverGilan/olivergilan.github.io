@@ -1,0 +1,20 @@
+---
+title: "Application Architecture"
+date: 2023-03-14
+draft: false
+description: ""
+thumbnail: null
+---
+
+Apps have 4 main layers:
+1. the infra
+2. the core
+3. the platform
+4. the interface
+
+Infrastructure is all hardware and software necessary to run the app.
+The Core is the main business logic.
+The Platform wraps the Core and productizes it with features like auth, subscription tiers, auditability, etc.
+The Interface is how the user interacts with the platform whether it's a GUI, CLI, API, etc.
+
+Only the Core and to a lesser extent the Interface provide value but most of the time spent in enterprise software development is on the Infra and the Platform.

@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { PostCard } from '../../components/PostCard';
+
+const allPosts = await getCollection('stream', ({ data }) => {
+  return import.meta.env.PROD ? !data.draft : true;
+});
+
+const sortedPosts = allPosts.sort((a, b) => 
+  b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<BaseLayout 
+  title="Stream - Oliver Gilan" 
+  description="Quick thoughts and shorter updates"
+  currentPath="/stream"
+>
+  <div>
+    <h1 class="text-4xl font-bold mb-8">Stream</h1>
+    <div class="space-y-6">
+      {sortedPosts.map((post) => (
+        <PostCard
+          title={post.data.title}
+          slug={post.slug}
+          date={post.data.date}
+          description={post.data.description}
+          href={`/stream/${post.slug}`}
+          client:load
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
