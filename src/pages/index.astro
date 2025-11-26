@@ -1,8 +1,49 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const socialLinks = [
+  { name: "GitHub", url: "https://github.com/olivergilan" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/oliver-gilan/" },
+  { name: "Twitter", url: "https://twitter.com/olvrgln" },
+];
 ---
 
-<BaseLayout>
-  <h1>Welcome</h1>
-</BaseLayout>
+<BaseLayout description="A public slice of my personal journal">
+  <div class="space-y-6">
+    <p class="text-lg leading-relaxed">
+      <strong class="font-semibold">Hello, this site is a public slice of my personal journal</strong> where
+      I share what I'm interested in and what I've learned — usually about engineering,
+      business, and life. A few of the problems I'm currently spending a lot of time
+      thinking about are the ability (or lack thereof) to create great software at
+      scale, creating artificial organs, and optimizing my personal health.
+    </p>
 
+    <p class="text-lg leading-relaxed">
+      My long-form writing is posted on my <a href="/blog/">blog</a> while my thoughts
+      that aren't fleshed out enough for a full entry are posted as a <a href="/stream/">stream</a> of consciousness.
+      I'm currently compiling a list of the <a href="/books/">100 books</a> that I would read over and over again
+      and I maintain a <a href="/blogroll/">blogroll</a> of writings and websites I love to read.
+    </p>
+
+    <p class="text-lg leading-relaxed">
+      You can email me at <em>blog (at) olivergilan.com</em> or reach me at the following links:
+    </p>
+
+    <ul class="flex flex-wrap justify-center gap-4 list-none p-0">
+      {
+        socialLinks.map((link) => (
+          <li>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-lg"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

@@ -82,46 +82,69 @@ const socialLinks = [
 
     <slot name="head" />
   </head>
-  <body>
-    <div class="inside">
-      <header>
-        <nav>
-          <a href="/" class="site-title">{siteTitle}</a>
-          <ul class="nav-links">
+  <body class="w-screen min-h-screen max-w-3xl mx-auto text-zinc-800">
+    <div class="flex flex-col min-h-screen px-4">
+      <header class="py-8 flex flex-col gap-1">
+        <nav class="flex flex-wrap items-baseline justify-between gap-4">
+          <a href="/" class="text-3xl font-light no-underline hover:opacity-70 transition-opacity">
+            {siteTitle}
+          </a>
+          <ul class="flex flex-wrap gap-4 list-none m-0 p-0">
             {
               navLinks.map((link) => (
                 <li>
-                  <a href={link.url}>{link.name}</a>
+                  <a
+                    href={link.url}
+                    class="text-lg hover:opacity-70 transition-opacity"
+                  >
+                    {link.name}
+                  </a>
                 </li>
               ))
             }
             <li>
-              <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+              <a
+                href="/rss.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-lg hover:opacity-70 transition-opacity"
+              >
                 RSS
               </a>
             </li>
           </ul>
         </nav>
-        <ul class="social-links">
-          {
-            socialLinks.map((link) => (
-              <li>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.name}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
       </header>
 
-      <main>
+      <main class="flex-1">
         <slot />
       </main>
 
-      <footer>
-        <p>&copy; 2024 Oliver Gilan. All rights reserved.</p>
+      <footer class="mt-8 pt-4 border-t border-zinc-200 text-center">
+        <p class="text-xs text-zinc-400">&copy; 2024 Oliver Gilan. All rights reserved.</p>
       </footer>
     </div>
   </body>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter.ttf") format("truetype");
+  }
+
+  * {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(20, 20, 20, 0.3);
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    text-decoration-color: rgba(20, 20, 20, 0.8);
+  }
+</style>
