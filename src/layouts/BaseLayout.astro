@@ -1,0 +1,127 @@
+---
+const siteTitle = "Oliver Gilan";
+const siteDescription = "Personal blog and thoughts by Oliver Gilan";
+
+const {
+  title = siteTitle,
+  description = siteDescription,
+  image = "/favicon.png",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const pageTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+const imageURL = new URL(image, Astro.site);
+
+const navLinks = [
+  { name: "Blog", url: "/blog/" },
+  { name: "Stream", url: "/stream/" },
+  { name: "Blogroll", url: "/blogroll/" },
+  { name: "Reading List", url: "/books/" },
+];
+
+const socialLinks = [
+  { name: "GitHub", url: "https://github.com/olivergilan" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/oliver-gilan/" },
+  { name: "Twitter", url: "https://twitter.com/olvrgln" },
+];
+---
+
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Oliver Gilan" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageURL} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@olvrgln" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <!-- iOS Metadata -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content={pageTitle} />
+
+    <!-- RSS Feed -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={siteTitle}
+      href={new URL("rss.xml", Astro.site)}
+    />
+
+    <!-- Plausible Analytics -->
+    <script
+      defer
+      data-domain="olivergilan.com"
+      src="https://plausible.io/js/script.js"></script>
+
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="inside">
+      <header>
+        <nav>
+          <a href="/" class="site-title">{siteTitle}</a>
+          <ul class="nav-links">
+            {
+              navLinks.map((link) => (
+                <li>
+                  <a href={link.url}>{link.name}</a>
+                </li>
+              ))
+            }
+            <li>
+              <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+                RSS
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="social-links">
+          {
+            socialLinks.map((link) => (
+              <li>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer>
+        <p>&copy; 2024 Oliver Gilan. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
