@@ -1,6 +1,6 @@
 ---
 const siteTitle = "Oliver Gilan";
-const siteDescription = "Personal blog and thoughts by Oliver Gilan";
+const siteDescription = "Dreams are the language of God.";
 
 const {
   title = siteTitle,
@@ -13,16 +13,17 @@ const pageTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const imageURL = new URL(image, Astro.site);
 
 const navLinks = [
-  { name: "Blog", url: "/essays/" },
-  { name: "Stream", url: "/breadcrumbs/" },
-  { name: "Blogroll", url: "/blogroll/" },
-  { name: "Reading List", url: "/books/" },
+  { name: "About", url: '/'},
+  { name: "Writing", url: "/writing/" },
+  { name: "Reading List", url: "/reading/" },
 ];
 
 const socialLinks = [
-  { name: "GitHub", url: "https://github.com/olivergilan" },
-  { name: "LinkedIn", url: "https://linkedin.com/in/oliver-gilan/" },
-  { name: "Twitter", url: "https://twitter.com/olvrgln" },
+  { name: "Email", url: "mailto:blog@olivergilan.com", icon: "/icons/email.svg" },
+  { name: "GitHub", url: "https://github.com/olivergilan", icon: "/icons/github.svg" },
+  // { name: "LinkedIn", url: "https://linkedin.com/in/oliver-gilan/", icon: "/icons/linkedin.svg" },
+  { name: "Twitter", url: "https://twitter.com/olvrgln", icon: "/icons/twitter.svg" },
+  { name: "RSS", url: "/rss.xml", icon: "/icons/rss.svg" },
 ];
 ---
 
@@ -82,7 +83,7 @@ const socialLinks = [
 
     <slot name="head" />
   </head>
-  <body class="w-screen min-h-screen max-w-3xl mx-auto text-zinc-800">
+  <body class="w-screen min-h-screen max-w-2xl mx-auto text-zinc-800">
     <div class="flex flex-col min-h-screen px-4">
       <header class="py-8 flex flex-col gap-1">
         <nav class="flex flex-wrap items-baseline justify-between gap-4">
@@ -91,27 +92,23 @@ const socialLinks = [
           </a>
           <ul class="flex flex-wrap gap-4 list-none m-0 p-0">
             {
-              navLinks.map((link) => (
-                <li>
-                  <a
-                    href={link.url}
-                    class="text-lg hover:opacity-70 transition-opacity"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))
+              navLinks.map((link) => {
+                const isActive = Astro.url.pathname.startsWith(link.url);
+                return (
+                  <li class="relative">
+                    {isActive && (
+                      <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-zinc-800 rounded-full"></span>
+                    )}
+                    <a
+                      href={link.url}
+                      class="text-lg no-underline hover:opacity-70 transition-opacity"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                );
+              })
             }
-            <li>
-              <a
-                href="/rss.xml"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-lg hover:opacity-70 transition-opacity"
-              >
-                RSS
-              </a>
-            </li>
           </ul>
         </nav>
       </header>
@@ -120,8 +117,23 @@ const socialLinks = [
         <slot />
       </main>
 
-      <footer class="mt-8 pt-4 border-t border-zinc-200 text-center">
-        <p class="text-xs text-zinc-400">&copy; {new Date().getFullYear()} Oliver Gilan. All rights reserved.</p>
+      <footer class="mt-8 pt-4 border-t border-zinc-200">
+        <div class="flex justify-center gap-4 mb-3">
+          {
+            socialLinks.map((link) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="opacity-30 hover:opacity-70 transition-opacity"
+                aria-label={link.name}
+              >
+                <img src={link.icon} alt={link.name} class="w-5 h-5" />
+              </a>
+            ))
+          }
+        </div>
+        <p class="text-xs text-zinc-400 text-center">&copy; {new Date().getFullYear()} Oliver Gilan</p>
       </footer>
     </div>
   </body>
@@ -129,19 +141,24 @@ const socialLinks = [
 
 <style is:global>
   @font-face {
-    font-family: "Inter";
-    src: url("/fonts/Inter.ttf") format("truetype");
+    font-family: "PT Serif";
+    src: url("/fonts/PT_Serif/PTSerif-Regular.woff2") format("woff2");
   }
 
   * {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+    font-feature-settings: normal;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   a {
     color: inherit;
-    text-decoration: underline;
-    text-decoration-color: rgba(20, 20, 20, 0.3);
-    text-underline-offset: 2px;
+    /* text-decoration: underline; */
+    /* text-decoration-color: rgba(20, 20, 20, 0.3); */
+    /* text-underline-offset: 2px; */
   }
 
   a:hover {

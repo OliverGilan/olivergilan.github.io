@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const socialLinks = [
-  { name: "GitHub", url: "https://github.com/olivergilan" },
-  { name: "LinkedIn", url: "https://linkedin.com/in/oliver-gilan/" },
-  { name: "Twitter", url: "https://twitter.com/olvrgln" },
+  { name: "GitHub", url: "https://github.com/olivergilan", icon: "/icons/github.svg" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/oliver-gilan/", icon: "/icons/linkedin.svg" },
+  { name: "Twitter", url: "https://twitter.com/olvrgln", icon: "/icons/twitter.svg" },
 ];
 ---
 
@@ -24,26 +24,5 @@ const socialLinks = [
       I'm currently compiling a list of the <a href="/books/">100 books</a> that I would read over and over again
       and I maintain a <a href="/blogroll/">blogroll</a> of writings and websites I love to read.
     </p>
-
-    <p class="text-lg leading-relaxed">
-      You can email me at <em>blog (at) olivergilan.com</em> or reach me at the following links:
-    </p>
-
-    <ul class="flex flex-wrap justify-center gap-4 list-none p-0">
-      {
-        socialLinks.map((link) => (
-          <li>
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-lg"
-            >
-              {link.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
   </div>
 </BaseLayout>
