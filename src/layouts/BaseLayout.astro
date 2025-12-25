@@ -13,8 +13,8 @@ const pageTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const imageURL = new URL(image, Astro.site);
 
 const navLinks = [
-  { name: "Blog", url: "/blog/" },
-  { name: "Stream", url: "/stream/" },
+  { name: "Blog", url: "/essays/" },
+  { name: "Stream", url: "/breadcrumbs/" },
   { name: "Blogroll", url: "/blogroll/" },
   { name: "Reading List", url: "/books/" },
 ];
@@ -121,7 +121,7 @@ const socialLinks = [
       </main>
 
       <footer class="mt-8 pt-4 border-t border-zinc-200 text-center">
-        <p class="text-xs text-zinc-400">&copy; 2024 Oliver Gilan. All rights reserved.</p>
+        <p class="text-xs text-zinc-400">&copy; {new Date().getFullYear()} Oliver Gilan. All rights reserved.</p>
       </footer>
     </div>
   </body>
