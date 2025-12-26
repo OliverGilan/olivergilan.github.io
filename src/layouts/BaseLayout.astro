@@ -21,14 +21,13 @@ const navLinks = [
 const socialLinks = [
   { name: "Email", url: "mailto:blog@olivergilan.com", icon: "/icons/email.svg" },
   { name: "GitHub", url: "https://github.com/olivergilan", icon: "/icons/github.svg" },
-  // { name: "LinkedIn", url: "https://linkedin.com/in/oliver-gilan/", icon: "/icons/linkedin.svg" },
   { name: "Twitter", url: "https://twitter.com/olvrgln", icon: "/icons/twitter.svg" },
   { name: "RSS", url: "/rss.xml", icon: "/icons/rss.svg" },
 ];
 ---
 
 <!doctype html>
-<html lang="en-us">
+<html lang="en-us" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -83,25 +82,32 @@ const socialLinks = [
 
     <slot name="head" />
   </head>
-  <body class="w-screen min-h-screen max-w-2xl mx-auto text-zinc-800">
-    <div class="flex flex-col min-h-screen px-4">
-      <header class="py-8 flex flex-col gap-1">
-        <nav class="flex flex-wrap items-baseline justify-between gap-4">
-          <a href="/" class="text-3xl font-light no-underline hover:opacity-70 transition-opacity">
-            {siteTitle}
-          </a>
-          <ul class="flex flex-wrap gap-4 list-none m-0 p-0">
+  <body class="bg-paper text-ink font-serif antialiased min-h-screen flex flex-col selection:bg-accent/20 selection:text-accent">
+    <div class="max-w-2xl mx-auto w-full px-4 md:px-6 flex-1 flex flex-col pt-6 md:pt-12 pb-8">
+      <header class="mb-8 md:mb-12 flex flex-col md:flex-row md:items-baseline md:justify-between gap-4 md:gap-8">
+        <a href="/" class="group relative">
+            <h1 class="text-2xl font-bold tracking-tight text-ink group-hover:text-accent transition-colors duration-300">
+                {siteTitle}
+            </h1>
+            <span class="absolute -bottom-2 left-0 w-12 h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
+        </a>
+        
+        <nav>
+          <ul class="flex flex-wrap gap-6 md:gap-8 list-none m-0 p-0 font-sans text-sm tracking-wide uppercase">
             {
               navLinks.map((link) => {
-                const isActive = Astro.url.pathname.startsWith(link.url);
+                const isActive = Astro.url.pathname === link.url || (link.url !== '/' && Astro.url.pathname.startsWith(link.url));
                 return (
                   <li class="relative">
                     {isActive && (
-                      <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-zinc-800 rounded-full"></span>
+                      <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full"></span>
                     )}
                     <a
                       href={link.url}
-                      class="text-lg no-underline hover:opacity-70 transition-opacity"
+                      class:list={[
+                        "hover:text-accent transition-colors duration-200",
+                        isActive ? "text-accent font-semibold" : "text-ink-light"
+                      ]}
                     >
                       {link.name}
                     </a>
@@ -113,19 +119,23 @@ const socialLinks = [
         </nav>
       </header>
 
-      <main class="flex-1">
+      <main class="flex-1 relative">
         <slot />
       </main>
 
-      <footer class="mt-8 pt-4 border-t border-zinc-200">
-        <div class="flex justify-center gap-4 mb-3">
+      <footer class="pt-8 border-t border-ink/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-xs text-ink-light/60 font-sans uppercase tracking-widest !mb-0">
+          &copy; {new Date().getFullYear()} Oliver Gilan
+        </p>
+        
+        <div class="flex items-center gap-4">
           {
             socialLinks.map((link) => (
               <a
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="opacity-30 hover:opacity-70 transition-opacity"
+                class="opacity-40 hover:opacity-100 transition-all duration-200 hover:scale-110"
                 aria-label={link.name}
               >
                 <img src={link.icon} alt={link.name} class="w-5 h-5" />
@@ -133,7 +143,6 @@ const socialLinks = [
             ))
           }
         </div>
-        <p class="text-xs text-zinc-400 text-center">&copy; {new Date().getFullYear()} Oliver Gilan</p>
       </footer>
     </div>
   </body>
@@ -143,25 +152,17 @@ const socialLinks = [
   @font-face {
     font-family: "PT Serif";
     src: url("/fonts/PT_Serif/PTSerif-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
   }
-
-  * {
-    font-family: "PT Serif", serif;
-    font-size: 16px;
-    font-feature-settings: normal;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  
+  /* Add styling for markdown content if needed, though Tailwind Typography is better if added */
+  p {
+    margin-bottom: 1.5rem;
   }
-
+  
   a {
-    color: inherit;
-    /* text-decoration: underline; */
-    /* text-decoration-color: rgba(20, 20, 20, 0.3); */
-    /* text-underline-offset: 2px; */
-  }
-
-  a:hover {
-    text-decoration-color: rgba(20, 20, 20, 0.8);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
   }
 </style>
