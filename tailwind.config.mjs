@@ -13,7 +13,20 @@ export default {
         serif: ['"PT Serif"', "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
         sans: ['"Inter"', "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: "#800000",
+              textDecoration: "underline",
+              "&:hover": {
+                opacity: 0.8,
+              },
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

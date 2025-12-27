@@ -119,7 +119,7 @@ const socialLinks = [
         </nav>
       </header>
 
-      <main class="flex-1 relative">
+      <main class="flex-1 relative prose prose-zinc max-w-none">
         <slot />
       </main>
 
@@ -154,15 +154,5 @@ const socialLinks = [
     src: url("/fonts/PT_Serif/PTSerif-Regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
-  }
-  
-  /* Add styling for markdown content if needed, though Tailwind Typography is better if added */
-  p {
-    margin-bottom: 1.5rem;
-  }
-  
-  a {
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
   }
 </style>
