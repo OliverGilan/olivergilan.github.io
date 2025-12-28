@@ -3,7 +3,7 @@ import { glob } from "astro/loaders";
 import slugify from "slugify";
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/posts" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/posts" }),
   schema: z
     .object({
       title: z.string(),
@@ -20,15 +20,13 @@ const blog = defineCollection({
     })),
 });
 
-const curated = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/curated" }),
+const books = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/books" }),
   schema: z
     .object({
       title: z.string(),
-      href: z.string().optional(),
-      author: z.string().optional(),
+      author: z.string(),
       slug: z.string().optional().nullable(),
-      type: z.enum(["blog", "essay", "music", "book"]),
     })
     .transform((data) => ({
       ...data,
@@ -36,4 +34,22 @@ const curated = defineCollection({
     })),
 });
 
-export const collections = { blog, curated };
+const essays = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/essays" }),
+  schema: z.object({
+    title: z.string(),
+    href: z.string(),
+    author: z.string().optional(),
+  }),
+});
+
+const blogs = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blogs" }),
+  schema: z.object({
+    title: z.string(),
+    href: z.string(),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { blog, books, essays, blogs };
