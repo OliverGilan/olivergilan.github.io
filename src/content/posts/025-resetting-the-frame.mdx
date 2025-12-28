@@ -7,14 +7,17 @@ thumbnail: null
 ---
 
 import Figure from '../../components/Figure.astro';
+import ImageCarousel from '../../components/ImageCarousel.astro';
 
 Every company in the world is thinking about how to add AI to their existing products and new products built from scratch. With intelligence too cheap to meter, you'd think we'd be seeing deep integration into existing products and novel user experiences but instead we find that most companies are converging on the same [simple](https://www.figma.com/make/) [app](https://www.airtable.com/platform/app-building) [builders](https://www.canva.com/).
 
 <div class="two-columns">
-<Figure src="/images/figma_make.png" alt="Figma make chatbox" />
-<Figure src="/images/canva_make.png" alt="Canva app builder" />
-<Figure src="/images/airtable_make.png" alt="Airtable app builder" />
-<Figure src="/images/codegen.png" alt="Codegen" />
+<ImageCarousel images={[
+  { src: "/images/figma_make.png", alt: "Figma make chatbox" },
+  { src: "/images/canva_make.png", alt: "Canva app builder" },
+  { src: "/images/airtable_make.png", alt: "Airtable app builder" },
+  { src: "/images/codegen.png", alt: "Codegen" },
+]} />
 </div>
 
 In a way, the chatbox is the pinnacle of UX design: a dead simple canvas with infinite possibility. Why even bother with product design if you can just talk to an agent and ask it to make the company's stock go up by 10% next quarter?
