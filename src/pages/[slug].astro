@@ -3,7 +3,9 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("blog", ({ data }) => 
+    import.meta.env.DEV || !!data.date_published
+  );
   return posts.map((post) => ({
     params: { slug: post.data.slug },
     props: { post },
@@ -30,10 +32,10 @@ const formatDate = (date: Date) => {
         <p class="text-ink-light text-md italic mb-4">{post.data.description}</p>
       )}
       <time
-        datetime={post.data.date.toISOString()}
+        datetime={post.data.date_published?.toISOString() ?? new Date().toISOString()}
         class="text-sm font-sans text-ink-light/70 uppercase tracking-wider"
       >
-        {formatDate(post.data.date)}
+        {post.data.date_published ? formatDate(post.data.date_published) : "Draft"}
       </time>
     </header>
 

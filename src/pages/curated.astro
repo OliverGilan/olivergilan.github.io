@@ -2,44 +2,21 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const posts = await getCollection("blog", ({ data }) => 
-  import.meta.env.DEV || !!data.date_published
-);
+const items = await getCollection("curated");
 
-// Sort by date descending
-const sortedPosts = posts.sort(
-  (a, b) => new Date(b.data.date_published ?? new Date()).getTime() - new Date(a.data.date_published ?? new Date()).getTime()
-);
-
-// Group by year
-const postsByYear = sortedPosts.reduce(
-  (acc, post) => {
-    const year = new Date(post.data.date_published ?? new Date()).getFullYear();
-    if (!acc[year]) acc[year] = [];
-    acc[year].push(post);
-    return acc;
-  },
-  {} as Record<number, typeof sortedPosts>
-);
-
-const years = Object.keys(postsByYear)
-  .map(Number)
-  .sort((a, b) => b - a);
-
-const formatDate = (date: Date) => {
-  return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-};
 ---
 
-<BaseLayout title="Writing" description="Thoughts and essays on software, startups, and life.">
+<BaseLayout title="Curated" description="Curated lists of blogs, essays, and music.">
   <div class="not-prose">
+    <p class="text-ink-light text-md italic mb-4">Curated lists of my favorite blogs, essays, and music.</p>
     <table class="w-full border-collapse">
       <colgroup>
         <col class="w-24" />
         <col />
       </colgroup>
       <tbody>
-        {years.map((year, yearIndex) => (
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/56fWREjDvv37m3K1EuLLrm?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <!-- {years.map((year, yearIndex) => (
           <>
             {yearIndex > 0 && (
               <tr>
@@ -58,10 +35,10 @@ const formatDate = (date: Date) => {
               <tr class="group">
                 <td class="py-1.5 pr-4 text-right align-middle border-r border-dashed border-ink/15">
                   <time
-                    datetime={post.data.date_published?.toISOString() ?? new Date().toISOString()}
+                    datetime={post.data.date.toISOString()}
                     class="text-sm font-sans text-ink-light/60 tabular-nums whitespace-nowrap"
                   >
-                    {post.data.date_published ? formatDate(post.data.date_published) : "Draft"}
+                    {formatDate(post.data.date)}
                   </time>
                 </td>
                 <td class="py-1.5 pl-4 align-middle">
@@ -75,7 +52,7 @@ const formatDate = (date: Date) => {
               </tr>
             ))}
           </>
-        ))}
+        ))} -->
       </tbody>
     </table>
   </div>
