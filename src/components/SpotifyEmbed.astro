@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: string;
+  type?: "playlist" | "album" | "track";
+  height?: number;
+  theme?: "dark" | "light";
+}
+
+const { id, type = "playlist", height = 352, theme = "dark" } = Astro.props;
+
+const src = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator${theme === "dark" ? "&theme=0" : ""}`;
+---
+
+<div class="not-prose my-8">
+  <iframe
+    style="border-radius: 12px"
+    src={src}
+    width="100%"
+    height={height}
+    frameborder="0"
+    allowfullscreen
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>

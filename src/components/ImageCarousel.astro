@@ -1,0 +1,118 @@
+---
+interface Props {
+  images: { src: string; alt: string; width?: number; height?: number }[];
+  caption?: string;
+}
+
+const { images, caption } = Astro.props;
+const displayImages = images.slice(0, 4);
+const remainingCount = images.length - 4;
+const hasMore = remainingCount > 0;
+const galleryId = `gallery-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<figure class="not-prose my-8">
+  <div 
+    class="image-carousel grid grid-cols-2 gap-1 rounded-lg overflow-hidden cursor-pointer"
+    data-gallery-id={galleryId}
+    data-images={JSON.stringify(images.map(img => ({
+      src: img.src,
+      alt: img.alt,
+      width: img.width || 1600,
+      height: img.height || 1200
+    })))}
+  >
+    {displayImages.map((image, index) => (
+      <button 
+        type="button"
+        class="relative aspect-square overflow-hidden block w-full border-0 p-0 bg-transparent"
+        data-index={index}
+      >
+        <img
+          src={image.src}
+          alt={image.alt}
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+        {hasMore && index === 3 && (
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center pointer-events-none">
+            <span class="text-white text-2xl font-semibold">+{remainingCount}</span>
+          </div>
+        )}
+      </button>
+    ))}
+  </div>
+  {caption && (
+    <figcaption class="mt-3 text-center text-sm text-ink-light italic">
+      {caption}
+    </figcaption>
+  )}
+</figure>
+
+<style is:global>
+  .pswp img {
+    max-width: none;
+    object-fit: contain;
+  }
+</style>
+
+<script>
+  import PhotoSwipe from 'photoswipe';
+  import 'photoswipe/style.css';
+
+  async function getImageDimensions(src: string): Promise<{ width: number; height: number }> {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+      img.onerror = () => resolve({ width: 1600, height: 1200 });
+      img.src = src;
+    });
+  }
+
+  function initCarousels() {
+    const galleries = document.querySelectorAll('.image-carousel');
+    
+    galleries.forEach((gallery) => {
+      const images = JSON.parse(gallery.getAttribute('data-images') || '[]');
+      const buttons = gallery.querySelectorAll('button[data-index]');
+      
+      buttons.forEach((button) => {
+        button.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const index = parseInt(button.getAttribute('data-index') || '0');
+          
+          const dataSource = await Promise.all(
+            images.map(async (img: { src: string; alt: string; width?: number; height?: number }) => {
+              const dims = img.width && img.height 
+                ? { width: img.width, height: img.height }
+                : await getImageDimensions(img.src);
+              return {
+                src: img.src,
+                width: dims.width,
+                height: dims.height,
+                alt: img.alt,
+              };
+            })
+          );
+          
+          const pswp = new PhotoSwipe({
+            dataSource,
+            index: index,
+            wheelToZoom: true,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 },
+            bgOpacity: 0.9,
+            initialZoomLevel: 'fit',
+            secondaryZoomLevel: 1,
+            maxZoomLevel: 2,
+          });
+          
+          pswp.init();
+        });
+      });
+    });
+  }
+
+  // Run on initial load and on Astro page transitions
+  initCarousels();
+  document.addEventListener('astro:page-load', initCarousels);
+</script>

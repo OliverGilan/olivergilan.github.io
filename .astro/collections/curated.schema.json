@@ -1,0 +1,51 @@
+{
+  "$ref": "#/definitions/curated",
+  "definitions": {
+    "curated": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "slug": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "blog",
+            "essay",
+            "music",
+            "book"
+          ]
+        }
+      },
+      "required": [
+        "title",
+        "type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

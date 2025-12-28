@@ -1,0 +1,158 @@
+---
+const siteTitle = "Oliver Gilan";
+const siteDescription = "Dreams are the language of God.";
+
+const {
+  title = siteTitle,
+  description = siteDescription,
+  image = "/favicon.png",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const pageTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+const imageURL = new URL(image, Astro.site);
+
+const navLinks = [
+  { name: "About", url: '/'},
+  { name: "Writing", url: "/writing/" },
+  { name: "Reading List", url: "/curated/" },
+];
+
+const socialLinks = [
+  { name: "Email", url: "mailto:blog@olivergilan.com", icon: "/icons/email.svg" },
+  { name: "GitHub", url: "https://github.com/olivergilan", icon: "/icons/github.svg" },
+  { name: "Twitter", url: "https://twitter.com/olvrgln", icon: "/icons/twitter.svg" },
+  { name: "RSS", url: "/rss.xml", icon: "/icons/rss.svg" },
+];
+---
+
+<!doctype html>
+<html lang="en-us" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Oliver Gilan" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageURL} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@olvrgln" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <!-- iOS Metadata -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content={pageTitle} />
+
+    <!-- RSS Feed -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={siteTitle}
+      href={new URL("rss.xml", Astro.site)}
+    />
+
+    <!-- Plausible Analytics -->
+    <script
+      defer
+      data-domain="olivergilan.com"
+      src="https://plausible.io/js/script.js"></script>
+
+    <slot name="head" />
+  </head>
+  <body class="bg-paper text-ink font-serif antialiased min-h-screen flex flex-col selection:bg-accent/20 selection:text-accent">
+    <div class="max-w-2xl mx-auto w-full px-4 md:px-6 flex-1 flex flex-col pt-6 md:pt-12 pb-8">
+      <header class="mb-8 md:mb-12 flex flex-col md:flex-row md:items-baseline md:justify-between gap-4 md:gap-8">
+        <a href="/" class="group relative">
+            <h1 class="text-2xl font-bold tracking-tight text-ink group-hover:text-accent transition-colors duration-300">
+                {siteTitle}
+            </h1>
+            <span class="absolute -bottom-2 left-0 w-12 h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
+        </a>
+        
+        <nav>
+          <ul class="flex flex-wrap gap-6 md:gap-8 list-none m-0 p-0 font-sans text-sm tracking-wide uppercase">
+            {
+              navLinks.map((link) => {
+                const isActive = Astro.url.pathname === link.url || (link.url !== '/' && Astro.url.pathname.startsWith(link.url));
+                return (
+                  <li class="relative">
+                    {isActive && (
+                      <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full"></span>
+                    )}
+                    <a
+                      href={link.url}
+                      class:list={[
+                        "hover:text-accent transition-colors duration-200",
+                        isActive ? "text-accent font-semibold" : "text-ink-light"
+                      ]}
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+      </header>
+
+      <main class="flex-1 relative prose prose-zinc max-w-none">
+        <slot />
+      </main>
+
+      <footer class="pt-8 border-t border-ink/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-xs text-ink-light/60 font-sans uppercase tracking-widest !mb-0">
+          &copy; {new Date().getFullYear()} Oliver Gilan
+        </p>
+        
+        <div class="flex items-center gap-4">
+          {
+            socialLinks.map((link) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="opacity-40 hover:opacity-100 transition-all duration-200 hover:scale-110"
+                aria-label={link.name}
+              >
+                <img src={link.icon} alt={link.name} class="w-5 h-5" />
+              </a>
+            ))
+          }
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "PT Serif";
+    src: url("/fonts/PT_Serif/PTSerif-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+</style>

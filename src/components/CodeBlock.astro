@@ -1,0 +1,36 @@
+---
+interface Props {
+  file?: string;
+}
+
+const { file } = Astro.props;
+---
+
+<div class="code-block-wrapper not-prose my-4">
+  {file && (
+    <div class="file-path px-4 py-2 bg-zinc-800 text-zinc-400 text-xs font-mono rounded-t-lg border-b border-zinc-700">
+      {file}
+    </div>
+  )}
+  <div class:list={["code-content", file ? "rounded-b-lg" : "rounded-lg"]}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .code-block-wrapper :global(pre) {
+    margin: 0 !important;
+    border-radius: 0;
+  }
+
+  .code-content.rounded-lg :global(pre) {
+    border-radius: 0.5rem;
+  }
+
+  .code-content.rounded-b-lg :global(pre) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+</style>

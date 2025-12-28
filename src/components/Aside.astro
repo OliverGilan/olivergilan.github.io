@@ -1,0 +1,38 @@
+---
+interface Props {
+  type?: 'note' | 'tip' | 'warning' | 'info';
+}
+
+const { type = 'note' } = Astro.props;
+
+const styles = {
+  note: 'bg-zinc-100 border-zinc-400',
+  tip: 'bg-emerald-50 border-emerald-400',
+  warning: 'bg-amber-50 border-amber-400',
+  info: 'bg-blue-50 border-blue-400',
+};
+---
+
+<aside class:list={[
+  "aside-block not-prose my-6 border-l-4 rounded-r-lg p-4",
+  styles[type]
+]}>
+  <div class="aside-content text-sm leading-relaxed">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .aside-content :global(p) {
+    margin: 0;
+  }
+  .aside-content :global(p + p) {
+    margin-top: 0.5rem;
+  }
+  .aside-content :global(code) {
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 0.1em 0.3em;
+    border-radius: 0.2rem;
+    font-size: 0.9em;
+  }
+</style>

@@ -1,0 +1,119 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => 
+    import.meta.env.DEV || !!data.date_published
+  );
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="post">
+    <header class="mb-8 border-b border-ink/10 pb-6">
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
+      {post.data.description && (
+        <p class="text-ink-light text-md italic mb-4">{post.data.description}</p>
+      )}
+      <div class="text-xs font-sans text-ink-light/70 uppercase tracking-wider">
+        <time datetime={post.data.date_published?.toISOString() ?? new Date().toISOString()}>
+          {post.data.date_published ? formatDate(post.data.date_published) : "Draft"}
+        </time>
+        {post.data.date_edited && (
+          <span class="ml-2">
+            · Edited <time datetime={post.data.date_edited.toISOString()}>{formatDate(post.data.date_edited)}</time>
+          </span>
+        )}
+      </div>
+    </header>
+
+    <div class="prose prose-zinc max-w-none
+      prose-headings:font-bold prose-headings:tracking-tight
+      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+      prose-p:leading-relaxed
+      prose-a:text-accent prose-a:underline hover:prose-a:opacity-80
+      prose-blockquote:border-l-4 prose-blockquote:border-accent/40 prose-blockquote:bg-accent/5 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:italic prose-blockquote:not-italic
+      prose-code:before:content-none prose-code:after:content-none
+      prose-pre:bg-zinc-900 prose-pre:text-zinc-100
+      prose-img:rounded-lg prose-img:mx-auto
+      prose-figure:my-8
+      prose-figcaption:text-center prose-figcaption:text-ink-light prose-figcaption:italic
+      prose-ul:my-4 prose-ol:my-4
+      prose-li:my-1
+    ">
+      <Content />
+    </div>
+    <div class="flex justify-center">
+      <img 
+        src="/images/baby_lion.png" 
+        alt="Baby Lion" 
+        class="h-40 mix-blend-multiply"
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style is:global>
+  /* Inline code styling */
+  .prose :not(pre) > code {
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 0.15em 0.4em;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    font-weight: 500;
+  }
+
+  /* Code block styling */
+  .prose pre {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .prose pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
+  }
+
+  /* Blockquote styling */
+  .prose blockquote {
+    font-style: normal;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .prose blockquote p {
+    margin: 0;
+  }
+
+  /* Figure/image styling */
+  .prose figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prose figure img {
+    max-width: 100%;
+  }
+</style>
