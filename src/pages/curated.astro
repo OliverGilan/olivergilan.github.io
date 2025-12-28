@@ -1,59 +1,84 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SpotifyEmbed from "../components/SpotifyEmbed.astro";
 
 const items = await getCollection("curated");
 
+const itemsByType = items.reduce(
+  (acc, item) => {
+    const type = item.data.type;
+    if (!acc[type]) acc[type] = [];
+    acc[type].push(item);
+    return acc;
+  },
+  {} as Record<string, typeof items>
+);
+
+const typeLabels: Record<string, string> = {
+  book: "Books",
+  essay: "Essays",
+  blog: "Blogs",
+  music: "Music",
+};
+
+const typeOrder = ["book", "essay", "blog", "music"];
+const types = typeOrder.filter((t) => itemsByType[t]?.length > 0);
 ---
 
 <BaseLayout title="Curated" description="Curated lists of blogs, essays, and music.">
   <div class="not-prose">
-    <p class="text-ink-light text-md italic mb-4">Curated lists of my favorite blogs, essays, and music.</p>
-    <table class="w-full border-collapse">
-      <colgroup>
-        <col class="w-24" />
-        <col />
-      </colgroup>
-      <tbody>
-        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/56fWREjDvv37m3K1EuLLrm?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <!-- {years.map((year, yearIndex) => (
-          <>
-            {yearIndex > 0 && (
-              <tr>
-                <td colspan="2" class="h-6"></td>
-              </tr>
-            )}
-            <tr>
-              <td colspan="2" class="pb-4">
-                <div class="flex items-center gap-4">
-                  <h2 class="text-sm font-sans font-semibold text-ink-light uppercase tracking-widest">{year}</h2>
-                  <div class="flex-1 h-px bg-ink/10"></div>
-                </div>
-              </td>
-            </tr>
-            {postsByYear[year].map((post) => (
-              <tr class="group">
-                <td class="py-1.5 pr-4 text-right align-middle border-r border-dashed border-ink/15">
-                  <time
-                    datetime={post.data.date.toISOString()}
-                    class="text-sm font-sans text-ink-light/60 tabular-nums whitespace-nowrap"
-                  >
-                    {formatDate(post.data.date)}
-                  </time>
-                </td>
-                <td class="py-1.5 pl-4 align-middle">
-                  <a
-                    href={`/${post.data.slug}/`}
-                    class="text-ink group-hover:text-accent transition-colors duration-150"
-                  >
-                    {post.data.title}
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </>
-        ))} -->
-      </tbody>
-    </table>
+    <p class="text-ink-light text-md italic mb-8">Curated lists of my favorite books, blogs, essays, and music.</p>
+    
+    {types.map((type, typeIndex) => (
+      <>
+        {typeIndex > 0 && <div class="h-8" />}
+        <section>
+          <div class="flex items-center gap-4 mb-4">
+            <h2 class="text-sm font-sans font-semibold text-ink-light uppercase tracking-widest">
+              {typeLabels[type]}
+            </h2>
+            <div class="flex-1 h-px bg-ink/10"></div>
+          </div>
+          
+          <ul class="space-y-1 pl-4">
+            {itemsByType[type].map(async (item) => {
+              const { Content } = await render(item);
+              const hasContent = item.body && item.body.trim().length > 0;
+              return (
+                <li class="group py-1.5">
+                  <div class="flex flex-col">
+                    <div class="flex items-baseline gap-2">
+                      {item.data.href ? (
+                        <a
+                          href={item.data.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-ink group-hover:text-accent transition-colors duration-150"
+                        >
+                          {item.data.title}
+                        </a>
+                      ) : (
+                        <span class="text-ink">{item.data.title}</span>
+                      )}
+                      {item.data.author && (
+                        <span class="text-sm text-ink-light/60">
+                          {item.data.author}
+                        </span>
+                      )}
+                    </div>
+                    {hasContent && (
+                      <div class="text-sm text-ink-light/70 mt-1 prose prose-sm max-w-none">
+                        <Content />
+                      </div>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      </>
+    ))}
   </div>
 </BaseLayout>

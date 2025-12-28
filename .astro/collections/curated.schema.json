@@ -10,6 +10,9 @@
         "href": {
           "type": "string"
         },
+        "author": {
+          "type": "string"
+        },
         "slug": {
           "anyOf": [
             {
@@ -27,20 +30,19 @@
             }
           ]
         },
-        "description": {
-          "type": "string"
-        },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "default": []
+        "type": {
+          "type": "string",
+          "enum": [
+            "blog",
+            "essay",
+            "music",
+            "book"
+          ]
         }
       },
       "required": [
         "title",
-        "href"
+        "type"
       ],
       "additionalProperties": false
     }

@@ -25,10 +25,10 @@ const curated = defineCollection({
   schema: z
     .object({
       title: z.string(),
-      href: z.string(),
+      href: z.string().optional(),
+      author: z.string().optional(),
       slug: z.string().optional().nullable(),
-      description: z.string().optional(),
-      tags: z.array(z.string()).default([]),
+      type: z.enum(["blog", "essay", "music", "book"]),
     })
     .transform((data) => ({
       ...data,
