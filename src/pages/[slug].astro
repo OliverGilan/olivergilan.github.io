@@ -31,12 +31,16 @@ const formatDate = (date: Date) => {
       {post.data.description && (
         <p class="text-ink-light text-md italic mb-4">{post.data.description}</p>
       )}
-      <time
-        datetime={post.data.date_published?.toISOString() ?? new Date().toISOString()}
-        class="text-xs font-sans text-ink-light/70 uppercase tracking-wider"
-      >
-        {post.data.date_published ? formatDate(post.data.date_published) : "Draft"}
-      </time>
+      <div class="text-xs font-sans text-ink-light/70 uppercase tracking-wider">
+        <time datetime={post.data.date_published?.toISOString() ?? new Date().toISOString()}>
+          {post.data.date_published ? formatDate(post.data.date_published) : "Draft"}
+        </time>
+        {post.data.date_edited && (
+          <span class="ml-2">
+            · Edited <time datetime={post.data.date_edited.toISOString()}>{formatDate(post.data.date_edited)}</time>
+          </span>
+        )}
+      </div>
     </header>
 
     <div class="prose prose-zinc max-w-none
