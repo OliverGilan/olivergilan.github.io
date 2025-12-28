@@ -6,4 +6,10 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://olivergilan.com",
   integrations: [mdx(), tailwind()],
+  markdown: {
+    shikiConfig: {
+      theme: "github-dark",
+      wrap: true,
+    },
+  },
 });
