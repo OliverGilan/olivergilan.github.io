@@ -17,7 +17,7 @@ After graduating I worked at Microsoft, co-founded [Antimetal](https://antimetal
 <div class="flex justify-center">
   <img 
     src="/images/allendale-3.png" 
-    alt="Carmel Valley" 
+    alt="North Jersey" 
     class="h-96 mix-blend-multiply"
   />
 </div>

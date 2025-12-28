@@ -33,7 +33,7 @@ const formatDate = (date: Date) => {
       )}
       <time
         datetime={post.data.date_published?.toISOString() ?? new Date().toISOString()}
-        class="text-sm font-sans text-ink-light/70 uppercase tracking-wider"
+        class="text-xs font-sans text-ink-light/70 uppercase tracking-wider"
       >
         {post.data.date_published ? formatDate(post.data.date_published) : "Draft"}
       </time>
@@ -55,6 +55,13 @@ const formatDate = (date: Date) => {
       prose-li:my-1
     ">
       <Content />
+    </div>
+    <div class="flex justify-center">
+      <img 
+        src="/images/baby_lion.png" 
+        alt="Baby Lion" 
+        class="h-40 mix-blend-multiply"
+      />
     </div>
   </article>
 </BaseLayout>
