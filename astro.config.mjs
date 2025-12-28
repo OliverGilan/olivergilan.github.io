@@ -6,9 +6,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://olivergilan.com",
   output: "static",
-  trailingSlash: "never",
+  trailingSlash: "ignore",
   build: {
-    format: "file",
+    format: "directory",
   },
   integrations: [mdx(), tailwind()],
   markdown: {
