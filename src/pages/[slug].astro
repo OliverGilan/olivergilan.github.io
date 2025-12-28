@@ -1,9 +1,10 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TableOfContents from "../components/TableOfContents.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => 
+  const posts = await getCollection("blog", ({ data }) =>
     import.meta.env.DEV || !!data.date_published
   );
   return posts.map((post) => ({
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 const formatDate = (date: Date) => {
   return date.toLocaleDateString("en-US", {
@@ -25,6 +26,7 @@ const formatDate = (date: Date) => {
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description}>
+  <TableOfContents headings={headings} />
   <article class="post">
     <header class="mb-8 border-b border-ink/10 pb-6">
       <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
@@ -116,4 +118,46 @@ const formatDate = (date: Date) => {
   .prose figure img {
     max-width: 100%;
   }
+
+  /* Heading anchor links */
+  .prose h2[id],
+  .prose h3[id],
+  .prose h4[id] {
+    cursor: pointer;
+  }
+
+  .prose .heading-anchor {
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: var(--color-ink-light, #52525B);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    font-weight: normal;
+    font-size: 0.75em;
+  }
+
+  .prose h2:hover .heading-anchor,
+  .prose h3:hover .heading-anchor,
+  .prose h4:hover .heading-anchor,
+  .prose .heading-anchor:focus {
+    opacity: 0.5;
+  }
+
+  .prose .heading-anchor:hover {
+    opacity: 1;
+    color: var(--color-accent, #800000);
+  }
 </style>
+
+<script>
+  document.querySelectorAll('.prose h2[id], .prose h3[id], .prose h4[id]').forEach((heading) => {
+    heading.addEventListener('click', async () => {
+      const id = heading.getAttribute('id');
+      if (id) {
+        const url = window.location.origin + window.location.pathname + '#' + id;
+        window.history.pushState(null, '', '#' + id);
+        await navigator.clipboard.writeText(url);
+      }
+    });
+  });
+</script>
