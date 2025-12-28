@@ -7,6 +7,8 @@ description: "Cloud hosting is one of the biggest markets in the world and it's 
 thumbnail: "cloud_marketshare.jpg"
 ---
 
+import Aside from '../components/Aside.astro';
+
 Matthew Parkhurst & I founded [Antimetal](https://antimetal.com/) in April of 2022 to bring my vision around "the Cloud" to life. I left the company to focus on my health shortly after but it's been fascinating to watch how my thesis has played out over the past two and a half years. I haven't talked in-depth about my original vision since then but I figure now is a good time to put it all in writing as some parts of my thesis have been validated, the market has matured, and there's still plenty of opportunity left.
 
 ## Market Context
@@ -33,9 +35,9 @@ Furthermore, I felt very strongly that trying to replicate Heroku was not the be
 
 Beating the existing players and capturing market share is a simple formula really: build a better product than the incumbents.
 
-{{< aside >}}
+<Aside>
 Sales and marketing matter, of course, but that's because execution as a whole matters when it comes to building a good company. When it comes to the Cloud and selling to developers it's a lot easier to succeed when your product is superior.
-{{< /aside >}}
+</Aside>
 
 **Ultimately the quality of a cloud hosting product comes down to 3 dimensions: capabilities, convenience, and price.** As a startup it is difficult to be best-in-class in all 3 categories so how you prioritize those dimensions and solve for the main problems each one poses will shape the type of company and product you build. Every choice will have tradeoffs and those tradeoffs will determine how your platform stacks up against the others. Most players in the space focus on just 1 dimension but if you want to dominate you need to be best-in-class in a minimum of 2 of those dimensions and if you can be the best at all 3 then you may achieve the size of the hyperscalers.
 
@@ -71,9 +73,9 @@ This actually highlights another big problem with this simplicity-first model: t
 
 So you need a free tier and to do that you need to subsidize it by making enterprise plans more expensive. So what you've set up is a system where your customers start out for free and get up and running easy and that's great for everyone involved but as a few of your customers find traction and grow they go past the free tier and require paid plans and as they grow further those paid plans grow in price significantly. By the time they reach the size of a Series B startup they will be spending far more on your cloud than they would if they were on AWS. Eventually it crosses a threshold where it's literally cheaper to just hire full-time dev-ops engineers to manage an AWS instance than it does to use a "simpler" cloud. For reference Vercel Functions, which is just a wrapper on AWS Lambda, gives free-tier users 3600 GB-seconds of function time for free. That's great for anyone building a hobby project or just starting out. But once you get past the included free usage they charge $0.00005 per GB-second. AWS Lambda charges you immediately so it's harder to get started with if you can't put down a credit card but they only charge $0.0000166667 per GB-second. Vercel is charging 300% more than AWS just for some simplicity and it only gets worse because the more you use Lambda the _cheaper_ it gets. At the maximum usage tier Vercel is 375% more expensive per GB-second of usage than AWS.
 
-{{< aside >}}
+<Aside>
 It's worth noting that this price comparison isn't really apples to apples. Vercel adds more to their functions than just the base Lambda. It would be more accurate to compare the price of Lambda + Shield + Global Accelerator.
-{{< /aside >}}
+</Aside>
 
 This is great for Vercel because they get to make a bunch of money and offer a free tier to their smallest customers which reduces CAC but if you're a startup that finds some success you're going to end up looking at your Vercel bill wondering if it's really worth it to pay over 300% more for the same infrastructure while having fewer capabilities. Between the backwards pricing model and the lack of functionality platforms that focus on simplicity end up **directly incentivizing their most successful customers to churn.** This is the biggest limiting factor for most of the PaaS providers today and it's a dynamic that needs to be resolved if you want to create a new cloud that can eclipse all of the existing non-hyperscalers.
 
@@ -103,9 +105,9 @@ Okay so I explained these different dimensions and how some of the players deal 
 
 On the pricing side I wanted to implement price controls where a customer could set soft and hard limits on spend for various resources and groups of resources. This would allow us to create an experience where we can show them a distribution of possible spending scenarios with upper bounds on spend for upcoming quarters. These limits would also have powerful rules attached to them where you could decide what to do as the limit was approached whether it was to send alerts, keep scaling under certain circumstances (maybe there's just a spike of traffic for 2 days), or to just let the service fail under load.
 
-{{< aside >}}
+<Aside>
 Edit: It turns out some of the PaaS services these days do have a concept of spend management: [Vercel](https://vercel.com/blog/introducing-spend-management-realtime-usage-alerts-sms-notifications) [Railway](https://docs.railway.app/guides/optimize-usage)
-{{< /aside >}}
+</Aside>
 
 The second way I wanted to tackle pricing was to take advantage of AWS reserved instances. Reserved instances is where you pay in advance for a certain amount of compute in exchange for discounts up to 60%! Then when you use compute later you can do it from the reserved instance credits you have. The beautiful part about this is reserved instances are relatively low risk, especially as your compute needs grow, because you can resell unused credits. For an individual company just trying to build a product this might be more complexity than it's worth but for a PaaS it makes sense to reserve the compute for a discount and handle that complexity intelligently. What this unlocks is that even if we were to price our product at the same price as AWS' on-demand rate we could still have 60% margins. That's not as good as the 300% that Vercel is getting but it doesn't need to be for the services where you're simply wrapping AWS. I'll explain how we can get higher margins on other services in a moment. The end goal of these two things, though, is we could have a PaaS that basically has price parity with AWS while providing a better cost management experience than any cloud on the market today.
 
@@ -114,9 +116,7 @@ When it comes to convenience I wanted an experience that worked for small teams 
 Big companies use Infrastructure as Code (IaC) tools where you use code to specify of the infrastructure you want whether it's servers or storage or domain names and then you provision infrastructure based on that specification. If you want to add a new server you generally update the spec and then push that change to the Cloud. There's a couple reasons this is preferable to clicking around in a dashboard. The first is that it's reproducible. Because it's code that's written down, if all your infrastructure gets deleted for some reason you could in theory just run the code again and bring your cloud back to the desired state. This is super useful if you want to make sure that your development or test environment matches your production environment and stays in sync. Another reason this is helpful is once it's written down you can version it automatically because your codebase is already being versioned anyway. If someone makes a change that breaks some infrastructure in theory you can find which change created the break and then rollback that change easily. And lastly, if you want to change a bunch of resources all at once -- such as changing all your bucket names to have a certain prefix -- you can do that a lot easier in a code editor than clicking around a dashboard.
 
 Okay, so what? Well, if you want a platform that works for big teams you need to have first-class support for IaC and it just so happens that if you want to allow multiple levels of complexity in one product then code is the best way to do that! Let's say you're a small team and you literally just want to deploy your NextJS app. A PaaS that offers IaC might let you do that like follows:
-{{< code >}}
-
-```JavaScript
+```javascript
 const domain = new CustomDomain({
 	...
 })
@@ -126,13 +126,9 @@ const site = new NextJSApp({
 })
 ```
 
-{{< /code >}}
-
 That's pretty simple! That would be very easy for any small team or even an individual developer but let's say now you're working on a big team that's using NextJS and wants a lot more control over how it's deployed. Well you could do something like:
 
-{{< code >}}
-
-```JavaScript
+```javascript
 const domain = new CustomDomain({...})
 const queue = new Redis({...})
 const cdn = new CDN()
@@ -150,13 +146,9 @@ const site = new NextJSApp({
 ...
 ```
 
-{{< /code >}}
-
 Or you can go even lower level and have more control:
 
-{{< code >}}
-
-```JavaScript
+```javascript
 const vpc = new VPC({...});
 const storage = new DurableStorage({
 	size: "16gb",
@@ -173,8 +165,6 @@ const vm = new VM({
 })
 ```
 
-{{< /code >}}
-
 This is all half-baked pseudocode to illustrate a point: when you're specifying things in code you can have multiple interfaces for the same thing and you can make one interface have multiple levels of complexity. You can make it so if all someone wants to do is tell you the domain to host their app on you can figure out the rest for them just like Vercel or Render would do but if they want more control they can just start configuring more of the options. You can also have a concept of primitives that build up to higher level concepts. For the power users in big companies you give them primitives to configure VM's with exactly the memory and compute power they want and allow them to configure all the networking rules, etc. For the simpler user you give them a construct like `NextJSApp` which is simple but under the hood it just provisions a VM with NodeJS and handles the configuration for them.
 
 This is such a powerful way to manage infrastructure that it's a real shame more PaaS platforms don't do this by default. The way I see it, this _has_ to be a first class citizen of a platform to be viable for enterprise customers but I wanted to go as far as making our dashboard completely read-only. I was not going to let people provision or deploy things by clicking on a dashboard and instead provide super easy recipes and starter templates and helpers with a CLI for all the common frameworks. It's kind of funny that most PaaS platforms don't do this. I wonder if they just think their target customers would be scared off by code but for anyone who's done any sort of serious programming they'll know this is preferable to clicking around a dashboard. You get type-safety, the power of your editor's auto complete, and every other benefit of IaC.
@@ -186,16 +176,12 @@ But it doesn't have to end there. Let's talk about capabilities. Earlier I menti
 Let's look at an AWS service like RDS (Relational Database Service) as an example. RDS is how most companies run their database on AWS but under the hood it's really just a combination of other AWS services. It uses their ec2 VMs, their storage, and then some software to orchestrate all that to make it useful for database management. I don't say that to mean it's a simple service -- RDS is incredibly complex and extremely valuable -- I am simply illustrating that just how you can combine primitives in the IaC spec you can combine cloud primitives with software to create new services and capabilities.
 
 Every SaaS company needs a number of capabilities that are serviced by various other entire companies but they don't need to be. You can have an Auth service and an Email service and a feature flag service, etc.
-{{< code >}}
-
-```JavaScript
+```javascript
 const emailProvider = new cloud.Email("MyEmail", {
 	sender: "example.com",
 	dmarc: "v=DMARC1; p=quarantine; adkim=s; aspf=s;"
 });
 ```
-
-{{< /code >}}
 
 Use the hyperscalers for their base infrastructure and accept lower margins when wrapping that but write your own software to power higher-level services and charge more for those. Simply wrapping AWS Lambda? Don't mark it up by 300% like Vercel. But do you have an Auth service that customers can provision which is just a number of Lambda functions under the hood for performing token exchanges? Charge more for that.
 
@@ -223,21 +209,15 @@ And that brings me to SST which is the only player in the space building somethi
 
 They also let you seamlessly deploy to multiple clouds at once because of their use of IaC! Here's a snippet creating an email provider in AWS and configuring it's dns to use Cloudflare. Do you know how wild it is to be able to deploy this sort of configuration this easily?
 
-{{< code >}}
-
-```JavaScript
+```javascript
 export const email = new sst.aws.Email("Email", {
   sender: domain,
   dns: sst.cloudflare.dns(),
 });
 ```
 
-{{< /code >}}
-
 And because they're using Pulumi and simply deploying resources to your own AWS instance any capability that they do not provide with the SST provider you can still use with other Pulumi providers. You can even orchestrate your other SaaS tools like Stripe and then link them to your resources. No fiddling with the Stripe dashboard to set up a new webhook anymore.
-{{< code >}}
-
-```JavaScript
+```javascript
 import { domain } from "./dns";
 
 sst.Linkable.wrap(stripe.WebhookEndpoint, (endpoint) => {
@@ -267,8 +247,6 @@ export const webhook = new stripe.WebhookEndpoint("StripeWebhook", {
   ],
 });
 ```
-
-{{< /code >}}
 
 I've never seen ergonomics this powerful from a PaaS but it's really an obvious conclusion when you think about the 2nd and 3rd-order effects of IaC and the cloud.
 

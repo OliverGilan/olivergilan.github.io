@@ -7,6 +7,8 @@ description: "The term software crisis was coined in 1968 to identify the inabil
 thumbnail: null
 ---
 
+import Figure from '../components/Figure.astro';
+
 A couple weeks ago every [flight in the US was grounded](https://fortune.com/2023/01/13/faa-computer-failure-grounded-thousands-flights-caused-2-contractors-introduced-data-errors-notam-system/) due to the meltdown of the FAA's NOTAM  system in the latest large-scale example of the *software crisis.* The term was coined in 1968 to describe the rapidly expanding pace of power and use-cases for computers and the inability of the industry to keep up with the appropriate quality of software. Computers became exponentially cheaper and more powerful and thus the role of software grew but the majority of the software created at the time shared characteristics that defined the crisis: 
 - Over budget, behind schedule
 - Frequently never completed
@@ -20,8 +22,7 @@ And today, 2 decades after the birth of Agile and with further developments such
 
 The Standish Group conducts a study every year on the state of software development in the industry and publishes a [Chaos Report](https://www.standishgroup.com/sample_research_files/CHAOSReport2015-Final.pdf) with its findings going back to 1994. Agile dominates the industry as the primary methodology employed in most software projects yet the success rates are still dismally low. 
 
-{{< figure src="/images/software_project_success_table.png" alt="Software Project Outcomes Table" caption="Software project outcomes by project size"  >}}
-<!-- ![Software Project Success Table](/images/software_project_success_table.png) -->
+<Figure src="/images/software_project_success_table.png" alt="Software Project Outcomes Table" caption="Software project outcomes by project size" />
 
 Read the [full 2015 report](https://www.standishgroup.com/sample_research_files/CHAOSReport2015-Final.pdf) for definitions on project size and resolution status. When the project size is small success rates are high and only a few projects fail. As projects increase in size the success rates drop with a 41% drop just from a small to a moderately sized project.  We built solutions to the problems software development faced in the 1900s but those solutions were outpaced by the requirements of software as it ate the world. The outcomes in the Chaos Report read like an O(n<sup>2</sup>) algorithm and our efforts to solve the crisis are being dwarfed by the exponential growth in importance and scale of software. 
 
