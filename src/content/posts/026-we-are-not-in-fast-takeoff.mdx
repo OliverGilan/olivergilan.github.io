@@ -1,7 +1,8 @@
 ---
 title: "We are not in fast takeoff"
 slug: "fast-takeoff"
-description: "AI is not yet improving in a runaway fashion, but most jobs in the economy will experience what's happening to software engineers."
+date_published: 2026-01-11
+description: "AI is not yet improving in a runaway fashion, but most jobs in the economy will see a significant level of disruption from AI in the next few years."
 ---
 
 import Tweet from '../../components/Tweet.astro';
@@ -20,18 +21,18 @@ And with the release of [Opus 4.5](https://www.anthropic.com/news/claude-opus-4-
 
 <Tweet id="2004707761138053123" />
 
-As a devtool founder and engineer I'm always evaluating where I think things are headed and, at least for now,
+As a devtool founder and engineer I'm always thinking about the future of software engineering and, at least for now,
 I do not think we are in a [fast takeoff](https://daveshap.substack.com/p/fast-takeoff-means-different-things) (yet). 
 
 Here's why.
 
-## Scaling Eras
+## Making sense of where we are
 
-Humans and our brains are universal explainers. Millions of years of evolution has tuned the parameters of our mind and body to the gradient of our real,
-messy environment. The development of language and writing allows us to project our understanding of that environment into a symbolic representation.
+Millions of years of evolution have tuned the parameters of our mind and body to the gradient of our real,
+messy environment. The development of language and writing allowed us to project our understanding of that environment into a symbolic representation.
 
 Pretraining was the first GPT-era paradigm and it leveraged all of that written knowledge of ours to fit models to the gradient of our _projection_.
-Thus, models are not grounded in the way a human is but they understand our concepts and language and, it turns out, if you
+Thus, models are not grounded in the way a human is, but they understand our concepts and language and, it turns out, if you
 train a model on everything that humans have written about the world, it does a pretty good job of understanding our world!
 
 Post-training was the next paradigm and made the models useful by
@@ -44,52 +45,58 @@ asked the model a question the model might:
 Post-training took these models and made them useful but they still lacked flexibility and the ability to execute over longer tasks that
 contain ambiguity.
 
-The RL paradigm came next and it's the current paradigm that is kicking into high gear. RL teaches models to execute over multiple steps
-and focuses on verifiable outcomes rather than input-output mappings. This allows the models to experiment and discovery novel
-ways to achieve longer running tasks. 
+The RL era came next with verifiable rewards, and suddenly it's possible to teach models how to execute over multiple steps and 
+achieve specific long-time-horizon outcomes rather than hardcoded input-output mappings. This allows the models to experiment and discover novel
+ways to achieve complex tasks. 
 
+In other words:
+- Pretraining = broad competence
+- Post-training = useful behavior
+- RL = long-time-horizon execution
+ 
 RL is the paradigm for the foreseeable future and barring a breakthrough in model architecture or training regime, understanding the
 capabilities and limitations of RL is the best way to understand where we are headed.
-
 
 ## The limitations of RL
 
 Engineers are freaking out over Opus 4.5 but most people have been complaining for a while that new model releases aren't bringing
-the same level of intelligence gains as previously and many engineers still claim the models are functionally useless for them. 
+the same level of intelligence gains as previous releases and many engineers still claim the models are functionally useless for them. 
 I have to admit, Opus 4.5 doesn't even feel like that big of a jump from Sonnet 4.5 or GPT-5 and people weren't freaking out about those models. So what's going on?
 
-The RL paradigm is disadvantageous to the foundation labs because it
+Reinforcement learning is making models better at achieving longer-running tasks for specific kinds of tasks and when it comes to software
+engineering the training data is by far the most robust because the labs are built by engineers, programming is incredibly verifiable,
+and it's easy to get expert engineers to generate high-quality data through normal work processes.
+
+So models are getting better at programming and their RL training sets are getting better and better, to the point where Opus 4.5 really
+is just better than entry-level engineers and potentially even the average programmer but RL isn't a silver bullet.
+
+<Tweet id="2005684504908734874" />
+
+The RL paradigm is also disadvantageous to the foundation labs because it
 - doesn't scale as well as pretraining (building RL environments is hard)
-- doesn't generalize as well as pretraining
+- doesn't generalize by default as well as pretraining
 - empowers legacy businesses that have high-quality process knowledge
 
 The combination of these limitations makes it harder to scale the capabilities of the models which is why most labs
 are hyperfixating on the programming usecase: they have process knowledge on programming and it's the most scalable skillset --
 many other white collar tasks that humans do manually can be represented in code in some way.
 
-Reinforcement learning is making models better at achieving longer running tasks for specific tasks, and when it comes to software
-engineering the training data is by far the most robust because the labs are focusing on programming, programming is incredibly verifiable,
-and it's easy to get expert engineers to generate high-quality data through normal work processes.
-
-So models are getting better at programming and they're RL training sets are getting better and better, to the point where Opus 4.5 really
-is just better than entry-level engineers and potentially even the average programmer but RL isn't a silver bullet.
-
-<Tweet id="2005684504908734874" />
-
-**Opus 4.5 is still squarely in the category of a tool rather than an independent actor.** It can achieve incredibly difficult tasks
-but it still doesn't actually learn the way a human does, it has behaviors baked into it that are hard to change, and it can still
-miss the forest for the trees (spec-driven development is also still a scam for the most part). 
-Opus is a massive accelerant in my own work but I still need to look at the code it's generating and for anything more
+**Opus 4.5 is still squarely in the category of a tool rather than an independent actor.** It still doesn't actually learn the way a human does; 
+it has behaviors baked into it that are hard to change, and it can still miss the forest for the trees in a way a senior engineer wouldn't. 
+Opus is a massive accelerant in my own work, but I still need to look at the code it's generating and for anything more
 complex than basic CRUD I still need to hold the right mental models in my head to make sure Opus isn't going off the rails.
 
 What people are experiencing is a model trained on high-quality RL for common coding tasks. They are better than the average engineer but they are not
 replacing seniors. They amplify the talent of the engineer using them and they are squarely in the category of tools rather than independent actors. 
 
+By the way, this is enough to shift the economics of software development and upend industries, but this doesn't constitute fast takeoff where
+we see rapid exponential capability growth across most domains simultaneously.
+
 ## So what comes next?
 
 I suspect that as long as we're in this paradigm we'll see a couple of things:
 - models will continue to get better at a wider variety of programming tasks.
-- models will continue to execute on longer term tasks without human intervention.
+- models will continue to execute on longer-term tasks without human intervention.
 - models will continue to have the same limitations that prevent them from being independent actors. They will act as amplifiers: 10x engineers will
 become 100x engineers and the average engineer will become far worse as they delegate more decisions to the model and lose their grip on the codebase.
 - models will start to be RL'd on a wider variety of economic tasks beyond programming
@@ -124,16 +131,22 @@ or we see some innovation in model architecture it's entirely plausible that we 
 Researchers from Anthropic seem confident they'll solve continuous learning in 2026, which is... interesting. I 
 would take them seriously. 
 
-The rise of high quality Chinese OSS models is fascinating because it points to a future where everyone has open models with 
-the same base capabilities and the RL environments becomes the differentiator. As an investor I'm really interested in
+<Tweet id="2002458008412885466" />
+
+The rise of high-quality Chinese OSS models is fascinating because it points to a future where everyone has open models with 
+the same base capabilities and the RL environments become the differentiator. As an investor I'm really interested in
 companies that can take advantage of these new OSS models and use ML talent arbitrage to grow rapidly. 
 Right now the vast majority of ML talent is stuck in labs and labs can only focus on so many things at once. Companies
-building tools for Fortune 500 companies to translate their process knowledge into self hosted models, like
+building tools for Fortune 500 companies to translate their process knowledge into self-hosted models, like
 Mira Murati's [Thinking Machines](https://thinkingmachines.ai/), will do very well.
 
 Similarly, I believe founding teams with a combination of ML expertise and specific industry expertise have an opportunity
 to build the frontier intelligence for industries not yet served by the labs. The hard part is finding the right industries
 that are both lucrative to be venture-scale yet not in the hot path of the labs but they exist and are ripe for disruption.
+
+Another area that I find interesting is robotics. It's very possible that the best way to move models to the next phase
+of capabilities is to move them from our projected world of words and into the real world of physics. I'm fascinated
+by the things that [Physical Intelligence](https://www.pi.website/) is working on as well as other world-model startups.
 
 If you _are_ building in the hot path of the labs, say in developer tools, then you have to think _very_ carefully about
 your positioning and what game you're playing. If your product value prop hinges on providing an agent that's X% better than
@@ -143,7 +156,7 @@ intelligence layer then you are in competition with the labs and need to act acc
 
 Instead I would focus on either the infrastructure layer or the application layer. As agents become more competent they
 will need tools to do their jobs just like humans. I believe models will be able to use human tools like Excel as a stopgap
-but most likely we'll see a rise in spreadsheet software that's designed for agents to use natively. Companies like Daytona
+but most likely we'll see a rise in spreadsheet software that's designed for agents to use natively. Companies like [Daytona](https://www.daytona.io/)
 are a good example of what "agent-first computers" might look like.
 
 Similarly, just because agents are doing a lot of work doesn't mean that humans won't be in the loop. Whether it's observability,
@@ -153,121 +166,10 @@ LLMs still cannot build a UX as polished as something like Linear. Even all the 
 proudly vibe-coded have very obvious UX problems. I believe human taste and judgement in product decisions and last-mile
 technical details will still be a major differentiator for a lot of software.
 
-
 ---
 
-### Evolution
-Humans exist in a messy and complicated world. We've had millions of years of evolution that's honed our senses and intuitions 
-so that we can understand and navigate this world. Evolution has, in a way, tuned the parameters of our body and mind to the 
-curve of our environment. And then around 200,000 years ago we developed language which allowed us to share, teach, 
-and exchange ideas about our environment. 
-
-The development of language allowed us to grow in unfathomable ways and allowed us to describe our environments in 
-increasingly precise ways. As a species we projected our understanding of our physical and mental environment onto 
-language and eventually in writing.
-
-### Pretraining
-Pretraining was the first GPT-era paradigm for building AI and it basically involves taking a big chunk of text and 
-then asking the model to predict the next "token" that would show up if that text continued. If the model is wrong 
-it's punished, if it's right it's rewarded, and then it repeats that process a billion times.
-
-It turns out that if you project human understanding of our physical world into all of written language and then you 
-train a model to understand that written language then the model will do a pretty good job of understanding our world! 
-It doesn't understand our world, not in the same way we do, but it does understand our own projection of our world and 
-when you take in all human knowledge that projection is pretty precise.
-
-This training regime has 2 properties that make it very amenable to scaling:
-1. It's unsupervised which means that you do not need a human in the loop while training a model
-2. At large scales it's very generalizable 
-
-Because you don't need humans you just need to scale compute to train more in the same amount of time and at large 
-scales it's very generalizable because most of human language has similar structure and patterns.
-
-The downside is that it doesn't lead to super useful models on its own and we've mostly exhausted our supply of 
-written text available on the internet. We do not have another order of magnitude more written text (although we 
-do have video and audio potentially).
-
-### Post-training
-Post training or Supervised Fine Tuning (SFT) was the next step in training models and making them useful. With 
-pretraining the models understand language but they don't actually know what you want. If your prompt is a question 
-the model might:
-- continue the question
-- start a fake Q&A thread
-- produce something unhelpful
-
-Pretraining never taught the model how to be *useful* and that's where post training comes in. 
-
-This training regimen made the models good at following instructions, refusing to answer "bad" prompts, and where 
-a lot of personality can be added to the model. 
-
-SFT is "Supervised" because humans need to manually create pairings of expected inputs and outputs i.e.
-
-```
-**User:** “Explain X in simple terms.”  
-**Assistant:** [good explanation]
-```
-or 
-```
-**System:** Never talk about X
-**User:** “Explain X in simple terms.”  
-**Assistant:** "I'm sorry I can't talk about that"
-```
-
-This inherently makes it less scalable than pre-training. In pre-training you get your expected output pairings for 
-free because for every given piece of text you're training on you can just literally look at the next token that a 
-human has already wrote versus needing to manually create a bunch of these different cases to train the model on 
-specific behaviors.
-
-SFT has a bigger limitation, though, which is that most prompts have *many* acceptable answers and the pretraining 
-world doesn't support different reasoning paths or levels of detail to arrive at a specific answer. This means 
-models get penalized for generating other correct answers that may not be in the training dataset. It also has no 
-distinction for *correct* an answer is. You can have a well-worded response that matches the training data well 
-but it's totally wrong or not useful and this isn't captured in the training run at all. 
-
-### RL Paradigm (present day)
-Which brings us to the present-day "RL paradigm" where models are trained on multi-step, long-running tasks with 
-verifiable rewards. The idea behind RL on LLMs is instead of hard mappings between input -> output like with 
-post-training or calculating loss on every step like with pretraining, you allow the model to experiment and you 
-grade its process and task completion at the end. This allows the models to experiment with different methods and 
-learn the right way to do certain tasks.
-
-This unlocked the rise of "agentic models" that can reason and operate to accomplish tasks with longer time horizons. 
-For any given task, as long as you can construct a set of verifiable rewards you can most likely RL a model to do 
-that task better than many humans while remaining flexible enough for a lot of ambiguity and variance. This is the 
-primary reason many engineers feel like we're already at the endgame with AI.
-
-I'm not convinced. 
-
-RL has it's own limitations: it's not easy to construct high-quality training datasets. Turns out, **high-quality**, 
-multi-step, verifiable data sets are really hard to build for many tasks. But let's say we solve that problem (and 
-there's a lot of new RL startups trying to solve that problem), the bigger problem with RL is that it, as far as I can 
-tell, doesn't generalize very well. RL'ing a model to be better at coding doesn't make it better at playing chess and 
-thus for AI to really eat the economy in the RL paradigm the labs would need to train the models on every single task 
-they want to automate. This would take a lot of time and resources.
-
-It also may not be possible. Software engineering at one company could look very different than at another company and 
-both methods can be correct, given the constraints of the company regulatory or otherwise. Using RL to train a model 
-to be really good at those two tasks isn't easy, and those companies may not open up their processes for you to train 
-your models on. 
-
-### Fast Takeoff
-What does this mean for fast takeoff and what can we expect over the next couple years?
-
-I use these models every day and ship tens of thousands of lines of code a week. The models are incredible, they're 
-getting better, and they're even better than entry level engineers at this point. 
-
-- The models feel like they aren't getting smarter because their "IQ" is mostly maxed out and now improvements are 
-more horizontal: training the models to be competent on a wider variety of tasks
-- What most people are experiencing is models trained on high-quality RL for coding tasks
-- They are better than many (most?) junior engineers but they are not even close to replacing a mid-level or senior engineer
-- They are squarely in the category of tools rather than independent actors. 
-- Barring a breakthrough in training, model architecture, or continuous learning the models will continue to get better 
-at a wider variety of tasks but are unlikely to start 
-- You can see this dynamic in the moves of Ilya and Mira Murati. If either of them felt OpenAI was on the verge of fast 
-takeoff AGI they simply would. not. have. left. Mira's new company is taking advantage of the RL paradigm and unlocking 
-personalized automation with RL'd models on proprietary processes for a variety of companies. Ilya is betting on research 
-unlocking a new breakthrough that can bring us back into a new era of scaling model capabilities.
-- So barring some breakthrough, we aren't in fast takeoff but the base case is still massive disruption. We have entities 
-that understand language, concepts, and can be trained or taught 
-- The base case is still massive disruption and at this point it's hard to bet against future breakthroughs. Anthropic 
-engineers feel strongly that they'll solve continuous learning in 2026 
+I'm building [Mesa](https://www.mesa.dev/) to rethink the fundamental infrastructure around versioning, code storage, and code collaboration in a world
+where agents and humans are co-authoring software. If you're interested in building the next GitHub and you want to tackle 
+problems both at the infrastructure layer (databases, API design, distributed compute, versioning) and at the application layer
+(pull requests / code review when you don't need to actually review code, issue management and OSS maintenance, documentation, etc.)
+then please reach out!

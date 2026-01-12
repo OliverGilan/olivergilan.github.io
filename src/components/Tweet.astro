@@ -6,7 +6,7 @@ interface Props {
 const { id } = Astro.props;
 ---
 
-<div class="tweet-container">
+<div class="tweet-container flex justify-center">
   <blockquote class="twitter-tweet">
     <a href={`https://twitter.com/x/status/${id}`}>Loading tweet...</a>
   </blockquote>
