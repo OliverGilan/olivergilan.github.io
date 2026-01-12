@@ -16,6 +16,18 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
 
+const resolveImagePath = (thumbnail?: string | null) => {
+  if (!thumbnail) return "/favicon.png";
+  if (thumbnail.startsWith("http")) return thumbnail;
+  const trimmed = thumbnail.replace(/^\//, "");
+  const withImagesPrefix = trimmed.startsWith("images/")
+    ? trimmed
+    : `images/${trimmed}`;
+  return `/${withImagesPrefix}`;
+};
+
+const openGraphImage = resolveImagePath(post.data.thumbnail);
+
 const formatDate = (date: Date) => {
   return date.toLocaleDateString("en-US", {
     year: "numeric",
@@ -25,7 +37,11 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={openGraphImage}
+>
   <TableOfContents headings={headings} />
   <article class="post">
     <header class="mb-8 border-b border-ink/10 pb-6">

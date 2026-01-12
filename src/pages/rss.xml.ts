@@ -6,15 +6,36 @@ import { loadRenderers } from "astro:container";
 import { getContainerRenderer as getMdxRenderer } from "@astrojs/mdx";
 
 export const GET = async (context: APIContext) => {
-  const posts = await getCollection(
-    "blog",
-    ({ data }) => !!data.date_published
-  );
+  const posts = await getCollection("blog", ({ data }) => !!data.date_published);
+
+  const resolveThumbnailUrl = (thumbnail?: string | null) => {
+    if (!thumbnail) return null;
+    if (thumbnail.startsWith("http")) return thumbnail;
+    const normalized = thumbnail.replace(/^\//, "");
+    const path = normalized.startsWith("images/") ? normalized : `images/${normalized}`;
+    return new URL(path, context.site).toString();
+  };
+
+  const getThumbnailMimeType = (thumbnail?: string | null) => {
+    if (!thumbnail) return null;
+    const extension = thumbnail.split(".").pop()?.toLowerCase();
+    switch (extension) {
+      case "png":
+        return "image/png";
+      case "jpg":
+      case "jpeg":
+        return "image/jpeg";
+      case "webp":
+        return "image/webp";
+      case "gif":
+        return "image/gif";
+      default:
+        return "image/*";
+    }
+  };
 
   const sortedPosts = posts.sort(
-    (a, b) =>
-      new Date(b.data.date_published!).getTime() -
-      new Date(a.data.date_published!).getTime()
+    (a, b) => new Date(b.data.date_published!).getTime() - new Date(a.data.date_published!).getTime()
   );
 
   // Set up container for rendering MDX content
@@ -26,14 +47,19 @@ export const GET = async (context: APIContext) => {
       const { Content } = await render(post);
       const content = await container.renderToString(Content);
 
+      const thumbnailUrl = resolveThumbnailUrl(post.data.thumbnail);
+      const thumbnailMimeType = getThumbnailMimeType(post.data.thumbnail);
+
       return {
         title: post.data.title,
         pubDate: post.data.date_published!,
         description: post.data.description ?? "",
         link: `/${post.data.slug}/`,
         content,
-        customData: post.data.thumbnail
-          ? `<enclosure url="${context.site}${post.data.thumbnail.replace(/^\//, "")}" type="image/png" length="0" />`
+        customData: thumbnailUrl
+          ? `<media:content url="${thumbnailUrl}" medium="image" type="${thumbnailMimeType}" />
+<media:thumbnail url="${thumbnailUrl}" />
+<enclosure url="${thumbnailUrl}" type="${thumbnailMimeType}" length="0" />`
           : undefined,
       };
     })
@@ -46,6 +72,7 @@ export const GET = async (context: APIContext) => {
     items,
     xmlns: {
       atom: "http://www.w3.org/2005/Atom",
+      media: "http://search.yahoo.com/mrss/",
     },
     customData: `<language>en-us</language>
 <atom:link href="${context.site}rss.xml" rel="self" type="application/rss+xml"/>
