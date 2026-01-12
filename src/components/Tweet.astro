@@ -1,0 +1,24 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div class="tweet-container">
+  <blockquote class="twitter-tweet">
+    <a href={`https://twitter.com/x/status/${id}`}>Loading tweet...</a>
+  </blockquote>
+</div>
+
+<script is:inline>
+  if (!window.twttrLoaded) {
+    window.twttrLoaded = true;
+    const script = document.createElement('script');
+    script.src = 'https://platform.twitter.com/widgets.js';
+    script.async = true;
+    script.charset = 'utf-8';
+    document.head.appendChild(script);
+  }
+</script>
