@@ -26,6 +26,8 @@ const years = Object.keys(postsByYear)
   .map(Number)
   .sort((a, b) => b - a);
 
+const categories = ["All", "Lore", "Technical", "Playlists", "Photos"];
+
 const formatDate = (date: Date) => {
   return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 };
@@ -33,29 +35,46 @@ const formatDate = (date: Date) => {
 
 <BaseLayout title="Writing" description="Thoughts and essays on software, startups, and life.">
   <div class="not-prose">
+    <div class="mb-6 flex flex-wrap items-center gap-3 text-[11px] font-sans uppercase tracking-[0.25em] sm:justify-end">
+      {categories.map((category) => (
+        <button
+          type="button"
+          data-filter={category}
+          aria-pressed={category === "All"}
+          class={`relative pb-1 transition-colors after:absolute after:inset-x-0 after:-bottom-px after:h-px after:origin-left after:bg-ink/40 after:transition-transform ${
+            category === "All"
+              ? "text-accent after:scale-x-100 after:bg-accent"
+              : "text-ink/60 after:scale-x-0 hover:text-accent"
+          }`}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
     <table class="w-full border-collapse">
       <colgroup>
         <col class="w-24" />
         <col />
       </colgroup>
-      <tbody>
-        {years.map((year, yearIndex) => (
-          <>
-            {yearIndex > 0 && (
-              <tr>
-                <td colspan="2" class="h-6"></td>
-              </tr>
-            )}
+      {years.map((year, yearIndex) => (
+        <tbody data-year={year}>
+          {yearIndex > 0 && (
             <tr>
-              <td colspan="2" class="pb-4">
-                <div class="flex items-center gap-4">
-                  <h2 class="text-sm font-sans font-semibold text-ink-light uppercase tracking-widest">{year}</h2>
-                  <div class="flex-1 h-px bg-ink/10"></div>
-                </div>
-              </td>
+              <td colspan="2" class="h-6"></td>
             </tr>
-            {postsByYear[year].map((post) => (
-              <tr class="group">
+          )}
+          <tr>
+            <td colspan="2" class="pb-4">
+              <div class="flex items-center gap-4">
+                <h2 class="text-sm font-sans font-semibold text-ink-light uppercase tracking-widest">{year}</h2>
+                <div class="flex-1 h-px bg-ink/10"></div>
+              </div>
+            </td>
+          </tr>
+          {postsByYear[year].map((post) => {
+            const category = post.data.tags?.[0] ?? "Technical";
+            return (
+              <tr class="group" data-category={category}>
                 <td class="py-1.5 pr-4 text-right align-middle border-r border-dashed border-ink/15">
                   <time
                     datetime={post.data.date_published?.toISOString() ?? new Date().toISOString()}
@@ -73,10 +92,52 @@ const formatDate = (date: Date) => {
                   </a>
                 </td>
               </tr>
-            ))}
-          </>
-        ))}
-      </tbody>
+            );
+          })}
+        </tbody>
+      ))}
     </table>
   </div>
+  <script>
+    // @ts-nocheck
+    const buttons = Array.from(document.querySelectorAll("[data-filter]"));
+    const rows = Array.from(document.querySelectorAll("tr[data-category]"));
+    const yearGroups = Array.from(document.querySelectorAll("tbody[data-year]"));
+    const activeClasses = ["text-accent", "after:scale-x-100", "after:bg-accent"];
+    const inactiveClasses = ["text-ink/60", "after:scale-x-0", "after:bg-ink/40"];
+
+    const setActiveFilter = (filter) => {
+      buttons.forEach((button) => {
+        const currentFilter = button.getAttribute("data-filter") ?? "All";
+        const isActive = currentFilter === filter;
+        button.setAttribute("aria-pressed", String(isActive));
+        activeClasses.forEach((className) => button.classList.toggle(className, isActive));
+        inactiveClasses.forEach((className) => button.classList.toggle(className, !isActive));
+      });
+    };
+
+    const applyFilter = (filter) => {
+      rows.forEach((row) => {
+        const category = row.getAttribute("data-category") ?? "";
+        const match = filter === "All" || category === filter;
+        row.toggleAttribute("hidden", !match);
+      });
+
+      yearGroups.forEach((group) => {
+        const visibleRows = group.querySelectorAll("tr[data-category]:not([hidden])");
+        group.toggleAttribute("hidden", visibleRows.length === 0);
+      });
+    };
+
+    setActiveFilter("All");
+    applyFilter("All");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter") ?? "All";
+        setActiveFilter(filter);
+        applyFilter(filter);
+      });
+    });
+  </script>
 </BaseLayout>

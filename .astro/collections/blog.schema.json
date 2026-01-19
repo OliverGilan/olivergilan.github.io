@@ -79,13 +79,21 @@
         "tags": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "Technical",
+              "Lore",
+              "Playlists",
+              "Photos"
+            ]
           },
-          "default": []
+          "minItems": 1,
+          "maxItems": 1
         }
       },
       "required": [
-        "title"
+        "title",
+        "tags"
       ],
       "additionalProperties": false
     }

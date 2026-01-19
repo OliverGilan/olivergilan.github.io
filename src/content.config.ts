@@ -12,7 +12,9 @@ const blog = defineCollection({
       date_edited: z.date().optional(),
       description: z.string().optional(),
       thumbnail: z.string().optional().nullable(),
-      tags: z.array(z.string()).default([]),
+      tags: z.array(
+        z.enum(["Technical", "Lore", "Playlists", "Photos"])
+      ).min(1).max(1),
     })
     .transform((data) => ({
       ...data,
