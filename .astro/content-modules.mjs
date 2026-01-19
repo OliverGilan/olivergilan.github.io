@@ -58,5 +58,6 @@ export default new Map([
 ["src/content/posts/024-ai-hasnt-helped-most-engineers.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2F024-ai-hasnt-helped-most-engineers.mdx&astroContentModuleFlag=true")],
 ["src/content/posts/025-resetting-the-frame.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2F025-resetting-the-frame.mdx&astroContentModuleFlag=true")],
 ["src/content/posts/023-cloud-hasnt-been-won.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2F023-cloud-hasnt-been-won.mdx&astroContentModuleFlag=true")],
-["src/content/posts/026-we-are-not-in-fast-takeoff.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2F026-we-are-not-in-fast-takeoff.mdx&astroContentModuleFlag=true")]]);
+["src/content/posts/026-we-are-not-in-fast-takeoff.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2F026-we-are-not-in-fast-takeoff.mdx&astroContentModuleFlag=true")],
+["src/content/posts/027-the-city-breathes-at-night.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2F027-the-city-breathes-at-night.mdx&astroContentModuleFlag=true")]]);
 		
