@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SeriesNavigation from "../components/SeriesNavigation.astro";
 import TableOfContents from "../components/TableOfContents.astro";
 
 export async function getStaticPaths() {
@@ -14,7 +15,46 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const allPosts = await getCollection("blog");
 const { Content, headings } = await render(post);
+
+const visiblePosts = allPosts.filter(({ data }) =>
+  import.meta.env.DEV || !!data.date_published
+);
+
+const sortSeriesPosts = (a: (typeof allPosts)[number], b: (typeof allPosts)[number]) => {
+  const orderDifference = (a.data.series?.order ?? 0) - (b.data.series?.order ?? 0);
+  if (orderDifference !== 0) return orderDifference;
+
+  const dateDifference =
+    (a.data.date_published?.getTime() ?? 0) - (b.data.date_published?.getTime() ?? 0);
+  if (dateDifference !== 0) return dateDifference;
+
+  return a.data.title.localeCompare(b.data.title);
+};
+
+const seriesSlug = post.data.series?.slug;
+const seriesTitle = seriesSlug
+  ? allPosts
+      .filter((entry) => entry.data.series?.slug === seriesSlug)
+      .sort(sortSeriesPosts)[0]?.data.title ?? post.data.title
+  : null;
+const seriesPosts = seriesSlug
+  ? visiblePosts
+      .filter((entry) => entry.data.series?.slug === seriesSlug)
+      .sort(sortSeriesPosts)
+  : [];
+const currentSeriesIndex = post.data.slug
+  ? seriesPosts.findIndex((entry) => entry.data.slug === post.data.slug)
+  : -1;
+const previousSeriesPost = currentSeriesIndex > 0
+  ? seriesPosts[currentSeriesIndex - 1]
+  : null;
+const nextSeriesPost =
+  currentSeriesIndex >= 0 && currentSeriesIndex < seriesPosts.length - 1
+    ? seriesPosts[currentSeriesIndex + 1]
+    : null;
+const hasSeriesNav = !!(previousSeriesPost || nextSeriesPost);
 
 const resolveImagePath = (thumbnail?: string | null) => {
   if (!thumbnail) return "/favicon.png";
@@ -61,6 +101,10 @@ const formatDate = (date: Date) => {
       </div>
     </header>
 
+    {post.data.slug && (
+      <SeriesNavigation posts={seriesPosts} currentSlug={post.data.slug} />
+    )}
+
     <div class="prose prose-zinc max-w-none
       prose-headings:font-bold prose-headings:tracking-tight
       prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
@@ -78,6 +122,7 @@ const formatDate = (date: Date) => {
     ">
       <Content />
     </div>
+
     <div class="flex justify-center">
       <img 
         src="/images/baby_lion.png" 
@@ -85,6 +130,53 @@ const formatDate = (date: Date) => {
         class="h-40 mix-blend-multiply"
       />
     </div>
+
+    {hasSeriesNav && seriesTitle && (
+      <div class="not-prose mt-2 border-t border-ink/10 pt-4">
+        <div class:list={[
+          "grid gap-2",
+          previousSeriesPost && nextSeriesPost ? "sm:grid-cols-2" : "sm:grid-cols-1",
+        ]}>
+          {previousSeriesPost && (
+            <a
+              href={`/${previousSeriesPost.data.slug}/`}
+              class="group flex items-center justify-between gap-3 rounded-xl border border-ink/10 bg-gradient-to-br from-accent/[0.035] via-paper to-paper px-4 py-3 transition-colors duration-150 hover:border-accent/20 hover:from-accent/[0.06]"
+            >
+              <div class="min-w-0">
+                <p class="text-[10px] font-sans uppercase tracking-[0.18em] text-ink-light/45">
+                  Previous in {seriesTitle}
+                </p>
+                <p class="mt-1 min-w-0 text-[15px] font-semibold leading-tight tracking-tight text-ink transition-colors duration-150 group-hover:text-accent">
+                  {previousSeriesPost.data.title}
+                </p>
+              </div>
+              <span class="shrink-0 text-sm text-ink-light/50 transition-transform duration-150 group-hover:-translate-x-0.5 group-hover:text-accent">
+                &larr;
+              </span>
+            </a>
+          )}
+
+          {nextSeriesPost && (
+            <a
+              href={`/${nextSeriesPost.data.slug}/`}
+              class="group flex items-center justify-between gap-3 rounded-xl border border-ink/10 bg-gradient-to-br from-accent/[0.035] via-paper to-paper px-4 py-3 transition-colors duration-150 hover:border-accent/20 hover:from-accent/[0.06]"
+            >
+              <div class="min-w-0">
+                <p class="text-[10px] font-sans uppercase tracking-[0.18em] text-ink-light/45">
+                  Next in {seriesTitle}
+                </p>
+                <p class="mt-1 min-w-0 text-[15px] font-semibold leading-tight tracking-tight text-ink transition-colors duration-150 group-hover:text-accent">
+                  {nextSeriesPost.data.title}
+                </p>
+              </div>
+              <span class="shrink-0 text-sm text-ink-light/50 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-accent">
+                &rarr;
+              </span>
+            </a>
+          )}
+        </div>
+      </div>
+    )}
   </article>
 </BaseLayout>
 

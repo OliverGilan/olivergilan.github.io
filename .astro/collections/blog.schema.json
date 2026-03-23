@@ -89,6 +89,24 @@
           },
           "minItems": 1,
           "maxItems": 1
+        },
+        "series": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1
+            },
+            "order": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "slug",
+            "order"
+          ],
+          "additionalProperties": false
         }
       },
       "required": [

@@ -1,0 +1,77 @@
+---
+interface SeriesPost {
+  data: {
+    title: string;
+    slug: string;
+    date_published?: Date;
+  };
+}
+
+interface Props {
+  posts: SeriesPost[];
+  currentSlug: string;
+}
+
+const { posts, currentSlug } = Astro.props;
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+---
+
+{posts.length > 0 && (
+  <section class="not-prose mb-8 rounded-2xl border border-ink/10 bg-gradient-to-br from-accent/[0.04] via-paper to-paper px-5 py-4 md:px-6 md:py-5">
+    <div class="mb-1 flex items-center gap-4">
+      <p class="text-[11px] font-sans uppercase tracking-[0.28em] text-accent/80">In This Series</p>
+      <div class="h-px flex-1 bg-ink/10"></div>
+    </div>
+
+    <ul class="m-0 list-none p-0">
+      {posts.map((seriesPost) => {
+        const isCurrent = seriesPost.data.slug === currentSlug;
+
+        return (
+          <li>
+            <a
+              href={`/${seriesPost.data.slug}/`}
+              aria-current={isCurrent ? "page" : undefined}
+              class:list={[
+                "group -mx-2 flex flex-col items-start gap-1 rounded-lg px-2 py-1 transition-colors duration-150 sm:flex-row sm:items-center sm:justify-between sm:gap-4",
+                isCurrent
+                  ? "bg-paper/75"
+                  : "hover:bg-paper/60",
+              ]}
+            >
+              <span class="flex min-w-0 items-center gap-3">
+                <span
+                  class:list={[
+                    "h-1.5 w-1.5 shrink-0 rounded-full transition-colors duration-150",
+                    isCurrent ? "bg-accent" : "bg-ink/20 group-hover:bg-accent/50",
+                  ]}
+                ></span>
+                <span
+                  class:list={[
+                    "block min-w-0 text-sm leading-snug transition-colors duration-150",
+                    isCurrent ? "font-semibold text-ink" : "text-ink-light group-hover:text-ink",
+                  ]}
+                >
+                  {seriesPost.data.title}
+                </span>
+              </span>
+
+              {seriesPost.data.date_published && (
+                <span class="shrink-0 text-[11px] font-sans uppercase tracking-[0.18em] text-ink-light/45">
+                  {formatDate(seriesPost.data.date_published)}
+                </span>
+              )}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+)}

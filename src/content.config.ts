@@ -15,6 +15,12 @@ const blog = defineCollection({
       tags: z.array(
         z.enum(["Technical", "Lore", "Playlists", "Photos"])
       ).min(1).max(1),
+      series: z
+        .object({
+          slug: z.string().min(1),
+          order: z.number().int().nonnegative(),
+        })
+        .optional(),
     })
     .transform((data) => ({
       ...data,

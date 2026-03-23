@@ -2,8 +2,33 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const posts = await getCollection("blog", ({ data }) => 
-  import.meta.env.DEV || !!data.date_published
+const allPosts = await getCollection("blog");
+const posts = allPosts.filter(({ data }) => import.meta.env.DEV || !!data.date_published);
+
+const sortSeriesPosts = (a: (typeof allPosts)[number], b: (typeof allPosts)[number]) => {
+  const orderDifference = (a.data.series?.order ?? 0) - (b.data.series?.order ?? 0);
+  if (orderDifference !== 0) return orderDifference;
+
+  const dateDifference =
+    (a.data.date_published?.getTime() ?? 0) - (b.data.date_published?.getTime() ?? 0);
+  if (dateDifference !== 0) return dateDifference;
+
+  return a.data.title.localeCompare(b.data.title);
+};
+
+const seriesTitleBySlug = allPosts.reduce(
+  (acc, post) => {
+    const seriesSlug = post.data.series?.slug;
+    if (!seriesSlug) return acc;
+
+    const current = acc[seriesSlug];
+    if (!current || sortSeriesPosts(post, current) < 0) {
+      acc[seriesSlug] = post;
+    }
+
+    return acc;
+  },
+  {} as Record<string, (typeof allPosts)[number]>
 );
 
 // Sort by date descending
@@ -92,6 +117,15 @@ const formatDate = (date: Date) => {
           </tr>
           {postsByYear[year].map((post) => {
             const category = post.data.tags?.[0] ?? "Technical";
+            const seriesTitle = post.data.series
+              ? seriesTitleBySlug[post.data.series.slug]?.data.title ?? post.data.title
+              : null;
+            const seriesLabel = seriesTitle
+              ? post.data.title === seriesTitle
+                ? "Series"
+                : `in ${seriesTitle}`
+              : null;
+
             return (
               <tr class="group" data-category={category}>
                 <td class="py-1.5 pr-4 align-middle border-r border-dashed border-ink/15">
@@ -116,6 +150,12 @@ const formatDate = (date: Date) => {
                   >
                     {post.data.title}
                   </a>
+                  {seriesLabel && (
+                    <span class="ml-2 inline-flex items-center gap-2 align-middle text-[11px] font-sans tracking-[0.08em] text-ink-light/45">
+                      <span aria-hidden="true" class="h-1 w-1 rounded-full bg-ink/25"></span>
+                      <span>{seriesLabel}</span>
+                    </span>
+                  )}
                 </td>
               </tr>
             );
