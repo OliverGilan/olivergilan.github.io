@@ -1,6 +1,7 @@
 ---
 const siteTitle = "Oliver Gilan";
 const siteDescription = "Dreams are the language of God.";
+import ThemeToggle from "../components/ThemeToggle.astro";
 
 const {
   title = siteTitle,
@@ -75,6 +76,23 @@ const socialLinks = [
       href={new URL("rss.xml", Astro.site)}
     />
 
+    <script is:inline>
+      (() => {
+        const key = "theme-preference";
+        const validThemes = ["light", "dark", "system"];
+        const savedTheme = window.localStorage.getItem(key);
+        const theme = validThemes.includes(savedTheme) ? savedTheme : "system";
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        const resolvedTheme = theme === "system" ? systemTheme : theme;
+        const root = document.documentElement;
+        root.classList.toggle("dark", resolvedTheme === "dark");
+        root.dataset.theme = theme;
+        root.style.colorScheme = resolvedTheme;
+      })();
+    </script>
+
     <!-- Plausible Analytics -->
     <script
       defer
@@ -120,7 +138,7 @@ const socialLinks = [
         </nav>
       </header>
 
-      <main class="flex-1 relative prose prose-zinc max-w-none">
+      <main class="flex-1 relative prose prose-zinc dark:prose-invert prose-headings:text-ink prose-p:text-ink prose-li:text-ink prose-strong:text-ink prose-blockquote:text-ink max-w-none">
         <slot />
       </main>
 
@@ -128,21 +146,24 @@ const socialLinks = [
         <p class="text-xs text-ink-light/60 font-sans uppercase tracking-widest !mb-0">
           &copy; {new Date().getFullYear()} Oliver Gilan
         </p>
-        
-        <div class="flex items-center gap-4">
-          {
-            socialLinks.map((link) => (
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="opacity-40 hover:opacity-100 transition-all duration-200 hover:scale-110"
-                aria-label={link.name}
-              >
-                <img src={link.icon} alt={link.name} class="w-5 h-5" />
-              </a>
-            ))
-          }
+
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <ThemeToggle />
+          <div class="flex items-center gap-4">
+            {
+              socialLinks.map((link) => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="opacity-40 hover:opacity-100 transition-all duration-200 hover:scale-110"
+                  aria-label={link.name}
+                >
+                  <img src={link.icon} alt={link.name} class="w-5 h-5" />
+                </a>
+              ))
+            }
+          </div>
         </div>
       </footer>
     </div>
@@ -150,6 +171,30 @@ const socialLinks = [
 </html>
 
 <style is:global>
+  :root {
+    --color-paper-hex: #fdfbf7;
+    --color-ink-hex: #18181b;
+    --color-ink-light-hex: #52525b;
+    --color-accent-hex: #800000;
+    --color-paper: 253 251 247;
+    --color-ink: 24 24 27;
+    --color-ink-light: 82 82 91;
+    --color-accent: 128 0 0;
+    color-scheme: light;
+  }
+
+  :root.dark {
+    --color-paper-hex: #18181b;
+    --color-ink-hex: #f4f4f5;
+    --color-ink-light-hex: #a1a1aa;
+    --color-accent-hex: #fca5a5;
+    --color-paper: 24 24 27;
+    --color-ink: 244 244 245;
+    --color-ink-light: 161 161 170;
+    --color-accent: 252 165 165;
+    color-scheme: dark;
+  }
+
   @font-face {
     font-family: "PT Serif";
     src: url("/fonts/PT_Serif/PTSerif-Regular.woff2") format("woff2");

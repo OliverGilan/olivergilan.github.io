@@ -18,6 +18,7 @@
     "@astrojs/mdx": "^4.3.12",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/tailwind": "^6.0.2",
+    "@lucide/astro": "^1.7.0",
     "@tailwindcss/typography": "^0.5.19",
     "astro": "^5.16.0",
     "glightbox": "^3.3.1",

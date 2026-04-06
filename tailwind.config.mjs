@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: "#FDFBF7",
-        ink: "#18181B", // zinc-950
-        "ink-light": "#52525B", // zinc-600
-        accent: "#800000", // maroon
+        paper: "rgb(var(--color-paper) / <alpha-value>)",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        "ink-light": "rgb(var(--color-ink-light) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
       },
       fontFamily: {
         serif: ['"PT Serif"', "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
@@ -17,7 +17,7 @@ export default {
         DEFAULT: {
           css: {
             a: {
-              color: "#800000",
+              color: "rgb(var(--color-accent) / 1)",
               textDecoration: "underline",
               "&:hover": {
                 opacity: 0.8,

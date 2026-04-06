@@ -105,11 +105,13 @@ const formatDate = (date: Date) => {
       <SeriesNavigation posts={seriesPosts} currentSlug={post.data.slug} />
     )}
 
-    <div class="prose prose-zinc max-w-none
+    <div class="prose prose-zinc dark:prose-invert max-w-none
       prose-headings:font-bold prose-headings:tracking-tight
       prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
       prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
       prose-p:leading-relaxed
+      prose-table:text-ink prose-th:text-ink prose-td:text-ink
+      prose-th:border-ink/25 prose-td:border-ink/15 prose-thead:border-ink/25 prose-tr:border-ink/10
       prose-a:text-accent prose-a:underline hover:prose-a:opacity-80
       prose-blockquote:border-l-4 prose-blockquote:border-accent/40 prose-blockquote:bg-accent/5 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:italic prose-blockquote:not-italic
       prose-code:before:content-none prose-code:after:content-none
@@ -237,7 +239,7 @@ const formatDate = (date: Date) => {
   .prose .heading-anchor {
     margin-left: 0.5rem;
     text-decoration: none;
-    color: var(--color-ink-light, #52525B);
+    color: var(--color-ink-light-hex, #52525B);
     opacity: 0;
     transition: opacity 0.15s ease;
     font-weight: normal;
@@ -253,7 +255,7 @@ const formatDate = (date: Date) => {
 
   .prose .heading-anchor:hover {
     opacity: 1;
-    color: var(--color-accent, #800000);
+    color: var(--color-accent-hex, #800000);
   }
 </style>
 

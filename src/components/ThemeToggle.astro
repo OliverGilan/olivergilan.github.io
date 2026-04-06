@@ -1,0 +1,109 @@
+---
+import { Laptop, Moon, Sun } from "@lucide/astro";
+---
+
+<div class="flex items-center gap-2" data-theme-toggle>
+  <div class="inline-flex rounded-full border border-ink/20 bg-paper/60 p-0.5">
+    <button
+      type="button"
+      data-theme-option="light"
+      class="rounded-full p-1.5 text-ink-light transition-colors"
+      aria-label="Use light theme"
+    >
+      <Sun class="h-3.5 w-3.5" />
+      <span class="sr-only">Light</span>
+    </button>
+    <button
+      type="button"
+      data-theme-option="dark"
+      class="rounded-full p-1.5 text-ink-light transition-colors"
+      aria-label="Use dark theme"
+    >
+      <Moon class="h-3.5 w-3.5" />
+      <span class="sr-only">Dark</span>
+    </button>
+    <button
+      type="button"
+      data-theme-option="system"
+      class="rounded-full p-1.5 text-ink-light transition-colors"
+      aria-label="Follow system theme"
+    >
+      <Laptop class="h-3.5 w-3.5" />
+      <span class="sr-only">System</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  type ThemePreference = "light" | "dark" | "system";
+
+  const THEME_STORAGE_KEY = "theme-preference";
+  const themeOptions = ["light", "dark", "system"] as const;
+  const themeSet = new Set(themeOptions);
+  const root = document.documentElement;
+  const control = document.querySelector("[data-theme-toggle]");
+  const buttons = Array.from(
+    control?.querySelectorAll("[data-theme-option]") ?? []
+  );
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const getStoredTheme = () => {
+    const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored && themeSet.has(stored as ThemePreference)) {
+      return stored as ThemePreference;
+    }
+    return "system";
+  };
+
+  const getEffectiveTheme = (theme: ThemePreference) => {
+    if (theme === "system") {
+      return mediaQuery.matches ? "dark" : "light";
+    }
+    return theme;
+  };
+
+  const applyTheme = (theme: ThemePreference) => {
+    const effectiveTheme = getEffectiveTheme(theme);
+    root.classList.toggle("dark", effectiveTheme === "dark");
+    root.dataset.theme = theme;
+    root.style.colorScheme = effectiveTheme;
+  };
+
+  const updateButtons = (theme: ThemePreference) => {
+    buttons.forEach((button) => {
+      const option = button.getAttribute("data-theme-option");
+      const isActive = option === theme;
+      button.setAttribute("aria-pressed", String(isActive));
+      button.classList.toggle("bg-ink", isActive);
+      button.classList.toggle("text-paper", isActive);
+      button.classList.toggle("text-ink-light", !isActive);
+      button.classList.toggle("hover:text-ink", !isActive);
+      button.classList.toggle("hover:text-paper", isActive);
+    });
+  };
+
+  const setTheme = (theme: ThemePreference) => {
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    applyTheme(theme);
+    updateButtons(theme);
+  };
+
+  const currentTheme = getStoredTheme();
+  applyTheme(currentTheme);
+  updateButtons(currentTheme);
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const theme = button.getAttribute("data-theme-option");
+      if (!theme || !themeSet.has(theme as ThemePreference)) return;
+      setTheme(theme as ThemePreference);
+    });
+  });
+
+  mediaQuery.addEventListener("change", () => {
+    const selectedTheme = getStoredTheme();
+    if (selectedTheme !== "system") return;
+    applyTheme("system");
+    updateButtons("system");
+  });
+</script>
