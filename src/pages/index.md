@@ -18,6 +18,6 @@ After graduating I worked at Microsoft, co-founded [Antimetal](https://antimetal
   <img 
     src="/images/allendale-3.png" 
     alt="North Jersey" 
-    class="h-96 mix-blend-multiply"
+    class="h-96 mix-blend-multiply dark:mix-blend-screen dark:[filter:invert(1)_brightness(0.94)_contrast(1.18)]"
   />
 </div>
